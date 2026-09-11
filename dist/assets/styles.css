@@ -1,10 +1,10 @@
 :root {
-  --ink: #101716;
-  --paper: #f8f7f3;
-  --acid: #c9ff4a;
-  --blue: #3b5bdb;
-  --muted: #69716d;
-  --line: rgba(16, 23, 22, 0.2);
+  --ink: #1d302c;
+  --paper: #f5f5e9;
+  --acid: #b8d2c9;
+  --blue: #4f887e;
+  --muted: #627a74;
+  --line: rgba(49, 82, 75, 0.24);
   --max: 1240px;
 }
 
@@ -60,17 +60,17 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.2rem); font-weight: 500; }
 .knowledge-diagram { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 50%; background: var(--paper); }
 .diagram-lines { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--line); stroke-width: 1.25; }
 .zone-base { stroke: none; }
-.zone-base-outer { fill: #f3f4f1; }
-.zone-base-middle { fill: #f6f6f3; }
-.zone-base-inner { fill: #f1f3f0; }
-.texture-zone { stroke: #b8bfbb; stroke-width: 1.25; }
+.zone-base-outer { fill: #eef1e8; }
+.zone-base-middle { fill: #f3f4e9; }
+.zone-base-inner { fill: #e8eee6; }
+.texture-zone { stroke: #9bb9b1; stroke-width: 1.25; }
 .zone-outer { opacity: .34; }
 .zone-middle { opacity: .29; }
 .zone-inner { opacity: .26; }
 .diagram-lines pattern circle { fill: var(--ink); }
 .diagram-lines pattern line, .diagram-lines pattern path { stroke: var(--ink); stroke-width: 1; }
-.grid-axis { stroke: #c8cdca; stroke-width: 1; stroke-dasharray: 5 8; opacity: 1; }
-.open-orbit { stroke: #c8cdca; stroke-width: 1.1; }
+.grid-axis { stroke: #b8c9c2; stroke-width: 1; stroke-dasharray: 5 8; opacity: 1; }
+.open-orbit { stroke: #b8c9c2; stroke-width: 1.1; }
 .relation { --line-delay: 1.05s; opacity: 0; stroke: var(--ink); stroke-width: 1.35; stroke-dasharray: 1; stroke-dashoffset: 1; transition: opacity 240ms ease, stroke-dashoffset 280ms ease; }
 .relation-step-2 { --line-delay: 1.45s; }
 .relation-step-3 { --line-delay: 1.85s; }
@@ -90,7 +90,7 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.2rem); font-weight: 500; }
 .knowledge-diagram:has(.node-learn:is(:hover, :focus-visible, .is-active)) .core-learn,
 .knowledge-diagram:has(.node-prototype:is(:hover, :focus-visible, .is-active)) .core-prototype { opacity: 1; stroke-dashoffset: 0; transition-duration: 180ms, 800ms; transition-delay: .85s, .85s; }
 .knowledge-diagram:has(.diagram-node:is(:hover, :focus-visible, .is-active)) .core-ring circle { stroke-dashoffset: 0; transition-duration: 700ms; transition-delay: 1.5s; }
-.knowledge-diagram:has(.diagram-node:is(:hover, :focus-visible, .is-active)) .diagram-node:not(:is(:hover, :focus-visible, .is-active)) { color: #858c88; opacity: 1; }
+.knowledge-diagram:has(.diagram-node:is(:hover, :focus-visible, .is-active)) .diagram-node:not(:is(:hover, :focus-visible, .is-active)) { color: #82948e; opacity: 1; }
 .knowledge-diagram:has(.node-follow:is(:hover, :focus-visible, .is-active)) .relation-follow,
 .knowledge-diagram:has(.node-translate:is(:hover, :focus-visible, .is-active)) .relation-translate,
 .knowledge-diagram:has(.node-learn:is(:hover, :focus-visible, .is-active)) .relation-learn,
@@ -181,10 +181,10 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .trajectory-copy > p:last-child { max-width: 48rem; color: var(--muted); }
 .complementary { grid-column: 2 / -1; margin-top: 3rem; padding: 2.5rem; background: var(--ink); color: var(--paper); }
 .background .complementary { grid-column: 1 / -1; }
-.complementary > p { max-width: 52rem; color: #c6ccca; }
+.complementary > p { max-width: 52rem; color: #d5e0da; }
 .training-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem 4rem; margin-top: 3rem; }
 .training-grid div { border-top: 1px solid rgba(255,255,255,.35); padding-top: 1rem; }
-.training-grid h4 { margin: 0 0 .5rem; font-size: 1.05rem; color: var(--acid); }.training-grid p { color: #c6ccca; }
+.training-grid h4 { margin: 0 0 .5rem; font-size: 1.05rem; color: var(--acid); }.training-grid p { color: #d5e0da; }
 .contact { position: relative; margin-top: 0; padding: 3.75rem max(1.5rem, 6vw); width: min(calc(100% - 3rem), var(--max)); border: 1px solid var(--ink); border-top: 5px solid var(--blue); background: var(--paper); color: var(--ink); }
 .contact-index { position: absolute; top: 1rem; left: max(1.5rem, 6vw); color: var(--blue); font-size: .75rem; font-weight: 700; }
 .contact h2 { max-width: 17ch; }.contact > p:not(.eyebrow) { max-width: 44rem; }.button.light { background: var(--paper); border-color: var(--paper); color: var(--ink); margin-top: 1rem; }.button.light:hover { background: var(--acid); border-color: var(--acid); }
