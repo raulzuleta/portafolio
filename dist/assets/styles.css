@@ -137,13 +137,17 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.2rem); font-weight: 500; }
 .node-translate { top: 31%; left: 85%; }
 .node-learn { top: 78%; left: 72%; }
 .node-prototype { top: 65%; left: 14%; }
-.diagram-card { position: absolute; inset: auto 1rem 1rem; z-index: 3; padding: 1.25rem 3rem 1.25rem 1.25rem; border: 1px solid var(--ink); border-top: 4px solid var(--blue); background: var(--paper); box-shadow: 0 12px 30px rgba(16,23,22,.16); }
+.knowledge-diagram.is-card-open .diagram-node,
+.knowledge-diagram.is-card-open .diagram-core { pointer-events: none; }
+.diagram-card { position: absolute; inset: auto 1rem 1rem; z-index: 3; padding: 1.25rem; border: 1px solid var(--ink); background: var(--paper); box-shadow: 5px 5px 0 rgba(29,48,44,.2); }
 .diagram-card[hidden] { display: none; }
 .diagram-card h2 { margin-bottom: .65rem; font-size: 1.75rem; }
 .diagram-card p { margin-bottom: .7rem; font-size: .9rem; }
+.diagram-card .diagram-card-label { margin: -1.25rem -1.25rem 1rem; padding: .55rem 3rem .55rem .75rem; border-bottom: 1px solid var(--ink); background: var(--blue); color: var(--paper); }
 .diagram-card .diagram-card-example { color: var(--muted); font-size: .77rem; font-weight: 700; }
 .diagram-card-link { font-size: .82rem; font-weight: 700; text-underline-offset: .25rem; }
-.diagram-close { position: absolute; top: .75rem; right: .75rem; width: 2rem; height: 2rem; border: 0; background: transparent; color: var(--ink); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.diagram-close { position: absolute; top: .35rem; right: .45rem; z-index: 1; width: 1.65rem; height: 1.65rem; padding: 0; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-size: 1.1rem; line-height: 1; cursor: pointer; box-shadow: inset 1px 1px 0 rgba(255,255,255,.8), inset -1px -1px 0 rgba(29,48,44,.25); }
+.diagram-close:active { box-shadow: inset 1px 1px 0 rgba(29,48,44,.25); transform: translate(1px, 1px); }
 .research, .projects, .pedagogy, .background { display: grid; grid-template-columns: 7rem minmax(16rem, .62fr) minmax(0, 1fr); column-gap: 2.5vw; padding: 1.5rem 0 4.5rem; border-top: 1px solid var(--ink); }
 .background { order: 1; grid-template-columns: minmax(0, 1fr); }
 .background > .section-intro { grid-column: 1; padding: 1rem 0 2rem; border-bottom: 1px solid var(--line); }

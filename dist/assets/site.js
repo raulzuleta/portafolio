@@ -30,6 +30,8 @@ function closeDiagramCard(returnFocus = false) {
   const previousNode = activeDiagramNode;
   activeDiagramNode = null;
   diagramCard.hidden = true;
+  knowledgeDiagram?.classList.remove('is-card-open');
+  if (knowledgeDiagram) knowledgeDiagram.inert = false;
   diagramNodes.forEach((node) => {
     node.classList.remove('is-active');
     node.setAttribute('aria-expanded', 'false');
@@ -94,19 +96,18 @@ tabLinks.forEach((link) => {
 
 diagramNodes.forEach((node) => {
   node.addEventListener('pointerenter', () => {
+    if (activeDiagramNode) return;
     if (previewDiagramNode === node || !knowledgeDiagram) return;
-    if (activeDiagramNode && activeDiagramNode !== node) closeDiagramCard();
     previewDiagramNode = node;
     knowledgeDiagram.classList.add('is-resetting');
     void knowledgeDiagram.offsetWidth;
     requestAnimationFrame(() => knowledgeDiagram.classList.remove('is-resetting'));
   });
   node.addEventListener('click', () => {
-    if (activeDiagramNode === node) {
-      closeDiagramCard();
-      return;
-    }
+    if (activeDiagramNode) return;
     activeDiagramNode = node;
+    knowledgeDiagram?.classList.add('is-card-open');
+    if (knowledgeDiagram) knowledgeDiagram.inert = true;
     diagramNodes.forEach((item) => {
       const active = item === node;
       item.classList.toggle('is-active', active);
@@ -124,6 +125,7 @@ knowledgeDiagram?.addEventListener('pointerleave', () => {
 diagramClose?.addEventListener('click', () => closeDiagramCard(true));
 diagramCard?.querySelector('.diagram-card-link').addEventListener('click', (event) => {
   event.preventDefault();
+  closeDiagramCard();
   activateTab(event.currentTarget.dataset.tab);
 });
 
