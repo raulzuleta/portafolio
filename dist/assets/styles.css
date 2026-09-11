@@ -191,14 +191,14 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .publication-list .status { display: block; min-height: 2.6rem; color: var(--muted); }
 .publication-list h3 { margin-top: 1.6rem; }
 .background > .section-index { grid-row: 1; }
-.trajectory-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 2rem; border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.trajectory-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 5vw, 5.5rem); margin-top: 3rem; }
 .timeline { display: contents; list-style: none; padding: 0; margin: 0; counter-reset: layers; }
-.trajectory-card { position: relative; display: grid; grid-template-columns: minmax(8rem, .38fr) minmax(0, 1fr); align-content: start; gap: 1.5rem; min-width: 0; padding: 2rem; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); counter-increment: layers; }
+.trajectory-card { position: relative; display: grid; grid-template-columns: minmax(8rem, .38fr) minmax(0, 1fr); align-content: start; gap: 1.5rem; min-width: 0; padding: 0; counter-increment: layers; }
 .trajectory-card:nth-child(1) { grid-column: 1; grid-row: 1; }
 .trajectory-card:nth-child(2) { grid-column: 2; grid-row: 1; }
 .trajectory-card:nth-child(3) { grid-column: 1; grid-row: 2; }
-.trajectory-card::before { content: "0" counter(layers); position: absolute; left: .65rem; top: 2.65rem; z-index: 1; padding: .22rem .38rem; background: var(--blue); color: white; font-size: .72rem; font-weight: 700; }
-.trajectory-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: grayscale(1); border: 1px solid var(--ink); }
+.trajectory-card::before { display: none; }
+.trajectory-card img { width: 100%; aspect-ratio: 1; object-fit: cover; filter: grayscale(1); border: 0; border-radius: 50%; }
 .trajectory-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
 .trajectory-heading span { font-size: clamp(1.8rem, 3vw, 3.2rem); line-height: 1; letter-spacing: -.04em; }
 .trajectory-heading small { color: var(--blue); font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
@@ -206,7 +206,7 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .trajectory-copy .thesis { max-width: 47rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 1.06rem; }
 .trajectory-copy > p:last-child { max-width: 48rem; color: var(--muted); }
 .complementary { padding: 2rem; background: var(--ink); color: var(--paper); }
-.background .complementary { grid-column: 2; grid-row: 2; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.background .complementary { grid-column: 2; grid-row: 2; }
 .complementary > p { max-width: 52rem; color: #d5e0da; }
 .training-grid { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: 2rem; border-bottom: 1px solid rgba(255,255,255,.35); }
 .training-grid details { border-top: 1px solid rgba(255,255,255,.35); }
@@ -255,10 +255,10 @@ footer p { margin: 0; }
   .research-body, .pedagogy-lead, .projects > .section-intro, .project-featured, .project-grid, .publication-list, .timeline, .complementary { grid-column: 1; }
   .projects > .section-index, .pedagogy > .section-index, .background > .section-index { grid-row: auto; }
   .project-grid, .training-grid { grid-template-columns: 1fr; }
-  .trajectory-grid { grid-template-columns: 1fr; border-left: 0; }
+  .trajectory-grid { grid-template-columns: 1fr; gap: 3.5rem; }
   .trajectory-card, .trajectory-card:nth-child(1), .trajectory-card:nth-child(2), .trajectory-card:nth-child(3), .background .complementary { grid-column: 1; grid-row: auto; }
-  .trajectory-card { grid-template-columns: 1fr; padding: 2rem 0 3rem; border-right: 0; }
-  .background .complementary { border-right: 0; }
+  .trajectory-card { grid-template-columns: 1fr; padding: 0; }
+  .trajectory-card img { width: min(72vw, 15rem); }
   .trajectory-card img { max-width: 28rem; }
   .project-featured { margin-top: 3rem; }.project-featured, .project { grid-template-columns: 1.8rem 1fr; }.sensor-visual { grid-column: 1 / -1; }
   .research-facts div { grid-template-columns: 1fr; }
