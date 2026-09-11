@@ -7,8 +7,18 @@ const diagramNodes = document.querySelectorAll('.diagram-node, [data-diagram-nod
 const diagramCard = document.querySelector('.diagram-card');
 const diagramClose = document.querySelector('.diagram-close');
 const knowledgeDiagram = document.querySelector('.knowledge-diagram');
+const trainingDetails = document.querySelectorAll('.training-grid details');
 let activeDiagramNode = null;
 let previewDiagramNode = null;
+
+trainingDetails.forEach((detail) => {
+  detail.addEventListener('toggle', () => {
+    if (!detail.open) return;
+    trainingDetails.forEach((other) => {
+      if (other !== detail) other.open = false;
+    });
+  });
+});
 
 function renderDiagramCard() {
   if (!activeDiagramNode || !diagramCard) return;
