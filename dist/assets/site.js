@@ -135,5 +135,15 @@ document.addEventListener('keydown', (event) => {
 
 window.addEventListener('popstate', () => activateTab(location.hash.slice(1), false));
 
+const oledPages = [...document.querySelectorAll('[data-oled-page]')];
+if (oledPages.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let oledPageIndex = 0;
+  window.setInterval(() => {
+    oledPages[oledPageIndex].classList.remove('is-current');
+    oledPageIndex = (oledPageIndex + 1) % oledPages.length;
+    oledPages[oledPageIndex].classList.add('is-current');
+  }, 2800);
+}
+
 setLanguage(localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es');
 activateTab(location.hash.slice(1), false);
