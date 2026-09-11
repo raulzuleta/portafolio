@@ -214,9 +214,14 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .pedagogy > .section-intro h2 { max-width: 17ch; margin-bottom: 0; }
 .pedagogy-lead { grid-column: 1; max-width: 52rem; padding-top: 2.4rem; font-size: 1.2rem; }
 .publication-list { grid-column: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3vw; margin-top: 2.5rem; }
-.publication-list article { border-top: 4px solid var(--ink); padding-top: 1rem; }
+.publication-list article { display: flex; flex-direction: column; min-width: 0; border-top: 4px solid var(--ink); padding: 1rem 0 0; }
 .publication-list .status { display: block; min-height: 2.6rem; color: var(--muted); }
 .publication-list h3 { margin-top: 1.6rem; }
+.teaching-contribution { margin-top: auto; padding-top: 1.4rem; }
+.teaching-contribution strong { display: block; margin-bottom: .4rem; color: var(--blue); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.teaching-contribution p { margin-bottom: 1.3rem; font-size: .92rem; }
+.material-cta { display: block; width: 100%; margin-top: .4rem; padding: .8rem .9rem; border: 1px solid var(--ink); color: var(--ink); font-size: .78rem; font-weight: 700; line-height: 1.25; text-decoration: none; }
+.material-cta.is-pending { border-color: var(--line); color: var(--muted); }
 .trajectory-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 5vw, 5.5rem); margin-top: 3rem; }
 .timeline { display: contents; list-style: none; padding: 0; margin: 0; counter-reset: layers; }
 .trajectory-card { position: relative; display: grid; grid-template-columns: minmax(8rem, .38fr) minmax(0, 1fr); align-content: start; gap: 1.5rem; min-width: 0; padding: 0; counter-increment: layers; }
