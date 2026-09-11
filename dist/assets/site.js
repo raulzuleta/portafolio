@@ -11,14 +11,7 @@ const trainingDetails = document.querySelectorAll('.training-grid details');
 let activeDiagramNode = null;
 let previewDiagramNode = null;
 
-trainingDetails.forEach((detail) => {
-  detail.addEventListener('toggle', () => {
-    if (!detail.open) return;
-    trainingDetails.forEach((other) => {
-      if (other !== detail) other.open = false;
-    });
-  });
-});
+trainingDetails.forEach((detail) => detail.removeAttribute('name'));
 
 function renderDiagramCard() {
   if (!activeDiagramNode || !diagramCard) return;

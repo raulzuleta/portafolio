@@ -207,6 +207,8 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .trajectory-heading span { font-size: clamp(1.8rem, 3vw, 3.2rem); line-height: 1; letter-spacing: -.04em; }
 .trajectory-heading small { color: var(--blue); font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
 .trajectory-copy .degree { max-width: 42rem; color: var(--ink); font-weight: 700; }
+.trajectory-copy .degree > span { display: block; }
+.degree-institution { margin-top: .2rem; color: var(--muted); font-weight: 400; }
 .trajectory-copy .thesis { display: flex; flex-direction: column; gap: .45rem; max-width: 47rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: .94rem; line-height: 1.45; }
 .thesis-label { color: var(--blue); font-family: Arial, Helvetica, sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .12em; line-height: 1; text-transform: uppercase; }
 .trajectory-copy > p:last-child { max-width: 48rem; color: var(--muted); }
@@ -215,7 +217,7 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .complementary > p { max-width: 52rem; color: #d5e0da; }
 .training-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 1.5rem; margin-top: 2rem; border-bottom: 1px solid rgba(255,255,255,.35); }
 .training-grid details { border-top: 1px solid rgba(255,255,255,.35); }
-.training-grid summary { position: relative; padding: .9rem 2rem .9rem 0; color: var(--acid); font-size: 1.05rem; font-weight: 700; cursor: pointer; list-style: none; }
+.training-grid summary { position: relative; padding: .9rem 2rem .9rem 0; color: var(--paper); font-size: 1.05rem; font-weight: 700; cursor: pointer; list-style: none; }
 .training-grid summary::-webkit-details-marker { display: none; }
 .training-grid summary::after { content: ""; position: absolute; right: .35rem; top: 1.15rem; width: .48rem; height: .48rem; border-right: 1.5px solid var(--paper); border-bottom: 1.5px solid var(--paper); transform: rotate(225deg); transition: transform 220ms ease, top 220ms ease; }
 .training-grid details[open] summary::after { top: .9rem; transform: rotate(45deg); }
