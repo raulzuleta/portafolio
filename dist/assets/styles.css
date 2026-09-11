@@ -175,7 +175,7 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .projects > .section-intro h2 { max-width: 22ch; margin-bottom: 0; }
 .project-featured { grid-column: 1; margin-top: 3rem; }
 .project { display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 0; border-top: 1px solid var(--ink); }
-.project-featured { grid-template-columns: minmax(0, 1fr) minmax(20rem, .82fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.project-featured { grid-template-columns: minmax(0, 1fr) minmax(18rem, .68fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; border-top: 0; }
 .project-number, .project-meta, .status { font-size: .73rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
 .project-meta { display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin-bottom: 1rem; color: var(--muted); }
 .project-copy p { max-width: 40rem; }
@@ -189,7 +189,7 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .future-work { border-top-color: var(--blue); }
 .oled-visual { min-width: 0; }
 .oled-bezel { padding: clamp(1rem, 2vw, 1.6rem); border: 1px solid var(--ink); border-radius: .35rem; background: #17211f; box-shadow: .45rem .55rem 0 rgba(29, 48, 44, .12); }
-.oled-screen { position: relative; aspect-ratio: 2 / 1; overflow: hidden; border: 1px solid rgba(194, 232, 218, .32); border-radius: .18rem; background: #07110f; color: #c8eee1; box-shadow: inset 0 0 2rem rgba(87, 174, 145, .12); font-family: "Courier New", monospace; }
+.oled-screen { position: relative; aspect-ratio: 1.62 / 1; overflow: hidden; border: 1px solid rgba(194, 232, 218, .32); border-radius: .18rem; background: #07110f; color: #c8eee1; box-shadow: inset 0 0 2rem rgba(87, 174, 145, .12); font-family: "Courier New", monospace; }
 .oled-screen::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0 3px, rgba(200, 238, 225, .025) 3px 4px); }
 .oled-page { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: .38rem; padding: 10%; opacity: 0; transform: translateY(.35rem); transition: opacity .38s ease, transform .38s ease; font-size: clamp(.65rem, 1.15vw, .9rem); letter-spacing: .02em; }
 .oled-page strong { margin-bottom: .25rem; padding-bottom: .35rem; border-bottom: 1px solid currentColor; font-size: inherit; }
