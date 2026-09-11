@@ -136,11 +136,41 @@ document.addEventListener('keydown', (event) => {
 window.addEventListener('popstate', () => activateTab(location.hash.slice(1), false));
 
 const oledPages = [...document.querySelectorAll('[data-oled-page]')];
+const oledHistory = [
+  ['05 SEP · 00:00', 22.1, 36.3, 950.1, 0, 21.2, 54.5],
+  ['05 SEP · 12:00', 24.3, 32.8, 946.4, 1327, 20.8, 49.1],
+  ['06 SEP · 18:00', 27.8, 27.3, 944.9, 342, 5.2, 46.9],
+  ['07 SEP · 12:00', 20.3, 36.0, 945.0, 599, 13.0, 78.9],
+  ['08 SEP · 18:00', 17.6, 45.4, 948.8, 117, 4.0, 39.9],
+  ['09 SEP · 12:00', 19.5, 41.4, 951.8, 886, 24.4, 64.7],
+  ['10 SEP · 18:00', 21.1, 32.8, 946.2, 554, 3.4, 36.6],
+  ['11 SEP · 18:00', 24.0, 33.0, 949.2, 892, 5.7, 19.2]
+];
+let oledHistoryIndex = 0;
+
+function renderOledHistory() {
+  const [time, temperature, humidity, pressure, light, pmInside, pmOutside] = oledHistory[oledHistoryIndex];
+  const difference = pmInside - pmOutside;
+  document.querySelector('[data-oled-th]').textContent = `T ${temperature.toFixed(1)} C  H ${humidity.toFixed(1)}%`;
+  document.querySelector('[data-oled-p]').textContent = `P ${pressure.toFixed(1)} hPa`;
+  document.querySelector('[data-oled-l]').textContent = `L ${light.toFixed(1)} lux`;
+  document.querySelector('[data-oled-pm-in]').textContent = `Dentro   ${pmInside.toFixed(1)} ug/m3`;
+  document.querySelector('[data-oled-pm-out]').textContent = `Fuera    ${pmOutside.toFixed(1)} ug/m3`;
+  document.querySelector('[data-oled-pm-diff]').textContent = `Diferencia ${difference >= 0 ? '+' : ''}${difference.toFixed(1)}`;
+  document.querySelector('[data-oled-action]').textContent = difference > 3 ? 'Ventilar: ayuda' : difference < -3 ? 'Mejor cerrar' : 'Efecto menor';
+  document.querySelector('[data-oled-time]').textContent = time;
+}
+
+if (oledPages.length) renderOledHistory();
 if (oledPages.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   let oledPageIndex = 0;
   window.setInterval(() => {
     oledPages[oledPageIndex].classList.remove('is-current');
     oledPageIndex = (oledPageIndex + 1) % oledPages.length;
+    if (oledPageIndex === 0) {
+      oledHistoryIndex = (oledHistoryIndex + 1) % oledHistory.length;
+      renderOledHistory();
+    }
     oledPages[oledPageIndex].classList.add('is-current');
   }, 2800);
 }
