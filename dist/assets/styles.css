@@ -169,6 +169,7 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.2rem); font-weight: 500; }
 .selected-research { margin-top: 2rem; }
 .selected-heading { display: grid; grid-template-columns: minmax(10rem, .45fr) 1fr; gap: 2rem; padding-bottom: 1.5rem; }
 .selected-heading .eyebrow { justify-self: start; padding: .65rem .8rem; background: var(--blue); color: white; }
+.research-work-list { display: flex; flex-direction: column-reverse; }
 .research-work { display: grid; grid-template-columns: minmax(8rem, .35fr) minmax(18rem, 1.3fr) minmax(12rem, .65fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; padding: 1.5rem 0; border-top: 1px solid var(--ink); }
 .selected-research article h3 { max-width: 48ch; margin: 0 0 .55rem; font-size: clamp(1.1rem, 1.55vw, 1.45rem); line-height: 1.2; }
 .selected-research article p { margin: 0; color: var(--muted); }
