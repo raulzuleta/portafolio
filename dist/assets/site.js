@@ -8,10 +8,30 @@ const diagramCard = document.querySelector('.diagram-card');
 const diagramClose = document.querySelector('.diagram-close');
 const knowledgeDiagram = document.querySelector('.knowledge-diagram');
 const trainingDetails = document.querySelectorAll('.training-grid details');
+const contactForm = document.querySelector('[data-contact-form]');
+const contactMessage = document.querySelector('#contact-message');
+const messageCount = document.querySelector('[data-message-count]');
+const formStatus = document.querySelector('[data-form-status]');
 let activeDiagramNode = null;
 let previewDiagramNode = null;
 
 trainingDetails.forEach((detail) => detail.removeAttribute('name'));
+
+contactMessage?.addEventListener('input', () => {
+  messageCount.textContent = contactMessage.value.length;
+});
+
+contactForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const language = document.documentElement.lang === 'en' ? 'en' : 'es';
+  if (!contactForm.checkValidity()) {
+    contactForm.reportValidity();
+    return;
+  }
+  formStatus.textContent = language === 'en'
+    ? 'Prototype only: your message has not been sent or stored.'
+    : 'Esto es solo un prototipo: tu mensaje no fue enviado ni almacenado.';
+});
 
 function renderDiagramCard() {
   if (!activeDiagramNode || !diagramCard) return;
