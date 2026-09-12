@@ -319,11 +319,41 @@
       </section>
 
       <section class="contact tab-panel" id="contacto" data-panel="contacto" role="tabpanel" hidden>
-        <div class="contact-index" aria-hidden="true">05</div>
-        <p class="eyebrow" data-es="Conversaciones y colaboraciones" data-en="Conversations and collaborations">Conversaciones y colaboraciones</p>
-        <h2 data-es="Busco cruces entre etnografía, estudios mediales y experimentación ambiental." data-en="I am seeking intersections between ethnography, media studies, and environmental experimentation.">Busco cruces entre etnografía, estudios mediales y experimentación ambiental.</h2>
-        <p data-es="Este portafolio está en construcción. En la siguiente versión incorporaré muestras documentales, publicaciones seleccionadas y datos de contacto definitivos." data-en="This portfolio is under development. The next version will include documentary samples, selected publications, and final contact details.">Este portafolio está en construcción. En la siguiente versión incorporaré muestras documentales, publicaciones seleccionadas y datos de contacto definitivos.</p>
-        <a class="button light" href="mailto:contacto@ejemplo.cl" data-es="Escribir un correo" data-en="Send an email">Escribir un correo</a>
+        <div class="contact-intro">
+          <p class="eyebrow" data-es="Conversaciones y colaboraciones" data-en="Conversations and collaborations">Conversaciones y colaboraciones</p>
+          <h2 data-es="Pensar con otros comienza por encontrarnos." data-en="Thinking with others begins by finding one another.">Pensar con otros comienza por encontrarnos.</h2>
+          <p class="contact-promise" data-es="Me cuesta responder inmediatamente, pero procuro contestar los mensajes que requieren respuesta en un máximo de cinco días hábiles." data-en="I may not reply immediately, but I aim to answer messages that require a response within five business days.">Me cuesta responder inmediatamente, pero procuro contestar los mensajes que requieren respuesta en un máximo de cinco días hábiles.</p>
+
+          <div class="contact-platforms">
+            <div><h3 data-es="Identidad académica" data-en="Academic identity">Identidad académica</h3><p>ORCID · Academia.edu · ResearchGate</p></div>
+            <div><h3 data-es="Trabajo y código" data-en="Work and code">Trabajo y código</h3><p>LinkedIn · GitHub</p></div>
+            <div><h3 data-es="Imágenes y documentos" data-en="Images and documents">Imágenes y documentos</h3><p>Flickr · SlideShare · Scribd</p></div>
+          </div>
+          <a class="contact-directory" href="https://linktr.ee/imbateriable" target="_blank" rel="noreferrer" data-es="Ver directorio actual ↗" data-en="View current directory ↗">Ver directorio actual ↗</a>
+        </div>
+
+        <form class="contact-form" data-contact-form novalidate>
+          <div class="form-notice" data-es="Prototipo visual: los mensajes todavía no se envían ni almacenan." data-en="Visual prototype: messages are not yet sent or stored.">Prototipo visual: los mensajes todavía no se envían ni almacenan.</div>
+          <div class="form-field">
+            <label for="contact-name" data-es="Nombre (opcional)" data-en="Name (optional)">Nombre (opcional)</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" />
+          </div>
+          <div class="form-field">
+            <label for="contact-email" data-es="Correo" data-en="Email">Correo</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-field">
+            <label for="contact-subject" data-es="Motivo" data-en="Subject">Motivo</label>
+            <input id="contact-subject" name="subject" type="text" maxlength="150" required />
+          </div>
+          <div class="form-field form-message">
+            <div class="form-label-row"><label for="contact-message" data-es="Mensaje" data-en="Message">Mensaje</label><output for="contact-message"><span data-message-count>0</span>/2500</output></div>
+            <textarea id="contact-message" name="message" maxlength="2500" rows="9" required></textarea>
+          </div>
+          <label class="consent-field"><input name="consent" type="checkbox" required /><span data-es="Acepto que estos datos sean almacenados únicamente para gestionar y responder este mensaje." data-en="I agree that this information may be stored solely to manage and respond to this message.">Acepto que estos datos sean almacenados únicamente para gestionar y responder este mensaje.</span></label>
+          <button class="contact-submit" type="submit" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 
