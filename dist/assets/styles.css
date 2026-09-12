@@ -212,7 +212,8 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .pedagogy { grid-template-columns: minmax(0, 1fr); }
 .pedagogy > .section-intro { grid-column: 1; padding: 1rem 0 2rem; border-bottom: 1px solid var(--line); }
 .pedagogy > .section-intro h2 { max-width: 17ch; margin-bottom: 0; }
-.pedagogy-lead { grid-column: 1; max-width: 52rem; padding-top: 2.4rem; font-size: 1.2rem; }
+.pedagogy-lead { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 6vw, 7rem); width: 100%; margin-top: clamp(2rem, 4vw, 3.5rem); padding-top: 0; font-size: 1.2rem; }
+.pedagogy-lead p { max-width: 34rem; margin-bottom: 0; }
 .publication-list { grid-column: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3vw; margin-top: 2.5rem; }
 .publication-list article { display: flex; flex-direction: column; min-width: 0; border-top: 4px solid var(--ink); padding: 1rem 0 0; }
 .publication-list .status { display: block; min-height: 2.6rem; color: var(--muted); }
@@ -220,8 +221,8 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .teaching-contribution { margin-top: auto; padding-top: 1.4rem; }
 .teaching-contribution strong { display: block; margin-bottom: .4rem; color: var(--blue); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .teaching-contribution p { margin-bottom: 1.3rem; font-size: .92rem; }
-.material-cta { display: block; width: 100%; margin-top: .4rem; padding: .8rem .9rem; border: 1px solid var(--ink); color: var(--ink); font-size: .78rem; font-weight: 700; line-height: 1.25; text-decoration: none; }
-.material-cta.is-pending { border-color: var(--line); color: var(--muted); }
+.material-cta { display: inline-flex; align-self: flex-start; align-items: center; width: fit-content; margin-top: .4rem; padding: .68rem 1rem; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: .78rem; font-weight: 700; line-height: 1.25; text-decoration: none; }
+.material-cta.is-pending { background: var(--muted); color: var(--paper); cursor: default; opacity: .82; }
 .trajectory-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 5vw, 5.5rem); margin-top: 3rem; }
 .timeline { display: contents; list-style: none; padding: 0; margin: 0; counter-reset: layers; }
 .trajectory-card { position: relative; display: grid; grid-template-columns: minmax(8rem, .38fr) minmax(0, 1fr); align-content: start; gap: 1.5rem; min-width: 0; padding: 0; counter-increment: layers; }
@@ -334,5 +335,6 @@ footer p { margin: 0; }
   .detail-back { grid-column: 1 / -1; grid-row: 2; justify-self: start; padding-bottom: .75rem; }
   .project-detail { width: min(calc(100% - 2rem), var(--max)); }
   .project-detail-grid { grid-template-columns: 1fr; }
+  .pedagogy-lead { grid-template-columns: 1fr; gap: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .oled-page { transition: none; } .oled-progress::after { animation: none; transform: scaleX(1); } }
