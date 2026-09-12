@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <rect width="24" height="48" rx="4" fill="#f5f5e9"/>
+  <path d="M20 0h24a4 4 0 0 1 4 4v40a4 4 0 0 1-4 4H20z" fill="#1d302c"/>
+  <path d="M24 7v34" stroke="#4f887e" stroke-width="2"/>
+  <text x="5" y="32.5" fill="#1d302c" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">R</text>
+  <text x="28" y="32.5" fill="#f5f5e9" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">Z</text>
+</svg>
