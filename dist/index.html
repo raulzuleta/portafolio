@@ -6,8 +6,8 @@
     <meta name="description" content="Portafolio académico de Raúl Zuleta: antropología, pedagogía y medios ambientales." />
     <title>Raúl Zuleta — Antropología, pedagogía y medios ambientales</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <script src="assets/site.js" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=accessibility-2" />
+    <script src="assets/site.js?v=accessibility-2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
@@ -16,13 +16,13 @@
       <a class="wordmark" href="#inicio" data-tab="inicio" aria-label="Raúl Zuleta, inicio">
         <strong>Raúl Zuleta</strong>
       </a>
-      <nav aria-label="Navegación principal" role="tablist">
-        <a href="#inicio" data-tab="inicio" role="tab" aria-selected="true" data-es="Inicio" data-en="Home">Inicio</a>
-        <a href="#trayectoria" data-tab="trayectoria" role="tab" aria-selected="false" data-es="Trayectoria" data-en="Background">Trayectoria</a>
-        <a href="#investigacion" data-tab="investigacion" role="tab" aria-selected="false" data-es="Investigación" data-en="Research">Investigación</a>
-        <a href="#proyectos" data-tab="proyectos" role="tab" aria-selected="false" data-es="Proyectos" data-en="Projects">Proyectos</a>
-        <a href="#pedagogia" data-tab="pedagogia" role="tab" aria-selected="false" data-es="Pedagogía" data-en="Teaching">Pedagogía</a>
-        <a href="#contacto" data-tab="contacto" role="tab" aria-selected="false" data-es="Contacto" data-en="Contact">Contacto</a>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio" data-tab="inicio" aria-current="page" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="#trayectoria" data-tab="trayectoria" data-es="Trayectoria" data-en="Background">Trayectoria</a>
+        <a href="#investigacion" data-tab="investigacion" data-es="Investigación" data-en="Research">Investigación</a>
+        <a href="#proyectos" data-tab="proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <a href="#pedagogia" data-tab="pedagogia" data-es="Pedagogía" data-en="Teaching">Pedagogía</a>
+        <a href="#contacto" data-tab="contacto" data-es="Contacto" data-en="Contact">Contacto</a>
       </nav>
       <button class="language-switch" type="button" aria-label="Change language to English" aria-pressed="false">
         <span class="active">ES</span><span>EN</span>
@@ -30,7 +30,7 @@
     </header>
 
     <main id="contenido">
-      <section class="hero tab-panel active" id="inicio" data-panel="inicio" role="tabpanel">
+      <section class="hero tab-panel active" id="inicio" data-panel="inicio">
         <div class="hero-copy">
           <p class="eyebrow" data-es="Antropólogo · investigador · educador" data-en="Anthropologist · researcher · educator">Antropólogo · investigador · educador</p>
           <h1 data-es="Estudio formas finitas de conocer un mundo infinito." data-en="I study finite ways of knowing an infinite world.">Estudio formas finitas de conocer un mundo infinito.</h1>
@@ -131,18 +131,18 @@
               <span data-es="Prototipar" data-en="Prototype">Prototipar</span>
             </button>
           </div>
-          <div class="diagram-card" id="diagram-card" aria-live="polite" hidden>
+          <div class="diagram-card" id="diagram-card" role="dialog" aria-modal="false" aria-labelledby="diagram-card-title" aria-describedby="diagram-card-copy" hidden>
             <button class="diagram-close" type="button" aria-label="Cerrar explicación" data-label-es="Cerrar explicación" data-label-en="Close explanation">×</button>
             <p class="eyebrow diagram-card-label" data-es="Una operación" data-en="An operation">Una operación</p>
-            <h2 class="diagram-card-title"></h2>
-            <p class="diagram-card-copy"></p>
+            <h2 class="diagram-card-title" id="diagram-card-title" tabindex="-1"></h2>
+            <p class="diagram-card-copy" id="diagram-card-copy"></p>
             <p class="diagram-card-example"></p>
             <a class="diagram-card-link" href="#"></a>
           </div>
         </div>
       </section>
 
-      <section class="research tab-panel" id="investigacion" data-panel="investigacion" role="tabpanel" hidden>
+      <section class="research tab-panel" id="investigacion" data-panel="investigacion" hidden>
         <div class="research-intro">
           <h2 data-es="Investigo cómo ciertos problemas llegan a adquirir forma, consistencia y capacidad de intervención." data-en="I study how certain problems come to acquire form, consistency, and the capacity to intervene.">Investigo cómo ciertos problemas llegan a adquirir forma, consistencia y capacidad de intervención.</h2>
           <p data-es="Mi recorrido parte de la formación y las políticas educativas, atraviesa dispositivos, gobierno y tecnología, y llega actualmente a las prácticas científicas mediante las cuales se conoce e interviene la vida." data-en="My trajectory begins with education and educational policy, moves through devices, government, and technology, and now turns to the scientific practices through which life is known and intervened upon.">Mi recorrido parte de la formación y las políticas educativas, atraviesa dispositivos, gobierno y tecnología, y llega actualmente a las prácticas científicas mediante las cuales se conoce e interviene la vida.</p>
@@ -232,7 +232,7 @@
         </div>
       </section>
 
-      <section class="projects tab-panel" id="proyectos" data-panel="proyectos" role="tabpanel" hidden>
+      <section class="projects tab-panel" id="proyectos" data-panel="proyectos" hidden>
         <div class="section-intro">
           <h2 data-es="Investigar también es construir relaciones, instrumentos y formas de percepción." data-en="Research also means building relations, instruments, and forms of perception.">Investigar también es construir relaciones, instrumentos y formas de percepción.</h2>
         </div>
@@ -288,7 +288,7 @@
         </div>
       </section>
 
-      <section class="pedagogy tab-panel" id="pedagogia" data-panel="pedagogia" role="tabpanel" hidden>
+      <section class="pedagogy tab-panel" id="pedagogia" data-panel="pedagogia" hidden>
         <div class="section-intro">
           <p class="section-kicker" data-es="Educar la atención" data-en="Educating attention">Educar la atención</p>
           <h2 data-es="Diseñar condiciones para pensar con otros." data-en="Designing conditions for thinking with others.">Diseñar condiciones para pensar con otros.</h2>
@@ -321,7 +321,7 @@
         </div>
       </section>
 
-      <section class="background tab-panel" id="trayectoria" data-panel="trayectoria" role="tabpanel" hidden>
+      <section class="background tab-panel" id="trayectoria" data-panel="trayectoria" hidden>
         <div class="section-intro">
           <h2 data-es="Una práctica interdisciplinaria, construida por capas." data-en="An interdisciplinary practice, built in layers.">Una práctica interdisciplinaria, construida por capas.</h2>
         </div>
@@ -369,7 +369,7 @@
         </div>
       </section>
 
-      <section class="contact tab-panel" id="contacto" data-panel="contacto" role="tabpanel" hidden>
+      <section class="contact tab-panel" id="contacto" data-panel="contacto" hidden>
         <div class="contact-intro">
           <p class="eyebrow" data-es="Conversaciones y colaboraciones" data-en="Conversations and collaborations">Conversaciones y colaboraciones</p>
           <h2 data-es="Pensar con otros comienza por encontrarnos." data-en="Thinking with others begins by finding one another.">Pensar con otros comienza por encontrarnos.</h2>
@@ -383,11 +383,11 @@
           <a class="contact-directory" href="https://linktr.ee/imbateriable" target="_blank" rel="noreferrer" data-es="Ver directorio actual ↗" data-en="View current directory ↗">Ver directorio actual ↗</a>
         </div>
 
-        <form class="contact-form" data-contact-form novalidate>
+        <form class="contact-form" data-contact-form aria-describedby="contact-form-notice" novalidate>
           <div class="contact-window-bar">
             <strong data-es="Nuevo mensaje" data-en="New message">Nuevo mensaje</strong>
           </div>
-          <div class="form-notice" data-es="Prototipo visual: los mensajes todavía no se envían ni almacenan." data-en="Visual prototype: messages are not yet sent or stored.">Prototipo visual: los mensajes todavía no se envían ni almacenan.</div>
+          <div class="form-notice" id="contact-form-notice" data-es="Prototipo visual: los mensajes todavía no se envían ni almacenan." data-en="Visual prototype: messages are not yet sent or stored.">Prototipo visual: los mensajes todavía no se envían ni almacenan.</div>
           <div class="form-field">
             <label for="contact-name" data-es="Nombre (opcional)" data-en="Name (optional)">Nombre (opcional)</label>
             <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" />
