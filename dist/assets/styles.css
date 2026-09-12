@@ -186,7 +186,7 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.2rem); font-weight: 500; }
 .research-work { display: grid; grid-template-columns: minmax(8rem, .35fr) minmax(18rem, 1.3fr) minmax(12rem, .65fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; padding: 1.5rem 0; border-top: 1px solid var(--ink); }
 .selected-research article h3 { max-width: 48ch; margin: 0 0 .55rem; font-size: clamp(1.1rem, 1.55vw, 1.45rem); line-height: 1.2; }
 .selected-research article p { margin: 0; color: var(--muted); }
-.research-work .work-thread { max-width: 24rem; color: var(--ink); }
+.research-work .work-thread { max-width: 24rem; color: var(--muted); font-size: .9rem; line-height: 1.45; }
 .selected-research article a, .trajectory-link { font-weight: 700; text-underline-offset: .3rem; }
 .work-type { color: var(--blue); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; } dd { margin: 0; }
