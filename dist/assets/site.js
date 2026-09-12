@@ -12,6 +12,7 @@ const contactForm = document.querySelector('[data-contact-form]');
 const contactMessage = document.querySelector('#contact-message');
 const messageCount = document.querySelector('[data-message-count]');
 const formStatus = document.querySelector('[data-form-status]');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let activeDiagramNode = null;
 let previewDiagramNode = null;
 
@@ -25,12 +26,27 @@ contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const language = document.documentElement.lang === 'en' ? 'en' : 'es';
   if (!contactForm.checkValidity()) {
+    contactForm.querySelectorAll('input, textarea').forEach((field) => {
+      if (field.validity.valid) field.removeAttribute('aria-invalid');
+      else field.setAttribute('aria-invalid', 'true');
+    });
+    formStatus.textContent = language === 'en'
+      ? 'Please review the highlighted fields.'
+      : 'Revisa los campos señalados antes de enviar.';
     contactForm.reportValidity();
     return;
   }
   formStatus.textContent = language === 'en'
     ? 'Prototype only: your message has not been sent or stored.'
     : 'Esto es solo un prototipo: tu mensaje no fue enviado ni almacenado.';
+});
+
+contactForm?.querySelectorAll('input, textarea').forEach((field) => {
+  field.addEventListener('input', () => {
+    if (field.validity.valid) field.removeAttribute('aria-invalid');
+    else field.setAttribute('aria-invalid', 'true');
+    if (contactForm.checkValidity()) formStatus.textContent = '';
+  });
 });
 
 function renderDiagramCard() {
@@ -90,27 +106,37 @@ switcher.addEventListener('click', () => {
   setLanguage(document.documentElement.lang === 'es' ? 'en' : 'es');
 });
 
-function activateTab(tabName, updateAddress = true) {
+function activateTab(tabName, updateAddress = true, moveFocus = false) {
   const validTab = [...navTabs].some((tab) => tab.dataset.tab === tabName) ? tabName : 'inicio';
+  let activePanel = null;
 
   panels.forEach((panel) => {
     const active = panel.dataset.panel === validTab;
     panel.hidden = !active;
     panel.classList.toggle('active', active);
+    if (active) activePanel = panel;
   });
 
   navTabs.forEach((tab) => {
-    tab.setAttribute('aria-selected', String(tab.dataset.tab === validTab));
+    if (tab.dataset.tab === validTab) tab.setAttribute('aria-current', 'page');
+    else tab.removeAttribute('aria-current');
   });
 
   if (updateAddress) history.pushState(null, '', `#${validTab}`);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+  if (moveFocus && activePanel) {
+    const heading = activePanel.querySelector('h1, h2');
+    if (heading) {
+      heading.tabIndex = -1;
+      requestAnimationFrame(() => heading.focus({ preventScroll: true }));
+    }
+  }
 }
 
 tabLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
-    activateTab(link.dataset.tab);
+    activateTab(link.dataset.tab, true, true);
   });
 });
 
@@ -135,6 +161,7 @@ diagramNodes.forEach((node) => {
     });
     renderDiagramCard();
     diagramCard.hidden = false;
+    requestAnimationFrame(() => diagramClose?.focus());
   });
 });
 
@@ -182,7 +209,7 @@ function renderOledHistory() {
 }
 
 if (oledPages.length) renderOledHistory();
-if (oledPages.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+if (oledPages.length > 1 && !reduceMotion.matches) {
   let oledPageIndex = 0;
   window.setInterval(() => {
     oledPages[oledPageIndex].classList.remove('is-current');
