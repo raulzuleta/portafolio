@@ -268,7 +268,8 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .contact-platforms p { margin: 0; color: var(--muted); font-size: .88rem; }
 .contact-directory { display: inline-block; margin-top: 1.3rem; font-size: .82rem; font-weight: 700; text-underline-offset: .3rem; }
 .contact-form { align-self: start; padding: 0 clamp(1.25rem, 3vw, 2.25rem) clamp(1.25rem, 3vw, 2.25rem); border: 1px solid var(--ink); background: rgba(255,255,255,.2); box-shadow: 6px 6px 0 rgba(29,48,44,.18); }
-.contact-window-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 0 calc(clamp(1.25rem, 3vw, 2.25rem) * -1); padding: .42rem .5rem .42rem .75rem; border-bottom: 1px solid var(--ink); background: var(--blue); color: var(--paper); font-size: .78rem; }
+.contact-window-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 2.8rem; margin: 0 calc(clamp(1.25rem, 3vw, 2.25rem) * -1); padding: .58rem .85rem; border-bottom: 1px solid var(--ink); background: var(--blue); color: var(--paper); font-size: clamp(1rem, 1.35vw, 1.12rem); line-height: 1.15; }
+.contact-window-bar strong { font-weight: 600; letter-spacing: -.015em; }
 .form-notice { margin: 0 calc(clamp(1.25rem, 3vw, 2.25rem) * -1) 1.6rem; padding: .7rem clamp(1.25rem, 3vw, 2.25rem); border-bottom: 1px solid var(--line); background: var(--acid); font-size: .78rem; font-weight: 700; }
 .form-field { margin-bottom: 1.15rem; }
 .form-field label, .form-label-row label { display: block; margin-bottom: .35rem; font-size: .82rem; font-weight: 700; }
