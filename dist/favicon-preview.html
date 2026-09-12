@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pruebas de favicon — Raúl Zuleta</title>
+    <style>
+      :root { --ink:#1d302c; --paper:#f5f5e9; --blue:#4f887e; --line:rgba(49,82,75,.24); }
+      * { box-sizing:border-box; }
+      body { margin:0; padding:clamp(2rem,7vw,6rem); color:var(--ink); background:var(--paper); font-family:Arial,Helvetica,sans-serif; }
+      main { width:min(100%,960px); margin:auto; }
+      h1 { max-width:12ch; margin:0 0 1rem; font-size:clamp(2.5rem,7vw,5.8rem); line-height:.95; letter-spacing:-.055em; }
+      .lead { max-width:42rem; margin-bottom:4rem; font-size:1.15rem; }
+      .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(2rem,6vw,5rem); }
+      article { padding-top:1.25rem; border-top:3px solid var(--ink); }
+      h2 { margin:.6rem 0 2rem; font-size:1.45rem; }
+      .large { display:block; width:192px; height:192px; margin-bottom:2.5rem; image-rendering:auto; }
+      .sizes { display:flex; align-items:end; gap:1.5rem; min-height:80px; }
+      figure { margin:0; text-align:center; }
+      figure img { display:block; margin:0 auto .55rem; }
+      figcaption { color:#454545; font-size:.75rem; }
+      @media(max-width:650px){ .options{grid-template-columns:1fr;} }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Dos gestos mínimos.</h1>
+      <p class="lead">Una comparación del símbolo conceptual y la firma personal en los tamaños reales de un favicon.</p>
+      <div class="options">
+        <article>
+          <p>01</p>
+          <h2>Círculo abierto</h2>
+          <img class="large" src="assets/favicon-open-circle.svg" alt="Círculo abierto con un punto en el umbral" />
+          <div class="sizes">
+            <figure><img src="assets/favicon-open-circle.svg" width="16" height="16" alt="" /><figcaption>16 px</figcaption></figure>
+            <figure><img src="assets/favicon-open-circle.svg" width="32" height="32" alt="" /><figcaption>32 px</figcaption></figure>
+            <figure><img src="assets/favicon-open-circle.svg" width="64" height="64" alt="" /><figcaption>64 px</figcaption></figure>
+          </div>
+        </article>
+        <article id="rz">
+          <p>02</p>
+          <h2>R | Z</h2>
+          <img class="large" src="assets/favicon-rz.svg" alt="Monograma R Z dividido en dos tonos" />
+          <div class="sizes">
+            <figure><img src="assets/favicon-rz.svg" width="16" height="16" alt="" /><figcaption>16 px</figcaption></figure>
+            <figure><img src="assets/favicon-rz.svg" width="32" height="32" alt="" /><figcaption>32 px</figcaption></figure>
+            <figure><img src="assets/favicon-rz.svg" width="64" height="64" alt="" /><figcaption>64 px</figcaption></figure>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
