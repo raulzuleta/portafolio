@@ -1,6 +1,6 @@
 const projects = {
   'viejito-perro': {
-    es: ['Viejito-Perro (Acto de Amor)', 'En desarrollo · investigación material', 'Una infraestructura doméstica para observar ambientes mediante nodos, datos y formas de representación.', '¿Qué implica medir un ambiente y cómo participan los instrumentos en aquello que se vuelve perceptible?', 'Diseño y construcción iterativa de nodos ambientales, programación de interfaces y exploración de formas visuales, sonoras e históricas de relacionarse con los datos.', 'Conceptualización, diseño del sistema, construcción y programación de los nodos, documentación y articulación con preguntas antropológicas.', 'Proyecto personal en desarrollo; las colaboraciones específicas se acreditarán junto a cada componente.', ['Nodos ambientales funcionales', 'Interfaz OLED del nodo 01', 'Configuraciones y documentación técnica', 'Registro ambiental en construcción']],
+    es: ['Viejito-Perro (Acto de Amor)', 'Infraestructura doméstica experimental en funcionamiento · desde agosto de 2026', 'Un computador reutilizado se ha convertido en una pequeña infraestructura de sensores, registros e interfaces para explorar distintas maneras de percibir y representar variaciones del ambiente cotidiano.', '¿Qué implica medir un ambiente y cómo participan los instrumentos en aquello que se vuelve perceptible?', 'Diseño y construcción iterativa de nodos ambientales, programación de interfaces y exploración de formas visuales, sonoras e históricas de relacionarse con los datos.', 'Conceptualización, diseño del sistema, construcción y programación de los nodos, documentación y articulación con preguntas antropológicas.', 'Proyecto personal en desarrollo; las colaboraciones específicas se acreditarán junto a cada componente.', ['Nodos ambientales funcionales', 'Interfaz OLED del nodo 01', 'Configuraciones y documentación técnica', 'Registro ambiental en construcción']],
     en: ['Viejito-Perro (Act of Love)', 'In progress · material research', 'A domestic infrastructure for observing environments through nodes, data, and forms of representation.', 'What does it mean to measure an environment, and how do instruments participate in what becomes perceptible?', 'Iterative design and construction of environmental nodes, interface programming, and exploration of visual, sonic, and historical ways of relating to data.', 'Conceptualization, system design, node construction and programming, documentation, and connection to anthropological questions.', 'Personal project in development; specific collaborations will be credited with each component.', ['Functional environmental nodes', 'Node 01 OLED interface', 'Technical configurations and documentation', 'Environmental record in progress']]
   },
   cenvi: {
@@ -36,6 +36,11 @@ function render(language) {
   document.querySelector('#project-process').textContent = process;
   document.querySelector('#project-role').textContent = role;
   document.querySelector('#project-credits').textContent = credits;
+  const richStory = document.querySelector('#viejito-story');
+  const showRichStory = id === 'viejito-perro' && language === 'es';
+  richStory.hidden = !showRichStory;
+  document.querySelector('#project-standard-grid').hidden = showRichStory;
+  document.querySelector('#project-standard-evidence').hidden = showRichStory;
   const list = document.querySelector('#project-evidence');
   list.replaceChildren(...evidence.map((item) => { const li = document.createElement('li'); li.textContent = item; return li; }));
   document.title = `${title} — Raúl Zuleta`;
