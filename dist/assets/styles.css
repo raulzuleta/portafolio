@@ -388,6 +388,22 @@ footer p { margin: 0; }
 .cenvi-section-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cenvi-section-compact h2 { margin-bottom: 1.25rem; font-size: clamp(1.8rem, 3vw, 3rem); }
 .cenvi-section-compact p { max-width: 38rem; }
+.punitaqui-story { max-width: 62rem; margin: 0 auto; padding: 0 0 6rem; }
+.punitaqui-story > section { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
+.punitaqui-story h2 { max-width: 19ch; margin-bottom: 1.5rem; }
+.punitaqui-story p, .punitaqui-story ul { max-width: 47rem; }
+.punitaqui-story li + li { margin-top: .35rem; }
+.punitaqui-opening { margin: 0; padding: clamp(2rem, 5vw, 4rem) 0 0; font-size: clamp(1.15rem, 1.7vw, 1.4rem); }
+.document-figure { margin: 2rem 0 0; }
+.document-figure img { display: block; width: 100%; border: 1px solid var(--line); background: #fff; }
+.document-figure figcaption, .paired-caption { margin-top: .75rem; color: var(--muted); font-size: .82rem; line-height: 1.45; }
+.document-figure-wide { width: min(100%, 56rem); margin-top: 2.5rem; }
+.document-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2rem); width: min(100%, 62rem); margin-top: 2.5rem; }
+.document-pair .document-figure { margin: 0; }
+.document-pair-forms { align-items: start; }
+.document-pair-forms + .paired-caption { max-width: 62rem; }
+.punitaqui-limits { margin-top: clamp(3rem, 7vw, 5.5rem); padding: clamp(2rem, 5vw, 3.5rem) !important; background: color-mix(in srgb, var(--acid) 42%, var(--paper)); }
+.punitaqui-limits p:last-child { margin-bottom: 0; }
 
 @media (max-width: 900px) {
   .site-header { grid-template-columns: 1fr auto; padding: 1rem 0; }
@@ -423,6 +439,8 @@ footer p { margin: 0; }
 @media (max-width: 620px) {
   .site-header, main > section, footer { width: min(calc(100% - 2rem), var(--max)); }
   .wordmark strong { display: none; }
+  .document-pair { grid-template-columns: 1fr; }
+  .punitaqui-limits { margin-inline: -1rem; }
   h1 { font-size: clamp(2.7rem, 14vw, 4.2rem); }
   .hero { padding: 4rem 0; gap: 3rem; }
   .diagram-wrap { width: 100%; }

@@ -8,7 +8,7 @@ const projects = {
     en: ['CENVI', 'Completed · teaching device', 'A device for developing diagnostic skills with fifth-year Educational Psychology students.', 'How can a school climate instrument become a learning experience about diagnosis and intervention?', 'CENVI selection, handbook editing, interpretive guidance, piloting, evaluation, and collaborative development of a scoring application.', 'Initial formulation, instrument selection, handbook editing, guidance, pilot support, evaluation supervision, and preparation of the presentation and abstract.', 'Jorge, teaching assistant and CIPSE intern; Matías, Computer Engineering student; Tania, course instructor; Raúl Zuleta, CIPSE coordinator.', ['Teaching handbook', 'Internal presentation', 'Conference abstract submission', 'Functional automated scoring application']]
   },
   punitaqui: {
-    es: ['Orientaciones para equipos comunales', 'Práctica profesional · gestión municipal', 'Documentos destinados a apoyar el trabajo de equipos comunales durante mi experiencia profesional en Punitaqui.', '¿Cómo traducir problemas y criterios técnicos en orientaciones claras, situadas y utilizables?', 'Levantamiento de necesidades, organización de información y redacción de documentos operativos para actores comunales.', 'Análisis, estructuración y redacción de las orientaciones. La descripción se ampliará después de revisar el corpus documental conservado.', 'Trabajo desarrollado en contexto municipal; los equipos y responsabilidades específicas se documentarán en la siguiente revisión.', ['Documentos de orientación conservados', 'Contexto y destinatarios por documentar', 'Selección de fragmentos pendiente']],
+    es: ['Organizar la convivencia escolar a escala comunal', 'Política comunal y sistema de orientaciones · diseño y distribución institucional · 2019', 'En 2019, mientras trabajaba como coordinador comunal de Convivencia Escolar en el Departamento de Educación Municipal de Punitaqui, elaboré una política y un conjunto de documentos destinados a organizar el trabajo de los establecimientos educacionales de la comuna.', '¿Cómo traducir problemas y criterios técnicos en orientaciones claras, situadas y utilizables?', 'Levantamiento de necesidades, organización de información y redacción de documentos operativos para actores comunales.', 'Análisis, estructuración y redacción de las orientaciones.', 'Trabajo desarrollado en contexto municipal.', ['Política comunal', 'Cinco documentos de orientación', 'Matrices, diagramas e instrumentos de trabajo']],
     en: ['Guidance for municipal teams', 'Professional practice · municipal management', 'Documents intended to support municipal teams during my professional work in Punitaqui.', 'How can technical problems and criteria be translated into clear, situated, usable guidance?', 'Needs assessment, information organization, and drafting of operational documents for municipal actors.', 'Analysis, structuring, and drafting of the guidance. The description will be expanded after reviewing the preserved document corpus.', 'Work developed in a municipal context; specific teams and responsibilities will be documented in the next review.', ['Preserved guidance documents', 'Context and audiences to be documented', 'Excerpt selection pending']]
   },
   cencosud: {
@@ -25,9 +25,11 @@ const switcher = document.querySelector('.language-switch');
 const id = new URLSearchParams(location.search).get('id') || 'viejito-perro';
 const project = projects[id] || projects['viejito-perro'];
 const isCenvi = id === 'cenvi';
+const isPunitaqui = id === 'punitaqui';
+const isSpanishOnly = isCenvi || isPunitaqui;
 
 function render(language) {
-  if (isCenvi) language = 'es';
+  if (isSpanishOnly) language = 'es';
   const [title, status, intro, problem, process, role, credits, evidence] = project[language];
   document.documentElement.lang = language;
   document.querySelectorAll('[data-es][data-en]').forEach((element) => { element.textContent = element.dataset[language]; });
@@ -59,7 +61,12 @@ if (isCenvi) {
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#cenvi-content').hidden = false;
   switcher.hidden = true;
+} else if (isPunitaqui) {
+  document.querySelector('#project-standard-content').hidden = true;
+  document.querySelector('#project-standard-evidence').hidden = true;
+  document.querySelector('#punitaqui-content').hidden = false;
+  switcher.hidden = true;
 } else {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }
-render(isCenvi ? 'es' : (localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es'));
+render(isSpanishOnly ? 'es' : (localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es'));
