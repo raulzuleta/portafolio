@@ -4,7 +4,7 @@ const projects = {
     en: ['Viejito-Perro (Act of Love)', 'In progress · material research', 'A domestic infrastructure for observing environments through nodes, data, and forms of representation.', 'What does it mean to measure an environment, and how do instruments participate in what becomes perceptible?', 'Iterative design and construction of environmental nodes, interface programming, and exploration of visual, sonic, and historical ways of relating to data.', 'Conceptualization, system design, node construction and programming, documentation, and connection to anthropological questions.', 'Personal project in development; specific collaborations will be credited with each component.', ['Functional environmental nodes', 'Node 01 OLED interface', 'Technical configurations and documentation', 'Environmental record in progress']]
   },
   cenvi: {
-    es: ['CENVI', 'Proyecto realizado · dispositivo pedagógico', 'Dispositivo para trabajar competencias diagnósticas con estudiantes de quinto año de Psicología Educacional.', '¿Cómo convertir un instrumento de convivencia escolar en una experiencia de aprendizaje sobre diagnóstico e intervención?', 'Selección del CENVI, edición de un manual, asesoría interpretativa, pilotaje, evaluación y desarrollo colaborativo de un programa de corrección.', 'Formulación inicial, selección del instrumento, edición del manual, asesoría, acompañamiento del pilotaje, supervisión de la evaluación y preparación de la presentación y el resumen.', 'Jorge, ayudante y pasante en CIPSE; Matías, estudiante de Ingeniería Informática; Tania, profesora de la asignatura; Raúl Zuleta, coordinador de CIPSE.', ['Manual pedagógico', 'Presentación interna', 'Resumen enviado a congreso', 'Ejecutable funcional de corrección automática']],
+    es: ['CENVI: aprender a pensar con un instrumento', 'Dispositivo pedagógico diseñado y pilotado · análisis de resultados pendiente · 2026', 'CENVI fue un dispositivo pedagógico desarrollado por el Centro de Investigación e Intervención en Psicología Educacional de la Universidad Central de Chile (CIPSE-UCEN), sede Región de Coquimbo. Articuló un manual, una herramienta informática, una capacitación y un proceso de acompañamiento para apoyar a estudiantes de Psicología en la aplicación e interpretación del Cuestionario de Convivencia Escolar para la No Violencia (CENVI). El proyecto no buscaba solamente facilitar la corrección de un cuestionario. Su propósito era acompañar el trabajo que comienza después de obtener los datos: revisar su calidad, relacionar factores y dimensiones, construir un diagnóstico situado y formular orientaciones pertinentes para cada establecimiento educacional.', '', '', '', '', []],
     en: ['CENVI', 'Completed · teaching device', 'A device for developing diagnostic skills with fifth-year Educational Psychology students.', 'How can a school climate instrument become a learning experience about diagnosis and intervention?', 'CENVI selection, handbook editing, interpretive guidance, piloting, evaluation, and collaborative development of a scoring application.', 'Initial formulation, instrument selection, handbook editing, guidance, pilot support, evaluation supervision, and preparation of the presentation and abstract.', 'Jorge, teaching assistant and CIPSE intern; Matías, Computer Engineering student; Tania, course instructor; Raúl Zuleta, CIPSE coordinator.', ['Teaching handbook', 'Internal presentation', 'Conference abstract submission', 'Functional automated scoring application']]
   },
   punitaqui: {
@@ -24,8 +24,10 @@ const projects = {
 const switcher = document.querySelector('.language-switch');
 const id = new URLSearchParams(location.search).get('id') || 'viejito-perro';
 const project = projects[id] || projects['viejito-perro'];
+const isCenvi = id === 'cenvi';
 
 function render(language) {
+  if (isCenvi) language = 'es';
   const [title, status, intro, problem, process, role, credits, evidence] = project[language];
   document.documentElement.lang = language;
   document.querySelectorAll('[data-es][data-en]').forEach((element) => { element.textContent = element.dataset[language]; });
@@ -39,7 +41,7 @@ function render(language) {
   const richStory = document.querySelector('#viejito-story');
   const showRichStory = id === 'viejito-perro' && language === 'es';
   richStory.hidden = !showRichStory;
-  document.querySelector('#project-standard-grid').hidden = showRichStory;
+  document.querySelector('#project-standard-content').hidden = showRichStory;
   document.querySelector('#project-standard-evidence').hidden = showRichStory;
   const list = document.querySelector('#project-evidence');
   list.replaceChildren(...evidence.map((item) => { const li = document.createElement('li'); li.textContent = item; return li; }));
@@ -52,5 +54,12 @@ function render(language) {
   localStorage.setItem('portfolio-language', language);
 }
 
-switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
-render(localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es');
+if (isCenvi) {
+  document.querySelector('#project-standard-content').hidden = true;
+  document.querySelector('#project-standard-evidence').hidden = true;
+  document.querySelector('#cenvi-content').hidden = false;
+  switcher.hidden = true;
+} else {
+  switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
+}
+render(isCenvi ? 'es' : (localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es'));
