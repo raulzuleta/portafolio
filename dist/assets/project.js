@@ -12,7 +12,7 @@ const projects = {
     en: ['Guidance for municipal teams', 'Professional practice · municipal management', 'Documents intended to support municipal teams during my professional work in Punitaqui.', 'How can technical problems and criteria be translated into clear, situated, usable guidance?', 'Needs assessment, information organization, and drafting of operational documents for municipal actors.', 'Analysis, structuring, and drafting of the guidance. The description will be expanded after reviewing the preserved document corpus.', 'Work developed in a municipal context; specific teams and responsibilities will be documented in the next review.', ['Preserved guidance documents', 'Context and audiences to be documented', 'Excerpt selection pending']]
   },
   cencosud: {
-    es: ['Caso Cencosud · Experiencia de cliente', 'Proyecto académico grupal · diseño de experiencia', 'Rediseño de las pantallas de una aplicación bancaria realizado como trabajo final de un diplomado de experiencia de cliente.', '¿Cómo traducir hallazgos y una propuesta de experiencia en una interfaz comprensible y consistente?', 'El equipo construyó el caso y la propuesta; las citas incluidas fueron ejemplos creados para el ejercicio. El prototipo visual fue desarrollado en Figma.', 'Diseñé todas las pantallas y asumí gran parte del desarrollo visual. El caso y sus resultados deben presentarse como trabajo grupal.', 'Proyecto grupal. La nómina completa y los roles se incorporarán desde la presentación final antes de publicar.', ['Presentación final', 'Archivo Figma funcional', 'Sistema de pantallas del prototipo']],
+    es: ['Del análisis de una experiencia financiera al prototipo', 'Proyecto académico grupal · diseño de experiencia y prototipado · 2023', 'Este proyecto fue realizado como trabajo final del Diplomado en Customer Experience: Data, Design and Innovation de la Pontificia Universidad Católica de Chile. El equipo tomó como caso la experiencia de solicitud y administración de avances mediante la aplicación de Tarjeta Cencosud Scotiabank.', '¿Cómo traducir hallazgos y una propuesta de experiencia en una interfaz comprensible y consistente?', 'Análisis colectivo de la experiencia y desarrollo de un prototipo visual en Figma.', 'Participación en todo el proceso grupal y diseño de todas las pantallas del prototipo.', 'Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira y Raúl Zuleta.', ['Journey map', 'Service blueprint', 'Prototipo editable en Figma']],
     en: ['Cencosud case · Customer experience', 'Group academic project · experience design', 'Redesign of a banking application’s screens, produced as the final project of a customer experience diploma.', 'How can findings and an experience proposal be translated into a clear and consistent interface?', 'The team developed the case and proposal; quotations were examples created for the exercise. The visual prototype was built in Figma.', 'I designed every screen and led much of the visual development. The case and outcomes must be presented as group work.', 'Group project. The full team and roles will be added from the final presentation before publication.', ['Final presentation', 'Functional Figma file', 'Prototype screen system']]
   },
   'obra-ambiental': {
@@ -26,7 +26,8 @@ const id = new URLSearchParams(location.search).get('id') || 'viejito-perro';
 const project = projects[id] || projects['viejito-perro'];
 const isCenvi = id === 'cenvi';
 const isPunitaqui = id === 'punitaqui';
-const isSpanishOnly = isCenvi || isPunitaqui;
+const isCencosud = id === 'cencosud';
+const isSpanishOnly = isCenvi || isPunitaqui || isCencosud;
 
 function render(language) {
   if (isSpanishOnly) language = 'es';
@@ -65,6 +66,11 @@ if (isCenvi) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#punitaqui-content').hidden = false;
+  switcher.hidden = true;
+} else if (isCencosud) {
+  document.querySelector('#project-standard-content').hidden = true;
+  document.querySelector('#project-standard-evidence').hidden = true;
+  document.querySelector('#cencosud-content').hidden = false;
   switcher.hidden = true;
 } else {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
