@@ -313,8 +313,14 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .form-status { min-height: 1.4em; margin: .9rem 0 0; color: var(--muted); font-size: .82rem; }
 footer { min-height: 5.5rem; display: flex; justify-content: space-between; gap: 2rem; align-items: center; border-top: 1px solid var(--line); font-size: .82rem; }
 footer p { margin: 0; }
-.detail-header { grid-template-columns: 1fr auto 1fr; }
-.detail-back { justify-self: center; font-size: .88rem; font-weight: 700; text-underline-offset: .3rem; }
+.detail-header { grid-template-columns: 1fr auto; }
+.detail-actions { display: flex; align-items: center; justify-content: flex-end; gap: 1.15rem; }
+.detail-back { font-size: .88rem; font-weight: 700; text-underline-offset: .3rem; }
+.language-switch.is-static { cursor: default; }
+.language-switch.is-static span:last-child { color: var(--muted); }
+.project-end-nav { display: flex; justify-content: space-between; gap: 2rem; width: 100%; margin-top: clamp(1.5rem, 4vw, 3rem); padding: 1.25rem 0 clamp(2rem, 5vw, 4rem); border-top: 1px solid var(--ink); }
+.project-end-nav a { padding: 0 0 .3rem; font-size: .82rem; font-weight: 700; text-decoration: none; }
+.project-end-nav a::after { left: 0; right: 0; }
 .project-detail { width: min(calc(100% - 3rem), var(--max)); margin-inline: auto; }
 .project-detail-hero { padding: clamp(4rem, 9vw, 8rem) 0 3rem; border-bottom: 1px solid var(--line); }
 .project-detail-hero h1 { max-width: 15ch; }
@@ -511,7 +517,6 @@ footer p { margin: 0; }
   .contact-platforms > div { grid-template-columns: 1fr; gap: .25rem; }
   footer { align-items: flex-start; flex-direction: column; justify-content: center; }
   .detail-header { grid-template-columns: 1fr auto; }
-  .detail-back { grid-column: 1 / -1; grid-row: 2; justify-self: start; padding-bottom: .75rem; }
   .project-detail { width: min(calc(100% - 2rem), var(--max)); }
   .project-detail-grid { grid-template-columns: 1fr; }
   .story-opening,
@@ -542,6 +547,11 @@ footer p { margin: 0; }
   .origin-art,
   .video-grid,
   .system-facts { grid-template-columns: 1fr; }
+  .detail-actions { display: contents; }
+  .detail-header .wordmark strong { display: inline; }
+  .detail-back { grid-column: 1 / -1; grid-row: 2; justify-self: start; padding: .7rem 0 .15rem; }
+  .language-switch { grid-column: 2; grid-row: 1; }
+  .project-end-nav { align-items: flex-start; flex-direction: column; gap: 1rem; }
   .cenvi-section-with-media { grid-template-columns: 1fr; }
   .cenvi-section-with-media .cenvi-media-button,
   .cenvi-gallery .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }

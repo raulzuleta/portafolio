@@ -26,6 +26,14 @@ const isCencosud = id === 'cencosud';
 const isSpanishOnly = isCenvi || isPunitaqui || isCencosud;
 document.body.classList.toggle('cenvi-detail-page', isCenvi);
 
+if (isSpanishOnly) {
+  switcher.disabled = true;
+  switcher.classList.add('is-static');
+  switcher.setAttribute('aria-label', 'Contenido disponible actualmente en español');
+  switcher.setAttribute('aria-disabled', 'true');
+  switcher.title = 'Versión en inglés pendiente';
+}
+
 function setupCenviLightbox() {
   const items = [...document.querySelectorAll('.cenvi-media-button')];
   const lightbox = document.querySelector('#cenvi-lightbox');
@@ -78,7 +86,7 @@ function render(language) {
   document.title = `${title} — Raúl Zuleta`;
   const english = language === 'en';
   switcher.setAttribute('aria-pressed', String(english));
-  switcher.setAttribute('aria-label', english ? 'Cambiar idioma a español' : 'Change language to English');
+  if (!isSpanishOnly) switcher.setAttribute('aria-label', english ? 'Cambiar idioma a español' : 'Change language to English');
   switcher.children[0].classList.toggle('active', !english);
   switcher.children[1].classList.toggle('active', english);
   localStorage.setItem('portfolio-language', language);
@@ -88,18 +96,15 @@ if (isCenvi) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#cenvi-content').hidden = false;
-  switcher.hidden = true;
   setupCenviLightbox();
 } else if (isPunitaqui) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#punitaqui-content').hidden = false;
-  switcher.hidden = true;
 } else if (isCencosud) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#cencosud-content').hidden = false;
-  switcher.hidden = true;
 } else {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }

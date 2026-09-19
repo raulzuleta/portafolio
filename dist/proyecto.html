@@ -6,15 +6,17 @@
     <meta name="description" content="Proyecto seleccionado del portafolio académico de Raúl Zuleta." />
     <title>Proyecto — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=layout-proyectos-3" />
-    <script src="assets/project.js?v=layout-proyectos-3" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=layout-proyectos-5" />
+    <script src="assets/project.js?v=layout-proyectos-5" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle">Saltar al contenido</a>
-    <header class="site-header detail-header">
+    <header class="site-header detail-header" id="arriba">
       <a class="wordmark" href="index.html#proyectos"><strong>Raúl Zuleta</strong></a>
-      <a class="detail-back" href="index.html#proyectos" data-es="Volver a proyectos" data-en="Back to projects">Volver a proyectos</a>
-      <button class="language-switch" type="button" aria-label="Change language to English" aria-pressed="false"><span class="active">ES</span><span>EN</span></button>
+      <div class="detail-actions">
+        <a class="detail-back" href="index.html#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <button class="language-switch" type="button" aria-label="Change language to English" aria-pressed="false"><span class="active">ES</span><span>EN</span></button>
+      </div>
     </header>
     <main id="detalle" class="project-detail">
       <header class="project-detail-hero">
@@ -411,6 +413,10 @@
           <p>La persona denominada “Miguel”, sus características y las citas incluidas en la presentación fueron construidas para el ejercicio. No proceden de entrevistas ni constituyen evidencia empírica sobre usuarios de la aplicación.</p>
         </section>
       </article>
+      <nav class="project-end-nav" aria-label="Navegación al terminar el proyecto">
+        <a href="index.html#proyectos" data-es="← Todos los proyectos" data-en="← All projects">← Todos los proyectos</a>
+        <a href="#arriba" data-es="↑ Volver arriba" data-en="↑ Back to top">↑ Volver arriba</a>
+      </nav>
     </main>
     <footer><p>Coquimbo — Santiago · Chile</p><p>© 2026 Raúl Zuleta · <span data-es="Derechos reservados" data-en="All rights reserved">Derechos reservados</span></p></footer>
   </body>
