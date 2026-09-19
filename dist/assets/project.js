@@ -67,6 +67,10 @@ function setupProjectLightbox() {
   const enlargedImage = lightbox.querySelector('img');
   const caption = lightbox.querySelector('figcaption');
   const closeButton = lightbox.querySelector('.cenvi-lightbox-close');
+  const previousButton = lightbox.querySelector('.project-lightbox-prev');
+  const nextButton = lightbox.querySelector('.project-lightbox-next');
+  let sectionItems = [];
+  let currentIndex = 0;
 
   const showItem = (item) => {
     const figure = item.closest('figure');
@@ -76,16 +80,34 @@ function setupProjectLightbox() {
     caption.textContent = figure.querySelector('figcaption')?.textContent || '';
   };
 
+  const moveWithinSection = (offset) => {
+    currentIndex = (currentIndex + offset + sectionItems.length) % sectionItems.length;
+    showItem(sectionItems[currentIndex]);
+  };
+
   items.forEach((item) => {
     item.addEventListener('click', () => {
+      const section = item.closest('section');
+      sectionItems = section ? [...section.querySelectorAll('.project-media-button')] : [item];
+      currentIndex = sectionItems.indexOf(item);
+      const hasSiblings = sectionItems.length > 1;
+      previousButton.hidden = !hasSiblings;
+      nextButton.hidden = !hasSiblings;
       showItem(item);
       lightbox.showModal();
     });
   });
 
   closeButton.addEventListener('click', () => lightbox.close());
+  previousButton.addEventListener('click', () => moveWithinSection(-1));
+  nextButton.addEventListener('click', () => moveWithinSection(1));
   lightbox.addEventListener('click', (event) => {
     if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener('keydown', (event) => {
+    if (sectionItems.length < 2) return;
+    if (event.key === 'ArrowLeft') moveWithinSection(-1);
+    if (event.key === 'ArrowRight') moveWithinSection(1);
   });
 }
 
