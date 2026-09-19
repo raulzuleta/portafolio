@@ -400,6 +400,10 @@ footer p { margin: 0; }
 .cenvi-media-button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .cenvi-media-hint { position: absolute; right: .75rem; bottom: .75rem; padding: .42rem .65rem; background: rgba(29, 48, 44, .9); color: var(--paper); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: 0; transform: translateY(.3rem); transition: opacity 180ms ease, transform 180ms ease; }
 .cenvi-media-button:hover .cenvi-media-hint, .cenvi-media-button:focus-visible .cenvi-media-hint { opacity: 1; transform: translateY(0); }
+.project-media-button:not(.cenvi-media-button) { position: relative; display: block; width: 100%; overflow: hidden; border: 0; border-radius: 0; padding: 0; background: transparent; color: inherit; font: inherit; text-align: inherit; cursor: zoom-in; }
+.project-media-button:not(.cenvi-media-button) img { display: block; width: 100%; }
+.project-media-button:not(.cenvi-media-button):focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.project-media-button:hover .cenvi-media-hint, .project-media-button:focus-visible .cenvi-media-hint { opacity: 1; transform: translateY(0); }
 .cenvi-section-with-media { grid-template-columns: minmax(20rem, .9fr) minmax(24rem, 1.1fr); align-items: start; }
 .cenvi-section-with-media .cenvi-section-text h2 { margin-bottom: 1.5rem; }
 .cenvi-section-with-media .cenvi-figure { align-self: start; margin: 0; }

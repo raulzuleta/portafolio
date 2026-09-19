@@ -34,9 +34,33 @@ if (isSpanishOnly) {
   switcher.title = 'Versión en inglés pendiente';
 }
 
-function setupCenviLightbox() {
-  const items = [...document.querySelectorAll('.cenvi-media-button')];
-  const lightbox = document.querySelector('#cenvi-lightbox');
+function setupProjectLightbox() {
+  const imageSelector = [
+    '#viejito-story figure img',
+    '#punitaqui-content figure img',
+    '#cencosud-content figure img'
+  ].join(',');
+
+  document.querySelectorAll('.cenvi-media-button').forEach((button) => button.classList.add('project-media-button'));
+  document.querySelectorAll(imageSelector).forEach((image) => {
+    if (image.closest('.project-media-button')) return;
+    const formerLink = image.parentElement?.tagName === 'A' ? image.parentElement : null;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'project-media-button';
+    button.setAttribute('aria-label', `Ampliar imagen: ${image.alt}`);
+    if (formerLink) formerLink.replaceWith(button);
+    else image.replaceWith(button);
+    button.append(image);
+    const hint = document.createElement('span');
+    hint.className = 'cenvi-media-hint';
+    hint.setAttribute('aria-hidden', 'true');
+    hint.textContent = 'Ampliar';
+    button.append(hint);
+  });
+
+  const items = [...document.querySelectorAll('.project-media-button')];
+  const lightbox = document.querySelector('#project-lightbox');
   if (!lightbox || !items.length) return;
 
   const enlargedImage = lightbox.querySelector('img');
@@ -96,7 +120,6 @@ if (isCenvi) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#cenvi-content').hidden = false;
-  setupCenviLightbox();
 } else if (isPunitaqui) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
@@ -108,4 +131,5 @@ if (isCenvi) {
 } else {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }
+setupProjectLightbox();
 render(isSpanishOnly ? 'es' : (localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es'));
