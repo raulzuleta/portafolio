@@ -24,6 +24,47 @@ const isCenvi = id === 'cenvi';
 const isPunitaqui = id === 'punitaqui';
 const isCencosud = id === 'cencosud';
 const isSpanishOnly = isCenvi || isPunitaqui || isCencosud;
+document.body.classList.toggle('cenvi-detail-page', isCenvi);
+
+function setupCenviLightbox() {
+  const items = [...document.querySelectorAll('.cenvi-media-button')];
+  const lightbox = document.querySelector('#cenvi-lightbox');
+  if (!lightbox || !items.length) return;
+
+  const enlargedImage = lightbox.querySelector('img');
+  const caption = lightbox.querySelector('figcaption');
+  const closeButton = lightbox.querySelector('.cenvi-lightbox-close');
+  const previousButton = lightbox.querySelector('.cenvi-lightbox-prev');
+  const nextButton = lightbox.querySelector('.cenvi-lightbox-next');
+  let currentIndex = 0;
+
+  const showItem = (index) => {
+    currentIndex = (index + items.length) % items.length;
+    const figure = items[currentIndex].closest('figure');
+    const sourceImage = items[currentIndex].querySelector('img');
+    enlargedImage.src = sourceImage.currentSrc || sourceImage.src;
+    enlargedImage.alt = sourceImage.alt;
+    caption.textContent = figure.querySelector('figcaption')?.textContent || '';
+  };
+
+  items.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      showItem(index);
+      lightbox.showModal();
+    });
+  });
+
+  closeButton.addEventListener('click', () => lightbox.close());
+  previousButton.addEventListener('click', () => showItem(currentIndex - 1));
+  nextButton.addEventListener('click', () => showItem(currentIndex + 1));
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') showItem(currentIndex - 1);
+    if (event.key === 'ArrowRight') showItem(currentIndex + 1);
+  });
+}
 
 function render(language) {
   if (isSpanishOnly) language = 'es';
@@ -58,6 +99,7 @@ if (isCenvi) {
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#cenvi-content').hidden = false;
   switcher.hidden = true;
+  setupCenviLightbox();
 } else if (isPunitaqui) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;

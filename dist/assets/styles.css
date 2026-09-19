@@ -369,25 +369,42 @@ footer p { margin: 0; }
 .horizons-section li { margin-bottom: .8rem; }
 .horizons-section { display: grid; grid-template-columns: .72fr 1fr .55fr; gap: clamp(2rem, 5vw, 5rem); }
 .oled-disclaimer { margin: .55rem 0 0; max-width: 36rem; color: var(--muted); font-size: .76rem; line-height: 1.35; }
+.cenvi-detail-page .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
+.cenvi-detail-page .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.6rem, 7.7vw, 7.2rem); }
+.cenvi-detail-page .project-detail-hero .lead { max-width: 72rem; font-size: clamp(1.05rem, 1.55vw, 1.28rem); }
 .cenvi-case { padding-bottom: clamp(4rem, 8vw, 7rem); }
-.cenvi-section { display: grid; grid-template-columns: minmax(14rem, .58fr) minmax(0, 1fr); gap: clamp(2rem, 7vw, 7rem); padding: clamp(3rem, 7vw, 6rem) 0; border-top: 1px solid var(--ink); }
+.cenvi-section { display: grid; grid-template-columns: minmax(12rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(2.75rem, 5vw, 4.75rem) 0; border-top: 1px solid var(--ink); }
 .cenvi-section:first-of-type { border-top: 0; }
-.cenvi-section h2 { max-width: 12ch; margin: 0; font-size: clamp(2rem, 4vw, 4rem); }
-.cenvi-copy { max-width: 46rem; }
+.cenvi-section h2 { max-width: 14ch; margin: 0; font-size: clamp(2rem, 3.4vw, 3.35rem); }
+.cenvi-copy { max-width: 52rem; }
 .cenvi-copy p:last-child { margin-bottom: 0; }
 .cenvi-copy ul { margin: 0 0 1.5rem; padding-left: 1.2rem; }
 .cenvi-copy li { margin-bottom: .45rem; padding-left: .2rem; }
-.cenvi-figure { width: 100%; max-width: 54rem; margin: 0 auto clamp(3rem, 7vw, 6rem); }
-.cenvi-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: white; }
-.cenvi-figure figcaption { max-width: 54rem; margin-top: .75rem; color: var(--muted); font-size: .8rem; }
-.cenvi-figure-hero { max-width: 60rem; margin-top: clamp(2rem, 5vw, 4rem); }
-.cenvi-figure-slide { max-width: 48rem; }
-.cenvi-gallery { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(14rem, .65fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; max-width: 64rem; margin-inline: auto; padding-bottom: clamp(3rem, 7vw, 6rem); }
+.cenvi-figure { width: 100%; max-width: 46rem; margin: 0 auto clamp(2.75rem, 5vw, 4.5rem); }
+.cenvi-figure figcaption { max-width: 46rem; margin-top: .75rem; color: var(--muted); font-size: .8rem; }
+.cenvi-figure-hero { margin-top: clamp(2rem, 4vw, 3rem); }
+.cenvi-figure-slide { max-width: 46rem; }
+.cenvi-media-button { position: relative; display: grid; place-items: center; width: 100%; height: clamp(17rem, 35vw, 26rem); overflow: hidden; border: 1px solid var(--line); border-radius: 0; padding: 1rem; background: #fff; color: var(--ink); cursor: zoom-in; }
+.cenvi-media-button img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.cenvi-media-button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.cenvi-media-hint { position: absolute; right: .75rem; bottom: .75rem; padding: .42rem .65rem; background: rgba(29, 48, 44, .9); color: var(--paper); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: 0; transform: translateY(.3rem); transition: opacity 180ms ease, transform 180ms ease; }
+.cenvi-media-button:hover .cenvi-media-hint, .cenvi-media-button:focus-visible .cenvi-media-hint { opacity: 1; transform: translateY(0); }
+.cenvi-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); align-items: start; max-width: 58rem; margin-inline: auto; padding-bottom: clamp(3rem, 6vw, 5rem); }
 .cenvi-gallery .cenvi-figure { margin-bottom: 0; }
-.cenvi-figure-document img { width: min(100%, 31rem); margin-inline: auto; }
 .cenvi-section-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cenvi-section-compact h2 { margin-bottom: 1.25rem; font-size: clamp(1.8rem, 3vw, 3rem); }
 .cenvi-section-compact p { max-width: 38rem; }
+.cenvi-lightbox { width: min(94vw, 78rem); max-width: none; height: min(90vh, 54rem); max-height: none; overflow: hidden; border: 1px solid var(--ink); padding: 3.5rem clamp(3.25rem, 6vw, 6rem) 1.5rem; background: var(--paper); color: var(--ink); }
+.cenvi-lightbox::backdrop { background: rgba(15, 24, 22, .82); backdrop-filter: blur(4px); }
+.cenvi-lightbox figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; width: 100%; height: 100%; margin: 0; }
+.cenvi-lightbox img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.cenvi-lightbox figcaption { padding-top: .9rem; color: var(--muted); font-size: .82rem; text-align: center; }
+.cenvi-lightbox button { border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
+.cenvi-lightbox button:hover, .cenvi-lightbox button:focus-visible { background: var(--acid); }
+.cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; padding: .45rem .7rem; font-size: .78rem; font-weight: 700; }
+.cenvi-lightbox-nav { position: absolute; top: 50%; width: 2.6rem; height: 2.6rem; transform: translateY(-50%); font-size: 1.35rem; }
+.cenvi-lightbox-prev { left: .75rem; }
+.cenvi-lightbox-next { right: .75rem; }
 .punitaqui-story { max-width: 62rem; margin: 0 auto; padding: 0 0 6rem; }
 .punitaqui-story > section { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
 .punitaqui-story h2 { max-width: 19ch; margin-bottom: 1.5rem; }
@@ -515,6 +532,12 @@ footer p { margin: 0; }
   .cenvi-section, .cenvi-section-compact { grid-template-columns: 1fr; gap: 1.5rem; }
   .cenvi-section h2 { max-width: 16ch; }
   .cenvi-gallery { grid-template-columns: 1fr; }
+  .cenvi-detail-page .project-detail-hero h1 { font-size: clamp(2.75rem, 13vw, 4.25rem); }
+  .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
+  .cenvi-lightbox { width: calc(100vw - 1rem); height: calc(100vh - 1rem); padding: 3.75rem 2.75rem 1rem; }
+  .cenvi-lightbox-nav { width: 2.15rem; height: 2.15rem; }
+  .cenvi-lightbox-prev { left: .3rem; }
+  .cenvi-lightbox-next { right: .3rem; }
 }
 
 @media (max-width: 620px) {

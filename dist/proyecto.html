@@ -6,8 +6,8 @@
     <meta name="description" content="Proyecto seleccionado del portafolio académico de Raúl Zuleta." />
     <title>Proyecto — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=accessibility-2" />
-    <script src="assets/project.js" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=layout-proyectos-1" />
+    <script src="assets/project.js?v=layout-proyectos-1" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle">Saltar al contenido</a>
@@ -167,7 +167,10 @@
       </section>
       <article class="cenvi-case" id="cenvi-content" hidden>
         <figure class="cenvi-figure cenvi-figure-hero">
-          <img src="assets/cenvi-software-inicio-recorte.png" alt="Pantalla de inicio del programa CENVI con sus módulos de carga, análisis y reportes" width="1388" height="827" />
+          <button class="cenvi-media-button" type="button" aria-label="Ampliar imagen de la interfaz del programa CENVI">
+            <img src="assets/cenvi-software-inicio-recorte.png" alt="Pantalla de inicio del programa CENVI con sus módulos de carga, análisis y reportes" width="1388" height="827" />
+            <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+          </button>
           <figcaption>Interfaz del programa desarrollado para apoyar el procesamiento e interpretación del CENVI. La demostración utiliza datos sintéticos.</figcaption>
         </figure>
 
@@ -194,7 +197,10 @@
           </div>
         </section>
         <figure class="cenvi-figure cenvi-figure-slide">
-          <img src="assets/cenvi-cuatro-componentes-recorte.png" alt="Diagrama de los cuatro componentes del dispositivo: manual, software, capacitación y acompañamiento" width="1700" height="860" loading="lazy" />
+          <button class="cenvi-media-button" type="button" aria-label="Ampliar diagrama de los cuatro componentes del dispositivo">
+            <img src="assets/cenvi-cuatro-componentes-recorte.png" alt="Diagrama de los cuatro componentes del dispositivo: manual, software, capacitación y acompañamiento" width="1700" height="860" loading="lazy" />
+            <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+          </button>
           <figcaption>Manual, software, capacitación y acompañamiento funcionaron como un sistema integrado de apoyo.</figcaption>
         </figure>
 
@@ -206,7 +212,10 @@
           </div>
         </section>
         <figure class="cenvi-figure cenvi-figure-slide">
-          <img src="assets/cenvi-pilotaje-cuatro-semanas-recorte.png" alt="Cronología del pilotaje: capacitación, aplicación, elaboración del informe y devolución de resultados" width="1700" height="860" loading="lazy" />
+          <button class="cenvi-media-button" type="button" aria-label="Ampliar cronología del pilotaje">
+            <img src="assets/cenvi-pilotaje-cuatro-semanas-recorte.png" alt="Cronología del pilotaje: capacitación, aplicación, elaboración del informe y devolución de resultados" width="1700" height="860" loading="lazy" />
+            <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+          </button>
           <figcaption>Secuencia de trabajo del pilotaje realizado durante cuatro semanas.</figcaption>
         </figure>
 
@@ -220,11 +229,17 @@
 
         <div class="cenvi-gallery" aria-label="Documentación visual del proyecto">
           <figure class="cenvi-figure">
-            <img src="assets/cenvi-software-visualizaciones-recorte.png" alt="Gráficos comparativos y matriz de interpretación cruzada generados por el programa CENVI" width="1291" height="759" loading="lazy" />
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar visualizaciones del programa CENVI">
+              <img src="assets/cenvi-software-visualizaciones-recorte.png" alt="Gráficos comparativos y matriz de interpretación cruzada generados por el programa CENVI" width="1291" height="759" loading="lazy" />
+              <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+            </button>
             <figcaption>Visualizaciones generadas con datos sintéticos.</figcaption>
           </figure>
           <figure class="cenvi-figure cenvi-figure-document">
-            <img src="assets/cenvi-manual-indice.png" alt="Índice del manual pedagógico CENVI" width="765" height="990" loading="lazy" />
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar índice del manual pedagógico CENVI">
+              <img src="assets/cenvi-manual-indice.png" alt="Índice del manual pedagógico CENVI" width="765" height="990" loading="lazy" />
+              <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+            </button>
             <figcaption>Índice del manual pedagógico: aplicación, calidad de datos, interpretación, toma de decisiones e informe diagnóstico.</figcaption>
           </figure>
         </div>
@@ -258,6 +273,16 @@
             <p>El instalador del programa, los informes diagnósticos, las bases del pilotaje, los instrumentos de evaluación y el resumen de congreso se conservan como documentación interna.</p>
           </div>
         </section>
+
+        <dialog class="cenvi-lightbox" id="cenvi-lightbox" aria-label="Visor de documentación visual">
+          <button class="cenvi-lightbox-close" type="button" aria-label="Cerrar imagen ampliada">Cerrar ×</button>
+          <button class="cenvi-lightbox-nav cenvi-lightbox-prev" type="button" aria-label="Ver imagen anterior">←</button>
+          <figure>
+            <img src="" alt="" />
+            <figcaption aria-live="polite"></figcaption>
+          </figure>
+          <button class="cenvi-lightbox-nav cenvi-lightbox-next" type="button" aria-label="Ver imagen siguiente">→</button>
+        </dialog>
       </article>
       <article class="punitaqui-story" id="punitaqui-content" hidden>
         <p class="punitaqui-opening">El proyecto surgió ante una dificultad práctica ya que los equipos de convivencia que debía supervisar trabajaban con criterios, procedimientos y formas de organización muy diferentes. Como coordinador comunal, consideré necesario ofrecer un marco compartido que orientara su trabajo sin reemplazar las decisiones propias de cada establecimiento.</p>
