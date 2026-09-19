@@ -417,7 +417,7 @@ footer p { margin: 0; }
 .cenvi-lightbox figcaption { padding-top: .9rem; color: var(--muted); font-size: .82rem; text-align: center; }
 .cenvi-lightbox button { border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
 .cenvi-lightbox button:hover, .cenvi-lightbox button:focus-visible { background: var(--acid); }
-.cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; padding: 0; font-size: 1.5rem; font-weight: 800; line-height: 1; }
+.cenvi-lightbox .cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0 0 .16rem; font-size: 2.15rem; font-weight: 800; line-height: 1; }
 .punitaqui-story { max-width: 62rem; margin: 0 auto; padding: 0 0 6rem; }
 .punitaqui-story > section { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
 .punitaqui-story h2 { max-width: 19ch; margin-bottom: 1.5rem; }
