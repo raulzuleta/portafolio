@@ -460,9 +460,12 @@ footer p { margin: 0; }
 .cencosud-section { display: grid; grid-template-columns: minmax(15rem, .42fr) minmax(0, 1fr); column-gap: clamp(2rem, 5vw, 5rem); row-gap: clamp(2rem, 4vw, 3rem); padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid var(--ink); }
 .cencosud-section:first-child { border-top: 0; }
 .cencosud-story h2 { max-width: 15ch; margin: 0; font-size: clamp(2rem, 3.4vw, 3.35rem); }
+.cencosud-section > .cencosud-section-body { grid-column: 2; }
 .cencosud-story p, .cencosud-story ul { max-width: 52rem; }
 .cencosud-story li + li { margin-top: .35rem; }
 .cencosud-analysis-gallery { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
+.cencosud-analysis-gallery .project-media-button { display: grid; place-items: center; aspect-ratio: 1.84 / 1; border: 1px solid var(--line); background: #fff; }
+.cencosud-analysis-gallery .project-media-button img { width: 100%; height: 100%; border: 0; object-fit: contain; }
 .cencosud-prototype-gallery { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1.5rem; }
 .cencosud-figure { margin: 0; }
 .cencosud-figure-primary { grid-column: 1; grid-row: 1 / span 2; display: grid; grid-template-rows: minmax(0, 1fr) auto; height: 100%; }
@@ -471,7 +474,7 @@ footer p { margin: 0; }
 .cencosud-figure img { display: block; width: 100%; border: 1px solid var(--line); background: white; }
 .cencosud-figure a { display: block; }
 .cencosud-figure figcaption { margin-top: .65rem; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
-.cencosud-source-wrap { grid-column: 1 / -1; display: flex; justify-content: flex-end; width: 100%; max-width: none !important; margin: 0; }
+.cencosud-source-wrap { display: flex; justify-content: flex-start; width: 100%; max-width: none !important; margin: 1.75rem 0 0; }
 .cencosud-source-link { display: inline-block; border: 1px solid var(--ink); padding: .85rem 1.15rem; background: var(--ink); color: var(--paper); font-weight: 700; text-decoration: none; }
 .cencosud-source-link:hover, .cencosud-source-link:focus-visible { background: var(--acid); color: var(--ink); }
 .cencosud-limits { padding-inline: clamp(1.5rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 42%, var(--paper)); border-top: 0; }
@@ -516,7 +519,6 @@ footer p { margin: 0; }
   .cencosud-prototype-gallery { grid-template-columns: 1fr; }
   .cencosud-figure-primary { grid-column: 1; grid-row: auto; }
   .cencosud-analysis-gallery { grid-template-columns: 1fr; }
-  .cencosud-source-wrap { grid-column: 1; }
   .cencosud-limits { margin-inline: -1rem; }
   h1 { font-size: clamp(2.7rem, 14vw, 4.2rem); }
   .hero { padding: 4rem 0; gap: 3rem; }
@@ -596,6 +598,7 @@ footer p { margin: 0; }
   .cenvi-gallery .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
   .punitaqui-section, .punitaqui-section-with-media { grid-template-columns: 1fr; gap: 1.5rem; }
   .cencosud-section { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cencosud-section > .cencosud-section-body { grid-column: 1; }
   .punitaqui-section-text h2 { margin-bottom: 1.25rem; }
   .punitaqui-story .project-media-button { height: clamp(14rem, 64vw, 21rem); }
   .punitaqui-story .document-pair .project-media-button { height: clamp(12rem, 54vw, 18rem); }
