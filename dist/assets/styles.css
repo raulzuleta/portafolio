@@ -421,8 +421,8 @@ footer p { margin: 0; }
 .cenvi-lightbox figcaption { padding-top: .9rem; color: var(--muted); font-size: .82rem; text-align: center; }
 .cenvi-lightbox button { border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
 .cenvi-lightbox button:hover, .cenvi-lightbox button:focus-visible { background: var(--acid); }
-.cenvi-lightbox .cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0 0 .13rem; font-size: 2rem; font-weight: 650; line-height: 1; }
-.project-lightbox-counter { position: absolute; top: 1.45rem; left: 50%; transform: translateX(-50%); color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
+.cenvi-lightbox .cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0 0 .13rem; font-size: 2rem; font-weight: 550; line-height: 1; }
+.project-lightbox-counter { position: absolute; top: 1.45rem; left: 50%; transform: translateX(-50%); color: var(--ink); font-size: .8rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
 .project-lightbox-counter[hidden] { display: none; }
 .cenvi-lightbox .project-lightbox-nav { position: absolute; top: 50%; display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0 0 .16rem; transform: translateY(-50%); font-size: 2rem; font-weight: 650; line-height: 1; }
 .project-lightbox-nav[hidden] { display: none; }
@@ -437,7 +437,9 @@ footer p { margin: 0; }
 .punitaqui-section-with-media { grid-template-columns: minmax(20rem, .9fr) minmax(24rem, 1.1fr); align-items: start; }
 .punitaqui-section-text h2 { margin-bottom: 1.5rem; }
 .punitaqui-document-overview { align-self: center; }
-.punitaqui-contribution .punitaqui-section-text { align-self: center; }
+.punitaqui-contribution .punitaqui-section-text { align-self: start; }
+.punitaqui-contribution .contribution-form { align-self: start; }
+.punitaqui-contribution .contribution-forms-caption { grid-column: 1 / -1; margin-top: -.25rem; }
 .document-figure { width: 100%; margin: 0; }
 .document-figure img { display: block; width: 100%; border: 1px solid var(--line); background: #fff; }
 .document-figure figcaption, .paired-caption { margin-top: .75rem; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
@@ -450,6 +452,7 @@ footer p { margin: 0; }
 .punitaqui-story .project-media-button { display: grid; place-items: center; height: clamp(17rem, 31vw, 24rem); border: 1px solid var(--line); padding: .75rem; background: #fff; }
 .punitaqui-story .project-media-button img { width: 100%; height: 100%; border: 0; object-fit: contain; }
 .punitaqui-story .document-pair .project-media-button { height: clamp(13rem, 19vw, 18rem); }
+.punitaqui-story .contribution-form .project-media-button { height: clamp(14rem, 22vw, 18rem); }
 .punitaqui-limits { margin-top: 0; padding-inline: clamp(1.5rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 42%, var(--paper)); border-top: 0; }
 .punitaqui-limits p:last-child { margin-bottom: 0; }
 .cencosud-story { max-width: 62rem; margin: 0 auto; padding: 0 0 6rem; }
