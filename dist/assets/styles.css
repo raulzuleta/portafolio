@@ -382,15 +382,18 @@ footer p { margin: 0; }
 .cenvi-copy li { margin-bottom: .45rem; padding-left: .2rem; }
 .cenvi-figure { width: 100%; max-width: 46rem; margin: 0 auto clamp(2.75rem, 5vw, 4.5rem); }
 .cenvi-figure figcaption { max-width: 46rem; margin-top: .75rem; color: var(--muted); font-size: .8rem; }
-.cenvi-figure-hero { margin-top: clamp(2rem, 4vw, 3rem); }
-.cenvi-figure-slide { max-width: 46rem; }
 .cenvi-media-button { position: relative; display: grid; place-items: center; width: 100%; height: clamp(17rem, 35vw, 26rem); overflow: hidden; border: 1px solid var(--line); border-radius: 0; padding: 1rem; background: #fff; color: var(--ink); cursor: zoom-in; }
 .cenvi-media-button img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .cenvi-media-button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .cenvi-media-hint { position: absolute; right: .75rem; bottom: .75rem; padding: .42rem .65rem; background: rgba(29, 48, 44, .9); color: var(--paper); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: 0; transform: translateY(.3rem); transition: opacity 180ms ease, transform 180ms ease; }
 .cenvi-media-button:hover .cenvi-media-hint, .cenvi-media-button:focus-visible .cenvi-media-hint { opacity: 1; transform: translateY(0); }
-.cenvi-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); align-items: start; max-width: 58rem; margin-inline: auto; padding-bottom: clamp(3rem, 6vw, 5rem); }
+.cenvi-section-with-media { grid-template-columns: minmax(20rem, .9fr) minmax(24rem, 1.1fr); align-items: start; }
+.cenvi-section-with-media .cenvi-section-text h2 { margin-bottom: 1.5rem; }
+.cenvi-section-with-media .cenvi-figure { align-self: start; margin: 0; }
+.cenvi-section-with-media .cenvi-media-button { height: clamp(17rem, 31vw, 24rem); }
+.cenvi-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); align-items: start; width: 100%; max-width: none; margin: 0; padding: 0; }
 .cenvi-gallery .cenvi-figure { margin-bottom: 0; }
+.cenvi-gallery .cenvi-media-button { height: clamp(14rem, 20vw, 19rem); }
 .cenvi-section-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cenvi-section-compact h2 { margin-bottom: 1.25rem; font-size: clamp(1.8rem, 3vw, 3rem); }
 .cenvi-section-compact p { max-width: 38rem; }
@@ -530,6 +533,7 @@ footer p { margin: 0; }
   .system-chain i { transform: rotate(90deg); transform-origin: left center; }
   .system-facts { grid-template-columns: 1fr 1fr; }
   .cenvi-section, .cenvi-section-compact { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cenvi-section-with-media { grid-template-columns: minmax(17rem, .9fr) minmax(20rem, 1.1fr); gap: clamp(1.5rem, 4vw, 3rem); }
   .cenvi-section h2 { max-width: 16ch; }
   .cenvi-gallery { grid-template-columns: 1fr; }
   .cenvi-detail-page .project-detail-hero h1 { font-size: clamp(2.75rem, 13vw, 4.25rem); }
@@ -544,6 +548,9 @@ footer p { margin: 0; }
   .origin-art,
   .video-grid,
   .system-facts { grid-template-columns: 1fr; }
+  .cenvi-section-with-media { grid-template-columns: 1fr; }
+  .cenvi-section-with-media .cenvi-media-button,
+  .cenvi-gallery .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
   .story-hero-media { padding-bottom: 3rem; }
   .story-section { padding-block: 3.5rem; }
 }
