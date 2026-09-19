@@ -462,15 +462,18 @@ footer p { margin: 0; }
 .cencosud-story h2 { max-width: 15ch; margin: 0; font-size: clamp(2rem, 3.4vw, 3.35rem); }
 .cencosud-story p, .cencosud-story ul { max-width: 52rem; }
 .cencosud-story li + li { margin-top: .35rem; }
-.cencosud-analysis-gallery { grid-column: 1 / -1; display: grid; gap: 1.5rem; }
+.cencosud-analysis-gallery { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
 .cencosud-prototype-gallery { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1.5rem; }
 .cencosud-figure { margin: 0; }
-.cencosud-figure-primary { grid-column: 1; grid-row: 1 / span 2; }
+.cencosud-figure-primary { grid-column: 1; grid-row: 1 / span 2; display: grid; grid-template-rows: minmax(0, 1fr) auto; height: 100%; }
+.cencosud-figure-primary .project-media-button { height: 100%; min-height: 0; background: #fff; }
+.cencosud-figure-primary .project-media-button img { width: 100%; height: 100%; object-fit: contain; }
 .cencosud-figure img { display: block; width: 100%; border: 1px solid var(--line); background: white; }
 .cencosud-figure a { display: block; }
 .cencosud-figure figcaption { margin-top: .65rem; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
-.cencosud-source-wrap { grid-column: 2; margin: 0; }
-.cencosud-source-link { display: inline-block; margin-top: 1.5rem; font-weight: 700; text-underline-offset: .3rem; }
+.cencosud-source-wrap { grid-column: 1 / -1; display: flex; justify-content: flex-end; width: 100%; max-width: none !important; margin: 0; }
+.cencosud-source-link { display: inline-block; border: 1px solid var(--ink); padding: .85rem 1.15rem; background: var(--ink); color: var(--paper); font-weight: 700; text-decoration: none; }
+.cencosud-source-link:hover, .cencosud-source-link:focus-visible { background: var(--acid); color: var(--ink); }
 .cencosud-limits { padding-inline: clamp(1.5rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 42%, var(--paper)); border-top: 0; }
 .cencosud-limits p:last-child { margin-bottom: 0; }
 
@@ -512,6 +515,7 @@ footer p { margin: 0; }
   .punitaqui-limits { margin-inline: -1rem; }
   .cencosud-prototype-gallery { grid-template-columns: 1fr; }
   .cencosud-figure-primary { grid-column: 1; grid-row: auto; }
+  .cencosud-analysis-gallery { grid-template-columns: 1fr; }
   .cencosud-source-wrap { grid-column: 1; }
   .cencosud-limits { margin-inline: -1rem; }
   h1 { font-size: clamp(2.7rem, 14vw, 4.2rem); }
