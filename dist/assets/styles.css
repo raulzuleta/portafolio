@@ -437,9 +437,10 @@ footer p { margin: 0; }
 .punitaqui-section-with-media { grid-template-columns: minmax(20rem, .9fr) minmax(24rem, 1.1fr); align-items: start; }
 .punitaqui-section-text h2 { margin-bottom: 1.5rem; }
 .punitaqui-document-overview { align-self: center; }
+.punitaqui-contribution { row-gap: clamp(1.25rem, 2.5vw, 2rem); }
 .punitaqui-contribution .punitaqui-section-text { align-self: start; }
 .punitaqui-contribution .contribution-form { align-self: start; }
-.punitaqui-contribution .contribution-forms-caption { grid-column: 1 / -1; margin-top: -.25rem; }
+.punitaqui-contribution .contribution-forms-caption { grid-column: 1 / -1; justify-self: center; width: 100%; max-width: none; margin-top: -.5rem; }
 .document-figure { width: 100%; margin: 0; }
 .document-figure img { display: block; width: 100%; border: 1px solid var(--line); background: #fff; }
 .document-figure figcaption, .paired-caption { margin-top: .75rem; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
