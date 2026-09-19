@@ -67,6 +67,7 @@ function setupProjectLightbox() {
   const enlargedImage = lightbox.querySelector('img');
   const caption = lightbox.querySelector('figcaption');
   const closeButton = lightbox.querySelector('.cenvi-lightbox-close');
+  const counter = lightbox.querySelector('.project-lightbox-counter');
   const previousButton = lightbox.querySelector('.project-lightbox-prev');
   const nextButton = lightbox.querySelector('.project-lightbox-next');
   let sectionItems = [];
@@ -78,6 +79,7 @@ function setupProjectLightbox() {
     enlargedImage.src = sourceImage.currentSrc || sourceImage.src;
     enlargedImage.alt = sourceImage.alt;
     caption.textContent = figure.querySelector('figcaption')?.textContent || '';
+    counter.textContent = `${currentIndex + 1} / ${sectionItems.length}`;
   };
 
   const moveWithinSection = (offset) => {
@@ -91,6 +93,7 @@ function setupProjectLightbox() {
       sectionItems = section ? [...section.querySelectorAll('.project-media-button')] : [item];
       currentIndex = sectionItems.indexOf(item);
       const hasSiblings = sectionItems.length > 1;
+      counter.hidden = !hasSiblings;
       previousButton.hidden = !hasSiblings;
       nextButton.hidden = !hasSiblings;
       showItem(item);

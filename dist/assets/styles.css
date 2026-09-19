@@ -421,8 +421,10 @@ footer p { margin: 0; }
 .cenvi-lightbox figcaption { padding-top: .9rem; color: var(--muted); font-size: .82rem; text-align: center; }
 .cenvi-lightbox button { border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
 .cenvi-lightbox button:hover, .cenvi-lightbox button:focus-visible { background: var(--acid); }
-.cenvi-lightbox .cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0 0 .16rem; font-size: 2.15rem; font-weight: 800; line-height: 1; }
-.cenvi-lightbox .project-lightbox-nav { position: absolute; top: 50%; width: 2.6rem; height: 2.6rem; transform: translateY(-50%); font-size: 1.35rem; }
+.cenvi-lightbox .cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0 0 .13rem; font-size: 2rem; font-weight: 650; line-height: 1; }
+.project-lightbox-counter { position: absolute; top: 1.45rem; left: 50%; transform: translateX(-50%); color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
+.project-lightbox-counter[hidden] { display: none; }
+.cenvi-lightbox .project-lightbox-nav { position: absolute; top: 50%; display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0 0 .16rem; transform: translateY(-50%); font-size: 2rem; font-weight: 650; line-height: 1; }
 .project-lightbox-nav[hidden] { display: none; }
 .project-lightbox-prev { left: .75rem; }
 .project-lightbox-next { right: .75rem; }
@@ -435,6 +437,7 @@ footer p { margin: 0; }
 .punitaqui-section-with-media { grid-template-columns: minmax(20rem, .9fr) minmax(24rem, 1.1fr); align-items: start; }
 .punitaqui-section-text h2 { margin-bottom: 1.5rem; }
 .punitaqui-document-overview { align-self: center; }
+.punitaqui-contribution .punitaqui-section-text { align-self: center; }
 .document-figure { width: 100%; margin: 0; }
 .document-figure img { display: block; width: 100%; border: 1px solid var(--line); background: #fff; }
 .document-figure figcaption, .paired-caption { margin-top: .75rem; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
