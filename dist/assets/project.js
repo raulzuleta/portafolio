@@ -34,35 +34,25 @@ function setupCenviLightbox() {
   const enlargedImage = lightbox.querySelector('img');
   const caption = lightbox.querySelector('figcaption');
   const closeButton = lightbox.querySelector('.cenvi-lightbox-close');
-  const previousButton = lightbox.querySelector('.cenvi-lightbox-prev');
-  const nextButton = lightbox.querySelector('.cenvi-lightbox-next');
-  let currentIndex = 0;
 
-  const showItem = (index) => {
-    currentIndex = (index + items.length) % items.length;
-    const figure = items[currentIndex].closest('figure');
-    const sourceImage = items[currentIndex].querySelector('img');
+  const showItem = (item) => {
+    const figure = item.closest('figure');
+    const sourceImage = item.querySelector('img');
     enlargedImage.src = sourceImage.currentSrc || sourceImage.src;
     enlargedImage.alt = sourceImage.alt;
     caption.textContent = figure.querySelector('figcaption')?.textContent || '';
   };
 
-  items.forEach((item, index) => {
+  items.forEach((item) => {
     item.addEventListener('click', () => {
-      showItem(index);
+      showItem(item);
       lightbox.showModal();
     });
   });
 
   closeButton.addEventListener('click', () => lightbox.close());
-  previousButton.addEventListener('click', () => showItem(currentIndex - 1));
-  nextButton.addEventListener('click', () => showItem(currentIndex + 1));
   lightbox.addEventListener('click', (event) => {
     if (event.target === lightbox) lightbox.close();
-  });
-  lightbox.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowLeft') showItem(currentIndex - 1);
-    if (event.key === 'ArrowRight') showItem(currentIndex + 1);
   });
 }
 
