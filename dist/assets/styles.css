@@ -315,12 +315,19 @@ footer { min-height: 5.5rem; display: flex; justify-content: space-between; gap:
 footer p { margin: 0; }
 .detail-header { grid-template-columns: 1fr auto; }
 .detail-actions { display: flex; align-items: center; justify-content: flex-end; gap: 1.15rem; }
-.detail-back { font-size: .88rem; font-weight: 700; text-underline-offset: .3rem; }
+.detail-back { position: relative; padding: 0 0 .35rem; font-size: .88rem; font-weight: 700; text-decoration: none; }
+.detail-back::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: center; transition: transform 240ms ease; }
+.detail-back:hover::after, .detail-back:focus-visible::after { transform: scaleX(1); }
 .language-switch.is-static { cursor: default; }
 .language-switch.is-static span:last-child { color: var(--muted); }
 .project-end-nav { display: flex; justify-content: space-between; gap: 2rem; width: 100%; margin-top: clamp(1.5rem, 4vw, 3rem); padding: 1.25rem 0 clamp(2rem, 5vw, 4rem); border-top: 1px solid var(--ink); }
-.project-end-nav a { padding: 0 0 .3rem; font-size: .82rem; font-weight: 700; text-decoration: none; }
-.project-end-nav a::after { left: 0; right: 0; }
+.project-end-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 13.5rem; padding: .8rem 1rem; border: 1px solid var(--ink); font-size: .82rem; font-weight: 700; text-decoration: none; transition: background-color 180ms ease, color 180ms ease, transform 180ms ease; }
+.project-end-nav a::after { display: none; }
+.project-end-nav a:hover { transform: translateY(-2px); }
+.project-end-primary { background: var(--ink); color: var(--paper); }
+.project-end-primary:hover, .project-end-primary:focus-visible { background: var(--blue-strong); border-color: var(--blue-strong); }
+.project-end-secondary { background: transparent; color: var(--ink); }
+.project-end-secondary:hover, .project-end-secondary:focus-visible { background: var(--acid); }
 .project-detail { width: min(calc(100% - 3rem), var(--max)); margin-inline: auto; }
 .project-detail-hero { padding: clamp(4rem, 9vw, 8rem) 0 3rem; border-bottom: 1px solid var(--line); }
 .project-detail-hero h1 { max-width: 15ch; }
@@ -410,7 +417,7 @@ footer p { margin: 0; }
 .cenvi-lightbox figcaption { padding-top: .9rem; color: var(--muted); font-size: .82rem; text-align: center; }
 .cenvi-lightbox button { border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
 .cenvi-lightbox button:hover, .cenvi-lightbox button:focus-visible { background: var(--acid); }
-.cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; padding: .45rem .7rem; font-size: .78rem; font-weight: 700; }
+.cenvi-lightbox-close { position: absolute; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; padding: 0; font-size: 1.5rem; font-weight: 800; line-height: 1; }
 .punitaqui-story { max-width: 62rem; margin: 0 auto; padding: 0 0 6rem; }
 .punitaqui-story > section { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
 .punitaqui-story h2 { max-width: 19ch; margin-bottom: 1.5rem; }
@@ -552,6 +559,7 @@ footer p { margin: 0; }
   .detail-back { grid-column: 1 / -1; grid-row: 2; justify-self: start; padding: .7rem 0 .15rem; }
   .language-switch { grid-column: 2; grid-row: 1; }
   .project-end-nav { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .project-end-nav a { width: 100%; }
   .cenvi-section-with-media { grid-template-columns: 1fr; }
   .cenvi-section-with-media .cenvi-media-button,
   .cenvi-gallery .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
