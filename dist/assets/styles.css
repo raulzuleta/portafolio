@@ -382,9 +382,9 @@ footer p { margin: 0; }
 .horizons-section li { margin-bottom: .8rem; }
 .horizons-section { display: grid; grid-template-columns: .72fr 1fr .55fr; gap: clamp(2rem, 5vw, 5rem); }
 .oled-disclaimer { margin: .55rem 0 0; max-width: 36rem; color: var(--muted); font-size: .76rem; line-height: 1.35; }
-:is(.cenvi-detail-page, .punitaqui-detail-page) .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
-:is(.cenvi-detail-page, .punitaqui-detail-page) .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.2rem, 6vw, 5.8rem); }
-:is(.cenvi-detail-page, .punitaqui-detail-page) .project-detail-hero .lead { max-width: 72rem; font-size: clamp(1.05rem, 1.55vw, 1.28rem); }
+:is(.cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page) .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
+:is(.cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page) .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.2rem, 6vw, 5.8rem); }
+:is(.cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page) .project-detail-hero .lead { max-width: 72rem; font-size: clamp(1.05rem, 1.55vw, 1.28rem); }
 .cenvi-case { padding-bottom: clamp(4rem, 8vw, 7rem); }
 .cenvi-section { display: grid; grid-template-columns: minmax(12rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(2.75rem, 5vw, 4.75rem) 0; border-top: 1px solid var(--ink); }
 .cenvi-section:first-of-type { border-top: 0; }
@@ -456,12 +456,12 @@ footer p { margin: 0; }
 .punitaqui-story .contribution-form .project-media-button { height: clamp(14rem, 22vw, 18rem); }
 .punitaqui-limits { margin-top: 0; padding-inline: clamp(1.5rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 42%, var(--paper)); border-top: 0; }
 .punitaqui-limits p:last-child { margin-bottom: 0; }
-.cencosud-story { max-width: 62rem; margin: 0 auto; padding: 0 0 6rem; }
-.cencosud-story > section { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
-.cencosud-story h2 { max-width: 19ch; margin-bottom: 1.5rem; }
-.cencosud-story p, .cencosud-story ul { max-width: 47rem; }
+.cencosud-story { max-width: 76rem; margin: 0 auto; padding: 0 0 6rem; }
+.cencosud-section { display: grid; grid-template-columns: minmax(15rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid var(--ink); }
+.cencosud-section:first-child { border-top: 0; }
+.cencosud-story h2 { max-width: 15ch; margin: 0; font-size: clamp(2rem, 3.4vw, 3.35rem); }
+.cencosud-story p, .cencosud-story ul { max-width: 52rem; }
 .cencosud-story li + li { margin-top: .35rem; }
-.cencosud-opening { margin: 0; padding: clamp(2rem, 5vw, 4rem) 0 0; font-size: clamp(1.15rem, 1.7vw, 1.4rem); }
 .cencosud-analysis-gallery { display: grid; gap: 1.5rem; margin-top: 2.5rem; }
 .cencosud-prototype-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
 .cencosud-figure { margin: 0; }
@@ -470,7 +470,7 @@ footer p { margin: 0; }
 .cencosud-figure a { display: block; }
 .cencosud-figure figcaption { margin-top: .65rem; color: var(--muted); font-size: .82rem; line-height: 1.45; }
 .cencosud-source-link { display: inline-block; margin-top: 1.5rem; font-weight: 700; text-underline-offset: .3rem; }
-.cencosud-limits { margin-top: clamp(3rem, 7vw, 5.5rem); padding: clamp(2rem, 5vw, 3.5rem) !important; background: color-mix(in srgb, var(--acid) 42%, var(--paper)); }
+.cencosud-limits { padding-inline: clamp(1.5rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 42%, var(--paper)); border-top: 0; }
 .cencosud-limits p:last-child { margin-bottom: 0; }
 
 @media (max-width: 900px) {
@@ -567,7 +567,7 @@ footer p { margin: 0; }
   .cenvi-section-with-media { grid-template-columns: minmax(17rem, .9fr) minmax(20rem, 1.1fr); gap: clamp(1.5rem, 4vw, 3rem); }
   .cenvi-section h2 { max-width: 16ch; }
   .cenvi-gallery { grid-template-columns: 1fr; }
-  :is(.cenvi-detail-page, .punitaqui-detail-page) .project-detail-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
+  :is(.cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page) .project-detail-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
   .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
   .cenvi-lightbox { width: calc(100vw - 1rem); height: calc(100vh - 1rem); padding: 3.75rem 1rem 1rem; }
   .cenvi-lightbox .project-lightbox-nav { width: 2.15rem; height: 2.15rem; }
@@ -589,6 +589,7 @@ footer p { margin: 0; }
   .cenvi-section-with-media .cenvi-media-button,
   .cenvi-gallery .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
   .punitaqui-section, .punitaqui-section-with-media { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cencosud-section { grid-template-columns: 1fr; gap: 1.5rem; }
   .punitaqui-section-text h2 { margin-bottom: 1.25rem; }
   .punitaqui-story .project-media-button { height: clamp(14rem, 64vw, 21rem); }
   .punitaqui-story .document-pair .project-media-button { height: clamp(12rem, 54vw, 18rem); }
