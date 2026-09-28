@@ -337,7 +337,7 @@ footer p { margin: 0; }
 .project-detail h2 { font-size: clamp(1.5rem, 2.2vw, 2.25rem); }
 .project-evidence { max-width: 52rem; padding: 3rem 0 5rem; }
 .project-evidence ul { padding-left: 1.15rem; }
-.viejito-story { padding-bottom: 6rem; }
+.viejito-story { padding-bottom: 2rem; }
 .viejito-story figure { margin: 0; }
 .viejito-story img,
 .viejito-story video { display: block; width: 100%; }
@@ -390,9 +390,9 @@ footer p { margin: 0; }
 .horizons-section ul { margin: 0; padding-left: 1.15rem; }
 .limits-content li,
 .horizons-section li { margin-bottom: .8rem; }
-.horizons-section { display: grid; grid-template-columns: minmax(14rem, .72fr) minmax(0, 1.28fr); gap: clamp(2rem, 5vw, 5rem); }
+.horizons-section { display: grid; grid-template-columns: minmax(14rem, .72fr) minmax(0, 1.28fr); column-gap: clamp(2rem, 5vw, 5rem); row-gap: 1rem; }
 .horizons-section .technical-note { grid-column: 2; margin-top: 0; }
-.horizons-section-compact { padding-block: clamp(2.25rem, 4vw, 3.25rem); }
+.horizons-section-compact { padding: clamp(2.25rem, 4vw, 3.25rem) 0 clamp(1.5rem, 3vw, 2rem); }
 .oled-disclaimer { margin: .55rem 0 0; max-width: 36rem; color: var(--muted); font-size: .76rem; line-height: 1.35; }
 :is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page) .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
 :is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page) .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.2rem, 6vw, 5.8rem); }
