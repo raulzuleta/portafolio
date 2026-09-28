@@ -371,13 +371,13 @@ footer p { margin: 0; }
 .system-section .story-copy h2 { margin-top: 0; }
 .system-section .story-copy > p { margin-top: 0; }
 .system-chain { --system-gap: clamp(1.25rem, 2.25vw, 2.25rem); counter-reset: system-step; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--system-gap); margin: 3rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.system-chain li { counter-increment: system-step; position: relative; display: flex; align-items: center; justify-content: center; min-height: 8.5rem; padding: 2.8rem .35rem 1.35rem; color: var(--blue); font-size: clamp(.92rem, 1.2vw, 1.08rem); font-weight: 700; line-height: 1.3; text-align: center; }
+.system-chain li { counter-increment: system-step; position: relative; display: flex; align-items: center; justify-content: center; min-height: 8.5rem; padding: 2.8rem .35rem 1.35rem; color: var(--blue-strong); font-size: clamp(.92rem, 1.2vw, 1.08rem); font-weight: 700; line-height: 1.3; text-align: center; }
 .system-chain li::before { content: "0" counter(system-step); position: absolute; top: 1.05rem; left: 50%; color: var(--muted); font-size: .76rem; letter-spacing: .08em; transform: translateX(-50%); }
 .system-chain li:not(:last-child)::after { content: ""; position: absolute; top: 54%; right: calc(var(--system-gap) * -.5); width: clamp(1.35rem, 2vw, 1.8rem); height: .72rem; background: var(--blue); clip-path: polygon(0 34%, 68% 34%, 68% 0, 100% 50%, 68% 100%, 68% 66%, 0 66%); transform: translate(50%, -50%); }
 .system-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
 .system-group { padding: 1.5rem clamp(1rem, 2vw, 1.75rem) 1.5rem 0; }
 .system-group + .system-group { padding-left: clamp(1rem, 2vw, 1.75rem); border-left: 1px solid var(--line); }
-.system-group h3 { margin: 0 0 .8rem; color: var(--blue); font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
+.system-group h3 { margin: 0 0 .8rem; color: var(--blue-strong); font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
 .system-group p { margin: 0; font-size: .94rem; }
 .system-group p + p { margin-top: .9rem; }
 .system-closing { max-width: none !important; margin: 0 0 2.5rem; color: var(--muted); font-size: 1.02rem; font-weight: 400; text-align: center; }

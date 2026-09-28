@@ -80,7 +80,9 @@ function setupProjectLightbox() {
     const sourceImage = item.querySelector('img');
     enlargedImage.src = sourceImage.currentSrc || sourceImage.src;
     enlargedImage.alt = sourceImage.alt;
-    caption.textContent = figure.querySelector('figcaption')?.textContent || '';
+    caption.textContent = figure.querySelector('figcaption')?.textContent
+      || figure.closest('section')?.querySelector('.paired-caption')?.textContent
+      || '';
     counter.textContent = `${currentIndex + 1} / ${sectionItems.length}`;
   };
 
@@ -111,8 +113,14 @@ function setupProjectLightbox() {
   });
   lightbox.addEventListener('keydown', (event) => {
     if (sectionItems.length < 2) return;
-    if (event.key === 'ArrowLeft') moveWithinSection(-1);
-    if (event.key === 'ArrowRight') moveWithinSection(1);
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      moveWithinSection(-1);
+    }
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      moveWithinSection(1);
+    }
   });
 }
 
