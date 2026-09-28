@@ -6,8 +6,8 @@
     <meta name="description" content="Proyecto seleccionado del portafolio académico de Raúl Zuleta." />
     <title>Proyecto — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=layout-proyectos-25" />
-    <script src="assets/project.js?v=layout-proyectos-25" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=layout-proyectos-26" />
+    <script src="assets/project.js?v=layout-proyectos-26" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle">Saltar al contenido</a>
@@ -63,22 +63,32 @@
 
         <section class="story-section system-section">
           <div class="story-copy">
-            <p class="eyebrow">Sistema actual</p>
             <h2>Cómo funciona</h2>
-            <p>Los sensores registran algunas variaciones de la sala y el dormitorio. Dos pequeños computadores reúnen las lecturas y las envían a un servidor local, donde se conservan y comparan. Una pantalla, luces e interfaces gráficas permiten expresar algunas de esas relaciones.</p>
+            <p>Los sensores registran algunas variaciones de la sala y el dormitorio. Dos nodos reúnen las lecturas y las envían a un servidor local, donde se conservan y comparan. Una pantalla, luces e interfaces gráficas permiten expresar algunas de esas relaciones.</p>
           </div>
-          <div class="system-chain" aria-label="Funcionamiento general del sistema">
-            <span>La vivienda cambia</span><i aria-hidden="true">→</i><span>Los sensores registran</span><i aria-hidden="true">→</i><span>Los nodos reúnen</span><i aria-hidden="true">→</i><span>El servidor conserva y relaciona</span><i aria-hidden="true">→</i><span>Las interfaces expresan</span>
+          <ol class="system-chain" aria-label="Funcionamiento general del sistema">
+            <li>El ambiente varía</li>
+            <li>Los sensores registran</li>
+            <li>Los nodos reúnen y transmiten</li>
+            <li>El servidor local conserva y compara</li>
+            <li>Las interfaces expresan relaciones</li>
+          </ol>
+          <div class="system-groups">
+            <div class="system-group">
+              <h3>Infraestructura doméstica</h3>
+              <p>Un computador reutilizado funciona como servidor. Dos nodos conectados a la red local reúnen y transmiten las lecturas desde la sala y el dormitorio.</p>
+            </div>
+            <div class="system-group">
+              <h3>Registros ambientales</h3>
+              <p>El sistema registra temperatura, humedad, presión y luminosidad. Las mediciones de partículas y actividad acústica permanecen como exploraciones experimentales.</p>
+              <p>La actividad acústica se transforma localmente en indicadores relativos: no se transmiten ni conservan grabaciones.</p>
+            </div>
+            <div class="system-group">
+              <h3>Archivo y comparación</h3>
+              <p>Las mediciones se conservan dentro de la vivienda para construir registros históricos, comparar habitaciones y relacionarlas con referencias exteriores.</p>
+            </div>
           </div>
-          <ul class="system-facts">
-            <li>Un computador reutilizado como servidor doméstico</li>
-            <li>Dos nodos conectados a la red local</li>
-            <li>Temperatura, humedad, presión y luminosidad</li>
-            <li>Mediciones experimentales de partículas y actividad acústica</li>
-            <li>Almacenamiento histórico dentro de la vivienda</li>
-            <li>Comparaciones entre habitaciones y con referencias exteriores</li>
-          </ul>
-          <p class="technical-note">La actividad acústica se reduce localmente a indicadores numéricos relativos. El sistema no transmite ni conserva grabaciones de audio.</p>
+          <p class="system-closing">En cada paso, una variación de la vivienda se transforma: primero en señal y luego en registro, comparación y forma de expresión.</p>
         </section>
 
         <section class="story-section process-section">
