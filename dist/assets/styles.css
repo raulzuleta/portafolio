@@ -395,6 +395,7 @@ footer p { margin: 0; }
 .limits-section { display: grid; grid-template-columns: minmax(15rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); margin-top: 0; padding-inline: clamp(1.5rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 42%, var(--paper)); border-top: 0; }
 .limits-section > h2 { max-width: 15ch; margin: 0; }
 .limits-content > p { margin-top: 0; }
+.limits-section + .contribution-section { border-top: 0; }
 .limits-content ul,
 .horizons-section ul { margin: 0; padding-left: 1.15rem; }
 .limits-content li,
