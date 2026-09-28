@@ -6,15 +6,17 @@
     <meta name="description" content="Proyecto seleccionado del portafolio académico de Raúl Zuleta." />
     <title>Proyecto — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=accessibility-2" />
-    <script src="assets/project.js" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=layout-proyectos-31" />
+    <script src="assets/project.js?v=layout-proyectos-31" defer></script>
   </head>
   <body class="project-detail-page">
-    <a class="skip-link" href="#detalle">Saltar al contenido</a>
-    <header class="site-header detail-header">
+    <a class="skip-link" href="#detalle" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
+    <header class="site-header detail-header" id="arriba">
       <a class="wordmark" href="index.html#proyectos"><strong>Raúl Zuleta</strong></a>
-      <a class="detail-back" href="index.html#proyectos" data-es="Volver a proyectos" data-en="Back to projects">Volver a proyectos</a>
-      <button class="language-switch" type="button" aria-label="Change language to English" aria-pressed="false"><span class="active">ES</span><span>EN</span></button>
+      <div class="detail-actions">
+        <a class="detail-back" href="index.html#proyectos" data-es="← Volver a proyectos" data-en="← Back to projects">← Volver a proyectos</a>
+        <button class="language-switch" type="button" aria-label="Change language to English" aria-pressed="false"><span class="active">ES</span><span>EN</span></button>
+      </div>
     </header>
     <main id="detalle" class="project-detail">
       <header class="project-detail-hero">
@@ -23,24 +25,30 @@
         <p class="lead" id="project-intro"></p>
       </header>
       <article class="viejito-story" id="viejito-story" lang="es" hidden>
-        <figure class="story-hero-media">
-          <img src="assets/viejito-perro/nodo-en-vivienda.jpeg" alt="Nodo experimental montado en protoboards junto a una ventana, con sensores, cables, luces y pantalla OLED." />
-          <figcaption>Un nodo situado en la vivienda: sensores, conexiones e interfaces permanecen abiertos a nuevas modificaciones.</figcaption>
-        </figure>
-
         <section class="story-opening story-section">
-          <p class="story-question">¿Cómo conocer un ambiente sin dejar de habitarlo?</p>
-          <div>
+          <div class="story-opening-copy">
+            <h2>¿Cómo conocer un ambiente sin dejar de habitarlo?</h2>
             <p>La pregunta retoma una tensión que estuve explorando durante mi primer año de doctorado, aquella que aparece en la brecha entre la experiencia vivida y el dato medido. Podemos conocer el mundo mediante modelos, promedios y representaciones y, al mismo tiempo, distanciarnos de su experiencia sensible.</p>
             <p>Viejito-Perro lleva esa inquietud al espacio doméstico. Permite seguir cómo una variación ambiental se transforma en señal, dato, comparación e interpretación. Las mediciones no se tratan como representaciones transparentes, sino que dependen de la posición de los sensores, de decisiones técnicas y de las prácticas cotidianas mediante las cuales adquieren contexto.</p>
             <p>El proyecto no pretende resolver la distancia entre conocer y habitar. Explora si una infraestructura de medición puede ampliar la atención hacia el ambiente y, a la vez, cómo podría contribuir a tecnologizar o simplificar su experiencia.</p>
+          </div>
+          <figure class="story-hero-media">
+            <img src="assets/viejito-perro/nodo-en-vivienda.jpeg" alt="Nodo experimental montado en protoboards junto a una ventana, con sensores, cables, luces y pantalla OLED." />
+            <figcaption>Un nodo situado en la vivienda: sensores, conexiones e interfaces permanecen abiertos a nuevas modificaciones.</figcaption>
+          </figure>
+        </section>
+
+        <section class="story-section trajectory-section trajectory-section-early">
+          <div><p class="eyebrow">Relación con mi trayectoria</p><h2>De observar mediaciones a construirlas</h2></div>
+          <div>
+            <p>El proyecto prolonga prácticas de mi formación antropológica: la observación situada, la elaboración de archivos, la atención a acontecimientos y fallas y el examen reflexivo de instrumentos, datos e infraestructuras. Mi formación complementaria me permitió llevar esas inquietudes hacia la construcción y prueba de un sistema material.</p>
+            <p>Viejito-Perro es un proyecto independiente desarrollado durante el doctorado. Comparte con mi investigación doctoral un interés por los instrumentos y las traducciones entre materia e información, pero no forma parte del terreno empírico ni constituye un resultado de la tesis.</p>
           </div>
         </section>
 
         <section class="story-section origin-section">
           <div class="story-copy">
-            <p class="eyebrow">Origen</p>
-            <h2>Un computador querido</h2>
+            <h2>Un computador querido adquiere una nueva forma</h2>
             <p>El computador que dio origen al proyecto me fue legado. Había sido un compañero de trabajo querido y, cuando me lo entregaron para jugar y experimentar, su antigüedad evocó la frase «no se le enseñan nuevos trucos a un perro viejo».</p>
             <p>El nombre reconoce el tiempo, el cuidado y el afecto invertidos en prolongar su vida mediante nuevas capacidades. Varias decisiones, como los comportamientos luminosos o la incorporación de un personaje en la pantalla, surgieron del deseo de compartir los avances con otros de una manera cercana.</p>
             <p>«Acto de Amor» nombra así una forma de construir basada en cuidar, reutilizar y hacer partícipes a otros.</p>
@@ -49,31 +57,42 @@
             <figure><img src="assets/viejito-perro/dibujo-original.png" alt="Dibujo original de Viejito-Perro: un perro de cabeza blanca y cuerpo de robot." /><figcaption>Dibujo original de Constanza Tizzoni.</figcaption></figure>
             <figure><img src="assets/viejito-perro/boceto-carcasa.png" alt="Boceto manuscrito de una primera carcasa con pantalla, sensor de luz, botón, luz de estado y ventilación." /><figcaption>Primer boceto de carcasa, 14 de agosto de 2026. Constanza Tizzoni.</figcaption></figure>
           </div>
+          <figure class="origin-model origin-model-exploded"><img src="assets/viejito-perro/despiece-carcasa-nodo-02.png" alt="Vista tridimensional despiezada de la carcasa, con sus cuerpos, tapa, puertas, bandeja y accesorios separados." /><figcaption>Despiece del modelo: cuerpos frontal y posterior, tapa, puertas, bandeja y accesorios previstos para su ensamblaje.</figcaption></figure>
+          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Render tridimensional de una carcasa de bordes redondeados, con pantalla, pulsadores, luces y rejilla frontal." /><figcaption>Modelo tridimensional ensamblado de la carcasa del nodo 02, diseñado en OpenSCAD y orientado a impresión. Es una propuesta en desarrollo, todavía no una carcasa fabricada.</figcaption></figure>
         </section>
 
         <section class="story-section system-section">
           <div class="story-copy">
-            <p class="eyebrow">Sistema actual</p>
             <h2>Cómo funciona</h2>
-            <p>Los sensores registran algunas variaciones de la sala y el dormitorio. Dos pequeños computadores reúnen las lecturas y las envían a un servidor local, donde se conservan y comparan. Una pantalla, luces e interfaces gráficas permiten expresar algunas de esas relaciones.</p>
+            <p>Los sensores registran algunas variaciones de la sala y el dormitorio. Dos nodos reúnen las lecturas y las envían a un servidor local, donde se conservan y comparan. Una pantalla, luces e interfaces gráficas permiten expresar algunas de esas relaciones.</p>
           </div>
-          <div class="system-chain" aria-label="Funcionamiento general del sistema">
-            <span>La vivienda cambia</span><i aria-hidden="true">→</i><span>Los sensores registran</span><i aria-hidden="true">→</i><span>Los nodos reúnen</span><i aria-hidden="true">→</i><span>El servidor conserva y relaciona</span><i aria-hidden="true">→</i><span>Las interfaces expresan</span>
+          <ol class="system-chain" aria-label="Funcionamiento general del sistema">
+            <li>El ambiente varía</li>
+            <li>Los sensores registran</li>
+            <li>Los nodos reúnen y transmiten</li>
+            <li>El servidor local conserva y compara</li>
+            <li>Las interfaces expresan relaciones</li>
+          </ol>
+          <p class="system-closing">En cada paso, una variación de la vivienda se transforma: primero en señal y luego en registro, comparación y forma de expresión.</p>
+          <div class="system-groups">
+            <div class="system-group">
+              <h3>Infraestructura doméstica</h3>
+              <p>Un computador reutilizado funciona como servidor. Dos nodos conectados a la red local reúnen y transmiten las lecturas desde la sala y el dormitorio.</p>
+            </div>
+            <div class="system-group">
+              <h3>Registros ambientales</h3>
+              <p>El sistema registra temperatura, humedad, presión y luminosidad. Las mediciones de partículas y actividad acústica permanecen como exploraciones experimentales.</p>
+              <p>La actividad acústica se transforma localmente en indicadores relativos: no se transmiten ni conservan grabaciones.</p>
+            </div>
+            <div class="system-group">
+              <h3>Archivo y comparación</h3>
+              <p>Las mediciones se conservan dentro de la vivienda para construir registros históricos, comparar habitaciones y relacionarlas con referencias exteriores.</p>
+            </div>
           </div>
-          <ul class="system-facts">
-            <li>Un computador reutilizado como servidor doméstico</li>
-            <li>Dos nodos conectados a la red local</li>
-            <li>Temperatura, humedad, presión y luminosidad</li>
-            <li>Mediciones experimentales de partículas y actividad acústica</li>
-            <li>Almacenamiento histórico dentro de la vivienda</li>
-            <li>Comparaciones entre habitaciones y con referencias exteriores</li>
-          </ul>
-          <p class="technical-note">La actividad acústica se reduce localmente a indicadores numéricos relativos. El sistema no transmite ni conserva grabaciones de audio.</p>
         </section>
 
         <section class="story-section process-section">
           <div class="story-copy">
-            <p class="eyebrow">Desarrollo abierto</p>
             <h2>Una forma que emerge al construir</h2>
             <p>Viejito-Perro no fue diseñado de una vez. Su forma ha emergido mediante incorporaciones sucesivas, pruebas, fallas y nuevas preguntas. Cada capacidad añadida —registrar, comparar, conservar o expresar— modifica el sistema y permite observar aspectos diferentes de la vivienda.</p>
             <p>Las fallas también producen aprendizajes. Un sensor que deja de responder, una lectura afectada por la posición del dispositivo o una comparación exterior insuficiente hacen visibles las condiciones necesarias para producir e interpretar un dato.</p>
@@ -88,27 +107,23 @@
 
         <section class="story-section interfaces-section">
           <div class="story-copy">
-            <p class="eyebrow">Interfaces en funcionamiento</p>
-            <h2>Expresar relaciones, no solo mostrar valores</h2>
+            <h2>Interfaces en funcionamiento</h2>
           </div>
           <div class="video-grid">
             <figure>
-              <video controls playsinline preload="metadata" aria-label="Demostración de la pantalla OLED del nodo 01"><source src="assets/viejito-perro/interfaz-oled.mp4" type="video/mp4" /></video>
+              <video controls muted playsinline preload="metadata" aria-label="Demostración sin sonido de la pantalla OLED del nodo 01"><source src="assets/viejito-perro/interfaz-oled.mp4" type="video/mp4" /></video>
               <figcaption><strong>Interfaz física del nodo 01.</strong> La pantalla muestra mediciones locales y permite recorrer distintas páginas desde el dispositivo.</figcaption>
             </figure>
             <figure>
-              <video controls playsinline preload="metadata" aria-label="Prueba temprana de respiración luminosa alternada"><source src="assets/viejito-perro/respiracion-led.mp4" type="video/mp4" /></video>
+              <video controls muted playsinline preload="metadata" aria-label="Prueba sin sonido de respiración luminosa alternada"><source src="assets/viejito-perro/respiracion-led.mp4" type="video/mp4" /></video>
               <figcaption><strong>Prueba temprana de respiración luminosa alternada.</strong> Este ensayo sirvió como base para el comportamiento actual, en el que los LED expresan mediante pulsaciones alternadas la diferencia de temperatura entre la sala y el dormitorio.</figcaption>
             </figure>
           </div>
         </section>
 
         <section class="story-section limits-section">
-          <div class="story-copy">
-            <p class="eyebrow">Estado y límites</p>
-            <h2>Una infraestructura experimental</h2>
-          </div>
-          <div class="limits-grid">
+          <h2>Estado y límites</h2>
+          <div class="limits-content">
             <p>Viejito-Perro está en funcionamiento, pero no es un producto terminado ni un instrumento científico calibrado. El sistema permite observar relaciones parciales y formular preguntas; no ofrece una representación completa o neutral del ambiente.</p>
             <ul>
               <li>Las lecturas dependen de la ubicación y del montaje.</li>
@@ -120,32 +135,18 @@
         </section>
 
         <section class="story-section contribution-section">
-          <div><p class="eyebrow">Mi contribución</p><h2>Dirección y validación material</h2></div>
+          <div><h2>Autoría y colaboraciones</h2></div>
           <div>
             <p>He definido el concepto y los principios del proyecto, reacondicionado y administrado el servidor, seleccionado y montado los componentes, realizado las pruebas físicas, definido comportamientos e interfaces, contextualizado las mediciones y dirigido su documentación y desarrollo.</p>
             <p>Parte del código, las configuraciones y la documentación se desarrolló iterativamente con asistencia de herramientas de inteligencia artificial, bajo mi dirección, revisión y comprobación en el sistema físico.</p>
-          </div>
-        </section>
-
-        <section class="story-section credits-section">
-          <div><p class="eyebrow">Colaboración y créditos</p><h2>Construir con otros</h2></div>
-          <div>
             <p>El dibujo original del personaje y las primeras exploraciones visuales de su carcasa fueron creados por <strong>Constanza Tizzoni</strong>. El bitmap de la pantalla y los modelos tridimensionales posteriores derivan de ese dibujo y se publican con su autorización.</p>
             <p><strong>Nicolás Müller</strong> me ayudó a identificar, con apoyo de herramientas de inteligencia artificial, las conexiones del sensor SPS30 y colaboró en trabajos de soldadura. También me ha permitido observar un proyecto independiente que desarrolla con sensores de bajo costo para mediciones agrícolas.</p>
             <p><strong>Alejandro Bustos</strong> ha contribuido mediante conversaciones sobre la orientación y las posibilidades del proyecto, ayudándome a clarificar decisiones y abrir líneas de exploración desde su experiencia con la electrónica. También me facilitó un sensor que aún no ha sido incorporado al sistema.</p>
           </div>
         </section>
 
-        <section class="story-section trajectory-section">
-          <div><p class="eyebrow">Relación con mi trayectoria</p><h2>De observar mediaciones a construirlas</h2></div>
-          <div>
-            <p>El proyecto prolonga prácticas de mi formación antropológica: la observación situada, la elaboración de archivos, la atención a acontecimientos y fallas y el examen reflexivo de instrumentos, datos e infraestructuras. Mi formación complementaria me permitió llevar esas inquietudes hacia la construcción y prueba de un sistema material.</p>
-            <p>Viejito-Perro es un proyecto independiente desarrollado durante el doctorado. Comparte con mi investigación doctoral un interés por los instrumentos y las traducciones entre materia e información, pero no forma parte del terreno empírico ni constituye un resultado de la tesis.</p>
-          </div>
-        </section>
-
-        <section class="story-section horizons-section">
-          <div><p class="eyebrow">Horizontes de desarrollo</p><h2>Próximas exploraciones</h2></div>
+        <section class="story-section horizons-section horizons-section-compact">
+          <div><h2>Próximas exploraciones</h2></div>
           <ul>
             <li>Fabricar carcasas que integren mejor los nodos en la vivienda.</li>
             <li>Investigar formas de comunicación autónoma entre ellos.</li>
@@ -166,68 +167,89 @@
         <ul id="project-evidence"></ul>
       </section>
       <article class="cenvi-case" id="cenvi-content" hidden>
-        <figure class="cenvi-figure cenvi-figure-hero">
-          <img src="assets/cenvi-software-inicio-recorte.png" alt="Pantalla de inicio del programa CENVI con sus módulos de carga, análisis y reportes" width="1388" height="827" />
-          <figcaption>Interfaz del programa desarrollado para apoyar el procesamiento e interpretación del CENVI. La demostración utiliza datos sintéticos.</figcaption>
-        </figure>
-
-        <section class="cenvi-section">
-          <h2>El problema formativo</h2>
-          <div class="cenvi-copy">
-            <p>El proyecto respondió a una dificultad que identifiqué mediante un diagnóstico participativo de la experiencia formativa, realizado en 2023. Los estudiantes aprendían a aplicar instrumentos y calcular resultados, pero necesitaban mayor acompañamiento para convertir esos resultados en interpretaciones contextualizadas y decisiones de intervención.</p>
-            <p>A partir de ese diagnóstico comencé a incubar la idea de un sistema de apoyo que integrara las operaciones técnicas con el razonamiento profesional. La propuesta pudo concretarse en 2026 mediante el trabajo colectivo desarrollado en CIPSE.</p>
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>El problema formativo</h2>
+            <div class="cenvi-copy">
+              <p>El proyecto respondió a una dificultad que identifiqué mediante un diagnóstico participativo de la experiencia formativa, realizado en 2023. Los estudiantes aprendían a aplicar instrumentos y calcular resultados, pero necesitaban mayor acompañamiento para convertir esos resultados en interpretaciones contextualizadas y decisiones de intervención.</p>
+              <p>A partir de ese diagnóstico comencé a incubar la idea de un sistema de apoyo que integrara las operaciones técnicas con el razonamiento profesional. La propuesta pudo concretarse en 2026 mediante el trabajo colectivo desarrollado en CIPSE.</p>
+            </div>
           </div>
-        </section>
-
-        <section class="cenvi-section">
-          <h2>Del cuestionario al dispositivo</h2>
-          <div class="cenvi-copy">
-            <p>El punto de partida fue el CENVI, un instrumento desarrollado por Flavio Muñoz Troncoso, Sandra Becerra Peña y Enrique Riquelme para examinar tipos de violencia escolar y aspectos de la gestión de la convivencia.</p>
-            <p>Sobre esa base se construyó un dispositivo compuesto por cuatro elementos:</p>
-            <ul>
-              <li>un manual pedagógico de aplicación, corrección e interpretación;</li>
-              <li>un programa para procesar, revisar y visualizar los datos;</li>
-              <li>una instancia inicial de capacitación;</li>
-              <li>y un acompañamiento durante la elaboración del diagnóstico y las orientaciones de intervención.</li>
-            </ul>
-            <p>El programa reducía parte de la carga operativa y organizaba los resultados por factores y dimensiones. También generaba visualizaciones y borradores interpretativos. Estos productos no sustituían el juicio profesional, sino que debían revisarse a la luz del contexto escolar, la calidad de los datos y otras fuentes de información.</p>
-          </div>
-        </section>
-        <figure class="cenvi-figure cenvi-figure-slide">
-          <img src="assets/cenvi-cuatro-componentes-recorte.png" alt="Diagrama de los cuatro componentes del dispositivo: manual, software, capacitación y acompañamiento" width="1700" height="860" loading="lazy" />
-          <figcaption>Manual, software, capacitación y acompañamiento funcionaron como un sistema integrado de apoyo.</figcaption>
-        </figure>
-
-        <section class="cenvi-section">
-          <h2>Cuatro semanas de pilotaje</h2>
-          <div class="cenvi-copy">
-            <p>El dispositivo fue pilotado durante cuatro semanas con diecisiete estudiantes de quinto año de Psicología, organizados en parejas y vinculados con establecimientos educacionales de la Región de Coquimbo.</p>
-            <p>El proceso comprendió la capacitación inicial, la aplicación del instrumento, sesiones de apoyo técnico e interpretativo, la elaboración de informes diagnósticos y la devolución de resultados a los establecimientos. El pilotaje buscaba examinar la utilidad del dispositivo como apoyo para la formación profesional. Cuando dejé mi trabajo en CIPSE y en la Universidad Central, el análisis de los resultados todavía no se había completado; desconozco si posteriormente avanzó.</p>
-          </div>
-        </section>
-        <figure class="cenvi-figure cenvi-figure-slide">
-          <img src="assets/cenvi-pilotaje-cuatro-semanas-recorte.png" alt="Cronología del pilotaje: capacitación, aplicación, elaboración del informe y devolución de resultados" width="1700" height="860" loading="lazy" />
-          <figcaption>Secuencia de trabajo del pilotaje realizado durante cuatro semanas.</figcaption>
-        </figure>
-
-        <section class="cenvi-section">
-          <h2>Aprender a trabajar entre disciplinas</h2>
-          <div class="cenvi-copy">
-            <p>El desarrollo del programa exigió traducir criterios psicológicos y pedagógicos a reglas de procesamiento, estructuras de datos y decisiones de interfaz. Esa traducción requirió revisar conceptos, precisar procedimientos y decidir qué operaciones podían automatizarse y cuáles debían permanecer abiertas a la interpretación.</p>
-            <p>La colaboración mostró una forma concreta de trabajo interdisciplinario. La informática permitió reducir operaciones repetitivas y hacer visibles ciertas relaciones entre los resultados, mientras que la psicología educativa aportó los criterios necesarios para interpretar esos resultados sin separarlos de su contexto.</p>
-          </div>
-        </section>
-
-        <div class="cenvi-gallery" aria-label="Documentación visual del proyecto">
           <figure class="cenvi-figure">
-            <img src="assets/cenvi-software-visualizaciones-recorte.png" alt="Gráficos comparativos y matriz de interpretación cruzada generados por el programa CENVI" width="1291" height="759" loading="lazy" />
-            <figcaption>Visualizaciones generadas con datos sintéticos.</figcaption>
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar imagen de la interfaz del programa CENVI">
+              <img src="assets/cenvi-software-inicio-recorte.png" alt="Pantalla de inicio del programa CENVI con sus módulos de carga, análisis y reportes" width="1388" height="827" />
+              <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+            </button>
+            <figcaption>Interfaz del programa desarrollado para apoyar el procesamiento e interpretación del CENVI.</figcaption>
           </figure>
-          <figure class="cenvi-figure cenvi-figure-document">
-            <img src="assets/cenvi-manual-indice.png" alt="Índice del manual pedagógico CENVI" width="765" height="990" loading="lazy" />
-            <figcaption>Índice del manual pedagógico: aplicación, calidad de datos, interpretación, toma de decisiones e informe diagnóstico.</figcaption>
+        </section>
+
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>Del cuestionario al dispositivo</h2>
+            <div class="cenvi-copy">
+              <p>El punto de partida fue el CENVI, un instrumento desarrollado por Flavio Muñoz Troncoso, Sandra Becerra Peña y Enrique Riquelme para examinar tipos de violencia escolar y aspectos de la gestión de la convivencia.</p>
+              <p>Sobre esa base se construyó un dispositivo compuesto por cuatro elementos:</p>
+              <ul>
+                <li>un manual pedagógico de aplicación, corrección e interpretación;</li>
+                <li>un programa para procesar, revisar y visualizar los datos;</li>
+                <li>una instancia inicial de capacitación;</li>
+                <li>y un acompañamiento durante la elaboración del diagnóstico y las orientaciones de intervención.</li>
+              </ul>
+              <p>El programa reducía parte de la carga operativa y organizaba los resultados por factores y dimensiones. También generaba visualizaciones y borradores interpretativos. Estos productos no sustituían el juicio profesional, sino que debían revisarse a la luz del contexto escolar, la calidad de los datos y otras fuentes de información.</p>
+            </div>
+          </div>
+          <figure class="cenvi-figure">
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar diagrama de los cuatro componentes del dispositivo">
+              <img src="assets/cenvi-cuatro-componentes-recorte.png" alt="Diagrama de los cuatro componentes del dispositivo: manual, software, capacitación y acompañamiento" width="1700" height="860" loading="lazy" />
+              <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+            </button>
+            <figcaption>Manual, software, capacitación y acompañamiento funcionaron como un sistema integrado de apoyo.</figcaption>
           </figure>
-        </div>
+        </section>
+
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>Cuatro semanas de pilotaje</h2>
+            <div class="cenvi-copy">
+              <p>El dispositivo fue pilotado durante cuatro semanas con diecisiete estudiantes de quinto año de Psicología, organizados en parejas y vinculados con establecimientos educacionales de la Región de Coquimbo.</p>
+              <p>El proceso comprendió la capacitación inicial, la aplicación del instrumento, sesiones de apoyo técnico e interpretativo, la elaboración de informes diagnósticos y la devolución de resultados a los establecimientos. El pilotaje buscaba examinar la utilidad del dispositivo como apoyo para la formación profesional. Cuando dejé mi trabajo en CIPSE y en la Universidad Central, el análisis de los resultados todavía no se había completado; desconozco si posteriormente avanzó.</p>
+            </div>
+          </div>
+          <figure class="cenvi-figure">
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar cronología del pilotaje">
+              <img src="assets/cenvi-pilotaje-cuatro-semanas-recorte.png" alt="Cronología del pilotaje: capacitación, aplicación, elaboración del informe y devolución de resultados" width="1700" height="860" loading="lazy" />
+              <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+            </button>
+            <figcaption>Secuencia de trabajo del pilotaje realizado durante cuatro semanas.</figcaption>
+          </figure>
+        </section>
+
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>Aprender a trabajar entre disciplinas</h2>
+            <div class="cenvi-copy">
+              <p>El desarrollo del programa exigió traducir criterios psicológicos y pedagógicos a reglas de procesamiento, estructuras de datos y decisiones de interfaz. Esa traducción requirió revisar conceptos, precisar procedimientos y decidir qué operaciones podían automatizarse y cuáles debían permanecer abiertas a la interpretación.</p>
+              <p>La colaboración mostró una forma concreta de trabajo interdisciplinario. La informática permitió reducir operaciones repetitivas y hacer visibles ciertas relaciones entre los resultados, mientras que la psicología educativa aportó los criterios necesarios para interpretar esos resultados sin separarlos de su contexto.</p>
+            </div>
+          </div>
+          <div class="cenvi-gallery" aria-label="Documentación visual del proyecto">
+            <figure class="cenvi-figure">
+              <button class="cenvi-media-button" type="button" aria-label="Ampliar visualizaciones del programa CENVI">
+                <img src="assets/cenvi-software-visualizaciones-recorte.png" alt="Gráficos comparativos y matriz de interpretación cruzada generados por el programa CENVI" width="1291" height="759" loading="lazy" />
+                <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+              </button>
+              <figcaption>Visualizaciones generadas con datos sintéticos.</figcaption>
+            </figure>
+            <figure class="cenvi-figure cenvi-figure-document">
+              <button class="cenvi-media-button" type="button" aria-label="Ampliar índice del manual pedagógico CENVI">
+                <img src="assets/cenvi-manual-indice.png" alt="Índice del manual pedagógico CENVI" width="765" height="990" loading="lazy" />
+                <span class="cenvi-media-hint" aria-hidden="true">Ampliar</span>
+              </button>
+              <figcaption>Índice del manual pedagógico: aplicación, calidad de datos, interpretación, toma de decisiones e informe diagnóstico.</figcaption>
+            </figure>
+          </div>
+        </section>
 
         <section class="cenvi-section">
           <h2>Mi contribución</h2>
@@ -246,44 +268,34 @@
           </div>
         </section>
 
-        <section class="cenvi-section cenvi-section-compact">
-          <div>
-            <h2>Estado y límites</h2>
-            <p>El dispositivo fue construido y pilotado en 2026. Cuando dejé mi trabajo en CIPSE y en la Universidad Central para dedicarme al trabajo de campo doctoral, el análisis de la evaluación todavía no se había completado.</p>
-          </div>
-          <div>
-            <h2>Cuidados de publicación</h2>
-            <p>Las capturas públicas del programa utilizan datos sintéticos y no contienen información de estudiantes ni de establecimientos. Las imágenes se publican con autorización de Jorge Mavrakis y Matías Barraza.</p>
-            <p>Del manual se muestran solamente el índice y fragmentos generales que permiten comprender su estructura. No se publican el documento completo, los ítems del cuestionario, claves de corrección ni materiales producidos por estudiantes.</p>
-            <p>El instalador del programa, los informes diagnósticos, las bases del pilotaje, los instrumentos de evaluación y el resumen de congreso se conservan como documentación interna.</p>
-          </div>
-        </section>
       </article>
       <article class="punitaqui-story" id="punitaqui-content" hidden>
-        <p class="punitaqui-opening">El proyecto surgió ante una dificultad práctica ya que los equipos de convivencia que debía supervisar trabajaban con criterios, procedimientos y formas de organización muy diferentes. Como coordinador comunal, consideré necesario ofrecer un marco compartido que orientara su trabajo sin reemplazar las decisiones propias de cada establecimiento.</p>
-
-        <section>
-          <h2>Del encargo a un sistema documental</h2>
-          <p>Mi jefatura me solicitó elaborar lo que institucionalmente se denominó una “Política Comunal de Convivencia Escolar”. La propuesta fue presentada al alcalde y aprobada mediante decreto municipal.</p>
-          <p>El documento central definía objetivos, fundamentos conceptuales, niveles de intervención y una programación plurianual. A su alrededor elaboré cinco documentos de orientación:</p>
-          <ul>
-            <li>elaboración del Plan de Gestión de la Convivencia Escolar;</li>
-            <li>conformación y gestión de los equipos de convivencia;</li>
-            <li>acompañamiento docente para fortalecer las interacciones en el aula;</li>
-            <li>fortalecimiento del rol de las jefaturas de curso;</li>
-            <li>perfiles de cargo para encargados de convivencia y duplas psicosociales.</li>
-          </ul>
-          <p>En conjunto, estos materiales buscaban traducir la normativa nacional y los propósitos generales de la convivencia escolar en funciones, procedimientos e instrumentos que pudieran utilizarse en el trabajo cotidiano.</p>
-          <figure class="document-figure document-figure-wide">
+        <section class="punitaqui-section punitaqui-section-with-media">
+          <div class="punitaqui-section-text">
+            <h2>Del encargo a un sistema documental</h2>
+            <p>Mi jefatura me solicitó elaborar lo que institucionalmente se denominó una “Política Comunal de Convivencia Escolar”. La propuesta fue presentada al alcalde y aprobada mediante decreto municipal.</p>
+            <p>El documento central definía objetivos, fundamentos conceptuales, niveles de intervención y una programación plurianual. A su alrededor elaboré cinco documentos de orientación:</p>
+            <ul>
+              <li>elaboración del Plan de Gestión de la Convivencia Escolar;</li>
+              <li>conformación y gestión de los equipos de convivencia;</li>
+              <li>acompañamiento docente para fortalecer las interacciones en el aula;</li>
+              <li>fortalecimiento del rol de las jefaturas de curso;</li>
+              <li>perfiles de cargo para encargados de convivencia y duplas psicosociales.</li>
+            </ul>
+            <p>En conjunto, estos materiales buscaban traducir la normativa nacional y los propósitos generales de la convivencia escolar en funciones, procedimientos e instrumentos que pudieran utilizarse en el trabajo cotidiano.</p>
+          </div>
+          <figure class="document-figure document-figure-wide punitaqui-document-overview">
             <img src="assets/punitaqui/politica-estrategias.png" alt="Tabla de la Política Comunal de Convivencia Escolar que relaciona un nivel institucional con perfiles de cargo y orientaciones para los equipos y planes de convivencia." loading="lazy" />
             <figcaption>Estrategias y documentos articulados por la Política Comunal de Convivencia Escolar.</figcaption>
           </figure>
         </section>
 
-        <section>
-          <h2>Documentos para organizar prácticas</h2>
-          <p>Las orientaciones incluían ciclos de diagnóstico, planificación, seguimiento y evaluación; matrices para formular planes; perfiles de competencias; pautas de observación y retroalimentación docente; indicadores de aprendizaje; materiales para el trabajo con familias; y una adaptación de metodologías ágiles para coordinar el trabajo de los equipos.</p>
-          <p>Los documentos intentaban producir una forma común de organizar el trabajo: distribuir responsabilidades, hacer visibles los avances, conservar registros y vincular las actividades de cada establecimiento con objetivos comunales.</p>
+        <section class="punitaqui-section punitaqui-section-with-media">
+          <div class="punitaqui-section-text">
+            <h2>Documentos para organizar prácticas</h2>
+            <p>Las orientaciones incluían ciclos de diagnóstico, planificación, seguimiento y evaluación; matrices para formular planes; perfiles de competencias; pautas de observación y retroalimentación docente; indicadores de aprendizaje; materiales para el trabajo con familias; y una adaptación de metodologías ágiles para coordinar el trabajo de los equipos.</p>
+            <p>Los documentos intentaban producir una forma común de organizar el trabajo: distribuir responsabilidades, hacer visibles los avances, conservar registros y vincular las actividades de cada establecimiento con objetivos comunales.</p>
+          </div>
           <div class="document-pair">
             <figure class="document-figure">
               <img src="assets/punitaqui/plan-ciclo.png" alt="Diagrama circular que organiza la elaboración del plan de convivencia desde el autodiagnóstico y la priorización hasta la implementación y evaluación." loading="lazy" />
@@ -296,78 +308,83 @@
           </div>
         </section>
 
-        <section>
+        <section class="punitaqui-section punitaqui-section-textual">
           <h2>Presentación y circulación</h2>
-          <p>La política y sus documentos complementarios fueron presentados durante una jornada comunal en la que los integrantes del Departamento de Educación expusimos nuestros planes de trabajo ante docentes de las escuelas municipales.</p>
-          <p>Los materiales fueron distribuidos oficialmente a los establecimientos. Yo mismo coordiné su multicopiado y deposité ejemplares impresos en los casilleros de correspondencia de las distintas escuelas de la comuna.</p>
+          <div>
+            <p>La política y sus documentos complementarios fueron presentados durante una jornada comunal en la que los integrantes del Departamento de Educación expusimos nuestros planes de trabajo ante docentes de las escuelas municipales.</p>
+            <p>Los materiales fueron distribuidos oficialmente a los establecimientos. Yo mismo coordiné su multicopiado y deposité ejemplares impresos en los casilleros de correspondencia de las distintas escuelas de la comuna.</p>
+          </div>
         </section>
 
-        <section>
-          <h2>Mi contribución</h2>
-          <p>Elaboré íntegramente el documento central y las cinco orientaciones complementarias. Esto comprendió la revisión de normativa y bibliografía, la definición del marco conceptual, la organización del sistema de documentos y la creación de diagramas, matrices, perfiles, pautas e instrumentos de trabajo.</p>
-          <p>También gestioné la presentación de la propuesta ante el alcalde, participé en su formalización institucional, presenté el proyecto ante la comunidad docente y coordiné la reproducción y distribución de los materiales.</p>
-          <figure class="document-figure document-figure-wide">
+        <section class="punitaqui-section punitaqui-section-with-media punitaqui-contribution">
+          <div class="punitaqui-section-text">
+            <h2>Mi contribución</h2>
+            <p>Elaboré íntegramente el documento central y las cinco orientaciones complementarias. Esto comprendió la revisión de normativa y bibliografía, la definición del marco conceptual, la organización del sistema de documentos y la creación de diagramas, matrices, perfiles, pautas e instrumentos de trabajo.</p>
+            <p>También gestioné la presentación de la propuesta ante el alcalde, participé en su formalización institucional, presenté el proyecto ante la comunidad docente y coordiné la reproducción y distribución de los materiales.</p>
+          </div>
+          <figure class="document-figure document-figure-wide contribution-profile">
             <img src="assets/punitaqui/perfiles-matriz.png" alt="Matriz de competencias funcionales que relaciona actividades clave del cargo con criterios de desempeño observables." loading="lazy" />
             <figcaption>Fragmento del perfil de cargo diseñado para vincular funciones, criterios de desempeño e indicadores.</figcaption>
           </figure>
-          <div class="document-pair document-pair-forms">
-            <figure class="document-figure">
-              <img src="assets/punitaqui/acompanamiento-observacion.png" alt="Inicio de una pauta de observación y acompañamiento docente en el aula." loading="lazy" />
-            </figure>
-            <figure class="document-figure">
-              <img src="assets/punitaqui/acompanamiento-retroalimentacion.png" alt="Inicio de una pauta de entrevista y retroalimentación docente." loading="lazy" />
-            </figure>
-          </div>
-          <p class="paired-caption">Pautas diseñadas para registrar observaciones de aula y orientar la retroalimentación docente.</p>
+          <figure class="document-figure contribution-form">
+            <img src="assets/punitaqui/acompanamiento-observacion.png" alt="Inicio de una pauta de observación y acompañamiento docente en el aula." loading="lazy" />
+          </figure>
+          <figure class="document-figure contribution-form">
+            <img src="assets/punitaqui/acompanamiento-retroalimentacion.png" alt="Inicio de una pauta de entrevista y retroalimentación docente." loading="lazy" />
+          </figure>
+          <p class="paired-caption contribution-forms-caption">Pautas diseñadas para registrar observaciones de aula y orientar la retroalimentación docente.</p>
         </section>
 
-        <section class="punitaqui-limits">
+        <section class="punitaqui-section punitaqui-section-textual punitaqui-limits">
           <h2>Implementación y límites</h2>
-          <p>La implementación no alcanzó lo proyectado. Me resultó difícil sostener un sistema de monitoreo que permitiera conocer cómo utilizaba cada establecimiento los documentos, acompañar las dificultades y ajustar oportunamente las orientaciones.</p>
-          <p>La propuesta tampoco fue comprendida o apropiada de la misma manera por todos los actores. Esto fue especialmente evidente en las escuelas rurales unidocentes, cuya organización, disponibilidad de personal y condiciones de trabajo no correspondían a varios de los supuestos organizativos presentes en los documentos.</p>
-          <p>Visto retrospectivamente, el proyecto muestra tanto la capacidad de construir una arquitectura institucional como los límites de intentar coordinar realidades escolares heterogéneas mediante orientaciones generales. Diseñar documentos, aprobarlos y distribuirlos no garantiza por sí solo que estos se conviertan en prácticas sostenidas.</p>
+          <div>
+            <p>La implementación no alcanzó lo proyectado. Me resultó difícil sostener un sistema de monitoreo que permitiera conocer cómo utilizaba cada establecimiento los documentos, acompañar las dificultades y ajustar oportunamente las orientaciones.</p>
+            <p>La propuesta tampoco fue comprendida o apropiada de la misma manera por todos los actores. Esto fue especialmente evidente en las escuelas rurales unidocentes, cuya organización, disponibilidad de personal y condiciones de trabajo no correspondían a varios de los supuestos organizativos presentes en los documentos.</p>
+            <p>Visto retrospectivamente, el proyecto muestra tanto la capacidad de construir una arquitectura institucional como los límites de intentar coordinar realidades escolares heterogéneas mediante orientaciones generales. Diseñar documentos, aprobarlos y distribuirlos no garantiza por sí solo que estos se conviertan en prácticas sostenidas.</p>
+          </div>
         </section>
       </article>
       <article class="cencosud-story" id="cencosud-content" hidden>
-        <p class="cencosud-opening">El ejercicio buscaba identificar dificultades en la experiencia, formular una propuesta de mejora y traducirla en un prototipo de interfaz.</p>
-
-        <section>
+        <section class="cencosud-section">
           <h2>Analizar el recorrido del usuario</h2>
-          <p>El equipo construyó colectivamente una caracterización del usuario, un mapa de empatía, un journey map y un service blueprint. Estos recursos permitieron representar el recorrido asociado a la solicitud de un avance e identificar posibles quiebres antes, durante y después del servicio.</p>
-          <p>La propuesta se concentró en tres dificultades: 1) la falta de información financiera actualizada; 2) el riesgo de atrasarse por no recibir recordatorios oportunos y 3) la ausencia de alternativas de financiamiento comprensibles para el usuario.</p>
-          <p>A partir de estas dificultades, el equipo definió tres atributos para orientar el rediseño: 1) seguridad y confiabilidad; 2) accesibilidad y facilidad de uso; y 3) educación financiera.</p>
+          <div class="cencosud-section-body">
+            <p>El equipo construyó colectivamente una caracterización del usuario, un mapa de empatía, un journey map y un service blueprint. Estos recursos permitieron representar el recorrido asociado a la solicitud de un avance e identificar posibles quiebres antes, durante y después del servicio.</p>
+            <p>La propuesta se concentró en tres dificultades: 1) la falta de información financiera actualizada; 2) el riesgo de atrasarse por no recibir recordatorios oportunos y 3) la ausencia de alternativas de financiamiento comprensibles para el usuario.</p>
+            <p>A partir de estas dificultades, el equipo definió tres atributos para orientar el rediseño: 1) seguridad y confiabilidad; 2) accesibilidad y facilidad de uso; y 3) educación financiera.</p>
+          </div>
           <div class="cencosud-analysis-gallery">
             <figure class="cencosud-figure">
-              <a href="assets/cencosud/journey.png" target="_blank" rel="noopener">
-                <img src="assets/cencosud/journey.png" alt="Journey map del ejercicio, organizado en once momentos antes, durante y después del servicio." loading="lazy" />
-              </a>
+              <img src="assets/cencosud/journey.png" alt="Journey map del ejercicio, organizado en once momentos antes, durante y después del servicio." loading="lazy" />
               <figcaption>Journey map utilizado para representar quiebres, acciones y emociones a lo largo del servicio.</figcaption>
             </figure>
             <figure class="cencosud-figure">
-              <a href="assets/cencosud/blueprint.png" target="_blank" rel="noopener">
-                <img src="assets/cencosud/blueprint.png" alt="Service blueprint del ejercicio, con catorce momentos distribuidos entre pre-servicio, servicio y post-servicio." loading="lazy" />
-              </a>
+              <img src="assets/cencosud/blueprint.png" alt="Service blueprint del ejercicio, con catorce momentos distribuidos entre pre-servicio, servicio y post-servicio." loading="lazy" />
               <figcaption>Service blueprint desarrollado para organizar la propuesta antes, durante y después del servicio.</figcaption>
             </figure>
           </div>
         </section>
 
-        <section>
-          <h2>Traducir la propuesta a una interfaz</h2>
-          <p>El prototipo reunió tres componentes principales:</p>
-          <ul>
-            <li>un flujo para simular la solicitud de un avance y revisar el desglose de sus costos;</li>
-            <li>una visualización de la distribución mensual de gastos;</li>
-            <li>un sistema de recordatorios de pago que mostraba el posible ahorro de intereses asociado al pago oportuno.</li>
-          </ul>
-          <p>Las pantallas buscaban organizar información financiera compleja mediante jerarquías visuales, gráficos, avisos y secuencias de navegación comprensibles. El archivo de Figma conserva distintas variantes y etapas del diseño, además de las pantallas seleccionadas para la presentación final.</p>
+        <section class="cencosud-section cencosud-interface">
+          <div class="cencosud-section-heading">
+            <h2>Traducir la propuesta a una interfaz</h2>
+            <p class="cencosud-source-wrap"><a class="cencosud-source-link" href="https://www.figma.com/design/l6OvanOGngKmvsAkQedM76/Diplomado?m=auto&amp;t=pmp5Zx6DiV0AUTfG-1" target="_blank" rel="noopener">Abrir el prototipo en Figma ↗</a></p>
+          </div>
+          <div class="cencosud-section-body">
+            <p>El prototipo reunió tres componentes principales:</p>
+            <ul>
+              <li>un flujo para simular la solicitud de un avance y revisar el desglose de sus costos;</li>
+              <li>una visualización de la distribución mensual de gastos;</li>
+              <li>un sistema de recordatorios de pago que mostraba el posible ahorro de intereses asociado al pago oportuno.</li>
+            </ul>
+            <p>Las pantallas buscaban organizar información financiera compleja mediante jerarquías visuales, gráficos, avisos y secuencias de navegación comprensibles. El archivo de Figma conserva distintas variantes y etapas del diseño, además de las pantallas seleccionadas para la presentación final.</p>
+          </div>
           <div class="cencosud-prototype-gallery">
             <figure class="cencosud-figure cencosud-figure-primary">
               <img src="assets/cencosud/prototipo-simulacion.png" alt="Dos pantallas del prototipo: simulador de un avance y resumen de sus costos." loading="lazy" />
               <figcaption>Simulación de un avance y desglose de costos.</figcaption>
             </figure>
             <figure class="cencosud-figure">
-              <img src="assets/cencosud/prototipo-gastos.png" alt="Tres pantallas del prototipo: notificación, inicio y gráfico de distribución mensual de gastos." loading="lazy" />
+              <img src="assets/cencosud/prototipo-gastos-recortado.png" alt="Tres pantallas del prototipo: notificación, inicio y gráfico de distribución mensual de gastos." loading="lazy" />
               <figcaption>Acceso a una visualización de la distribución mensual de gastos.</figcaption>
             </figure>
             <figure class="cencosud-figure">
@@ -375,26 +392,45 @@
               <figcaption>Recordatorios de pago y comunicación del posible ahorro de intereses.</figcaption>
             </figure>
           </div>
-          <p><a class="cencosud-source-link" href="https://www.figma.com/design/l6OvanOGngKmvsAkQedM76/Diplomado?m=auto&amp;t=pmp5Zx6DiV0AUTfG-1" target="_blank" rel="noopener">Consultar el prototipo en Figma</a></p>
         </section>
 
-        <section>
+        <section class="cencosud-section">
           <h2>Aprender una herramienta durante el proyecto</h2>
-          <p>Participé en la totalidad de los ejercicios y decisiones del trabajo grupal. Mi contribución individual más destacable fue el desarrollo visual de todas las pantallas del prototipo.</p>
-          <p>Al comenzar el proyecto no sabía utilizar Figma. Mi experiencia previa con software de edición de gráficos vectoriales me permitió comprender algunos principios de construcción gráfica, pero debí aprender las funciones básicas de la nueva herramienta mediante tutoriales y experimentación directa. El prototipo fue, por tanto, tanto un resultado del ejercicio como una instancia de aprendizaje técnico situado ya que la necesidad de materializar la propuesta orientó la adquisición y aplicación inmediata de una nueva herramienta.</p>
+          <div class="cencosud-section-body">
+            <p>Participé en la totalidad de los ejercicios y decisiones del trabajo grupal. Mi contribución individual más destacable fue el desarrollo visual de todas las pantallas del prototipo.</p>
+            <p>Al comenzar el proyecto no sabía utilizar Figma. Mi experiencia previa con software de edición de gráficos vectoriales me permitió comprender algunos principios de construcción gráfica, pero debí aprender las funciones básicas de la nueva herramienta mediante tutoriales y experimentación directa. El prototipo fue, por tanto, tanto un resultado del ejercicio como una instancia de aprendizaje técnico situado ya que la necesidad de materializar la propuesta orientó la adquisición y aplicación inmediata de una nueva herramienta.</p>
+          </div>
         </section>
 
-        <section>
+        <section class="cencosud-section">
           <h2>Colaboración y créditos</h2>
-          <p>El proyecto fue desarrollado conjuntamente por <strong>Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira y Raúl Zuleta</strong>. Todos los integrantes participaron en el análisis de la experiencia, la elaboración de los instrumentos y la definición de la propuesta.</p>
-          <p>El diseño y construcción de las pantallas en Figma fue realizado por Raúl Zuleta.</p>
+          <div class="cencosud-section-body">
+            <p>El proyecto fue desarrollado conjuntamente por <strong>Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira y Raúl Zuleta</strong>. Todos los integrantes participaron en el análisis de la experiencia, la elaboración de los instrumentos y la definición de la propuesta.</p>
+            <p>El diseño y construcción de las pantallas en Figma fue realizado por Raúl Zuleta.</p>
+          </div>
         </section>
 
-        <section class="cencosud-limits">
+        <section class="cencosud-section cencosud-limits">
           <h2>Alcance y límites</h2>
-          <p>La persona denominada “Miguel”, sus características y las citas incluidas en la presentación fueron construidas para el ejercicio. No proceden de entrevistas ni constituyen evidencia empírica sobre usuarios de la aplicación.</p>
+          <div class="cencosud-section-body">
+            <p>La persona denominada “Miguel”, sus características y las citas incluidas en la presentación fueron construidas para el ejercicio. No proceden de entrevistas ni constituyen evidencia empírica sobre usuarios de la aplicación.</p>
+          </div>
         </section>
       </article>
+      <dialog class="cenvi-lightbox project-lightbox" id="project-lightbox" aria-label="Visor de documentación visual">
+        <button class="cenvi-lightbox-close" type="button" aria-label="Cerrar imagen ampliada">×</button>
+        <span class="project-lightbox-counter" aria-live="polite" hidden></span>
+        <button class="project-lightbox-nav project-lightbox-prev" type="button" aria-label="Ver imagen anterior de esta sección">‹</button>
+        <figure>
+          <img src="" alt="" />
+          <figcaption aria-live="polite"></figcaption>
+        </figure>
+        <button class="project-lightbox-nav project-lightbox-next" type="button" aria-label="Ver imagen siguiente de esta sección">›</button>
+      </dialog>
+      <nav class="project-end-nav" aria-label="Navegación al terminar el proyecto">
+        <a class="project-end-primary" href="index.html#proyectos" data-es="← Todos los proyectos" data-en="← All projects">← Todos los proyectos</a>
+        <a class="project-end-secondary" href="#arriba" data-es="↑ Volver arriba" data-en="↑ Back to top">↑ Volver arriba</a>
+      </nav>
     </main>
     <footer><p>Coquimbo — Santiago · Chile</p><p>© 2026 Raúl Zuleta · <span data-es="Derechos reservados" data-en="All rights reserved">Derechos reservados</span></p></footer>
   </body>
