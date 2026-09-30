@@ -2,11 +2,12 @@
 
 ## Trayectoria
 
-Estado: versión española aprobada e integrada en `ronda-contenidos-2026-09`.
+Estado: contenido español cerrado e integrado en `ronda-contenidos-2026-09`; la revisión general de layout queda para la ronda final.
 
 ### Decisiones aprobadas
 
 - La trayectoria presenta psicología, sociología y antropología como una ampliación deliberada de escalas, sin afirmar que su articulación precisa estuviera resuelta desde el inicio.
+- El título «Tres formaciones, una trayectoria por sedimentación» presenta las formaciones como capas que se acumulan y reorganizan sin sustituirse ni homogeneizar sus diferencias.
 - Psicología incorpora investigación educacional, trabajo escolar y comunal e interlocución intersectorial.
 - Sociología explicita el estudio de políticas, instituciones, categorías y dispositivos de gobierno.
 - Antropología presenta la investigación doctoral en curso, la candidatura aprobada y el desplazamiento hacia prácticas científicas, escalas moleculares y transformaciones entre materia e información.
