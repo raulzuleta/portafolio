@@ -307,6 +307,9 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .credential-list h3 { margin: 0 0 .65rem; font-size: 1.05rem; line-height: 1.25; }
 .credential-list p { margin: 0 0 1rem; color: var(--muted); font-size: .86rem; }
 .credential-pending { margin-top: auto; color: var(--muted); font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.credential-link { align-self: flex-start; margin-top: auto; border-bottom: 1px solid currentColor; color: var(--ink); font-size: .78rem; font-weight: 750; letter-spacing: .035em; text-decoration: none; text-transform: uppercase; }
+.credential-link:hover, .credential-link:focus-visible { border-bottom-color: transparent; color: var(--blue); }
+.credential-link:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 .contact { display: grid; grid-template-columns: minmax(0, .85fr) minmax(26rem, 1.15fr); gap: clamp(3rem, 7vw, 7rem); padding: clamp(2.5rem, 6vw, 5rem) 0; border-top: 1px solid var(--ink); }
 .contact-intro h2 { max-width: 15ch; }
 .contact-promise { max-width: 35rem; font-size: 1.12rem; }

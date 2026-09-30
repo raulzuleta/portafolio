@@ -19,9 +19,12 @@ Estado: versión española aprobada e integrada en `ronda-contenidos-2026-09`.
 ### Pendientes
 
 - Traducir Trayectoria y la página secundaria al inglés después de verificar la versión española en contexto.
-- Incorporar los PDF de certificados y reemplazar los estados provisionales por enlaces de visualización en línea.
-- Verificar que cada enlace abra el certificado correspondiente sin iniciar una descarga automática.
 - Realizar revisión final de la sección junto con Inicio, Investigación, Proyectos y Pedagogía antes de integrar la rama en `main`.
+
+### Certificados incorporados
+
+- Se incorporaron los 19 certificados con nombres web normalizados y enlaces de visualización en una pestaña nueva.
+- Se generó una copia PDF de Consumer Psychology a partir del archivo JPG entregado para mantener una experiencia uniforme.
 
 ### Fuera de esta sección
 
