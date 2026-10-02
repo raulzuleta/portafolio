@@ -6,8 +6,8 @@
     <meta name="description" content="Proyecto seleccionado del portafolio académico de Raúl Zuleta." />
     <title>Proyecto — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=huerto-1" />
-    <script src="assets/project.js?v=huerto-1" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=huerto-2" />
+    <script src="assets/project.js?v=huerto-2" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
@@ -438,19 +438,18 @@
             <p>La fotografía diaria documentó la emergencia y el crecimiento inicial. Los rabanitos fueron los primeros en aparecer; después emergieron las albahacas y los tomates. Sin embargo, comparar las imágenes no era una operación automática: el ángulo de la cámara, la hora, la iluminación, la posición de las bandejas y el procesamiento de los archivos modificaban aquello que podía verse.</p>
             <p>El dispositivo de observación no precedió al cultivo. Se fue formando junto con las plantas, a medida que aparecían nuevas necesidades de identificación, comparación y registro.</p>
           </div>
-          <div class="huerto-sequence" aria-label="Secuencia fotográfica de la emergencia y crecimiento del cultivo">
-            <figure class="huerto-figure">
-              <img src="assets/huerto/primeros-brotes-21-septiembre.jpg" alt="Bandejas vistas desde arriba con los primeros brotes verdes visibles en cuatro cavidades." width="1800" height="2400" loading="lazy" />
-              <figcaption><time datetime="2026-09-21">21 de septiembre</time> · Los rabanitos son los primeros en emerger.</figcaption>
+          <div class="huerto-timelapse" data-huerto-timelapse aria-label="Secuencia temporal del crecimiento del cultivo">
+            <figure class="huerto-figure huerto-timelapse-frame">
+              <img src="assets/huerto/siembra-19-septiembre.jpg" alt="Dos bandejas de germinación recién sembradas." width="1800" height="2400" loading="lazy" data-timelapse-image />
+              <figcaption aria-live="polite"><time datetime="2026-09-19" data-timelapse-date>19 de septiembre</time><span data-timelapse-note> · Siembra y primer registro estabilizado.</span></figcaption>
             </figure>
-            <figure class="huerto-figure">
-              <img src="assets/huerto/emergencia-especies-23-septiembre.jpg" alt="Bandejas vistas desde arriba con brotes de distintos tamaños distribuidos en varias cavidades." width="1800" height="2400" loading="lazy" />
-              <figcaption><time datetime="2026-09-23">23 de septiembre</time> · La serie permite distinguir ritmos de emergencia y crecimiento.</figcaption>
-            </figure>
-            <figure class="huerto-figure">
-              <img src="assets/huerto/crecimiento-2-octubre.jpg" alt="Bandejas con tomates, rabanitos y albahacas ya desarrollados; algunas plantas sobrepasan los límites de sus cavidades." width="1800" height="2400" loading="lazy" />
-              <figcaption><time datetime="2026-10-02">2 de octubre</time> · El crecimiento vuelve necesarias nuevas decisiones de raleo y trasplante.</figcaption>
-            </figure>
+            <div class="huerto-timelapse-controls">
+              <button type="button" class="huerto-timelapse-play" data-timelapse-play aria-pressed="false">Reproducir secuencia</button>
+              <label for="huerto-timelapse-range">Recorrer los registros</label>
+              <input id="huerto-timelapse-range" type="range" min="0" max="11" value="0" step="1" data-timelapse-range />
+              <output data-timelapse-counter>1 / 12</output>
+            </div>
+            <p class="huerto-timelapse-note">Las variaciones de encuadre, iluminación y montaje forman parte del registro: la secuencia no ha sido alineada ni homogeneizada.</p>
           </div>
         </section>
 
@@ -462,6 +461,10 @@
             <p>Las sondas de sustrato producen actualmente voltajes crudos. Esos valores permiten seguir variaciones, pero todavía no equivalen a porcentajes calibrados de humedad. Conservarlos en su unidad original evita presentar una interpretación como si fuera una medición directa y definitiva.</p>
           </div>
           <div class="huerto-instrument-gallery">
+            <figure class="huerto-figure">
+              <img src="assets/huerto/montaje-y-programacion.jpg" alt="Nodo vegetal conectado a un computador durante una prueba de programación, con una sonda de sustrato en primer plano." width="1600" height="2133" loading="lazy" />
+              <figcaption>Prueba del nodo y revisión de sus lecturas antes de incorporarlo al cultivo.</figcaption>
+            </figure>
             <figure class="huerto-figure">
               <img src="assets/huerto/montaje-nodo-vegetal.jpg" alt="Montaje del nodo vegetal en una protoboard, conectado mediante cables a sensores ubicados junto a las bandejas." width="1800" height="2400" loading="lazy" />
               <figcaption>El montaje inicial hace visibles las conexiones que median entre el cultivo y el registro.</figcaption>
@@ -497,6 +500,10 @@
             <p>Estas prácticas tampoco conservan un objeto inalterado. Cada intervención modifica las trayectorias posteriores del cultivo y aquello que podrá registrarse. El cuidado sostiene la vida, pero también selecciona, orienta y transforma sus posibilidades.</p>
             <p>Durante el primer raleo de los rabanitos se aplicaron criterios distintos en dos cavidades. En una se conservó la planta de mayor tamaño; en otra, la menor. Las plántulas retiradas fueron fotografiadas y pesadas, incorporando parcialmente una práctica de fenotipado conocida durante el trabajo de campo.</p>
             <p>El procedimiento no constituye un experimento comparativo ni reproduce un protocolo de laboratorio completo. Su importancia está en mostrar cómo una conversación, una herramienta y una decisión de cuidado pueden introducir nuevas operaciones de observación en el espacio doméstico.</p>
+            <figure class="huerto-figure huerto-care-figure">
+              <img src="assets/huerto/raleo-y-medicion.jpg" alt="Tres plántulas de rabanito retiradas durante el raleo, dispuestas junto a una cinta métrica antes de ser pesadas." width="1600" height="2133" loading="lazy" />
+              <figcaption>Plántulas retiradas durante el primer raleo, fotografiadas junto a una referencia de longitud antes del pesaje.</figcaption>
+            </figure>
           </div>
         </section>
 

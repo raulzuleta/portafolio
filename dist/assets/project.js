@@ -131,6 +131,60 @@ function setupProjectLightbox() {
   });
 }
 
+function setupHuertoTimelapse() {
+  const viewer = document.querySelector('[data-huerto-timelapse]');
+  if (!viewer) return;
+
+  const frames = [
+    ['assets/huerto/siembra-19-septiembre.jpg', '2026-09-19', '19 de septiembre', 'Siembra y primer registro estabilizado.', 'Dos bandejas de germinación recién sembradas.'],
+    ['assets/huerto/crecimiento-20-septiembre.jpg', '2026-09-20', '20 de septiembre', 'Primer brote visible.', 'Bandejas con el primer brote verde apenas visible.'],
+    ['assets/huerto/primeros-brotes-21-septiembre.jpg', '2026-09-21', '21 de septiembre', 'Los rabanitos son los primeros en emerger.', 'Bandejas con los primeros brotes de rabanito visibles.'],
+    ['assets/huerto/crecimiento-22-septiembre.jpg', '2026-09-22', '22 de septiembre', 'Aparecen brotes de albahaca y tomate.', 'Bandejas con nuevos brotes de albahaca y tomate.'],
+    ['assets/huerto/emergencia-especies-23-septiembre.jpg', '2026-09-23', '23 de septiembre · mañana', 'Se distinguen ritmos diferentes de emergencia.', 'Bandejas con brotes de distintos tamaños en varias cavidades.'],
+    ['assets/huerto/crecimiento-23-septiembre-tarde.jpg', '2026-09-23', '23 de septiembre · tarde', 'Las sondas se incorporan al montaje.', 'Cultivo con cables y sondas durante la incorporación del nodo vegetal.'],
+    ['assets/huerto/montaje-nodo-vegetal.jpg', '2026-09-23', '23 de septiembre · montaje', 'El nodo conecta sensores y cultivo.', 'Nodo vegetal en protoboard instalado junto a las bandejas.'],
+    ['assets/huerto/sensores-y-cultivo-24-septiembre.jpg', '2026-09-24', '24 de septiembre', 'Todas las especies han emergido.', 'Bandejas con sensores y plántulas de las tres especies.'],
+    ['assets/huerto/crecimiento-26-septiembre.jpg', '2026-09-26', '26 de septiembre', 'El crecimiento hace más visibles las diferencias.', 'Cultivo con plántulas de distintos tamaños seis días después de la primera emergencia.'],
+    ['assets/huerto/crecimiento-27-septiembre.jpg', '2026-09-27', '27 de septiembre', 'Los rabanitos comienzan a desbordar sus cavidades.', 'Bandejas con rabanitos alargados y tomates en crecimiento.'],
+    ['assets/huerto/crecimiento-28-septiembre.jpg', '2026-09-28', '28 de septiembre', 'La posición de algunas plantas altera la comparación.', 'Cultivo con tallos inclinados que cruzan los límites de las cavidades.'],
+    ['assets/huerto/crecimiento-2-octubre.jpg', '2026-10-02', '2 de octubre', 'El crecimiento vuelve necesarias nuevas intervenciones.', 'Tomates, rabanitos y albahacas desarrollados dentro de las bandejas.']
+  ];
+  const image = viewer.querySelector('[data-timelapse-image]');
+  const date = viewer.querySelector('[data-timelapse-date]');
+  const note = viewer.querySelector('[data-timelapse-note]');
+  const range = viewer.querySelector('[data-timelapse-range]');
+  const counter = viewer.querySelector('[data-timelapse-counter]');
+  const play = viewer.querySelector('[data-timelapse-play]');
+  let timer = null;
+
+  const showFrame = (index) => {
+    const [src, datetime, label, description, alt] = frames[index];
+    image.src = src;
+    image.alt = alt;
+    date.dateTime = datetime;
+    date.textContent = label;
+    note.textContent = ` · ${description}`;
+    range.value = String(index);
+    counter.textContent = `${index + 1} / ${frames.length}`;
+  };
+  const stop = () => {
+    clearInterval(timer);
+    timer = null;
+    play.textContent = 'Reproducir secuencia';
+    play.setAttribute('aria-pressed', 'false');
+  };
+  const start = () => {
+    play.textContent = 'Pausar secuencia';
+    play.setAttribute('aria-pressed', 'true');
+    timer = setInterval(() => showFrame((Number(range.value) + 1) % frames.length), 950);
+  };
+
+  frames.slice(1).forEach(([src]) => { const preload = new Image(); preload.src = src; });
+  range.addEventListener('input', () => { stop(); showFrame(Number(range.value)); });
+  play.addEventListener('click', () => { if (timer) stop(); else start(); });
+  document.addEventListener('visibilitychange', () => { if (document.hidden && timer) stop(); });
+}
+
 function render(language) {
   if (isSpanishOnly) language = 'es';
   const [title, status, intro, problem, process, role, credits, evidence] = project[language];
@@ -178,5 +232,6 @@ if (isCenvi) {
 } else {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }
+setupHuertoTimelapse();
 setupProjectLightbox();
 render(isSpanishOnly ? 'es' : (localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es'));

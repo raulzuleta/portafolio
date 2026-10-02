@@ -572,10 +572,19 @@ footer p { margin: 0; }
 .huerto-sequence-section .huerto-copy { display: grid; grid-template-columns: minmax(15rem, .72fr) minmax(0, 1.28fr); column-gap: clamp(2rem, 7vw, 7rem); }
 .huerto-sequence-section .huerto-copy h2 { grid-row: 1 / span 3; }
 .huerto-sequence-section .huerto-copy p { grid-column: 2; margin-top: 0; }
-.huerto-sequence { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.huerto-sequence .project-media-button { aspect-ratio: 3 / 4; }
-.huerto-sequence img { height: 100%; object-fit: cover; }
-.huerto-instrument-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.huerto-timelapse { display: grid; grid-template-columns: minmax(17rem, .72fr) minmax(0, 1.28fr); gap: 1rem clamp(2rem, 5vw, 5rem); align-items: center; padding: clamp(1rem, 2vw, 1.5rem); background: #111; color: var(--paper); }
+.huerto-timelapse-frame { grid-row: 1 / span 2; }
+.huerto-timelapse-frame .project-media-button { aspect-ratio: 3 / 4; }
+.huerto-timelapse-frame img { height: 100%; object-fit: cover; }
+.huerto-timelapse-frame figcaption { color: #d8dbcd; }
+.huerto-timelapse-controls { display: grid; grid-template-columns: auto 1fr auto; gap: .75rem 1rem; align-items: center; }
+.huerto-timelapse-controls label { grid-column: 1 / -1; color: #d8dbcd; font-size: .78rem; }
+.huerto-timelapse-controls button { grid-row: 2; border: 1px solid var(--paper); padding: .7rem .85rem; background: transparent; color: var(--paper); font: inherit; font-size: .78rem; font-weight: 700; cursor: pointer; }
+.huerto-timelapse-controls button:hover, .huerto-timelapse-controls button:focus-visible { background: var(--acid); color: var(--ink); }
+.huerto-timelapse-controls input { grid-row: 2; width: 100%; accent-color: var(--acid); }
+.huerto-timelapse-controls output { grid-row: 2; min-width: 3.5rem; font-size: .78rem; font-variant-numeric: tabular-nums; text-align: right; }
+.huerto-timelapse-note { align-self: start; margin: 0; color: #d8dbcd; font-size: .82rem; }
+.huerto-instrument-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: start; }
 .huerto-instrument-gallery .project-media-button { aspect-ratio: 3 / 4; }
 .huerto-instrument-gallery img { height: 100%; object-fit: cover; }
 .huerto-system-section { grid-template-columns: minmax(18rem, .9fr) minmax(0, 1.1fr); }
@@ -585,6 +594,9 @@ footer p { margin: 0; }
 .huerto-data-chain span { color: var(--blue-strong); font-weight: 700; }
 .huerto-data-chain small { color: var(--muted); font-size: .78rem; }
 .huerto-care-section { padding-inline: clamp(1.5rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 35%, var(--paper)); border-top: 0; }
+.huerto-care-figure { margin-top: 2rem; }
+.huerto-care-figure .project-media-button { max-height: 38rem; }
+.huerto-care-figure img { max-height: 38rem; object-fit: contain; }
 .huerto-text-section { grid-template-columns: minmax(15rem, .42fr) minmax(0, 1fr); }
 .huerto-state-section { border-top-color: var(--blue-strong); }
 .huerto-state-section .eyebrow { margin-top: 0; }
@@ -722,6 +734,8 @@ footer p { margin: 0; }
   .huerto-sequence-section .huerto-copy { grid-template-columns: 1fr; }
   .huerto-sequence-section .huerto-copy h2 { grid-row: auto; }
   .huerto-sequence-section .huerto-copy p { grid-column: 1; }
+  .huerto-timelapse { grid-template-columns: minmax(15rem, .85fr) minmax(0, 1.15fr); gap: 1.5rem; }
+  .huerto-instrument-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
   .cenvi-lightbox { width: calc(100vw - 1rem); height: calc(100vh - 1rem); padding: 3.75rem 1rem 1rem; }
   .cenvi-lightbox .project-lightbox-nav { width: 2.15rem; height: 2.15rem; }
@@ -750,8 +764,13 @@ footer p { margin: 0; }
   .punitaqui-story .document-pair .project-media-button { height: clamp(12rem, 54vw, 18rem); }
   .story-hero-media { padding-bottom: 3rem; }
   .story-section { padding-block: 3.5rem; }
-  .huerto-sequence,
+  .huerto-timelapse { grid-template-columns: 1fr; }
+  .huerto-timelapse-frame { grid-row: auto; }
   .huerto-instrument-gallery { grid-template-columns: 1fr; }
+  .huerto-timelapse-controls { grid-template-columns: 1fr auto; }
+  .huerto-timelapse-controls button { grid-column: 1 / -1; grid-row: 2; }
+  .huerto-timelapse-controls input { grid-column: 1; grid-row: 3; }
+  .huerto-timelapse-controls output { grid-column: 2; grid-row: 3; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
