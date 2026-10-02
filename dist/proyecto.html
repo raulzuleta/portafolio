@@ -28,8 +28,9 @@
         <section class="story-opening story-section">
           <div class="story-opening-copy">
             <h2>¿Cómo conocer un ambiente sin dejar de habitarlo?</h2>
-            <p>La pregunta retoma una tensión que estuve explorando durante mi primer año de doctorado, aquella que aparece en la brecha entre la experiencia vivida y el dato medido. Podemos conocer el mundo mediante modelos, promedios y representaciones y, al mismo tiempo, distanciarnos de su experiencia sensible.</p>
-            <p>Viejito-Perro lleva esa inquietud al espacio doméstico. Permite seguir cómo una variación ambiental se transforma en señal, dato, comparación e interpretación. Las mediciones no se tratan como representaciones transparentes, sino que dependen de la posición de los sensores, de decisiones técnicas y de las prácticas cotidianas mediante las cuales adquieren contexto.</p>
+            <p>Viejito-Perro comenzó durante las vacaciones posteriores a mi examen de candidatura. Quería poner en práctica mis habilidades informáticas y entretenerme aprendiendo, así que decidí reutilizar un notebook antiguo como servidor doméstico. Primero instalé servicios que podían resultar útiles dentro de la vivienda. Después incorporé placas de desarrollo y sensores ambientales. A medida que el sistema comenzó a registrar y comparar lo que ocurría en distintos lugares, aparecieron preguntas que no estaban completamente formuladas al inicio.</p>
+            <p>El proyecto se convirtió así en una manera de explorar una inquietud que había surgido durante mi primer año de doctorado, la brecha entre la experiencia vivida y el dato medido. Podemos conocer el mundo mediante modelos, promedios y representaciones y, al mismo tiempo, distanciarnos de su experiencia sensible.</p>
+            <p>Viejito-Perro permite seguir cómo una variación ambiental se transforma en señal, dato, comparación e interpretación. Las mediciones no se consideran representaciones transparentes. Dependen de la posición de los sensores, de decisiones técnicas y de las prácticas cotidianas mediante las cuales adquieren contexto.</p>
             <p>El proyecto no pretende resolver la distancia entre conocer y habitar. Explora si una infraestructura de medición puede ampliar la atención hacia el ambiente y, a la vez, cómo podría contribuir a tecnologizar o simplificar su experiencia.</p>
           </div>
           <figure class="story-hero-media">
@@ -58,7 +59,7 @@
             <figure><img src="assets/viejito-perro/boceto-carcasa.png" alt="Boceto manuscrito de una primera carcasa con pantalla, sensor de luz, botón, luz de estado y ventilación." /><figcaption>Primer boceto de carcasa, 14 de agosto de 2026. Constanza Tizzoni.</figcaption></figure>
           </div>
           <figure class="origin-model origin-model-exploded"><img src="assets/viejito-perro/despiece-carcasa-nodo-02.png" alt="Vista tridimensional despiezada de la carcasa, con sus cuerpos, tapa, puertas, bandeja y accesorios separados." /><figcaption>Despiece del modelo: cuerpos frontal y posterior, tapa, puertas, bandeja y accesorios previstos para su ensamblaje.</figcaption></figure>
-          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Render tridimensional de una carcasa de bordes redondeados, con pantalla, pulsadores, luces y rejilla frontal." /><figcaption>Modelo tridimensional ensamblado de la carcasa del nodo 02, diseñado en OpenSCAD y orientado a impresión. Es una propuesta en desarrollo, todavía no una carcasa fabricada.</figcaption></figure>
+          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Render tridimensional de una carcasa de bordes redondeados, con pantalla, pulsadores, luces y rejilla frontal." /><figcaption>El diseño paramétrico de la carcasa del nodo 02 comenzó como un modelo digital desarrollado en OpenSCAD. Actualmente se está imprimiendo una primera versión física con una impresora 3D facilitada por el laboratorio mediante la asesoría técnica de Nicolás Müller. Esta fabricación permitirá comprobar dimensiones, ventilación, acceso a los componentes y resistencia del ensamblaje. La carcasa continúa en desarrollo y todavía no corresponde a una versión terminada.</figcaption></figure>
         </section>
 
         <section class="story-section system-section">
@@ -105,6 +106,16 @@
           </div>
         </section>
 
+        <section class="story-section archive-findings-section">
+          <div class="story-copy">
+            <h2>Lo que comenzó a mostrar el archivo</h2>
+            <p>El registro acumulado permitió reconocer que los nodos no describen simplemente una sala y un dormitorio. Cada uno registra una posición material específica, afectada por la luz, la proximidad de ventanas, la circulación del aire, las actividades cotidianas y el propio montaje.</p>
+            <p>Un primer análisis exploratorio permitió distinguir tres escalas. Los ciclos ambientales aparecen en el recorrido diario de la luz, el calentamiento y el enfriamiento. Los ritmos domésticos se manifiestan en diferencias recurrentes de actividad acústica, temperatura y humedad. Los acontecimientos breves, como cocinar o ventilar, pueden producir variaciones intensas que desaparecen al resumir los datos mediante promedios horarios.</p>
+            <p>Estas diferencias no permiten identificar automáticamente qué ocurrió. Un aumento de humedad no equivale por sí mismo a una ducha y el silencio no demuestra que una habitación esté vacía. Para interpretar las mediciones es necesario relacionarlas con observaciones, anotaciones y conocimiento situado de la vivienda.</p>
+            <p>Esta limitación abrió una nueva pregunta práctica. La futura incorporación de sensores de presencia LD2410C podría ayudar a distinguir mejor entre ocupación, movimiento y ausencia.</p>
+          </div>
+        </section>
+
         <section class="story-section interfaces-section">
           <div class="story-copy">
             <h2>Interfaces en funcionamiento</h2>
@@ -140,7 +151,7 @@
             <p>He definido el concepto y los principios del proyecto, reacondicionado y administrado el servidor, seleccionado y montado los componentes, realizado las pruebas físicas, definido comportamientos e interfaces, contextualizado las mediciones y dirigido su documentación y desarrollo.</p>
             <p>Parte del código, las configuraciones y la documentación se desarrolló iterativamente con asistencia de herramientas de inteligencia artificial, bajo mi dirección, revisión y comprobación en el sistema físico.</p>
             <p>El dibujo original del personaje y las primeras exploraciones visuales de su carcasa fueron creados por <strong>Constanza Tizzoni</strong>. El bitmap de la pantalla y los modelos tridimensionales posteriores derivan de ese dibujo y se publican con su autorización.</p>
-            <p><strong>Nicolás Müller</strong> me ayudó a identificar, con apoyo de herramientas de inteligencia artificial, las conexiones del sensor SPS30 y colaboró en trabajos de soldadura. También me ha permitido observar un proyecto independiente que desarrolla con sensores de bajo costo para mediciones agrícolas.</p>
+            <p><strong>Nicolás Müller</strong> ha sido mi principal interlocutor técnico dentro del laboratorio. Hemos mantenido conversaciones frecuentes sobre sensores, conexiones, electrónica y fabricación. Me ha ayudado a resolver problemas de montaje y soldadura, ha revisado el modelo de la carcasa y facilitó la impresora 3D del laboratorio con la que actualmente estamos produciendo su primera versión física.</p>
             <p><strong>Alejandro Bustos</strong> ha contribuido mediante conversaciones sobre la orientación y las posibilidades del proyecto, ayudándome a clarificar decisiones y abrir líneas de exploración desde su experiencia con la electrónica. También me facilitó un sensor que aún no ha sido incorporado al sistema.</p>
           </div>
         </section>
@@ -148,7 +159,8 @@
         <section class="story-section horizons-section horizons-section-compact">
           <div><h2>Próximas exploraciones</h2></div>
           <ul>
-            <li>Fabricar carcasas que integren mejor los nodos en la vivienda.</li>
+            <li>Evaluar y ajustar la primera carcasa actualmente en impresión.</li>
+            <li>Instalar y calibrar sensores de presencia LD2410C en ambos nodos.</li>
             <li>Investigar formas de comunicación autónoma entre ellos.</li>
             <li>Desarrollar maneras visuales, sonoras e históricas de relacionarse con los registros.</li>
           </ul>
