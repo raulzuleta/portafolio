@@ -14,6 +14,10 @@ const projects = {
   cencosud: {
     es: ['Del análisis de una experiencia financiera al prototipo', 'Diseño de experiencia y prototipado · 2023', 'Este proyecto fue realizado como trabajo final del Diplomado en Customer Experience: Data, Design and Innovation de la Pontificia Universidad Católica de Chile. El equipo tomó como caso la experiencia de solicitud y administración de avances mediante la aplicación de Tarjeta Cencosud Scotiabank. El ejercicio buscaba identificar dificultades en la experiencia, formular una propuesta de mejora y traducirla en un prototipo de interfaz.', '¿Cómo traducir hallazgos y una propuesta de experiencia en una interfaz comprensible y consistente?', 'Análisis colectivo de la experiencia y desarrollo de un prototipo visual en Figma.', 'Participación en todo el proceso grupal y diseño de todas las pantallas del prototipo.', 'Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira y Raúl Zuleta.', ['Journey map', 'Service blueprint', 'Prototipo editable en Figma']],
     en: ['Cencosud case · Customer experience', 'Group academic project · experience design', 'Redesign of a banking application’s screens, produced as the final project of a customer experience diploma.', 'How can findings and an experience proposal be translated into a clear and consistent interface?', 'The team developed the case and proposal; quotations were examples created for the exercise. The visual prototype was built in Figma.', 'I designed every screen and led much of the visual development. The case and outcomes must be presented as group work.', 'Group project. The full team and roles will be added from the final presentation before publication.', ['Final presentation', 'Functional Figma file', 'Prototype screen system']]
+  },
+  huerto: {
+    es: ['Huerto', 'Proyecto experimental en curso · desde septiembre de 2026', 'Un dispositivo doméstico de observación vegetal que articula cultivo, fotografías, sensores, prácticas de cuidado, bitácoras y un archivo de datos.', '', '', '', '', []],
+    en: ['Garden', 'Experimental project in progress · since September 2026', 'A domestic plant-observation device bringing together cultivation, photographs, sensors, care practices, field notes, and a data archive.', '', '', '', '', []]
   }
 };
 
@@ -23,11 +27,13 @@ const project = projects[id] || projects['viejito-perro'];
 const isCenvi = id === 'cenvi';
 const isPunitaqui = id === 'punitaqui';
 const isCencosud = id === 'cencosud';
-const isSpanishOnly = isCenvi || isPunitaqui || isCencosud;
+const isHuerto = id === 'huerto';
+const isSpanishOnly = isCenvi || isPunitaqui || isCencosud || isHuerto;
 document.body.classList.toggle('viejito-detail-page', id === 'viejito-perro');
 document.body.classList.toggle('cenvi-detail-page', isCenvi);
 document.body.classList.toggle('punitaqui-detail-page', isPunitaqui);
 document.body.classList.toggle('cencosud-detail-page', isCencosud);
+document.body.classList.toggle('huerto-detail-page', isHuerto);
 
 if (isSpanishOnly) {
   switcher.disabled = true;
@@ -41,7 +47,8 @@ function setupProjectLightbox() {
   const imageSelector = [
     '#viejito-story figure img',
     '#punitaqui-content figure img',
-    '#cencosud-content figure img'
+    '#cencosud-content figure img',
+    '#huerto-content figure img'
   ].join(',');
 
   document.querySelectorAll('.cenvi-media-button').forEach((button) => button.classList.add('project-media-button'));
@@ -164,6 +171,10 @@ if (isCenvi) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#cencosud-content').hidden = false;
+} else if (isHuerto) {
+  document.querySelector('#project-standard-content').hidden = true;
+  document.querySelector('#project-standard-evidence').hidden = true;
+  document.querySelector('#huerto-content').hidden = false;
 } else {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }

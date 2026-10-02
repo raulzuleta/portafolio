@@ -6,8 +6,8 @@
     <meta name="description" content="Proyecto seleccionado del portafolio académico de Raúl Zuleta." />
     <title>Proyecto — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=layout-proyectos-31" />
-    <script src="assets/project.js?v=layout-proyectos-31" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=huerto-1" />
+    <script src="assets/project.js?v=huerto-1" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
@@ -414,6 +414,149 @@
           <h2>Alcance y límites</h2>
           <div class="cencosud-section-body">
             <p>La persona denominada “Miguel”, sus características y las citas incluidas en la presentación fueron construidas para el ejercicio. No proceden de entrevistas ni constituyen evidencia empírica sobre usuarios de la aplicación.</p>
+          </div>
+        </section>
+      </article>
+      <article class="huerto-story" id="huerto-content" lang="es" hidden>
+        <section class="huerto-section huerto-opening">
+          <div class="huerto-copy">
+            <p class="eyebrow">Un dispositivo doméstico de observación vegetal</p>
+            <h2>¿Qué hace falta para que un conjunto de plantas cultivadas en casa pueda convertirse en un objeto de observación?</h2>
+            <p>El proyecto articula un cultivo doméstico, fotografías diarias, sensores ambientales y de sustrato, intervenciones de cuidado, bitácoras y un archivo de datos. Su propósito no es realizar un experimento biológico controlado, sino observar cómo plantas, instrumentos, registros y decisiones cotidianas llegan a constituir conjuntamente un objeto de conocimiento.</p>
+            <p>Comenzó con la siembra de tomates, rabanitos y albahacas en dos bandejas de germinación. Durante los primeros días, la observación dependía principalmente de fotografías y apreciaciones sensibles como la apariencia del sustrato, su humedad al tacto y la emergencia visible de cada especie.</p>
+          </div>
+          <figure class="huerto-figure huerto-hero-figure">
+            <img src="assets/huerto/siembra-19-septiembre.jpg" alt="Dos bandejas de germinación recién sembradas, dispuestas sobre una superficie marcada con cintas y una flecha de orientación." width="1800" height="2400" />
+            <figcaption>La posición de las bandejas y su orientación respecto de la ventana comenzaron a estabilizarse desde los primeros registros.</figcaption>
+          </figure>
+        </section>
+
+        <section class="huerto-section huerto-sequence-section">
+          <div class="huerto-copy">
+            <h2>Construir algo que pueda seguirse</h2>
+            <p>Pronto se hizo evidente que producir una serie comparable requería construir condiciones de continuidad. Las bandejas fueron etiquetadas y ubicadas dentro de marcas que permitieran devolverlas aproximadamente a la misma posición. Una flecha registró su orientación respecto de la ventana y un mapa vinculó cada cavidad con un identificador.</p>
+            <p>La fotografía diaria documentó la emergencia y el crecimiento inicial. Los rabanitos fueron los primeros en aparecer; después emergieron las albahacas y los tomates. Sin embargo, comparar las imágenes no era una operación automática: el ángulo de la cámara, la hora, la iluminación, la posición de las bandejas y el procesamiento de los archivos modificaban aquello que podía verse.</p>
+            <p>El dispositivo de observación no precedió al cultivo. Se fue formando junto con las plantas, a medida que aparecían nuevas necesidades de identificación, comparación y registro.</p>
+          </div>
+          <div class="huerto-sequence" aria-label="Secuencia fotográfica de la emergencia y crecimiento del cultivo">
+            <figure class="huerto-figure">
+              <img src="assets/huerto/primeros-brotes-21-septiembre.jpg" alt="Bandejas vistas desde arriba con los primeros brotes verdes visibles en cuatro cavidades." width="1800" height="2400" loading="lazy" />
+              <figcaption><time datetime="2026-09-21">21 de septiembre</time> · Los rabanitos son los primeros en emerger.</figcaption>
+            </figure>
+            <figure class="huerto-figure">
+              <img src="assets/huerto/emergencia-especies-23-septiembre.jpg" alt="Bandejas vistas desde arriba con brotes de distintos tamaños distribuidos en varias cavidades." width="1800" height="2400" loading="lazy" />
+              <figcaption><time datetime="2026-09-23">23 de septiembre</time> · La serie permite distinguir ritmos de emergencia y crecimiento.</figcaption>
+            </figure>
+            <figure class="huerto-figure">
+              <img src="assets/huerto/crecimiento-2-octubre.jpg" alt="Bandejas con tomates, rabanitos y albahacas ya desarrollados; algunas plantas sobrepasan los límites de sus cavidades." width="1800" height="2400" loading="lazy" />
+              <figcaption><time datetime="2026-10-02">2 de octubre</time> · El crecimiento vuelve necesarias nuevas decisiones de raleo y trasplante.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-instrument-section">
+          <div class="huerto-copy">
+            <h2>De la apreciación sensible a la señal instrumental</h2>
+            <p>La decisión de regar comenzó como una evaluación práctica del sustrato: observar su color, tocarlo y decidir si todavía conservaba humedad. Posteriormente se incorporó un nodo vegetal compuesto por dos sensores capacitivos de sustrato, un sensor de luz y un sensor de temperatura, humedad ambiental y presión.</p>
+            <p>Los sensores no reemplazan la observación sensible ni describen directamente el estado de las plantas. Cada lectura depende de la posición, profundidad, cableado, alimentación y configuración del montaje.</p>
+            <p>Las sondas de sustrato producen actualmente voltajes crudos. Esos valores permiten seguir variaciones, pero todavía no equivalen a porcentajes calibrados de humedad. Conservarlos en su unidad original evita presentar una interpretación como si fuera una medición directa y definitiva.</p>
+          </div>
+          <div class="huerto-instrument-gallery">
+            <figure class="huerto-figure">
+              <img src="assets/huerto/montaje-nodo-vegetal.jpg" alt="Montaje del nodo vegetal en una protoboard, conectado mediante cables a sensores ubicados junto a las bandejas." width="1800" height="2400" loading="lazy" />
+              <figcaption>El montaje inicial hace visibles las conexiones que median entre el cultivo y el registro.</figcaption>
+            </figure>
+            <figure class="huerto-figure">
+              <img src="assets/huerto/sensores-y-cultivo-24-septiembre.jpg" alt="Dos sondas de sustrato instaladas en una bandeja, junto a plántulas de tomate, albahaca y rabanito." width="1800" height="2400" loading="lazy" />
+              <figcaption>Las sondas ocupan posiciones concretas: no representan de manera automática toda la bandeja.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-system-section">
+          <div class="huerto-copy">
+            <h2>Un nodo conectado con Viejito-Perro</h2>
+            <p>El Nodo Vegetal 01 se integra técnicamente con la infraestructura doméstica de Viejito-Perro. El nodo obtiene las lecturas, Home Assistant permite supervisar su funcionamiento y un servicio independiente conserva una instantánea de seis variables cada minuto.</p>
+            <p>El archivo separa la telemetría automática de los acontecimientos y observaciones humanas. Riegos, fotografías, movimientos, raleos, cambios de sensores y calibraciones se registran como eventos distintos. Esta separación permite relacionar posteriormente una variación instrumental con aquello que ocurrió alrededor de las plantas, sin reducir una cosa a la otra.</p>
+            <p>Huerto constituye un proyecto autónomo. Utiliza parte de la infraestructura de Viejito-Perro, pero desarrolla su propia pregunta, protocolo y archivo.</p>
+          </div>
+          <ol class="huerto-data-chain" aria-label="Recorrido de los registros del huerto">
+            <li><span>Cultivo</span><small>crecimiento y acontecimientos</small></li>
+            <li><span>Sensores</span><small>señales situadas</small></li>
+            <li><span>Nodo vegetal</span><small>lectura y transmisión</small></li>
+            <li><span>Archivo local</span><small>telemetría y eventos separados</small></li>
+          </ol>
+        </section>
+
+        <section class="huerto-section huerto-care-section">
+          <div>
+            <h2>Sostener la vida también transforma lo observado</h2>
+          </div>
+          <div class="huerto-copy">
+            <p>Observar el cultivo exige realizar prácticas que permitan sostener su vida. Regar, proporcionar luz, ralear, trasplantar y responder a cambios visibles no son actividades externas al dispositivo: mantienen las condiciones que hacen posible tanto el crecimiento de las plantas como la continuidad de su observación.</p>
+            <p>Estas prácticas tampoco conservan un objeto inalterado. Cada intervención modifica las trayectorias posteriores del cultivo y aquello que podrá registrarse. El cuidado sostiene la vida, pero también selecciona, orienta y transforma sus posibilidades.</p>
+            <p>Durante el primer raleo de los rabanitos se aplicaron criterios distintos en dos cavidades. En una se conservó la planta de mayor tamaño; en otra, la menor. Las plántulas retiradas fueron fotografiadas y pesadas, incorporando parcialmente una práctica de fenotipado conocida durante el trabajo de campo.</p>
+            <p>El procedimiento no constituye un experimento comparativo ni reproduce un protocolo de laboratorio completo. Su importancia está en mostrar cómo una conversación, una herramienta y una decisión de cuidado pueden introducir nuevas operaciones de observación en el espacio doméstico.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-text-section">
+          <h2>Una práctica de cuidado distribuido</h2>
+          <div class="huerto-copy">
+            <p>La continuidad de las plantas, del cultivo y de su registro no ha dependido exclusivamente de una persona ni del funcionamiento automático de los sensores. Durante una ausencia, otra persona de la vivienda sostuvo el riego y produjo parte del registro fotográfico siguiendo indicaciones generales sobre encuadre y orientación.</p>
+            <p>La circulación de una de esas fotografías a través de una plataforma de mensajería redujo su resolución y eliminó parte de la metadata original. Este episodio hizo visible que la procedencia y comparabilidad de los registros también dependen de personas, instrucciones, dispositivos y plataformas.</p>
+            <p>El cuidado distribuido no es un elemento externo al sistema. Es una condición para que las plantas, las fotografías y el archivo puedan continuar existiendo.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-text-section">
+          <h2>Corregir sin borrar</h2>
+          <div class="huerto-copy">
+            <p>Durante los primeros días se documentó incorrectamente la posición de las dos sondas de sustrato. La comparación de las series mostró que el comportamiento de cada canal era más coherente con la ubicación inversa.</p>
+            <p>La rectificación no modificó los valores históricos ni intercambió los nombres eléctricos de los sensores. Se corrigió la anotación que relacionaba cada canal con su posición física y se conservó el error como parte de la historia del archivo.</p>
+            <p>Este procedimiento expresa uno de los principios del proyecto: una anomalía no debe eliminarse silenciosamente. Debe contextualizarse mediante nuevas observaciones, eventos y correcciones verificables.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-text-section">
+          <h2>Relación con la investigación doctoral</h2>
+          <div class="huerto-copy">
+            <p>Huerto es una exploración material independiente desarrollada durante el doctorado. No forma parte del trabajo de campo, no utiliza datos etnográficos de la tesis y no constituye uno de sus resultados.</p>
+            <p>Comparte con la investigación doctoral preguntas sobre las operaciones mediante las cuales organismos vivos son identificados, fragmentados, medidos y convertidos en información. Algunas prácticas incorporadas al proyecto fueron aprendidas o sugeridas durante el trabajo de campo, pero su traslado al espacio doméstico produjo un montaje diferente, con propósitos y condiciones propios.</p>
+            <p>El proyecto permite experimentar, a pequeña escala, con las relaciones entre cuidado, medición, archivo y conocimiento sin presentar la vivienda como un laboratorio equivalente ni el cultivo como un experimento controlado.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-state-section">
+          <div>
+            <p class="eyebrow">Estado actual</p>
+            <h2>Un cultivo y un archivo todavía abiertos</h2>
+          </div>
+          <div class="huerto-copy">
+            <p>El cultivo continúa activo y la serie fotográfica se ha mantenido. Actualmente está pendiente ralear los tomates y trasplantar los rabanitos. La bitácora y el archivo técnico todavía deben actualizarse para incorporar los registros posteriores al 28 de septiembre.</p>
+            <p>El nodo y el archivo de datos se encuentran operativos, aunque las sondas de sustrato todavía requieren calibración situada. También permanece pendiente consolidar la secuencia fotográfica, documentar las siguientes intervenciones y completar el ciclo de cultivo.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-limits-section">
+          <h2>Límites</h2>
+          <ul>
+            <li>No es un experimento biológico controlado.</li>
+            <li>Las plantas no funcionan como réplicas sometidas a tratamientos comparables.</li>
+            <li>Los voltajes de las sondas no equivalen todavía a porcentajes de humedad.</li>
+            <li>Las condiciones de iluminación, encuadre y dispositivo fotográfico no son completamente constantes.</li>
+            <li>Las series permiten seguir asociaciones temporales, pero no establecer relaciones causales.</li>
+            <li>Las prácticas trasladadas desde el laboratorio se presentan de forma anonimizada y no representan protocolos completos de esas instituciones.</li>
+            <li>La infraestructura automática no reemplaza las decisiones humanas de observación y cuidado.</li>
+          </ul>
+        </section>
+
+        <section class="huerto-section huerto-text-section huerto-credits-section">
+          <h2>Autoría y colaboración</h2>
+          <div class="huerto-copy">
+            <p>He conceptualizado y diseñado el proyecto, realizado la siembra y el cuidado cotidiano, construido el nodo vegetal, definido el protocolo de observación, configurado el archivo de datos y elaborado las bitácoras y su interpretación.</p>
+            <p>Otra persona de la vivienda colaboró temporalmente con el riego y la producción de fotografías, permitiendo mantener la continuidad del cultivo durante mi ausencia.</p>
+            <p>Algunos componentes y prácticas surgieron de intercambios producidos durante el trabajo de campo. Estas contribuciones se mantienen anonimizadas para proteger a las personas y espacios involucrados. La programación, configuración y revisión técnica también han recibido apoyo de herramientas de inteligencia artificial bajo mi dirección y comprobación.</p>
           </div>
         </section>
       </article>
