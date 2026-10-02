@@ -459,9 +459,9 @@ footer p { margin: 0; }
 .horizons-section .technical-note { grid-column: 2; margin-top: 0; }
 .horizons-section-compact { padding: clamp(2.25rem, 4vw, 3.25rem) 0 clamp(1.5rem, 3vw, 2rem); }
 .oled-disclaimer { margin: .55rem 0 0; max-width: 36rem; color: var(--muted); font-size: .76rem; line-height: 1.35; }
-:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page) .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
-:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page) .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.2rem, 6vw, 5.8rem); }
-:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page) .project-detail-hero .lead { max-width: 72rem; font-size: clamp(1.05rem, 1.55vw, 1.28rem); }
+:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
+:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.2rem, 6vw, 5.8rem); }
+:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero .lead { max-width: 72rem; font-size: clamp(1.05rem, 1.55vw, 1.28rem); }
 .cenvi-case { padding-bottom: clamp(4rem, 8vw, 7rem); }
 .cenvi-section { display: grid; grid-template-columns: minmax(12rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(2.75rem, 5vw, 4.75rem) 0; border-top: 1px solid var(--ink); }
 .cenvi-section:first-of-type { border-top: 0; }
@@ -605,6 +605,47 @@ footer p { margin: 0; }
 .huerto-limits-section li + li { margin-top: .65rem; }
 .huerto-credits-section { padding-bottom: 1rem; }
 
+.sound-practices-story { max-width: 78rem; margin: 0 auto; padding-bottom: clamp(3rem, 6vw, 5rem); }
+.sound-practices-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 2rem 0 clamp(4rem, 8vw, 7rem); }
+.sound-practices-index a { display: grid; grid-template-columns: auto 1fr; gap: .2rem 1rem; padding: 1.25rem; border: 1px solid var(--ink); text-decoration: none; }
+.sound-practices-index a:hover, .sound-practices-index a:focus-visible { background: var(--acid); }
+.sound-practices-index span { grid-row: 1 / span 2; color: var(--muted); font-size: .72rem; letter-spacing: .08em; }
+.sound-practices-index strong { font-size: 1.1rem; }
+.sound-practices-index small { color: var(--muted); font-size: .75rem; }
+.sound-work { scroll-margin-top: 2rem; padding-bottom: clamp(5rem, 10vw, 9rem); }
+.sound-work + .sound-work { padding-top: clamp(4rem, 9vw, 8rem); border-top: 3px solid var(--ink); }
+.sound-work-header { display: grid; grid-template-columns: minmax(15rem, .7fr) minmax(0, 1.3fr); column-gap: clamp(2rem, 6vw, 6rem); padding: 0 0 clamp(2.5rem, 5vw, 4rem); }
+.sound-work-header .eyebrow { grid-column: 1 / -1; }
+.sound-work-header h2 { grid-row: 2 / span 2; max-width: none; margin: .5rem 0 0; font-size: clamp(3rem, 7vw, 6.5rem); line-height: .95; }
+.sound-work-subtitle { align-self: end; max-width: 34rem; margin: .5rem 0 0; font-size: clamp(1.15rem, 2vw, 1.55rem); }
+.sound-work-meta { margin: .65rem 0 0; color: var(--muted); font-size: .8rem; }
+.sound-player-card { display: grid; grid-template-columns: minmax(15rem, .65fr) minmax(18rem, 1.35fr); gap: 1.25rem clamp(2rem, 5vw, 5rem); align-items: center; margin-bottom: clamp(3rem, 7vw, 6rem); padding: clamp(1.5rem, 3vw, 2.5rem); background: #111; color: var(--paper); }
+.sound-player-card h3 { margin: .3rem 0 .5rem; font-size: clamp(1.8rem, 3vw, 2.8rem); }
+.sound-player-card p { margin: 0; color: #d8dbcd; }
+.sound-player-card audio { width: 100%; }
+.sound-player-note { grid-column: 2; font-size: .76rem; }
+.sound-player-card-progress { background: var(--blue-strong); }
+.sound-section { display: grid; grid-template-columns: minmax(15rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid var(--ink); }
+.sound-section h3, .sound-scope-note h3 { max-width: 16ch; margin: 0 0 1.25rem; font-size: clamp(2rem, 3.4vw, 3.35rem); }
+.sound-copy { max-width: 52rem; }
+.sound-copy p:first-child { margin-top: 0; }
+.sound-section-with-media { grid-template-columns: minmax(20rem, .85fr) minmax(24rem, 1.15fr); }
+.sound-software-figure { align-self: center; margin: 0; }
+.sound-software-figure img { display: block; width: 100%; border: 1px solid var(--line); }
+.sound-software-figure figcaption { margin-top: .7rem; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
+.sound-section-paired { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sound-section-paired > div { max-width: 35rem; }
+.sound-section-paired > div + div { padding-left: clamp(1.5rem, 4vw, 4rem); border-left: 1px solid var(--line); }
+.sound-section-paired h3 { max-width: 17ch; }
+.sound-credit-list { margin: 1rem 0 1.5rem; padding-left: 1.15rem; }
+.sound-credit-list li + li { margin-top: .55rem; }
+.sound-credit-list a { text-underline-offset: .2em; }
+.sound-scope-note { display: grid; grid-template-columns: minmax(15rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); padding: clamp(2rem, 4vw, 3rem); background: color-mix(in srgb, var(--acid) 38%, var(--paper)); }
+.sound-scope-note p { grid-column: 2; max-width: 52rem; margin: 0; }
+.sound-scope-note p + p { margin-top: 1rem; }
+.sound-progress-section { padding-inline: clamp(1.5rem, 4vw, 3rem); background: rgba(184, 210, 201, .28); border-top: 0; }
+.sound-progress-section .eyebrow { margin-top: 0; }
+
 @media (max-width: 900px) {
   .site-header { grid-template-columns: 1fr auto; padding: 1rem 0; }
   nav { grid-column: 1 / -1; grid-row: 2; width: 100%; overflow-x: auto; gap: 0; padding: .9rem 0 .2rem; scrollbar-width: thin; }
@@ -723,7 +764,7 @@ footer p { margin: 0; }
   .cenvi-section-with-media { grid-template-columns: minmax(17rem, .9fr) minmax(20rem, 1.1fr); gap: clamp(1.5rem, 4vw, 3rem); }
   .cenvi-section h2 { max-width: 16ch; }
   .cenvi-gallery { grid-template-columns: 1fr; }
-  :is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page) .project-detail-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
+  :is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
   .huerto-opening,
   .huerto-instrument-section,
   .huerto-system-section,
@@ -736,6 +777,7 @@ footer p { margin: 0; }
   .huerto-sequence-section .huerto-copy p { grid-column: 1; }
   .huerto-timelapse { grid-template-columns: minmax(15rem, .85fr) minmax(0, 1.15fr); gap: 1.5rem; }
   .huerto-instrument-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sound-section-with-media { grid-template-columns: minmax(19rem, .9fr) minmax(22rem, 1.1fr); gap: 2rem; }
   .cenvi-media-button { height: clamp(13rem, 58vw, 20rem); }
   .cenvi-lightbox { width: calc(100vw - 1rem); height: calc(100vh - 1rem); padding: 3.75rem 1rem 1rem; }
   .cenvi-lightbox .project-lightbox-nav { width: 2.15rem; height: 2.15rem; }
@@ -771,6 +813,17 @@ footer p { margin: 0; }
   .huerto-timelapse-controls button { grid-column: 1 / -1; grid-row: 2; }
   .huerto-timelapse-controls input { grid-column: 1; grid-row: 3; }
   .huerto-timelapse-controls output { grid-column: 2; grid-row: 3; }
+  .sound-practices-index,
+  .sound-work-header,
+  .sound-player-card,
+  .sound-section,
+  .sound-section-with-media,
+  .sound-section-paired,
+  .sound-scope-note { grid-template-columns: 1fr; }
+  .sound-work-header h2 { grid-row: auto; }
+  .sound-player-note,
+  .sound-scope-note p { grid-column: 1; }
+  .sound-section-paired > div + div { padding-top: 2.5rem; padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

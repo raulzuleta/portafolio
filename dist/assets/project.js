@@ -18,6 +18,10 @@ const projects = {
   huerto: {
     es: ['Huerto', 'Proyecto experimental en curso · desde septiembre de 2026', 'Un dispositivo doméstico de observación vegetal que articula cultivo, fotografías, sensores, prácticas de cuidado, bitácoras y un archivo de datos.', '', '', '', '', []],
     en: ['Garden', 'Experimental project in progress · since September 2026', 'A domestic plant-observation device bringing together cultivation, photographs, sensors, care practices, field notes, and a data archive.', '', '', '', '', []]
+  },
+  'practicas-sonoras': {
+    es: ['Prácticas sonoras', 'Exploraciones de escucha, interpretación y montaje · 2025–2026', 'Dos prácticas que prolongan preguntas antropológicas mediante instrumentos, archivos, sonidos encontrados y decisiones de edición.', '', '', '', '', []],
+    en: ['Sound practices', 'Explorations in listening, performance, and montage · 2025–2026', 'Two practices that extend anthropological questions through instruments, archives, found sounds, and editing decisions.', '', '', '', '', []]
   }
 };
 
@@ -28,12 +32,14 @@ const isCenvi = id === 'cenvi';
 const isPunitaqui = id === 'punitaqui';
 const isCencosud = id === 'cencosud';
 const isHuerto = id === 'huerto';
-const isSpanishOnly = isCenvi || isPunitaqui || isCencosud || isHuerto;
+const isSoundPractices = id === 'practicas-sonoras';
+const isSpanishOnly = isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices;
 document.body.classList.toggle('viejito-detail-page', id === 'viejito-perro');
 document.body.classList.toggle('cenvi-detail-page', isCenvi);
 document.body.classList.toggle('punitaqui-detail-page', isPunitaqui);
 document.body.classList.toggle('cencosud-detail-page', isCencosud);
 document.body.classList.toggle('huerto-detail-page', isHuerto);
+document.body.classList.toggle('sound-practices-detail-page', isSoundPractices);
 
 if (isSpanishOnly) {
   switcher.disabled = true;
@@ -48,7 +54,8 @@ function setupProjectLightbox() {
     '#viejito-story figure img',
     '#punitaqui-content figure img',
     '#cencosud-content figure img',
-    '#huerto-content figure img'
+    '#huerto-content figure img',
+    '#sound-practices-content figure img'
   ].join(',');
 
   document.querySelectorAll('.cenvi-media-button').forEach((button) => button.classList.add('project-media-button'));
@@ -229,6 +236,10 @@ if (isCenvi) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#huerto-content').hidden = false;
+} else if (isSoundPractices) {
+  document.querySelector('#project-standard-content').hidden = true;
+  document.querySelector('#project-standard-evidence').hidden = true;
+  document.querySelector('#sound-practices-content').hidden = false;
 } else {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }
