@@ -98,7 +98,7 @@ function setLanguage(language) {
   switcher.children[1].classList.toggle('active', english);
   document.title = english
     ? 'Raúl Zuleta — Anthropology, teaching, and environmental media'
-    : 'Raúl Zuleta — Antropología, pedagogía y medios ambientales';
+    : 'Raúl Zuleta — Antropología, pedagogía y experimentación material';
   localStorage.setItem('portfolio-language', language);
 }
 
