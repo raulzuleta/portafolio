@@ -1,5 +1,6 @@
 const switcher = document.querySelector('.language-switch');
 const staticLanguage = document.documentElement.dataset.staticLanguage;
+const languageTarget = staticLanguage === 'en' ? 'index.html' : 'index-en.html';
 const translatable = document.querySelectorAll('[data-es][data-en]');
 const tabLinks = document.querySelectorAll('[data-tab]');
 const navTabs = document.querySelectorAll('nav [data-tab]');
@@ -126,6 +127,7 @@ function activateTab(tabName, updateAddress = true, moveFocus = false) {
   });
 
   if (updateAddress) history.pushState(null, '', `#${validTab}`);
+  if (switcher?.tagName === 'A') switcher.href = `${languageTarget}#${validTab}`;
   window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
   if (moveFocus && activePanel) {
     const heading = activePanel.querySelector('h1, h2');
@@ -204,13 +206,10 @@ function renderOledHistory() {
   document.querySelector('[data-oled-th]').textContent = `T ${temperature.toFixed(1)} C  H ${humidity.toFixed(1)}%`;
   document.querySelector('[data-oled-p]').textContent = `P ${pressure.toFixed(1)} hPa`;
   document.querySelector('[data-oled-l]').textContent = `L ${light.toFixed(1)} lux`;
-  const english = document.documentElement.lang === 'en';
-  document.querySelector('[data-oled-pm-in]').textContent = `${english ? 'Inside ' : 'Dentro  '} ${pmInside.toFixed(1)} ug/m3`;
-  document.querySelector('[data-oled-pm-out]').textContent = `${english ? 'Outside' : 'Fuera  '} ${pmOutside.toFixed(1)} ug/m3`;
-  document.querySelector('[data-oled-pm-diff]').textContent = `${english ? 'Difference' : 'Diferencia'} ${difference >= 0 ? '+' : ''}${difference.toFixed(1)}`;
-  document.querySelector('[data-oled-action]').textContent = english
-    ? (difference > 3 ? 'Ventilating helps' : difference < -3 ? 'Better to close' : 'Minor effect')
-    : (difference > 3 ? 'Ventilar: ayuda' : difference < -3 ? 'Mejor cerrar' : 'Efecto menor');
+  document.querySelector('[data-oled-pm-in]').textContent = `Dentro   ${pmInside.toFixed(1)} ug/m3`;
+  document.querySelector('[data-oled-pm-out]').textContent = `Fuera    ${pmOutside.toFixed(1)} ug/m3`;
+  document.querySelector('[data-oled-pm-diff]').textContent = `Diferencia ${difference >= 0 ? '+' : ''}${difference.toFixed(1)}`;
+  document.querySelector('[data-oled-action]').textContent = difference > 3 ? 'Ventilar: ayuda' : difference < -3 ? 'Mejor cerrar' : 'Efecto menor';
   document.querySelector('[data-oled-time]').textContent = time;
 }
 
