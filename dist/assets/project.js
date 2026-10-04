@@ -1,19 +1,19 @@
 const projects = {
   'viejito-perro': {
     es: ['Viejito-Perro (Acto de Amor)', 'Infraestructura doméstica experimental · en funcionamiento desde agosto de 2026', 'Un computador reutilizado se ha convertido en una pequeña infraestructura de sensores, registros e interfaces para explorar distintas maneras de percibir y representar variaciones del ambiente cotidiano.', '¿Qué implica medir un ambiente y cómo participan los instrumentos en aquello que se vuelve perceptible?', 'Diseño y construcción iterativa de nodos ambientales, programación de interfaces y exploración de formas visuales, sonoras e históricas de relacionarse con los datos.', 'Conceptualización, diseño del sistema, construcción y programación de los nodos, documentación y articulación con preguntas antropológicas.', 'Proyecto personal en desarrollo; las colaboraciones específicas se acreditarán junto a cada componente.', ['Nodos ambientales funcionales', 'Interfaz OLED del nodo 01', 'Configuraciones y documentación técnica', 'Registro ambiental en construcción']],
-    en: ['Viejito-Perro (Act of Love)', 'In progress · material research', 'A domestic infrastructure for observing environments through nodes, data, and forms of representation.', 'What does it mean to measure an environment, and how do instruments participate in what becomes perceptible?', 'Iterative design and construction of environmental nodes, interface programming, and exploration of visual, sonic, and historical ways of relating to data.', 'Conceptualization, system design, node construction and programming, documentation, and connection to anthropological questions.', 'Personal project in development; specific collaborations will be credited with each component.', ['Functional environmental nodes', 'Node 01 OLED interface', 'Technical configurations and documentation', 'Environmental record in progress']]
+    en: ['Viejito-Perro (Act of Love)', 'Experimental domestic infrastructure · operating since August 2026', 'A repurposed computer has become a small infrastructure of sensors, records, and interfaces for exploring different ways of perceiving and representing variations in the everyday environment.', 'What does it mean to measure an environment, and how do instruments participate in what becomes perceptible?', 'Iterative design and construction of environmental nodes, interface programming, and exploration of visual, sonic, and historical ways of relating to data.', 'Conceptualisation, system design, node construction and programming, documentation, and connection to anthropological questions.', 'Personal project in development; specific collaborations are credited alongside each component.', ['Functional environmental nodes', 'Node 01 OLED interface', 'Technical configurations and documentation', 'Environmental record in progress']]
   },
   cenvi: {
     es: ['CENVI: aprender a pensar con un instrumento', 'Dispositivo pedagógico diseñado y pilotado · 2026', 'CENVI fue un dispositivo pedagógico desarrollado por el Centro de Investigación e Intervención en Psicología Educacional de la Universidad Central de Chile (CIPSE-UCEN), sede Región de Coquimbo. Articuló un manual, una herramienta informática, una capacitación y un proceso de acompañamiento para apoyar a estudiantes de Psicología en la aplicación e interpretación del Cuestionario de Convivencia Escolar para la No Violencia (CENVI). El proyecto no buscaba solamente facilitar la corrección de un cuestionario. Su propósito era acompañar el trabajo que comienza después de obtener los datos: revisar su calidad, relacionar factores y dimensiones, construir un diagnóstico situado y formular orientaciones pertinentes para cada establecimiento educacional.', '', '', '', '', []],
-    en: ['CENVI', 'Completed · teaching device', 'A device for developing diagnostic skills with fifth-year Educational Psychology students.', 'How can a school climate instrument become a learning experience about diagnosis and intervention?', 'CENVI selection, handbook editing, interpretive guidance, piloting, evaluation, and collaborative development of a scoring application.', 'Initial formulation, instrument selection, handbook editing, guidance, pilot support, evaluation supervision, and preparation of the presentation and abstract.', 'Jorge, teaching assistant and CIPSE intern; Matías, Computer Engineering student; Tania, course instructor; Raúl Zuleta, CIPSE coordinator.', ['Teaching handbook', 'Internal presentation', 'Conference abstract submission', 'Functional automated scoring application']]
+    en: ['CENVI: learning to think with an instrument', 'Teaching device designed and piloted · 2026', 'CENVI was a teaching device developed by the Centro de Investigación e Intervención en Psicología Educacional at Universidad Central de Chile (CIPSE-UCEN), Coquimbo Region campus. It combined a manual, a software tool, training, and a mentoring process to support Psychology students in applying and interpreting the Cuestionario de Convivencia Escolar para la No Violencia (CENVI). Its purpose was not merely to make questionnaire scoring easier, but to support the work that begins once data have been obtained: reviewing their quality, relating factors and dimensions, developing a situated diagnosis, and formulating relevant guidance for each school.', '', '', '', '', []]
   },
   punitaqui: {
     es: ['Organizar la convivencia escolar a escala comunal', 'Política comunal y sistema de orientaciones · Elaborado en 2019 para el período 2020–2024', 'En 2019, mientras trabajaba como coordinador comunal de Convivencia Escolar en el Departamento de Educación Municipal de Punitaqui, elaboré una política y un conjunto de documentos destinados a organizar el trabajo de los establecimientos educacionales de la comuna. El proyecto surgió ante una dificultad práctica: los equipos de convivencia que debía supervisar trabajaban con criterios, procedimientos y formas de organización muy diferentes. Como coordinador comunal, consideré necesario ofrecer un marco compartido que orientara su trabajo sin reemplazar las decisiones propias de cada establecimiento.', '¿Cómo traducir problemas y criterios técnicos en orientaciones claras, situadas y utilizables?', 'Levantamiento de necesidades, organización de información y redacción de documentos operativos para actores comunales.', 'Análisis, estructuración y redacción de las orientaciones.', 'Trabajo desarrollado en contexto municipal.', ['Política comunal', 'Cinco documentos de orientación', 'Matrices, diagramas e instrumentos de trabajo']],
-    en: ['Guidance for municipal teams', 'Professional practice · municipal management', 'Documents intended to support municipal teams during my professional work in Punitaqui.', 'How can technical problems and criteria be translated into clear, situated, usable guidance?', 'Needs assessment, information organization, and drafting of operational documents for municipal actors.', 'Analysis, structuring, and drafting of the guidance. The description will be expanded after reviewing the preserved document corpus.', 'Work developed in a municipal context; specific teams and responsibilities will be documented in the next review.', ['Preserved guidance documents', 'Context and audiences to be documented', 'Excerpt selection pending']]
+    en: ['Organising school convivencia at the municipal level', 'Municipal policy and guidance system · produced in 2019 for the 2020–2024 period', 'In 2019, while working as municipal coordinator for Convivencia Escolar in Punitaqui’s Municipal Education Department, I produced a policy and a set of documents intended to organise the work of local schools. The project arose from a practical difficulty: the school convivencia teams I supervised worked with very different criteria, procedures, and organisational arrangements. I considered it necessary to offer a shared framework that could guide their work without replacing the decisions made by each school.', 'How can problems and technical criteria be translated into clear, situated, and usable guidance?', 'Needs assessment, information organisation, and drafting of operational documents for municipal actors.', 'Analysis, structuring, and drafting of the guidance.', 'Work developed in a municipal context.', ['Municipal policy', 'Five guidance documents', 'Matrices, diagrams, and working instruments']]
   },
   cencosud: {
     es: ['Del análisis de una experiencia financiera al prototipo', 'Diseño de experiencia y prototipado · Proyecto académico grupal · 2023', 'Este proyecto fue realizado como trabajo final del Diplomado en Customer Experience: Data, Diseño e Innovación de la Pontificia Universidad Católica de Chile. Al comienzo del diplomado, sus participantes propusieron distintos casos y votaron cuál desarrollar. El caso seleccionado fue presentado por un integrante de nuestro equipo que trabajaba en Cencosud y conocía directamente el problema. El equipo tomó como caso la experiencia de solicitud y administración de avances mediante la aplicación de Tarjeta Cencosud Scotiabank. A partir de la información aportada por este integrante, construimos una representación del recorrido del usuario, formulamos oportunidades de mejora y las tradujimos en un conjunto de pantallas. El proyecto fue un ejercicio académico. No constituyó un encargo oficial de Cencosud Scotiabank ni fue validado institucionalmente por la empresa.', '¿Cómo traducir una propuesta de experiencia en una interfaz comprensible y consistente?', 'Análisis colectivo de la experiencia y desarrollo de un conjunto de pantallas en Figma.', 'Participación en el análisis colectivo y realización íntegra del rediseño de la aplicación y sus pantallas.', 'Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira y Raúl Zuleta.', ['Journey map', 'Service blueprint', 'Archivo de diseño en Figma']],
-    en: ['Cencosud case · Customer experience', 'Group academic project · experience design', 'Redesign of a banking application’s screens, produced as the final project of a customer experience diploma.', 'How can findings and an experience proposal be translated into a clear and consistent interface?', 'The team developed the case and proposal; quotations were examples created for the exercise. The visual prototype was built in Figma.', 'I designed every screen and led much of the visual development. The case and outcomes must be presented as group work.', 'Group project. The full team and roles will be added from the final presentation before publication.', ['Final presentation', 'Functional Figma file', 'Prototype screen system']]
+    en: ['From analysing a financial experience to a prototype', 'Experience design and prototyping · group academic project · 2023', 'This project was completed as the final assignment for the Diploma in Customer Experience: Data, Design and Innovation at Pontificia Universidad Católica de Chile. Participants proposed different cases and voted on which one to develop. The selected case was introduced by a member of our team who worked at Cencosud and knew the problem directly. We examined the experience of requesting and managing cash advances through the Cencosud Scotiabank Card application. Using the information provided by this team member, we mapped the user journey, identified opportunities for improvement, and translated them into a set of screens. This was an academic exercise, not an official commission from Cencosud Scotiabank, and it was not institutionally validated by the company.', 'How can an experience proposal be translated into a clear and consistent interface?', 'Collective analysis of the experience and development of a set of screens in Figma.', 'Participation in the collective analysis and full responsibility for redesigning the application and producing its screens.', 'Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira, and Raúl Zuleta.', ['Journey map', 'Service blueprint', 'Figma design file']]
   },
   huerto: {
     es: ['Huerto', 'Proyecto experimental en curso · desde septiembre de 2026', 'Un dispositivo doméstico de observación vegetal que articula cultivo, fotografías, sensores, prácticas de cuidado, bitácoras y un archivo de datos.', '', '', '', '', []],
@@ -26,6 +26,7 @@ const projects = {
 };
 
 const switcher = document.querySelector('.language-switch');
+const staticEnglish = document.documentElement.dataset.staticLanguage === 'en';
 const id = new URLSearchParams(location.search).get('id') || 'viejito-perro';
 const project = projects[id] || projects['viejito-perro'];
 const isCenvi = id === 'cenvi';
@@ -33,7 +34,8 @@ const isPunitaqui = id === 'punitaqui';
 const isCencosud = id === 'cencosud';
 const isHuerto = id === 'huerto';
 const isSoundPractices = id === 'practicas-sonoras';
-const isSpanishOnly = isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices;
+const hasDedicatedStory = isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices;
+const isSpanishOnly = !staticEnglish && (isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices);
 document.body.classList.toggle('viejito-detail-page', id === 'viejito-perro');
 document.body.classList.toggle('cenvi-detail-page', isCenvi);
 document.body.classList.toggle('punitaqui-detail-page', isPunitaqui);
@@ -41,7 +43,7 @@ document.body.classList.toggle('cencosud-detail-page', isCencosud);
 document.body.classList.toggle('huerto-detail-page', isHuerto);
 document.body.classList.toggle('sound-practices-detail-page', isSoundPractices);
 
-if (isSpanishOnly) {
+if (isSpanishOnly && switcher.tagName === 'BUTTON') {
   switcher.disabled = true;
   switcher.classList.add('is-static');
   switcher.setAttribute('aria-label', 'Contenido disponible actualmente en español');
@@ -196,7 +198,7 @@ function render(language) {
   if (isSpanishOnly) language = 'es';
   const [title, status, intro, problem, process, role, credits, evidence] = project[language];
   document.documentElement.lang = language;
-  document.querySelectorAll('[data-es][data-en]').forEach((element) => { element.textContent = element.dataset[language]; });
+  if (!staticEnglish) document.querySelectorAll('[data-es][data-en]').forEach((element) => { element.textContent = element.dataset[language]; });
   document.querySelector('#project-title').textContent = title;
   document.querySelector('#project-status').textContent = status;
   document.querySelector('#project-intro').textContent = intro;
@@ -205,18 +207,22 @@ function render(language) {
   document.querySelector('#project-role').textContent = role;
   document.querySelector('#project-credits').textContent = credits;
   const richStory = document.querySelector('#viejito-story');
-  const showRichStory = id === 'viejito-perro' && language === 'es';
+  const showRichStory = id === 'viejito-perro';
   richStory.hidden = !showRichStory;
-  document.querySelector('#project-standard-content').hidden = showRichStory || isSpanishOnly;
-  document.querySelector('#project-standard-evidence').hidden = showRichStory || isSpanishOnly;
+  document.querySelector('#project-standard-content').hidden = showRichStory || hasDedicatedStory;
+  document.querySelector('#project-standard-evidence').hidden = showRichStory || hasDedicatedStory;
   const list = document.querySelector('#project-evidence');
   list.replaceChildren(...evidence.map((item) => { const li = document.createElement('li'); li.textContent = item; return li; }));
   document.title = `${title} — Raúl Zuleta`;
   const english = language === 'en';
-  switcher.setAttribute('aria-pressed', String(english));
-  if (!isSpanishOnly) switcher.setAttribute('aria-label', english ? 'Cambiar idioma a español' : 'Change language to English');
-  switcher.children[0].classList.toggle('active', !english);
-  switcher.children[1].classList.toggle('active', english);
+  if (switcher.tagName === 'BUTTON') {
+    switcher.setAttribute('aria-pressed', String(english));
+    if (!isSpanishOnly) switcher.setAttribute('aria-label', english ? 'Cambiar idioma a español' : 'Change language to English');
+    switcher.children[0].classList.toggle('active', !english);
+    switcher.children[1].classList.toggle('active', english);
+  } else {
+    switcher.href = `${staticEnglish ? 'proyecto.html' : 'proyecto-en.html'}?id=${id}`;
+  }
   localStorage.setItem('portfolio-language', language);
 }
 
@@ -240,9 +246,9 @@ if (isCenvi) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#sound-practices-content').hidden = false;
-} else {
+} else if (switcher.tagName === 'BUTTON') {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }
 setupHuertoTimelapse();
 setupProjectLightbox();
-render(isSpanishOnly ? 'es' : (localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'es'));
+render(staticEnglish ? 'en' : 'es');

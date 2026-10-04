@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en" data-static-language="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Proyecto seleccionado del sitio personal de Raúl Zuleta." />
+    <title>Project — Raúl Zuleta</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
+    <link rel="stylesheet" href="assets/styles.css?v=practicas-sonoras-1" />
+    <script src="assets/project.js?v=practicas-sonoras-1" defer></script>
+  </head>
+  <body class="project-detail-page">
+    <a class="skip-link" href="#detalle" data-es="Saltar al contenido" data-en="Skip to content">Skip to content</a>
+    <header class="site-header detail-header" id="arriba">
+      <a class="wordmark" href="index-en.html#proyectos"><strong>Raúl Zuleta</strong></a>
+      <div class="detail-actions">
+        <a class="detail-back" href="index-en.html#proyectos" data-es="← Volver a proyectos" data-en="← Back to projects">← Back to projects</a>
+        <a class="language-switch" href="proyecto.html" aria-label="Cambiar idioma a español"><span>ES</span><span class="active">EN</span></a>
+      </div>
+    </header>
+    <main id="detalle" class="project-detail">
+      <header class="project-detail-hero">
+        <p class="eyebrow" id="project-status"></p>
+        <h1 id="project-title"></h1>
+        <p class="lead" id="project-intro"></p>
+      </header>
+      <article class="viejito-story" id="viejito-story" lang="en" hidden>
+        <section class="story-opening story-section">
+          <div class="story-opening-copy">
+            <h2>How to get to know an environment without stopping inhabiting it?</h2>
+            <p>Viejito-Perro started during the holidays after my candidacy exam. I wanted to put my computer skills into practice and have fun learning, so I decided to reuse an old notebook as a home server. First I installed services that could be useful inside the home. Then I incorporated development boards and environmental sensors. As the system began to record and compare what was happening in different places, questions appeared that were not fully formulated at the beginning.</p>
+            <p>The project thus became a way to explore a concern that had arisen during my first year of doctoral work, the gap between lived experience and measured data. We can know the world through models, averages and representations and, at the same time, distance ourselves from its sensible experience.</p>
+            <p>Viejito-Perro allows you to follow how an environmental variation is transformed into a signal, data, comparison and interpretation. Measurements are not considered transparent representations. They depend on the position of the sensors, technical decisions and everyday practices through which they acquire context.</p>
+            <p>The project does not attempt to resolve the distance between knowing and living. It explores whether a measurement infrastructure can expand attention to the environment and, at the same time, how it could contribute to technologizing or simplifying your experience.</p>
+          </div>
+          <figure class="story-hero-media">
+            <img src="assets/viejito-perro/nodo-en-vivienda.jpeg" alt="Nodo experimental montado en protoboards junto a una ventana, con sensores, cables, luces y pantalla OLED." />
+            <figcaption>A node located in the home: sensors, connections and interfaces remain open to new modifications.</figcaption>
+          </figure>
+        </section>
+
+        <section class="story-section trajectory-section trajectory-section-early">
+          <div><p class="eyebrow">Relationship with my career</p><h2>From observing mediations to building them</h2></div>
+          <div>
+            <p>The project extends practices from my anthropological training: situated observation, the creation of archives, attention to events and failures, and the reflective examination of instruments, data, and infrastructure. My complementary training allowed me to take those concerns towards the construction and testing of a material system.</p>
+            <p>Viejito-Perro is an independent project developed during the PhD. It shares with my doctoral research an interest in instruments and translations between matter and information, but it is not part of the empirical terrain nor does it constitute a result of the thesis.</p>
+          </div>
+        </section>
+
+        <section class="story-section origin-section">
+          <div class="story-copy">
+            <h2>A beloved computer takes on a new form</h2>
+            <p>The computer that gave rise to the project was bequeathed to me. He had been a beloved co-worker, and when he was given to me to play with and experiment with, his age evoked the phrase "you don't teach an old dog new tricks."</p>
+            <p>The name recognizes the time, care and affection invested in prolonging your life through new capabilities. Several decisions, such as lighting behaviors or the incorporation of a character on the screen, arose from the desire to share progress with others in a close way.</p>
+            <p>“Act of Love” thus names a way of building based on caring, reusing and involving others.</p>
+          </div>
+          <div class="origin-art">
+            <figure><img src="assets/viejito-perro/dibujo-original.png" alt="Dibujo original de Viejito-Perro: un perro de cabeza blanca y cuerpo de robot." /><figcaption>Original drawing by Constanza Tizzoni.</figcaption></figure>
+            <figure><img src="assets/viejito-perro/boceto-carcasa.png" alt="Boceto manuscrito de una primera carcasa con pantalla, sensor de luz, botón, luz de estado y ventilación." /><figcaption>First casing sketch, August 14, 2026. Constanza Tizzoni.</figcaption></figure>
+          </div>
+          <figure class="origin-model origin-model-exploded"><img src="assets/viejito-perro/despiece-carcasa-nodo-02.png" alt="Vista tridimensional despiezada de la carcasa, con sus cuerpos, tapa, puertas, bandeja y accesorios separados." /><figcaption>Exploded view of the model: front and rear bodies, cover, doors, tray and accessories provided for assembly.</figcaption></figure>
+          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Render tridimensional de una carcasa de bordes redondeados, con pantalla, pulsadores, luces y rejilla frontal." /><figcaption>The parametric design of the node 02 casing began as a digital model developed in OpenSCAD. A first physical version is currently being printed with a 3D printer provided by the laboratory through the technical advice of Nicolás Müller. This manufacturing will allow checking dimensions, ventilation, access to components and resistance of the assembly. The case is still under development and is not yet a finished version.</figcaption></figure>
+        </section>
+
+        <section class="story-section system-section">
+          <div class="story-copy">
+            <h2>How it works</h2>
+            <p>The sensors record some variations in the living room and bedroom. Two nodes gather the readings and send them to a local server, where they are persisted and compared. A screen, lights and graphic interfaces allow some of these relationships to be expressed.</p>
+          </div>
+          <ol class="system-chain" aria-label="Funcionamiento general del sistema">
+            <li>The environment varies</li>
+            <li>The sensors record</li>
+            <li>Nodes gather and transmit</li>
+            <li>The local server maintains and compares</li>
+            <li>Interfaces express relationships</li>
+          </ol>
+          <p class="system-closing">At each step, a variation of the dwelling is transformed: first into a sign and then into registration, comparison and form of expression.</p>
+          <div class="system-groups">
+            <div class="system-group">
+              <h3>Domestic infrastructure</h3>
+              <p>A reused computer works as a server. Two nodes connected to the local network gather and transmit the readings from the living room and bedroom.</p>
+            </div>
+            <div class="system-group">
+              <h3>Environmental records</h3>
+              <p>The system records temperature, humidity, pressure and luminosity. Measurements of particles and acoustic activity remain experimental explorations.</p>
+              <p>Acoustic activity is locally transformed into relative indicators: no recordings are transmitted or preserved.</p>
+            </div>
+            <div class="system-group">
+              <h3>File and comparison</h3>
+              <p>Measurements are kept inside the home to build historical records, compare rooms and relate them to exterior references.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="story-section process-section">
+          <div class="story-copy">
+            <h2>A form that emerges when building</h2>
+            <p>Viejito-Perro was not designed all at once. Its form has emerged through successive additions, tests, failures and new questions. Each added capacity—record, compare, preserve, or express—modifies the system and allows different aspects of the home to be observed.</p>
+            <p>Failures also produce learning. A sensor that stops responding, a reading affected by the position of the device or an insufficient external comparison make visible the conditions necessary to produce and interpret data.</p>
+          </div>
+          <div class="process-gallery">
+            <figure><img src="assets/viejito-perro/primer-montaje.jpeg" alt="ESP32 sobre una protoboard pequeña conectado a un sensor mediante cables." /><figcaption>First assemblies: learning connections, components and material limits.</figcaption></figure>
+            <figure><img src="assets/viejito-perro/prototipo-expandido.jpeg" alt="Prototipo en una protoboard grande con ESP32, sensores, luces y numerosos cables." /><figcaption>The system grows through successive additions, tests and reorganizations.</figcaption></figure>
+            <figure><img src="assets/viejito-perro/nodo-sensores.jpeg" alt="Nodo experimental sobre una mesa, conectado a sensores de luz y ambiente." /><figcaption>The sensors are deployed from specific positions within the home.</figcaption></figure>
+            <figure><img src="assets/viejito-perro/detalle-oled.jpeg" alt="Pequeña pantalla OLED sostenida en una mano." /><figcaption>The material scale of the screen that would then host the local interface.</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="story-section archive-findings-section">
+          <div class="story-copy">
+            <h2>What started showing the file</h2>
+            <p>The accumulated record allowed us to recognize that the nodes do not simply describe a living room and a bedroom. Each registers a specific material position, affected by light, the proximity of windows, air circulation, daily activities and the assembly itself.</p>
+            <p>A first exploratory analysis allowed us to distinguish three scales. Environmental cycles appear in the daily path of light, heating and cooling. Domestic rhythms manifest themselves in recurring differences in acoustic activity, temperature and humidity. Brief events, such as cooking or ventilation, can produce large variations that disappear when the data are summarized using hourly averages.</p>
+            <p>These differences do not automatically identify what happened. An increase in humidity does not in itself equate to a shower and silence does not prove that a room is empty. To interpret the measurements it is necessary to relate them with observations, notes and situated knowledge of the home.</p>
+            <p>This limitation opened a new practical question. The future addition of LD2410C occupancy sensors could help better distinguish between occupancy, motion and absence.</p>
+          </div>
+        </section>
+
+        <section class="story-section interfaces-section">
+          <div class="story-copy">
+            <h2>Interfaces in operation</h2>
+          </div>
+          <div class="video-grid">
+            <figure>
+              <video controls muted playsinline preload="metadata" aria-label="Demostración sin sonido de la pantalla OLED del nodo 01"><source src="assets/viejito-perro/interfaz-oled.mp4" type="video/mp4" /></video>
+              <figcaption><strong>Physical interface of node 01.</strong> The screen shows local measurements and allows you to navigate through different pages from the device.</figcaption>
+            </figure>
+            <figure>
+              <video controls muted playsinline preload="metadata" aria-label="Prueba sin sonido de respiración luminosa alternada"><source src="assets/viejito-perro/respiracion-led.mp4" type="video/mp4" /></video>
+              <figcaption><strong>Early test of alternate light breathing.</strong> This test served as the basis for the current behavior, in which the LEDs express the temperature difference between the living room and the bedroom through alternating pulses.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="story-section limits-section">
+          <h2>Status and limits</h2>
+          <div class="limits-content">
+            <p>Viejito-Perro is operational, but it is not a finished product or a calibrated scientific instrument. The system allows you to observe partial relationships and ask questions; it does not offer a complete or neutral representation of the environment.</p>
+            <ul>
+              <li>Readings depend on location and mounting.</li>
+              <li>Acoustic indicators are not equivalent to measurements calibrated in decibels.</li>
+              <li>The exterior references are regional and modeled.</li>
+              <li>Interpretations about domestic activities remain contextualized hypotheses.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="story-section contribution-section">
+          <div><h2>Authorship and collaborations</h2></div>
+          <div>
+            <p>I have defined the concept and principles of the project, reconditioned and managed the server, selected and assembled the components, performed the physical tests, defined behaviors and interfaces, contextualized the measurements and directed its documentation and development.</p>
+            <p>Some code, configurations and documentation were developed iteratively with assistance from AI tools, under my direction, review and testing on the physical system.</p>
+            <p>The original drawing of the character and the first visual explorations of his casing were created by <strong>Constance Tizzoni</strong>. The screen bitmap and subsequent 3D models are derived from that drawing and are published with his permission.</p>
+            <p><strong>Nicolas Müller</strong> He has been my main technical interlocutor within the laboratory. We have had frequent conversations about sensors, connections, electronics and manufacturing. He has helped me solve assembly and soldering problems, reviewed the case model and provided the laboratory's 3D printer with which we are currently producing its first physical version.</p>
+            <p><strong>Alejandro Bustos</strong> He has contributed through conversations about the orientation and possibilities of the project, helping me clarify decisions and open lines of exploration from his experience with electronics. He also provided me with a sensor that has not yet been incorporated into the system.</p>
+          </div>
+        </section>
+
+        <section class="story-section horizons-section horizons-section-compact">
+          <div><h2>Upcoming explorations</h2></div>
+          <ul>
+            <li>Evaluate and adjust the first case currently in print.</li>
+            <li>Install and calibrate LD2410C presence sensors on both nodes.</li>
+            <li>Investigate forms of autonomous communication between them.</li>
+            <li>Develop visual, sound and historical ways of relating to records.</li>
+          </ul>
+          <p class="technical-note">These lines are developing possibilities, not current capabilities of the system.</p>
+        </section>
+      </article>
+
+      <div class="project-detail-grid" id="project-standard-content">
+        <section><h2 data-es="Problema" data-en="Problem">Problem</h2><p id="project-problem"></p></section>
+        <section><h2 data-es="Proceso" data-en="Process">Process</h2><p id="project-process"></p></section>
+        <section><h2 data-es="Mi contribución" data-en="My contribution">My contribution</h2><p id="project-role"></p></section>
+        <section><h2 data-es="Colaboración y créditos" data-en="Collaboration and credits">Collaboration and credits</h2><p id="project-credits"></p></section>
+      </div>
+      <section class="project-evidence" id="project-standard-evidence">
+        <h2 data-es="Evidencias y materiales" data-en="Evidence and materials">Evidence and materials</h2>
+        <ul id="project-evidence"></ul>
+      </section>
+      <article class="cenvi-case" id="cenvi-content" hidden>
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>The training problem</h2>
+            <div class="cenvi-copy">
+              <p>The project responded to a difficulty that began to become visible in 2023. A participatory diagnosis carried out with students identified insecurities related to the evaluation of the impact of the interventions developed during their professional practices. This, added to the subsequent reflection among teachers, led to problematizing the fact that students could apply instruments and calculate results, thus having the basis to evaluate the impact of their interventions. However, they needed greater support to correct them, interpret them and transform them into relevant diagnoses to guide decisions in educational establishments.</p>
+              <p>From this background I began to incubate the idea of a support system that integrated technical operations with professional reasoning. The proposal could be finalized in 2026 through the collective work developed at CIPSE.</p>
+            </div>
+          </div>
+          <figure class="cenvi-figure">
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar imagen de la interfaz del programa CENVI">
+              <img src="assets/cenvi-software-inicio-recorte.png" alt="Pantalla de inicio del programa CENVI con sus módulos de carga, análisis y reportes" width="1388" height="827" />
+              <span class="cenvi-media-hint" aria-hidden="true">Expand</span>
+            </button>
+            <figcaption>Program interface developed to support the processing and interpretation of the CENVI.</figcaption>
+          </figure>
+        </section>
+
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>From questionnaire to device</h2>
+            <div class="cenvi-copy">
+              <p>The starting point was <a href="https://www.scielo.cl/scielo.php?script=sci_arttext&amp;pid=S0718-07052017000300012" target="_blank" rel="noopener">School Coexistence Questionnaire for Non-Violence</a>, developed and psychometrically validated by Flavio Muñoz Troncoso, Sandra Becerra Peña and Enrique Riquelme. The instrument jointly examines, from the students' perspective, different types of school violence and aspects of the institutional management of coexistence.</p>
+              <p>On that basis, a device composed of four elements was built:</p>
+              <ul>
+                <li>a pedagogical manual of application, correction and interpretation;</li>
+                <li>a program to process, review and display the data;</li>
+                <li>an initial training session;</li>
+                <li>and support during the preparation of the diagnosis and intervention guidelines.</li>
+              </ul>
+              <p>The program reduced part of the operational burden and organized the results by factors and dimensions. It also generated visualizations and interpretive drafts. These products were not a substitute for professional judgment, but rather needed to be reviewed in light of the school context, data quality, and other sources of information.</p>
+            </div>
+          </div>
+          <figure class="cenvi-figure">
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar diagrama de los cuatro componentes del dispositivo">
+              <img src="assets/cenvi-cuatro-componentes-recorte.png" alt="Diagrama de los cuatro componentes del dispositivo: manual, software, capacitación y acompañamiento" width="1700" height="860" loading="lazy" />
+              <span class="cenvi-media-hint" aria-hidden="true">Expand</span>
+            </button>
+            <figcaption>Manual, software, training and support functioned as an integrated support system.</figcaption>
+          </figure>
+        </section>
+
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>Four weeks of piloting</h2>
+            <div class="cenvi-copy">
+              <p>The device was piloted for four weeks with seventeen fifth-year Psychology students, organized in pairs and linked to educational establishments in the Coquimbo Region.</p>
+              <p>The process included initial training, application of the instrument, technical and interpretive support sessions, preparation of diagnostic reports and return of results to the establishments.</p>
+              <p>I also participated in the advisory session dedicated to the interpretation of results and the design of intervention strategies. In it, work was done on the reading and interpretation of statistics, to make the transition from the results organized by the program to contextualized diagnoses and guidelines usable by the establishments.</p>
+              <p>Diagnostic reports, usability and satisfaction questionnaires, and exit interviews were collected. When I left CIPSE and the Central University, in August 2026, the analysis of these materials had not yet been completed. I don't know if it continued later.</p>
+              <p>For this reason, the experience allows us to affirm that the device was designed, implemented and subjected to an evaluation process in a real training context. It does not yet allow us to affirm that its effectiveness in strengthening diagnostic skills has been demonstrated.</p>
+            </div>
+          </div>
+          <figure class="cenvi-figure">
+            <button class="cenvi-media-button" type="button" aria-label="Ampliar cronología del pilotaje">
+              <img src="assets/cenvi-pilotaje-cuatro-semanas-recorte.png" alt="Cronología del pilotaje: capacitación, aplicación, elaboración del informe y devolución de resultados" width="1700" height="860" loading="lazy" />
+              <span class="cenvi-media-hint" aria-hidden="true">Expand</span>
+            </button>
+            <figcaption>Piloting work sequence carried out over four weeks.</figcaption>
+          </figure>
+        </section>
+
+        <section class="cenvi-section cenvi-section-with-media">
+          <div class="cenvi-section-text">
+            <h2>Learn to work across disciplines</h2>
+            <div class="cenvi-copy">
+              <p>The development of the program required translating psychological and pedagogical criteria into processing rules, data structures, and interface decisions. This translation required reviewing concepts, specifying procedures and deciding which operations could be automated and which should remain open to interpretation.</p>
+              <p>The collaboration showed a concrete form of interdisciplinary work. Computer science made it possible to reduce repetitive operations and make certain relationships between results visible, while educational psychology provided the necessary criteria to interpret these results without separating them from their context.</p>
+              <p>The project showed that automating calculations is not equivalent to automating a diagnosis. The program could organize information and propose drafts, but it was up to the students to review the data, relate it to other sources, and justify their interpretations and recommendations.</p>
+            </div>
+          </div>
+          <div class="cenvi-gallery" aria-label="Documentación visual del proyecto">
+            <figure class="cenvi-figure">
+              <button class="cenvi-media-button" type="button" aria-label="Ampliar visualizaciones del programa CENVI">
+                <img src="assets/cenvi-software-visualizaciones-recorte.png" alt="Gráficos comparativos y matriz de interpretación cruzada generados por el programa CENVI" width="1291" height="759" loading="lazy" />
+                <span class="cenvi-media-hint" aria-hidden="true">Expand</span>
+              </button>
+              <figcaption>Visualizations generated with synthetic data.</figcaption>
+            </figure>
+            <figure class="cenvi-figure cenvi-figure-document">
+              <button class="cenvi-media-button" type="button" aria-label="Ampliar índice del manual pedagógico CENVI">
+                <img src="assets/cenvi-manual-indice.png" alt="Índice del manual pedagógico CENVI" width="765" height="990" loading="lazy" />
+                <span class="cenvi-media-hint" aria-hidden="true">Expand</span>
+              </button>
+              <figcaption>Index of the pedagogical manual: application, data quality, interpretation, decision making and diagnostic report.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="cenvi-section">
+          <h2>My contribution</h2>
+          <div class="cenvi-copy">
+            <p>The 2023 participatory diagnosis made it possible to identify the initial problem. From this background I formulated the proposal for the device, selected the CENVI as the basic instrument and coordinated its pedagogical development while directing CIPSE.</p>
+            <p>My work with the manual was mainly editing and coordination. I wrote its introduction and established the general tone of the document, seeking to ensure that the technical guidelines remained linked to diagnostic reasoning and contextualized decision making.</p>
+            <p>I also defined criteria for interpretation and support, coordinated the psychological and pedagogical requirements with the team in charge of the program, participated in the piloting and collaborated in the design and application of its evaluation instruments. I also prepared the institutional presentation of the project and a summary for the congress.</p>
+          </div>
+        </section>
+
+        <section class="cenvi-section">
+          <h2>Collaboration and credits</h2>
+          <div class="cenvi-copy">
+            <p><strong>Jorge Mavrakis</strong>, student member of CIPSE, and <strong>Matias Barraza</strong>, an external collaborator incorporated by Jorge, jointly developed the computer program in dialogue with the psychological and pedagogical requirements of the project. Jorge also prepared training on its use and accompanied part of the implementation.</p>
+            <p><strong>Tania Guerrero</strong>, teacher responsible for the subject, articulated the device with the students' curricular practice and participated in its implementation.</p>
+            <p>The project was developed collectively at CIPSE-UCEN. The School Coexistence Questionnaire for Non-Violence was developed and psychometrically validated by Flavio Muñoz Troncoso, Sandra Becerra Peña and Enrique Riquelme.</p>
+          </div>
+        </section>
+
+        <section class="cenvi-section cenvi-section-compact">
+          <h2>Evidence and safeguards</h2>
+          <div class="cenvi-copy">
+            <p>The program images published on this page do not contain information from the piloting. The first shows only the interface and the remaining visualizations were generated with synthetic data.</p>
+          </div>
+        </section>
+
+      </article>
+      <article class="punitaqui-story" id="punitaqui-content" hidden>
+        <section class="punitaqui-section punitaqui-section-with-media">
+          <div class="punitaqui-section-text">
+            <h2>From a shared need to a documentary system</h2>
+            <p>The project had as its background a consultation process developed during 2018. In conversations, workshops and work instances, appreciations and needs of actors linked to school coexistence were collected. This process culminated in a communal day held on December 11 of that year.</p>
+            <p>The background showed a demand for clearer communal guidelines and for tools that would help convert the general purposes of school coexistence into concrete ways of organizing work.</p>
+            <p>My boss asked me to prepare what was institutionally called a Community School Coexistence Policy. During 2019 I transformed this background, along with regulations and ministerial documents, into an articulated system of materials. The finished proposal was presented to the mayor, approved by municipal decree and subsequently presented to the educational community.</p>
+            <p>The central document defined objectives, conceptual foundations, levels of intervention and multi-year programming. Around it I developed five complementary guidelines:</p>
+            <ul>
+              <li>preparation of the School Coexistence Management Plan;</li>
+              <li>formation and management of coexistence teams;</li>
+              <li>teaching support to strengthen interactions in the classroom;</li>
+              <li>strengthening the role of course leaders;</li>
+              <li>Position profiles for those in charge of coexistence and psychosocial pairs.</li>
+            </ul>
+            <p>Together, these materials sought to translate national regulations and the general purposes of school coexistence into functions, procedures and instruments that could be used in daily work.</p>
+          </div>
+          <figure class="document-figure document-figure-wide punitaqui-document-overview">
+            <img src="assets/punitaqui/politica-estrategias.png" alt="Tabla de la Política Comunal de Convivencia Escolar que relaciona un nivel institucional con perfiles de cargo y orientaciones para los equipos y planes de convivencia." loading="lazy" />
+            <figcaption>Strategies and documents articulated by the Communal School Coexistence Policy.</figcaption>
+          </figure>
+        </section>
+
+        <section class="punitaqui-section punitaqui-section-with-media">
+          <div class="punitaqui-section-text">
+            <h2>Documents to organize practices</h2>
+            <p>The guidelines included cycles of diagnosis, planning, monitoring and evaluation; matrices to formulate plans; competency profiles; teacher observation and feedback guidelines; learning indicators; materials for working with families and an adaptation of agile methodologies to coordinate the work of the teams.</p>
+            <p>The documents attempted to produce a common way of organizing work, distributing responsibilities, making progress visible, keeping records, and linking the activities of each establishment with communal objectives.</p>
+            <p>The guidelines were not intended to replace the autonomy of educational communities. They sought to offer a shared language and structure within which each establishment could formulate its own decisions.</p>
+          </div>
+          <div class="document-pair">
+            <figure class="document-figure">
+              <img src="assets/punitaqui/plan-ciclo.png" alt="Diagrama circular que organiza la elaboración del plan de convivencia desde el autodiagnóstico y la priorización hasta la implementación y evaluación." loading="lazy" />
+              <figcaption>Proposed process to convert institutional needs into objectives, actions and evaluation mechanisms.</figcaption>
+            </figure>
+            <figure class="document-figure">
+              <img src="assets/punitaqui/equipos-agil.png" alt="Diagrama de seis pasos que adapta un ciclo de trabajo ágil a la coordinación de equipos de convivencia escolar." loading="lazy" />
+              <figcaption>Adaptation of an agile work cycle for the coordination of school coexistence teams.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="punitaqui-section punitaqui-section-textual">
+          <h2>Presentation and circulation</h2>
+          <div>
+            <p>The finished policy and its complementary documents were presented during 2019 in a communal day in which members of the Department of Education presented our work plans to teachers from municipal schools.</p>
+            <p>The materials were officially distributed to the establishments. I myself coordinated its multicopying and deposited printed copies in the correspondence pigeonholes of the different schools in the commune.</p>
+          </div>
+        </section>
+
+        <section class="punitaqui-section punitaqui-section-with-media punitaqui-contribution">
+          <div class="punitaqui-section-text">
+            <h2>My contribution</h2>
+            <p>I was responsible for the writing, structure, layout and construction of instruments of the central document and the five complementary guidelines.</p>
+            <p>The work included the review of regulations, ministerial documents and bibliography; the definition of the conceptual framework; the organization of the documentary system; and the creation of diagrams, matrices, profiles, guidelines and work tools.</p>
+            <p>I also managed the presentation of the proposal to the mayor, participated in its institutional formalization, presented the project to the teaching community and coordinated the reproduction and distribution of the materials.</p>
+          </div>
+          <figure class="document-figure document-figure-wide contribution-profile">
+            <img src="assets/punitaqui/perfiles-matriz.png" alt="Matriz de competencias funcionales que relaciona actividades clave del cargo con criterios de desempeño observables." loading="lazy" />
+            <figcaption>Fragment of the position profile designed to link functions, performance criteria and indicators.</figcaption>
+          </figure>
+          <figure class="document-figure contribution-form">
+            <img src="assets/punitaqui/acompanamiento-observacion.png" alt="Inicio de una pauta de observación y acompañamiento docente en el aula." loading="lazy" />
+          </figure>
+          <figure class="document-figure contribution-form">
+            <img src="assets/punitaqui/acompanamiento-retroalimentacion.png" alt="Inicio de una pauta de entrevista y retroalimentación docente." loading="lazy" />
+          </figure>
+          <p class="paired-caption contribution-forms-caption">Guidelines designed to record classroom observations and guide teacher feedback.</p>
+        </section>
+
+        <section class="punitaqui-section punitaqui-section-textual punitaqui-limits">
+          <h2>Implementation and limits</h2>
+          <div>
+            <p>The implementation did not reach what was projected. It was difficult for me to maintain a monitoring system that would allow me to know how each establishment used the documents, monitor the difficulties and adjust the guidelines in a timely manner.</p>
+            <p>However, some practices were established, such as the preparation of the management plan in the format proposed by the policy and the monthly monitoring practices that it established.</p>
+            <p>The proposal was not understood or appropriated in the same way by all actors. This was especially evident in single-teacher rural schools, whose organization, staff availability, and working conditions did not correspond to several of the organizational assumptions present in the documents.</p>
+            <p>The initial participatory process allowed us to recognize needs and build a starting point, but it did not in itself ensure subsequent appropriation. Between collecting inputs, preparing documents and transforming institutional practices there were distances that the project was not able to completely resolve.</p>
+            <p>Seen retrospectively, the experience shows both the capacity to build an institutional architecture and the limits of trying to coordinate heterogeneous school realities through general guidelines. Designing documents, approving them, and distributing them does not guarantee that they will become sustained practices.</p>
+          </div>
+        </section>
+
+        <section class="punitaqui-section punitaqui-section-textual">
+          <h2>Relationship with my career</h2>
+          <div>
+            <p>This experience shifted my attention from individual interpretations to public policies, organizations and instruments through which remote work is attempted to be coordinated.</p>
+            <p>The daily contact with norms, indicators, guidelines and various establishments later influenced my decision to study sociology and historically analyze the National School Coexistence Policy. This research was not the original foundation of the municipal project, but it returned to questions that became visible during this professional experience.</p>
+          </div>
+        </section>
+
+        <section class="punitaqui-section punitaqui-section-textual">
+          <h2>Evidence and validity</h2>
+          <div>
+            <p>The page presents fragments of the core document and the five orientations, including planning diagrams, competency matrices, and observation and feedback guidelines.</p>
+            <p>The documents were prepared in 2019 with regulations, policies and references in force at that time. They are presented as historical evidence of professional and institutional work, not as currently updated guidelines for educational establishments.</p>
+          </div>
+        </section>
+      </article>
+      <article class="cencosud-story" id="cencosud-content" hidden>
+        <section class="cencosud-section">
+          <h2>Build a representation of the experience</h2>
+          <div class="cencosud-section-body">
+            <p>The team collectively developed a user characterization, an empathy map, a journey map and a service blueprint. These resources made it possible to organize the available information and represent the journey associated with the request for an advance before, during and after the service.</p>
+            <p>The analysis focused on three problems raised from the professional experience of the member who worked at Cencosud:</p>
+            <ul>
+              <li>the lack of updated financial information;</li>
+              <li>the risk of falling behind due to not receiving timely reminders;</li>
+              <li>the difficulty in understanding and comparing financing alternatives.</li>
+            </ul>
+            <p>Based on these problems, the team defined three attributes to guide the proposal: security and reliability, accessibility and ease of use, and financial education.</p>
+            <p>The journey map and the service blueprint were work instruments built to organize the case and develop a proposal within the diploma.</p>
+          </div>
+          <div class="cencosud-analysis-gallery">
+            <figure class="cencosud-figure">
+              <img src="assets/cencosud/journey.png" alt="Journey map del ejercicio, organizado en once momentos antes, durante y después del servicio." loading="lazy" />
+              <figcaption>Journey map used to represent breaks, actions and emotions throughout the service.</figcaption>
+            </figure>
+            <figure class="cencosud-figure">
+              <img src="assets/cencosud/blueprint.png" alt="Service blueprint del ejercicio, con catorce momentos distribuidos entre pre-servicio, servicio y post-servicio." loading="lazy" />
+              <figcaption>Service blueprint developed to organize the proposal before, during and after the service.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="cencosud-section cencosud-interface">
+          <div class="cencosud-section-heading">
+            <h2>Translate the proposal to an interface</h2>
+            <p class="cencosud-source-wrap"><a class="cencosud-source-link" href="https://www.figma.com/design/l6OvanOGngKmvsAkQedM76/Diplomado?m=auto&amp;t=pmp5Zx6DiV0AUTfG-1" target="_blank" rel="noopener">Open the prototype in Figma ↗</a></p>
+          </div>
+          <div class="cencosud-section-body">
+            <p>The prototype brought together three main components:</p>
+            <ul>
+              <li>a flow to simulate the request for an advance and review the breakdown of its costs;</li>
+              <li>a visualization of the monthly distribution of expenses;</li>
+              <li>a payment reminder system that showed the potential interest savings associated with timely payment.</li>
+            </ul>
+            <p>The screens sought to organize complex financial information through visual hierarchies, graphs, notices, and understandable sequences.</p>
+            <p>The result was a set of screens designed in Figma. The file preserves different variants and stages of the work, in addition to the screens selected for the final presentation.</p>
+          </div>
+          <div class="cencosud-prototype-gallery">
+            <figure class="cencosud-figure cencosud-figure-primary">
+              <img src="assets/cencosud/prototipo-simulacion.png" alt="Dos pantallas del prototipo: simulador de un avance y resumen de sus costos." loading="lazy" />
+              <figcaption>Simulation of progress and cost breakdown.</figcaption>
+            </figure>
+            <figure class="cencosud-figure">
+              <img src="assets/cencosud/prototipo-gastos-recortado.png" alt="Tres pantallas del prototipo: notificación, inicio y gráfico de distribución mensual de gastos." loading="lazy" />
+              <figcaption>Access to a visualization of the monthly distribution of expenses.</figcaption>
+            </figure>
+            <figure class="cencosud-figure">
+              <img src="assets/cencosud/prototipo-recordatorios.png" alt="Tres fragmentos del prototipo con avisos de vencimiento y posible ahorro de intereses." loading="lazy" />
+              <figcaption>Payment reminders and communication of possible interest savings.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="cencosud-section">
+          <h2>My contribution</h2>
+          <div class="cencosud-section-body">
+            <p>I participated in the collective analysis of the experience, the development of the instruments and the general definition of the proposal. Later I fully assumed the translation of those decisions to the redesign of the application.</p>
+            <p>I made all the screens presented in the project, including their visual composition, the hierarchy of information, the graphic representation of expenses and costs, and the organization of the different moments of the experience.</p>
+            <p>When I started the project I didn't know how to use Figma. My previous experience with vector editing programs allowed me to recognize some principles of graphic construction, but I had to learn the functions of the new tool through tutorials and direct experimentation. The need to materialize the proposal thus guided a situated technical learning process.</p>
+          </div>
+        </section>
+
+        <section class="cencosud-section">
+          <h2>Informal feedback</h2>
+          <div class="cencosud-section-body">
+            <p>During development we showed the proposal to people close to the team and collected their impressions. This review helped discuss understanding the screens and how information is presented.</p>
+          </div>
+        </section>
+
+        <section class="cencosud-section">
+          <h2>Collaboration and credits</h2>
+          <div class="cencosud-section-body">
+            <p>The project was developed jointly by <strong>Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira and Raúl Zuleta</strong>. The analysis of the experience, the development of the instruments and the general definition of the proposal were collective works.</p>
+            <p>The redesign of the application and the construction of all the screens in Figma were done by me.</p>
+          </div>
+        </section>
+
+        <section class="cencosud-section cencosud-limits">
+          <h2>Scope and limits</h2>
+          <div class="cencosud-section-body">
+            <p>The person called “Miguel”, his characteristics and the quotes included in the presentation were constructed for the exercise. The names, amounts, movements, dates and calculations shown on the screens are also simulated. The project did not use personal financial data or information belonging to real users.</p>
+            <p>Although the problem was raised by a member who worked at Cencosud, the proposal was not officially commissioned, tested or approved by Cencosud Scotiabank. It should be understood as an academic exercise of analysis, design and prototyping.</p>
+          </div>
+        </section>
+      </article>
+      <article class="huerto-story" id="huerto-content" lang="en" hidden>
+        <section class="huerto-section huerto-opening">
+          <div class="huerto-copy">
+            <p class="eyebrow">A home plant observation device</p>
+            <h2>What does it take for a set of plants grown at home to become an object of observation?</h2>
+            <p>The project articulates a domestic cultivation, daily photographs, environmental and substrate sensors, care interventions, logs and a data archive. Its purpose is not to carry out a controlled biological experiment, but to observe how plants, instruments, records and daily decisions come to together constitute an object of knowledge.</p>
+            <p>It began by planting tomatoes, radishes and basil in two germination trays. During the first days, observation depended mainly on photographs and sensitive assessments such as the appearance of the substrate, its humidity to the touch and the visible emergence of each species.</p>
+          </div>
+          <figure class="huerto-figure huerto-hero-figure">
+            <img src="assets/huerto/siembra-19-septiembre.jpg" alt="Dos bandejas de germinación recién sembradas, dispuestas sobre una superficie marcada con cintas y una flecha de orientación." width="1800" height="2400" />
+            <figcaption>The position of the trays and their orientation with respect to the window began to stabilize from the first records.</figcaption>
+          </figure>
+        </section>
+
+        <section class="huerto-section huerto-sequence-section">
+          <div class="huerto-copy">
+            <h2>Build something that can be followed</h2>
+            <p>It soon became evident that producing a comparable series required building conditions of continuity. The trays were labeled and placed within markings that allowed them to be returned to approximately the same position. An arrow recorded its orientation relative to the window and a map linked each cavity to an identifier.</p>
+            <p>Daily photography documented emergence and initial growth. The radishes were the first to appear; then the basils and tomatoes emerged. However, comparing the images was not an automatic operation: the camera angle, the time, the lighting, the position of the trays and the processing of the files changed what could be seen.</p>
+            <p>The observation device did not precede culture. It was formed along with the plants, as new needs for identification, comparison and registration arose.</p>
+          </div>
+          <div class="huerto-timelapse" data-huerto-timelapse aria-label="Secuencia temporal del crecimiento del cultivo">
+            <figure class="huerto-figure huerto-timelapse-frame">
+              <img src="assets/huerto/siembra-19-septiembre.jpg" alt="Dos bandejas de germinación recién sembradas." width="1800" height="2400" loading="lazy" data-timelapse-image />
+              <figcaption aria-live="polite"><time datetime="2026-09-19" data-timelapse-date>September 19</time><span data-timelapse-note> · Sowing and first stabilized registration.</span></figcaption>
+            </figure>
+            <div class="huerto-timelapse-controls">
+              <button type="button" class="huerto-timelapse-play" data-timelapse-play aria-pressed="false">Play sequence</button>
+              <label for="huerto-timelapse-range">Browse the logs</label>
+              <input id="huerto-timelapse-range" type="range" min="0" max="11" value="0" step="1" data-timelapse-range />
+              <output data-timelapse-counter>1 / 12</output>
+            </div>
+            <p class="huerto-timelapse-note">The variations in framing, lighting and editing are part of the record: the sequence has not been aligned or homogenized.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-instrument-section">
+          <div class="huerto-copy">
+            <h2>From sensitive appreciation to the instrumental signal</h2>
+            <p>The decision to water began as a practical evaluation of the substrate: observing its color, touching it and deciding if it still retained moisture. Subsequently, a plant node was incorporated consisting of two capacitive substrate sensors, a light sensor and a temperature, ambient humidity and pressure sensor.</p>
+            <p>Sensors do not replace sensitive observation nor do they directly describe the state of plants. Each reading depends on position, depth, wiring, power and mounting configuration.</p>
+            <p>Substrate probes currently produce raw voltages. These values ​​allow variations to be followed, but are not yet equivalent to calibrated humidity percentages. Preserving them in their original unit avoids presenting an interpretation as if it were a direct and definitive measurement.</p>
+          </div>
+          <div class="huerto-instrument-gallery">
+            <figure class="huerto-figure">
+              <img src="assets/huerto/montaje-y-programacion.jpg" alt="Nodo vegetal conectado a un computador durante una prueba de programación, con una sonda de sustrato en primer plano." width="1600" height="2133" loading="lazy" />
+              <figcaption>Test the node and review its readings before incorporating it into the crop.</figcaption>
+            </figure>
+            <figure class="huerto-figure">
+              <img src="assets/huerto/montaje-nodo-vegetal.jpg" alt="Montaje del nodo vegetal en una protoboard, conectado mediante cables a sensores ubicados junto a las bandejas." width="1800" height="2400" loading="lazy" />
+              <figcaption>The initial montage makes visible the connections that mediate between cultivation and registration.</figcaption>
+            </figure>
+            <figure class="huerto-figure">
+              <img src="assets/huerto/sensores-y-cultivo-24-septiembre.jpg" alt="Dos sondas de sustrato instaladas en una bandeja, junto a plántulas de tomate, albahaca y rabanito." width="1800" height="2400" loading="lazy" />
+              <figcaption>The probes occupy specific positions: they do not automatically represent the entire tray.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-system-section">
+          <div class="huerto-copy">
+            <h2>A node connected to Viejito-Perro</h2>
+            <p>The Vegetal Node 01 is technically integrated with the domestic infrastructure of Viejito-Perro. The node obtains the readings, Home Assistant allows you to monitor its operation, and a separate service maintains a snapshot of six variables every minute.</p>
+            <p>The file separates automated telemetry from human events and observations. Watering, photographs, movements, thinning, sensor changes and calibrations are recorded as separate events. This separation allows an instrumental variation to be subsequently related to what occurred around the plants, without reducing one thing to the other.</p>
+            <p>Huerto constitutes an autonomous project. It uses some of the Viejito-Perro infrastructure, but develops its own question, protocol and file.</p>
+          </div>
+          <ol class="huerto-data-chain" aria-label="Recorrido de los registros del huerto">
+            <li><span>Cultivation</span><small>growth and events</small></li>
+            <li><span>Sensors</span><small>signs located</small></li>
+            <li><span>Plant node</span><small>reading and transmission</small></li>
+            <li><span>local file</span><small>telemetry and separate events</small></li>
+          </ol>
+        </section>
+
+        <section class="huerto-section huerto-care-section">
+          <div>
+            <h2>Sustaining life also transforms what is observed</h2>
+          </div>
+          <div class="huerto-copy">
+            <p>Observing the crop requires carrying out practices that allow it to sustain its life. Watering, providing light, thinning, transplanting and responding to visible changes are not activities external to the device: they maintain the conditions that make both the growth of plants and the continuity of their observation possible.</p>
+            <p>These practices also do not preserve an unaltered object. Each intervention modifies the subsequent trajectories of the crop and what can be recorded. Care sustains life, but also selects, guides and transforms its possibilities.</p>
+            <p>During the first thinning of the radishes, different criteria were applied in two cavities. In one the largest plant was preserved; in another, the minor. The removed seedlings were photographed and weighed, partially incorporating a phenotyping practice known during field work.</p>
+            <p>The procedure does not constitute a comparative experiment nor does it reproduce a complete laboratory protocol. Its importance is in showing how a conversation, a tool and a care decision can introduce new operations of observation in the domestic space.</p>
+            <figure class="huerto-figure huerto-care-figure">
+              <img src="assets/huerto/raleo-y-medicion.jpg" alt="Tres plántulas de rabanito retiradas durante el raleo, dispuestas junto a una cinta métrica antes de ser pesadas." width="1600" height="2133" loading="lazy" />
+              <figcaption>Seedlings removed during the first thinning, photographed next to a length reference before weighing.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-text-section">
+          <h2>A distributed care practice</h2>
+          <div class="huerto-copy">
+            <p>The continuity of the plants, the cultivation and their registration has not depended exclusively on one person or the automatic operation of the sensors. During an absence, another person in the home held the irrigation and produced part of the photographic record following general instructions on framing and orientation.</p>
+            <p>Circulating one of those photographs through a messaging platform reduced its resolution and removed some of the original metadata. This episode made visible that the provenance and comparability of records also depend on people, instructions, devices and platforms.</p>
+            <p>Distributed care is not an external element to the system. It is a condition so that the plants, photographs and archive can continue to exist.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-text-section">
+          <h2>Correct without erasing</h2>
+          <div class="huerto-copy">
+            <p>During the first few days the position of the two substrate probes was incorrectly documented. Comparison of the series showed that the behavior of each channel was more consistent with the reverse location.</p>
+            <p>The rectification did not modify the historical values or exchange the electrical names of the sensors. The annotation relating each channel to its physical position was corrected and the error was preserved as part of the file history.</p>
+            <p>This procedure expresses one of the principles of the project: an anomaly should not be eliminated silently. It must be contextualized through new observations, events, and verifiable corrections.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-text-section">
+          <h2>Relationship with doctoral research</h2>
+          <div class="huerto-copy">
+            <p>Huerto is an independent material exploration developed during the doctorate. It is not part of the field work, does not use ethnographic data from the thesis and does not constitute one of its results.</p>
+            <p>It shares with doctoral research questions about the operations through which living organisms are identified, fragmented, measured and converted into information. Some practices incorporated into the project were learned or suggested during fieldwork, but their transfer to the domestic space produced a different setup, with its own purposes and conditions.</p>
+            <p>The project allows for experimentation, on a small scale, with the relationships between care, measurement, archiving and knowledge without presenting the home as an equivalent laboratory or cultivation as a controlled experiment.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-state-section">
+          <div>
+            <p class="eyebrow">Current status</p>
+            <h2>A crop and a file still open</h2>
+          </div>
+          <div class="huerto-copy">
+            <p>The cultivation continues active and the photographic series has been maintained. Currently, thinning of the tomatoes and transplanting of the radishes is pending. The log and technical file still need to be updated to incorporate records after September 28.</p>
+            <p>The node and data archive are operational, although the substrate probes still require situated calibration. It also remains to consolidate the photographic sequence, document the following interventions and complete the cultivation cycle.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-limits-section">
+          <h2>Limits</h2>
+          <ul>
+            <li>It is not a controlled biological experiment.</li>
+            <li>The plants do not function as replicas subjected to comparable treatments.</li>
+            <li>The voltages of the probes are not yet equivalent to percentages of humidity.</li>
+            <li>The lighting, framing and photographic device conditions are not completely constant.</li>
+            <li>Series allow temporal associations to be followed, but not causal relationships to be established.</li>
+            <li>The practices transferred from the laboratory are presented in an anonymized manner and do not represent complete protocols of those institutions.</li>
+            <li>Automatic infrastructure does not replace human decisions of observation and care.</li>
+          </ul>
+        </section>
+
+        <section class="huerto-section huerto-text-section huerto-credits-section">
+          <h2>Authorship and collaboration</h2>
+          <div class="huerto-copy">
+            <p>I have conceptualized and designed the project, carried out the planting and daily care, built the plant node, defined the observation protocol, configured the data file and prepared the logs and their interpretation.</p>
+            <p>Another person from the house temporarily collaborated with irrigation and the production of photographs, allowing the continuity of the crop to be maintained during my absence.</p>
+            <p>Some components and practices emerged from exchanges produced during fieldwork. These contributions are kept anonymized to protect the people and spaces involved. Programming, configuration and technical review have also been supported by artificial intelligence tools under my direction and verification.</p>
+          </div>
+        </section>
+      </article>
+      <article class="sound-practices-story" id="sound-practices-content" lang="en" hidden>
+        <nav class="sound-practices-index" aria-label="Piezas incluidas">
+          <a href="#metagenome"><span>01</span><strong>Metagenome</strong><small>Sound practice completed · 2025</small></a>
+          <a href="#retrato-familiar"><span>02</span><strong>family portrait</strong><small>Collaborative assembly in development · 2026</small></a>
+        </nav>
+
+        <section class="sound-work" id="metagenome">
+          <header class="sound-work-header">
+            <p class="eyebrow">01 · Experimental sound practice</p>
+            <h2>Metagenome</h2>
+            <p class="sound-work-subtitle">A sound exploration inspired by <cite>Alien Ocean</cite></p>
+            <p class="sound-work-meta"><time datetime="2025-05-17">May 17, 2025</time> · 2 min 55 s</p>
+          </header>
+
+          <div class="sound-player-card">
+            <div>
+              <p class="eyebrow">Listen to the piece</p>
+              <h3>Metagenome</h3>
+              <p>Interpretation, composition and editing by Raúl Zuleta.</p>
+            </div>
+            <audio controls preload="metadata" controlslist="nodownload" aria-label="Reproducir Metagenome">
+              <source src="assets/practicas-sonoras/metagenome.mp3" type="audio/mpeg" />
+            </audio>
+            <p class="sound-player-note">Work published on a non-commercial basis. An AIFF master is retained and a compressed copy is used for web playback.</p>
+          </div>
+
+          <section class="sound-section sound-section-opening">
+            <div>
+              <h3>Listen to a community that does not form a single organism</h3>
+            </div>
+            <div class="sound-copy">
+              <p><em>Metagenome</em> arose during my first year of doctorate, from reading <cite>Alien Ocean</cite>, by Stefan Helmreich, and a conversation on post-qualitative research methods. The piece explores what the conceptual and affective atmosphere of the book might sound like, an ocean populated by microbial life forms, observational technologies, and unstable boundaries between the human and the non-human.</p>
+              <p>It does not seek to scientifically represent a metagenome or convert biological data into sound. It is a material exploration developed through interpretation, listening and editing.</p>
+              <p>A metagenome brings together the genetic material of an entire microbial community within an environment. It does not refer to an isolated organism, but to multiple forms of life that coexist and interact.</p>
+              <p>This idea guided the construction of the piece. Instead of searching for a central melody or a dominant voice, I worked with layers, textures and sounds capable of suggesting a medium populated by simultaneous presences. The ocean appears as a fluid and mutable environment, a network in which organisms, signals and material conditions are transformed together.</p>
+              <p>The initial image was a glass of seawater understood as an ecosystem and a living sensor in which signs of a changing world are inscribed.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-section-with-media">
+            <div class="sound-copy">
+              <h3>Build through improvisation and iteration</h3>
+              <p>To carry out the work I got a MIDI controller and returned to a previous experience of amateur musical performance.</p>
+              <p>The process began with a sonic intention, to produce a long and sustained note. I sat down in front of the controller and the computer, tried out virtual instruments and continued searching until I found a sound that was close to that first image.</p>
+              <p>From there I alternated between two operations. On the one hand, I played different tracks from scratch using GarageBand's MIDI controller and virtual instruments. On the other hand, I looked for recordings in Freesound that could introduce atmospheres, movements and presences that were difficult to produce with the controller alone.</p>
+              <p>Each sound incorporated modified what the piece seemed to need next. The composition emerged through improvisations, listening, selection, repetition, superimposition and assembly.</p>
+            </div>
+            <figure class="sound-software-figure">
+              <img src="assets/practicas-sonoras/metagenome-garageband.jpg" alt="Proyecto de Metagenome abierto en GarageBand, con cuatro pistas instrumentales y cinco pistas de sonidos encontrados distribuidas en la línea de tiempo." width="1800" height="963" loading="lazy" />
+              <figcaption>The GarageBand session retains the tracks played with the MIDI controller and the sounds coming from Freesound.</figcaption>
+            </figure>
+          </section>
+
+          <section class="sound-section sound-section-paired">
+            <div>
+              <h3>Decide that a scan is finished</h3>
+              <p>One of the main difficulties was not starting the piece, but deciding when to stop it. The working structure allowed us to continue adding layers, replacing sounds and modifying relationships almost indefinitely.</p>
+              <p>Considering it finished required recognizing that the piece had already achieved a form capable of sustaining exploration, although other possibilities remained open. Closing involved provisionally accepting the form produced.</p>
+            </div>
+            <div>
+              <h3>Materials and assembly</h3>
+              <p>The piece combines four tracks played via a MIDI controller with five sounds coming from Freesound. Assembly and production were carried out in GarageBand.</p>
+              <p>The instrumental tracks were performed from scratch. External sounds were cut, distributed and combined within the composition to build a marine and more-than-human atmosphere.</p>
+              <p>The final version is 2 minutes and 55 seconds long.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-section-text">
+            <h3>Relationship to my doctoral research</h3>
+            <div class="sound-copy">
+              <p><em>Metagenome</em> It was carried out during my doctorate and arose from a reading linked to my training in the anthropology of science.</p>
+              <p>The piece functions as a parallel exploration of other ways of thinking with concepts, materials and atmospheres. Instead of analyzing the book exclusively through writing, he attempts to relate to some of its images and problems through listening, interpretation, and sound editing.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-credits-section">
+            <h3>Authorship and credits</h3>
+            <div class="sound-copy">
+              <p>I conceptualized, performed, composed and staged the piece. The four instrumental tracks were played by me using a MIDI controller and GarageBand's virtual instruments.</p>
+              <p>The composition incorporates the following sounds from Freesound.</p>
+              <ul class="sound-credit-list">
+                <li><a href="https://freesound.org/people/Robinhood76/sounds/529909/" target="_blank" rel="noopener">“09347 sinking in the sea.wav”</a>, by Robinhood76 — CC BY-NC 4.0.</li>
+                <li><a href="https://freesound.org/people/hisoul/sounds/365659/" target="_blank" rel="noopener">“Dive Deep preview.mp3”</a>, by hisoul — CC BY 4.0.</li>
+                <li><a href="https://freesound.org/people/Ave_Rapina/sounds/329909/" target="_blank" rel="noopener">“205015__xserra__ocean_hpsModel_result.wav”</a>, published by Ave_Rapina — CC0.</li>
+                <li><a href="https://freesound.org/people/markj_visuals/sounds/547949/" target="_blank" rel="noopener">“Sea Ambience.wav”</a>, by markj_visuals — CC0.</li>
+                <li><a href="https://freesound.org/people/TomchikRec/sounds/372241/" target="_blank" rel="noopener">“Breathing – Slow, Distraught, Tired”</a>, by TomchikRec — CC BY 4.0.</li>
+              </ul>
+              <p>The work is published on a non-commercial basis and respecting the conditions of attribution of the materials used.</p>
+            </div>
+          </section>
+
+          <section class="sound-scope-note">
+            <h3>Scope</h3>
+            <p><em>Metagenome</em> it is an experimental sound practice, not a sonification of data or a scientific representation of microbial communities. Nor does it intend to faithfully reproduce the proposal of <cite>Alien Ocean</cite>.</p>
+            <p>Its scope is much more humble, it is about exploring what I can do when I try to prolong an anthropological reading through instruments, found sounds, improvisation and montage.</p>
+          </section>
+        </section>
+
+        <section class="sound-work sound-work-in-progress" id="retrato-familiar">
+          <header class="sound-work-header">
+            <p class="eyebrow">02 · Collaborative sound practice in development</p>
+            <h2>family portrait</h2>
+            <p class="sound-work-subtitle">A sound montage around a singer of the divine</p>
+            <p class="sound-work-meta">From May–June 2026 · 5 min 40 sec model</p>
+          </header>
+
+          <div class="sound-player-card sound-player-card-progress">
+            <div>
+              <p class="eyebrow">Listen to the demo</p>
+              <h3>family portrait</h3>
+              <p>Advanced version, approximately sixty percent of the process.</p>
+            </div>
+            <audio controls preload="metadata" controlslist="nodownload" aria-label="Reproducir la maqueta de Retrato familiar">
+              <source src="assets/practicas-sonoras/retrato-familiar-maqueta.mp3" type="audio/mpeg" />
+            </audio>
+            <p class="sound-player-note">The structure and conceptual orientation are defined, but records are missing to complete the closure and perform the final mix.</p>
+          </div>
+
+          <section class="sound-section sound-section-opening">
+            <div><h3>A portrait built solely with sounds</h3></div>
+            <div class="sound-copy">
+              <p><em>family portrait</em> is a sound montage constructed from Javiera Montecinos' field archive on canto a lo divino. The piece revolves around the figure of Don Gilberto, an elderly singer recognized as an authority within this tradition.</p>
+              <p>The project explores how to construct a portrait of a singer using only sounds. Conversations, domestic environments, arrivals, greetings, collective songs and individual voices are articulated to show that someone does not appear as a singer in isolation. Their presence becomes audible through the family, community, and ritual relationships that sustain the practice.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-section-text">
+            <h3>Dimension a file to start listening to it</h3>
+            <div class="sound-copy">
+              <p>The collaboration arose after several conversations in which Javiera told me about the numerous recordings she had produced with a TASCAM recorder during her field work. I told him I had experience working with audio and showed him <em>Metagenome</em>. Later we met at his house to review some of the material.</p>
+              <p>The volume of the file made it difficult to decide where to start. I proposed concentrating on a single vigil, rather than trying to immediately organize or represent the entire set. The general classification of the archive required its own archival work, for which Javiera has experience in community archiving and knowledge of the context that I do not have.</p>
+              <p>Javiera selected Don Gilberto's vigil. His choice responded to the recognition he has as a singer, his advanced age and the desire to produce something that could be dedicated to him.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-section-text">
+            <h3>Ask a question using montage</h3>
+            <div class="sound-copy">
+              <p>At the beginning, the question did not yet have a definitive form. During the conversations we rehearsed different possibilities, including what the canto a lo divino sounds like, how a singer sounds, who is a singer through sound, and what elements of this practice can be made perceptible without resorting to images.</p>
+              <p>My participation focused on honing these questions and translating them into a conceptual and narrative direction. The problem ceased to be simply selecting representative recordings and became one of constructing a form of listening capable of showing how a person comes to be recognized as a singer within a network of relationships.</p>
+              <p>The title <em>family portrait</em> collects that orientation. The piece does not seek to isolate an individual voice or produce an exhaustive biography, but rather to approach Don Gilberto through the sound world that surrounds him and contributes to sustaining his practice.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-section-paired">
+            <div>
+              <h3>Work listening together</h3>
+              <p>The first stage took place in Javiera's house. As we reviewed the recordings, I pointed out editing and editing possibilities, showing him the operations available in the software and recording his reactions to different fragments.</p>
+              <p>This joint work allowed us to recognize scenes, voices and relationships that I would not have been able to interpret without their knowledge of the field. At the same time, listening through software opened up new possibilities for ordering material, juxtaposing moments, and rehearsing a structure.</p>
+              <p>Javiera later sent me a digital copy of the project and I continued working independently. Our collaboration flow became iterative. I would prepare a version, we would meet to listen to it, Javiera would provide feedback and we would rehearse preliminary changes. Then I adjusted those changes at home to integrate them without producing too abrupt transitions.</p>
+            </div>
+            <div>
+              <h3>Build Relationships Through Editing</h3>
+              <p>I made the technical editing and mixing decisions in GarageBand. The work included selecting and trimming fragments, rearranging, fades, volume automations, panning, equalization, level adjustment and transition construction.</p>
+              <p>These operations did not function solely as technical corrections. Cutting, bringing together or separating sounds modified the relationships that could be heard between people, spaces and songs. The edition thus became a way of exploring the archive and proposing an interpretation of what sustains the figure of a singer.</p>
+              <p>The structure advances from the environments of the house and the arrival of the participants to the greetings, conversations, collective singing and the more defined appearance of Don Gilberto. This journey attempts to prevent his voice from appearing separated from the relationships that give it context.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-progress-section">
+            <div>
+              <p class="eyebrow">Current status</p>
+              <h3>A model still open</h3>
+            </div>
+            <div class="sound-copy">
+              <p>The current version is an advanced mockup, estimated to be approximately sixty percent complete. Its structure and conceptual orientation are already defined, but the piece is not yet finished.</p>
+              <p>The closure depends on new recordings that Javiera promised to select and send. These materials will allow you to complete the final section and review the general balance of the assembly. Afterwards, it will be necessary to carry out a final round of editing, mixing and listening together.</p>
+              <p>The version published at this stage should be understood as documentation of a collaborative process in development, not as a closed work or as the definitive version of the file.</p>
+            </div>
+          </section>
+
+          <section class="sound-section sound-credits-section">
+            <h3>Authorship, research and responsibilities</h3>
+            <div class="sound-copy">
+              <p>Research, fieldwork, recordings and ethnographic knowledge of the context belong to <strong>Javiera Montecinos</strong>. She selected Don Gilberto's vigil, identified people and situations, contextualized the records and validated the narrative decisions from her knowledge of the field.</p>
+              <p>I initially proposed limiting the archive to a single vigil, I participated centrally in the formulation of the anthropological question and I developed the conceptual direction of the montage. I also made the editorial selection together with Javiera and was responsible for all the technical editing and mixing decisions.</p>
+              <p>The successive versions were reviewed and approved jointly. Javiera authorized the publication of the model in the portfolio and has the required informed consents to use the voices, songs and recordings incorporated.</p>
+            </div>
+          </section>
+
+          <section class="sound-scope-note">
+            <h3>Scope</h3>
+            <p><em>family portrait</em> It is not intended to represent the canto a lo divino in its entirety or replace the ethnographic work from which the file comes. Nor does it present the montage as a transparent reproduction of the vigil.</p>
+            <p>The piece offers a partial interpretation constructed through selection and editing. His question is more limited, how to make audible that someone is a singer without separating his voice from the family, community and ritual relationships that make that recognition possible.</p>
+          </section>
+        </section>
+      </article>
+      <dialog class="cenvi-lightbox project-lightbox" id="project-lightbox" aria-label="Visor de documentación visual">
+        <button class="cenvi-lightbox-close" type="button" aria-label="Cerrar imagen ampliada">×</button>
+        <span class="project-lightbox-counter" aria-live="polite" hidden></span>
+        <button class="project-lightbox-nav project-lightbox-prev" type="button" aria-label="Ver imagen anterior de esta sección">‹</button>
+        <figure>
+          <img src="" alt="" />
+          <figcaption aria-live="polite"></figcaption>
+        </figure>
+        <button class="project-lightbox-nav project-lightbox-next" type="button" aria-label="Ver imagen siguiente de esta sección">›</button>
+      </dialog>
+      <nav class="project-end-nav" aria-label="Navegación al terminar el proyecto">
+        <a class="project-end-primary" href="index-en.html#proyectos" data-es="← Todos los proyectos" data-en="← All projects">← All projects</a>
+        <a class="project-end-secondary" href="#arriba" data-es="↑ Volver arriba" data-en="↑ Back to top">↑ Back to top</a>
+      </nav>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-links"><p><a href="index-en.html#inicio" data-es="Inicio" data-en="Home">Home</a> · <a href="index-en.html#contacto" data-es="Contacto" data-en="Contact">Contact</a></p><p><a href="https://orcid.org/0009-0005-2897-0759" target="_blank" rel="noopener noreferrer">ORCID</a> · <a href="https://github.com/raulzuleta" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/raulzuleta1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p></div>
+      <div class="footer-meta"><p>Coquimbo — Santiago · Chile</p><p>© 2026 Raúl Zuleta · <span data-es="Derechos reservados" data-en="All rights reserved">All rights reserved</span></p></div>
+    </footer>
+  </body>
+</html>

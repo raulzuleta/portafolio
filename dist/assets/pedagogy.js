@@ -6,4 +6,9 @@ pedagogyCases.forEach((item) => {
   item.hidden = item !== activeCase;
 });
 
-document.title = `${activeCase.dataset.title} — Raúl Zuleta`;
+const staticEnglish = document.documentElement.dataset.staticLanguage === 'en';
+document.title = `${staticEnglish ? activeCase.querySelector('h1').textContent : activeCase.dataset.title} — Raúl Zuleta`;
+const languageSwitcher = document.querySelector('.language-switch');
+if (languageSwitcher?.tagName === 'A') {
+  languageSwitcher.href = `${staticEnglish ? 'pedagogia.html' : 'pedagogia-en.html'}?id=${activeCase.dataset.pedagogyCase}`;
+}
