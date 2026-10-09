@@ -95,11 +95,11 @@ function setLanguage(language) {
 
   const english = language === 'en';
   switcher.setAttribute('aria-pressed', String(english));
-  switcher.setAttribute('aria-label', english ? 'Cambiar idioma a español' : 'Change language to English');
+  switcher.setAttribute('aria-label', english ? 'Switch to Spanish' : 'Cambiar idioma a inglés');
   switcher.children[0].classList.toggle('active', !english);
   switcher.children[1].classList.toggle('active', english);
   document.title = english
-    ? 'Raúl Zuleta — Anthropology, teaching, and environmental media'
+    ? 'Raúl Zuleta — Anthropology, pedagogy and material experimentation'
     : 'Raúl Zuleta — Antropología, pedagogía y experimentación material';
   localStorage.setItem('portfolio-language', language);
 }
@@ -128,7 +128,7 @@ function activateTab(tabName, updateAddress = true, moveFocus = false) {
 
   if (updateAddress) history.pushState(null, '', `#${validTab}`);
   if (switcher?.tagName === 'A') switcher.href = `${languageTarget}#${validTab}`;
-  window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+  window.scrollTo({ top: 0, behaviour: reduceMotion.matches ? 'auto' : 'smooth' });
   if (moveFocus && activePanel) {
     const heading = activePanel.querySelector('h1, h2');
     if (heading) {
