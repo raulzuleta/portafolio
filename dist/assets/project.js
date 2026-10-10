@@ -110,6 +110,8 @@ function setupProjectLightbox() {
 
   items.forEach((item) => {
     item.addEventListener('click', () => {
+      const timelapse = item.closest('[data-huerto-timelapse]');
+      if (timelapse) timelapse.dispatchEvent(new CustomEvent('huerto:pause'));
       const section = item.closest('section');
       sectionItems = section ? [...section.querySelectorAll('.project-media-button')] : [item];
       currentIndex = sectionItems.indexOf(item);
@@ -157,7 +159,15 @@ function setupHuertoTimelapse() {
     ['assets/huerto/crecimiento-26-septiembre.jpg', '2026-09-26', '26 de septiembre', 'El crecimiento hace más visibles las diferencias.', 'Cultivo con plántulas de distintos tamaños seis días después de la primera emergencia.'],
     ['assets/huerto/crecimiento-27-septiembre.jpg', '2026-09-27', '27 de septiembre', 'Los rabanitos comienzan a desbordar sus cavidades.', 'Bandejas con rabanitos alargados y tomates en crecimiento.'],
     ['assets/huerto/crecimiento-28-septiembre.jpg', '2026-09-28', '28 de septiembre', 'La posición de algunas plantas altera la comparación.', 'Cultivo con tallos inclinados que cruzan los límites de las cavidades.'],
-    ['assets/huerto/crecimiento-2-octubre.jpg', '2026-10-02', '2 de octubre', 'El crecimiento vuelve necesarias nuevas intervenciones.', 'Tomates, rabanitos y albahacas desarrollados dentro de las bandejas.']
+    ['assets/huerto/crecimiento-2-octubre.jpg', '2026-10-02', '2 de octubre', 'El crecimiento vuelve necesarias nuevas intervenciones.', 'Tomates, rabanitos y albahacas desarrollados dentro de las bandejas.'],
+    ['assets/huerto/crecimiento-3-octubre.jpg', '2026-10-03', '3 de octubre', 'Último registro antes del raleo y los trasplantes.', 'Cultivo desarrollado antes del raleo de tomates y la intervención sobre los rabanitos.'],
+    ['assets/huerto/crecimiento-4-octubre.jpg', '2026-10-04', '4 de octubre', 'El montaje cambia después de la intervención.', 'Tomates raleados, albahacas en bandeja y dos rabanitos en macetas individuales.'],
+    ['assets/huerto/crecimiento-5-octubre.jpg', '2026-10-05', '5 de octubre', 'Comienza el seguimiento posterior al trasplante.', 'Cultivo reorganizado durante el segundo día posterior a la intervención.'],
+    ['assets/huerto/crecimiento-6-octubre.jpg', '2026-10-06', '6 de octubre', 'Las unidades conservadas continúan creciendo.', 'Tomates individualizados y rabanitos trasplantados junto a las albahacas.'],
+    ['assets/huerto/crecimiento-7-octubre.jpg', '2026-10-07', '7 de octubre', 'Los tomates vuelven a desbordar sus cavidades.', 'Follaje de tomate extendido sobre la bandeja después del raleo.'],
+    ['assets/huerto/crecimiento-8-octubre.jpg', '2026-10-08', '8 de octubre', 'El cultivo exige preparar una nueva reorganización.', 'Tomates en crecimiento y rabanitos sostenidos por tutores.'],
+    ['assets/huerto/crecimiento-9-octubre.jpg', '2026-10-09', '9 de octubre', 'El crecimiento anticipa el trasplante de los tomates.', 'Cultivo doméstico con follaje de tomate ocupando gran parte de la bandeja.'],
+    ['assets/huerto/crecimiento-10-octubre.jpg', '2026-10-10', '10 de octubre', 'La serie permanece abierta.', 'Tomates, albahacas y rabanitos activos veintitrés días después de la siembra.']
   ];
   const framesEn = [
     ['assets/huerto/siembra-19-septiembre.jpg', '2026-09-19', '19 September', 'Sowing and first stabilised record.', 'Two newly sown germination trays.'],
@@ -171,7 +181,15 @@ function setupHuertoTimelapse() {
     ['assets/huerto/crecimiento-26-septiembre.jpg', '2026-09-26', '26 September', 'Growth makes the differences more visible.', 'Plants with seedlings of different sizes six days after the first emergence.'],
     ['assets/huerto/crecimiento-27-septiembre.jpg', '2026-09-27', '27 September', 'The radishes begin to extend beyond their cells.', 'Trays with elongated radishes and growing tomatoes.'],
     ['assets/huerto/crecimiento-28-septiembre.jpg', '2026-09-28', '28 September', 'The position of some plants affects comparison.', 'Plants with leaning stems crossing the boundaries between cells.'],
-    ['assets/huerto/crecimiento-2-octubre.jpg', '2026-10-02', '2 October', 'Growth makes new interventions necessary.', 'Tomatoes, radishes, and basil developing in the trays.']
+    ['assets/huerto/crecimiento-2-octubre.jpg', '2026-10-02', '2 October', 'Growth makes new interventions necessary.', 'Tomatoes, radishes, and basil developing in the trays.'],
+    ['assets/huerto/crecimiento-3-octubre.jpg', '2026-10-03', '3 October', 'Final record before thinning and transplanting.', 'Developed plants before thinning the tomatoes and intervening on the radishes.'],
+    ['assets/huerto/crecimiento-4-octubre.jpg', '2026-10-04', '4 October', 'The setup changes after the intervention.', 'Thinned tomatoes, basil in its tray, and two radishes in individual pots.'],
+    ['assets/huerto/crecimiento-5-octubre.jpg', '2026-10-05', '5 October', 'Post-transplant monitoring begins.', 'The reorganised cultivation on the second day after the intervention.'],
+    ['assets/huerto/crecimiento-6-octubre.jpg', '2026-10-06', '6 October', 'The retained units continue to grow.', 'Individual tomatoes and transplanted radishes beside the basil.'],
+    ['assets/huerto/crecimiento-7-octubre.jpg', '2026-10-07', '7 October', 'The tomatoes again extend beyond their cells.', 'Tomato foliage spreading across the tray after thinning.'],
+    ['assets/huerto/crecimiento-8-octubre.jpg', '2026-10-08', '8 October', 'The plants call for another reorganisation.', 'Growing tomatoes and radishes supported by stakes.'],
+    ['assets/huerto/crecimiento-9-octubre.jpg', '2026-10-09', '9 October', 'Growth anticipates the tomatoes’ transplant.', 'Domestic cultivation with tomato foliage occupying much of the tray.'],
+    ['assets/huerto/crecimiento-10-octubre.jpg', '2026-10-10', '10 October', 'The series remains open.', 'Tomatoes, basil, and radishes active twenty-three days after sowing.']
   ];
   const english = document.documentElement.lang === 'en';
   const frames = english ? framesEn : framesEs;
@@ -183,7 +201,7 @@ function setupHuertoTimelapse() {
   const play = viewer.querySelector('[data-timelapse-play]');
   let timer = null;
 
-  const showFrame = (index) => {
+  const showFrame = (index, announce = false) => {
     const [src, datetime, label, description, alt] = frames[index];
     image.src = src;
     image.alt = alt;
@@ -192,6 +210,11 @@ function setupHuertoTimelapse() {
     note.textContent = ` · ${description}`;
     range.value = String(index);
     counter.textContent = `${index + 1} / ${frames.length}`;
+    if (announce) range.setAttribute('aria-valuetext', english
+      ? `Record ${index + 1} of ${frames.length}: ${label}. ${description}`
+      : `Registro ${index + 1} de ${frames.length}: ${label}. ${description}`);
+    const mediaButton = image.closest('.project-media-button');
+    if (mediaButton) mediaButton.setAttribute('aria-label', `${english ? 'Enlarge image' : 'Ampliar imagen'}: ${alt}`);
   };
   const stop = () => {
     clearInterval(timer);
@@ -206,9 +229,40 @@ function setupHuertoTimelapse() {
   };
 
   frames.slice(1).forEach(([src]) => { const preload = new Image(); preload.src = src; });
-  range.addEventListener('input', () => { stop(); showFrame(Number(range.value)); });
+  range.max = String(frames.length - 1);
+  range.addEventListener('input', () => { stop(); showFrame(Number(range.value), true); });
   play.addEventListener('click', () => { if (timer) stop(); else start(); });
+  viewer.addEventListener('huerto:pause', stop);
   document.addEventListener('visibilitychange', () => { if (document.hidden && timer) stop(); });
+}
+
+function setupHuertoOpeningBalance() {
+  const opening = document.querySelector('#huerto-content .huerto-opening');
+  if (!opening) return;
+
+  const copy = opening.querySelector('.huerto-copy');
+  const figure = opening.querySelector('.huerto-hero-figure');
+  const media = figure?.querySelector('.project-media-button');
+  const caption = figure?.querySelector('figcaption');
+  if (!copy || !figure || !media || !caption) return;
+
+  const balance = () => {
+    figure.style.removeProperty('height');
+    media.style.removeProperty('height');
+    if (window.matchMedia('(max-width: 900px)').matches) return;
+
+    const copyHeight = copy.getBoundingClientRect().height;
+    const captionStyle = getComputedStyle(caption);
+    const captionGap = Number.parseFloat(captionStyle.marginTop) || 0;
+    const mediaHeight = Math.max(240, copyHeight - caption.getBoundingClientRect().height - captionGap);
+    figure.style.height = `${copyHeight}px`;
+    media.style.height = `${mediaHeight}px`;
+  };
+
+  const observer = new ResizeObserver(balance);
+  observer.observe(copy);
+  window.addEventListener('resize', balance, { passive: true });
+  balance();
 }
 
 function render(language) {
@@ -269,3 +323,4 @@ if (isCenvi) {
 setupHuertoTimelapse();
 setupProjectLightbox();
 render(staticEnglish ? 'en' : 'es');
+setupHuertoOpeningBalance();

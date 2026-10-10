@@ -6,8 +6,8 @@
     <meta name="description" content="A selected project from Raúl Zuleta’s personal site." />
     <title>Project — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=practicas-sonoras-1" />
-    <script src="assets/project.js?v=practicas-sonoras-1" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=layout-final-huerto-3" />
+    <script src="assets/project.js?v=layout-final-huerto-2" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle">Skip to content</a>
@@ -53,13 +53,14 @@
             <p>The computer that gave rise to the project was passed on to me after many years of use. When I received it to play and experiment with, its age brought to mind the saying “you can’t teach an old dog new tricks”.</p>
             <p>The name acknowledges the time, care and affection invested in extending its life by giving it new capabilities. Several decisions, including its lighting behaviours and the character incorporated into the screen, arose from a desire to share the project’s development with others in an approachable way.</p>
             <p><em>Acto de Amor</em> thus names a way of building grounded in care, reuse and the involvement of others.</p>
+            <p>Drawing on the illustration and the first sketch, I developed a parametric casing model for node 02 in OpenSCAD. Its first physical print will make it possible to test dimensions, ventilation, access to components and the strength of the assembly.</p>
           </div>
           <div class="origin-art">
             <figure><img src="assets/viejito-perro/dibujo-original.png" alt="Original drawing of Viejito-Perro: a white-headed dog with a robot body." /><figcaption>Original drawing by Constanza Tizzoni.</figcaption></figure>
             <figure><img src="assets/viejito-perro/boceto-carcasa.png" alt="Hand-drawn sketch of an initial casing with a screen, light sensor, button, status light and ventilation." /><figcaption>First casing sketch, 14 August 2026. Constanza Tizzoni.</figcaption></figure>
           </div>
           <figure class="origin-model origin-model-exploded"><img src="assets/viejito-perro/despiece-carcasa-nodo-02.png" alt="Exploded three-dimensional view of the casing, showing its bodies, cover, doors, tray and accessories separately." /><figcaption>Exploded view of the model: front and rear bodies, cover, doors, tray and accessories intended for assembly.</figcaption></figure>
-          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Three-dimensional rendering of a rounded casing with a screen, buttons, lights and a front grille." /><figcaption>The parametric casing for node 02 began as a digital model developed in OpenSCAD. A first physical version is currently being produced on a 3D printer made available by the laboratory, with technical guidance from Nicolás Müller. Printing it will allow us to check its dimensions, ventilation, access to components and structural strength. The casing remains under development and is not yet a finished version.</figcaption></figure>
+          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Three-dimensional rendering of a rounded casing with a screen, buttons, lights and a front grille." /><figcaption>Assembled model of the node 02 casing, developed in OpenSCAD and still undergoing testing.</figcaption></figure>
         </section>
 
         <section class="story-section system-section">
@@ -110,10 +111,13 @@
           <div class="story-copy">
             <h2>What the archive began to reveal</h2>
             <p>The accumulated archive showed that the nodes do not simply describe a living room and a bedroom. Each records a specific material position shaped by light, proximity to windows, air circulation, everyday activities and the assembly itself.</p>
-            <p>An initial exploratory analysis distinguished three scales. Environmental cycles appear in daily patterns of light, warming and cooling. Domestic rhythms become visible through recurring differences in acoustic activity, temperature and humidity. Brief events, such as cooking or ventilation, can produce marked variations that disappear when the data are summarised as hourly averages.</p>
-            <p>These differences do not automatically reveal what happened. An increase in humidity does not in itself indicate a shower, and silence does not prove that a room is empty. Interpreting the measurements requires relating them to observations, notes and situated knowledge of the home.</p>
-            <p>This limitation opened up a new practical question. Adding LD2410C presence sensors could help distinguish more clearly among presence, movement and absence.</p>
           </div>
+          <div class="archive-scale-grid">
+            <article><h3>Environmental cycles</h3><p>They appear in daily patterns of light, warming and cooling.</p></article>
+            <article><h3>Domestic rhythms</h3><p>They become visible through recurring differences in acoustic activity, temperature and humidity.</p></article>
+            <article><h3>Brief events</h3><p>Cooking or ventilation can produce marked variations that disappear when data are summarised as hourly averages.</p></article>
+          </div>
+          <p class="archive-caution">These differences do not automatically reveal what happened. An increase in humidity does not in itself indicate a shower, and silence does not prove that a room is empty. Interpreting the measurements requires relating them to observations, notes and situated knowledge of the home.</p>
         </section>
 
         <section class="story-section interfaces-section">
@@ -143,28 +147,26 @@
               <li>Interpretations of domestic activities remain contextualised hypotheses.</li>
             </ul>
           </div>
+          <div class="limits-open-lines">
+            <h3>Open lines</h3>
+            <ul>
+              <li>Evaluate and adjust the first casing currently being printed.</li>
+              <li>Install and calibrate LD2410C presence sensors on both nodes to distinguish more clearly among presence, movement and absence.</li>
+              <li>Investigate forms of autonomous communication between them.</li>
+              <li>Develop visual, sonic and historical ways of engaging with the records.</li>
+            </ul>
+          </div>
         </section>
 
         <section class="story-section contribution-section">
           <div><h2>Authorship and collaborations</h2></div>
-          <div>
-            <p>I defined the project’s concept and principles, reconditioned and managed the server, selected and assembled the components, carried out the physical tests, designed behaviours and interfaces, contextualised the measurements, and directed the project’s development and documentation.</p>
-            <p>Some code, configurations and documentation were developed iteratively with assistance from AI tools, under my direction, review and testing on the physical system.</p>
-            <p>The original drawing of the character and the first visual explorations of its casing were created by <strong>Constanza Tizzoni</strong>. The screen bitmap and subsequent 3D models derive from that drawing and are published with her permission.</p>
-            <p><strong>Nicolás Müller</strong> has been my main technical interlocutor in the laboratory. We have spoken frequently about sensors, connections, electronics and fabrication. He has helped me solve assembly and soldering problems, reviewed the casing model, and provided access to the laboratory’s 3D printer, which we are currently using to produce its first physical version.</p>
-            <p><strong>Alejandro Bustos</strong> has contributed through conversations about the project’s direction and possibilities. Drawing on his experience with electronics, he has helped me clarify decisions and open up new lines of exploration. He also gave me a sensor that has not yet been incorporated into the system.</p>
+          <div class="collaboration-list">
+            <article><h3>My work</h3><p>I defined the project’s concept and principles, reconditioned and managed the server, selected and assembled the components, carried out the physical tests, designed behaviours and interfaces, contextualised the measurements, and directed the project’s development and documentation.</p></article>
+            <article><h3>AI assistance</h3><p>Some code, configurations and documentation were developed iteratively with assistance from AI tools, under my direction, review and testing on the physical system.</p></article>
+            <article><h3>Constanza Tizzoni</h3><p>The original drawing of the character and the first visual explorations of its casing were created by Constanza Tizzoni. The screen bitmap and subsequent 3D models derive from that drawing and are published with her permission.</p></article>
+            <article><h3>Nicolás Müller</h3><p>He has been my main technical interlocutor in the laboratory. We have spoken frequently about sensors, connections, electronics and fabrication. He has helped me solve assembly and soldering problems, reviewed the casing model, and provided access to the laboratory’s 3D printer, which we are currently using to produce its first physical version.</p></article>
+            <article><h3>Alejandro Bustos</h3><p>He has contributed through conversations about the project’s direction and possibilities. Drawing on his experience with electronics, he has helped me clarify decisions and open up new lines of exploration. He also gave me a sensor that has not yet been incorporated into the system.</p></article>
           </div>
-        </section>
-
-        <section class="story-section horizons-section horizons-section-compact">
-          <div><h2>Upcoming explorations</h2></div>
-          <ul>
-            <li>Evaluate and adjust the first casing currently being printed.</li>
-            <li>Install and calibrate LD2410C presence sensors on both nodes.</li>
-            <li>Investigate forms of autonomous communication between them.</li>
-            <li>Develop visual, sonic and historical ways of engaging with the records.</li>
-          </ul>
-          <p class="technical-note">These lines are developing possibilities, not current capabilities of the system.</p>
         </section>
       </article>
 
@@ -511,20 +513,20 @@
           <div class="huerto-timelapse" data-huerto-timelapse aria-label="Time sequence showing the growth of the plants">
             <figure class="huerto-figure huerto-timelapse-frame">
               <img src="assets/huerto/siembra-19-septiembre.jpg" alt="Two newly sown germination trays." width="1800" height="2400" loading="lazy" data-timelapse-image />
-              <figcaption aria-live="polite"><time datetime="2026-09-19" data-timelapse-date>19 September</time><span data-timelapse-note> · Sowing and first stabilised record.</span></figcaption>
+              <figcaption><time datetime="2026-09-19" data-timelapse-date>19 September</time><span data-timelapse-note> · Sowing and first stabilised record.</span></figcaption>
             </figure>
             <div class="huerto-timelapse-controls">
               <button type="button" class="huerto-timelapse-play" data-timelapse-play aria-pressed="false">Play sequence</button>
               <label for="huerto-timelapse-range">Browse the records</label>
-              <input id="huerto-timelapse-range" type="range" min="0" max="11" value="0" step="1" data-timelapse-range />
-              <output data-timelapse-counter>1 / 12</output>
+              <input id="huerto-timelapse-range" type="range" min="0" max="19" value="0" step="1" data-timelapse-range />
+              <output data-timelapse-counter>1 / 20</output>
             </div>
             <p class="huerto-timelapse-note">Variations in framing, lighting and setup form part of the record: the sequence has not been aligned or standardised.</p>
           </div>
         </section>
 
         <section class="huerto-section huerto-instrument-section">
-          <div class="huerto-copy">
+          <div class="huerto-copy huerto-wide-copy">
             <h2>From sensory judgement to instrumental signals</h2>
             <p>The decision to water began as a practical assessment of the substrate: looking at its colour, touching it and deciding whether it still retained moisture. A plant node was subsequently added, comprising two capacitive substrate sensors, a light sensor and a sensor measuring temperature, ambient humidity and pressure.</p>
             <p>The sensors do not replace sensory observation, nor do they directly describe the condition of the plants. Each reading depends on the position and depth of the sensor, its wiring and power supply, and the configuration of the assembly.</p>
@@ -548,7 +550,7 @@
 
         <section class="huerto-section huerto-system-section">
           <div class="huerto-copy">
-            <h2>A node connected to Viejito-Perro</h2>
+            <h2>A node connected to <a href="proyecto-en.html?id=viejito-perro">Viejito-Perro</a></h2>
             <p>Plant Node 01 is technically integrated with Viejito-Perro’s domestic infrastructure. The node collects readings, Home Assistant is used to monitor its operation, and a separate service stores a snapshot of six variables every minute.</p>
             <p>The archive separates automated telemetry from human observations and events. Watering, photographs, movements, thinning, sensor changes and calibrations are recorded as distinct events. This separation makes it possible to relate an instrumental variation to what occurred around the plants without reducing either to the other.</p>
             <p>Huerto is an independent project. It uses part of Viejito-Perro’s infrastructure but develops its own question, protocol and archive.</p>
@@ -562,36 +564,38 @@
         </section>
 
         <section class="huerto-section huerto-care-section">
-          <div>
-            <h2>Sustaining life also transforms what is observed</h2>
-          </div>
-          <div class="huerto-copy">
+          <h2>Sustaining life also transforms what is observed</h2>
+          <div class="huerto-copy huerto-care-copy">
             <p>Observing the cultivation requires practices that sustain the plants’ lives. Watering, providing light, thinning, transplanting and responding to visible changes are not external to the observational setup: they maintain the conditions that make both plant growth and continued observation possible.</p>
             <p>Nor do these practices preserve an unchanging object. Each intervention alters the subsequent trajectories of the cultivation and what can be recorded. Care sustains life, but it also selects, directs and transforms its possibilities.</p>
             <p>During the first thinning of the radishes, different criteria were applied in two cells. In one, the larger plant was retained; in the other, the smaller one. The removed seedlings were photographed and weighed, partially incorporating a phenotyping practice encountered during fieldwork.</p>
             <p>The procedure does not constitute a comparative experiment, nor does it reproduce a complete laboratory protocol. Its importance lies in showing how a conversation, a tool and a decision about care can introduce new operations of observation into a domestic setting.</p>
+          </div>
+          <div class="huerto-care-gallery">
             <figure class="huerto-figure huerto-care-figure">
               <img src="assets/huerto/raleo-y-medicion.jpg" alt="Three radish seedlings removed during thinning, placed beside a tape measure before weighing." width="1600" height="2133" loading="lazy" />
               <figcaption>Seedlings removed during the first thinning, photographed next to a length reference before weighing.</figcaption>
             </figure>
+            <figure class="huerto-figure huerto-care-figure">
+              <img src="assets/huerto/rabanito-r1-medicion.jpg" alt="Extracted and cleaned R1 radish seedling placed beside a tape measure and its label." width="1350" height="1800" loading="lazy" />
+              <figcaption>The 3 October intervention turned a cultivated plant into an identified, measured and weighed unit.</figcaption>
+            </figure>
           </div>
         </section>
 
-        <section class="huerto-section huerto-text-section">
-          <h2>A distributed care practice</h2>
-          <div class="huerto-copy">
-            <p>The continuity of the plants, the cultivation and its records has depended neither exclusively on one person nor solely on the automatic operation of the sensors. During an absence, another person in the household maintained the watering and produced part of the photographic record, following general instructions on framing and orientation.</p>
-            <p>Circulating one of those photographs through a messaging platform reduced its resolution and removed some of the original metadata. This episode showed that the provenance and comparability of records also depend on people, instructions, devices and platforms.</p>
-            <p>Distributed care is not external to the system. It is one of the conditions that allows the plants, photographs and archive to continue to exist.</p>
-          </div>
-        </section>
-
-        <section class="huerto-section huerto-text-section">
-          <h2>Correcting without erasing</h2>
-          <div class="huerto-copy">
-            <p>During the first few days, the positions of the two substrate probes were documented incorrectly. Comparison of the series showed that the behaviour of each channel was more consistent with the opposite assignment.</p>
-            <p>The correction did not modify the historical values or swap the sensors’ electrical names. The annotation linking each channel to its physical position was corrected, and the error was preserved as part of the archive’s history.</p>
-            <p>This procedure expresses one of the project’s principles: an anomaly should not be silently removed. It must be contextualised through new observations, events and verifiable corrections.</p>
+        <section class="huerto-section huerto-continuity-section">
+          <h2>The continuity of the archive</h2>
+          <div class="huerto-continuity-grid">
+            <div>
+              <p class="eyebrow">Distributed care</p>
+              <p>The continuity of the plants, the cultivation and its records has depended neither exclusively on one person nor solely on the automatic operation of the sensors. During an absence, another person in the household maintained the watering and produced part of the photographic record, following general instructions on framing and orientation.</p>
+              <p>Circulating one photograph through a messaging platform reduced its resolution and removed some original metadata. The episode showed that provenance and comparability also depend on people, instructions, devices and platforms.</p>
+            </div>
+            <div>
+              <p class="eyebrow">Correcting without erasing</p>
+              <p>During the first few days, the positions of the two substrate probes were documented incorrectly. Comparison of the series showed that the behaviour of each channel was more consistent with the opposite assignment.</p>
+              <p>The correction did not modify the historical values or swap the sensors’ electrical names. The annotation linking each channel to its physical position was corrected, and the error was preserved as part of the archive’s history.</p>
+            </div>
           </div>
         </section>
 
@@ -604,36 +608,37 @@
           </div>
         </section>
 
-        <section class="huerto-section huerto-state-section">
-          <div>
+        <section class="huerto-section huerto-state-limits-section">
+          <div class="huerto-state-heading">
             <p class="eyebrow">Current status</p>
             <h2>An ongoing cultivation and an open archive</h2>
           </div>
-          <div class="huerto-copy">
-            <p>The cultivation remains active and the photographic series has been maintained. Thinning the tomatoes and transplanting the radishes remain pending. The log and technical archive also need to be updated to incorporate records produced after 28 September.</p>
-            <p>The node and data archive are operational, although the substrate probes still require situated calibration. The photographic sequence also needs to be consolidated, subsequent interventions documented and the cultivation cycle completed.</p>
+          <div class="huerto-state-limits-grid">
+            <div class="huerto-copy">
+              <p class="eyebrow">As of 10 October 2026</p>
+              <p>The cultivation remains active and the photographic series extends to day 23 after sowing. On 3 October the tomatoes were thinned, two radishes were extracted and measured, and the other two were transplanted into individual pots. The retained tomatoes continued to grow and their transplant was being prepared; thinning the basil remained pending.</p>
+              <p>The node and data archive remain operational. The substrate probes still require situated calibration, and the cultivation cycle is ongoing.</p>
+            </div>
+            <div>
+              <p class="eyebrow">Limits</p>
+              <ul>
+                <li>It is not a controlled biological experiment, and the plants do not function as comparable replicas.</li>
+                <li>The raw probe voltages do not yet correspond to moisture percentages.</li>
+                <li>Photographic conditions are not entirely constant.</li>
+                <li>The series can trace temporal associations but cannot establish causal relationships.</li>
+                <li>Practices transferred from the laboratory are anonymised and do not represent complete protocols.</li>
+                <li>Automated infrastructure does not replace human decisions about observation and care.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        <section class="huerto-section huerto-limits-section">
-          <h2>Limits</h2>
-          <ul>
-            <li>It is not a controlled biological experiment.</li>
-            <li>The plants do not function as replicas subjected to comparable treatments.</li>
-            <li>The raw probe voltages do not yet correspond to moisture percentages.</li>
-            <li>The lighting, framing and photographic equipment are not entirely constant.</li>
-            <li>The series can trace temporal associations but cannot establish causal relationships.</li>
-            <li>Practices transferred from the laboratory are presented in anonymised form and do not represent the full protocols of those institutions.</li>
-            <li>Automated infrastructure does not replace human decisions about observation and care.</li>
-          </ul>
-        </section>
-
-        <section class="huerto-section huerto-text-section huerto-credits-section">
+        <section class="huerto-section huerto-credits-section">
           <h2>Authorship and collaboration</h2>
-          <div class="huerto-copy">
-            <p>I conceptualised and designed the project, carried out the planting and daily care, built the plant node, defined the observation protocol, configured the data archive, and prepared and interpreted the logs.</p>
-            <p>Another person in the household temporarily helped with watering and taking photographs, allowing the cultivation to continue during my absence.</p>
-            <p>Some components and practices emerged from exchanges during fieldwork. These contributions remain anonymised to protect the people and spaces involved. Programming, configuration and technical review have also received support from artificial intelligence tools under my direction and verification.</p>
+          <div class="huerto-credits-grid">
+            <div><p class="eyebrow">My work</p><p>I conceptualised and designed the project, carried out the planting and daily care, built the plant node, defined the observation protocol, configured the data archive, and prepared and interpreted the logs.</p></div>
+            <div><p class="eyebrow">Distributed care</p><p>Another person in the household temporarily helped with watering and taking photographs, allowing the cultivation to continue during my absence.</p></div>
+            <div><p class="eyebrow">Fieldwork exchanges and technical assistance</p><p>Some components and practices emerged from exchanges during fieldwork. These contributions remain anonymised to protect the people and spaces involved. Programming, configuration and technical review have also received support from artificial intelligence tools under my direction and verification.</p></div>
           </div>
         </section>
       </article>

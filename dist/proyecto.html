@@ -6,8 +6,8 @@
     <meta name="description" content="Proyecto seleccionado del sitio personal de Raúl Zuleta." />
     <title>Proyecto — Raúl Zuleta</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-    <link rel="stylesheet" href="assets/styles.css?v=practicas-sonoras-1" />
-    <script src="assets/project.js?v=practicas-sonoras-1" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=layout-final-huerto-3" />
+    <script src="assets/project.js?v=layout-final-huerto-2" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
@@ -53,13 +53,14 @@
             <p>El computador que dio origen al proyecto me fue legado. Había sido un compañero de trabajo querido y, cuando me lo entregaron para jugar y experimentar, su antigüedad evocó la frase «no se le enseñan nuevos trucos a un perro viejo».</p>
             <p>El nombre reconoce el tiempo, el cuidado y el afecto invertidos en prolongar su vida mediante nuevas capacidades. Varias decisiones, como los comportamientos luminosos o la incorporación de un personaje en la pantalla, surgieron del deseo de compartir los avances con otros de una manera cercana.</p>
             <p>«Acto de Amor» nombra así una forma de construir basada en cuidar, reutilizar y hacer partícipes a otros.</p>
+            <p>A partir del dibujo y del primer boceto desarrollé en OpenSCAD un modelo paramétrico para la carcasa del nodo 02. Su primera impresión física permitirá comprobar dimensiones, ventilación, acceso a los componentes y resistencia del ensamblaje.</p>
           </div>
           <div class="origin-art">
             <figure><img src="assets/viejito-perro/dibujo-original.png" alt="Dibujo original de Viejito-Perro: un perro de cabeza blanca y cuerpo de robot." /><figcaption>Dibujo original de Constanza Tizzoni.</figcaption></figure>
             <figure><img src="assets/viejito-perro/boceto-carcasa.png" alt="Boceto manuscrito de una primera carcasa con pantalla, sensor de luz, botón, luz de estado y ventilación." /><figcaption>Primer boceto de carcasa, 14 de agosto de 2026. Constanza Tizzoni.</figcaption></figure>
           </div>
           <figure class="origin-model origin-model-exploded"><img src="assets/viejito-perro/despiece-carcasa-nodo-02.png" alt="Vista tridimensional despiezada de la carcasa, con sus cuerpos, tapa, puertas, bandeja y accesorios separados." /><figcaption>Despiece del modelo: cuerpos frontal y posterior, tapa, puertas, bandeja y accesorios previstos para su ensamblaje.</figcaption></figure>
-          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Render tridimensional de una carcasa de bordes redondeados, con pantalla, pulsadores, luces y rejilla frontal." /><figcaption>El diseño paramétrico de la carcasa del nodo 02 comenzó como un modelo digital desarrollado en OpenSCAD. Actualmente se está imprimiendo una primera versión física con una impresora 3D facilitada por el laboratorio mediante la asesoría técnica de Nicolás Müller. Esta fabricación permitirá comprobar dimensiones, ventilación, acceso a los componentes y resistencia del ensamblaje. La carcasa continúa en desarrollo y todavía no corresponde a una versión terminada.</figcaption></figure>
+          <figure class="origin-model origin-model-assembled"><img src="assets/viejito-perro/modelo-carcasa-nodo-02.png" alt="Render tridimensional de una carcasa de bordes redondeados, con pantalla, pulsadores, luces y rejilla frontal." /><figcaption>Modelo ensamblado de la carcasa del nodo 02, desarrollado en OpenSCAD y todavía en proceso de prueba.</figcaption></figure>
         </section>
 
         <section class="story-section system-section">
@@ -110,10 +111,13 @@
           <div class="story-copy">
             <h2>Lo que comenzó a mostrar el archivo</h2>
             <p>El registro acumulado permitió reconocer que los nodos no describen simplemente una sala y un dormitorio. Cada uno registra una posición material específica, afectada por la luz, la proximidad de ventanas, la circulación del aire, las actividades cotidianas y el propio montaje.</p>
-            <p>Un primer análisis exploratorio permitió distinguir tres escalas. Los ciclos ambientales aparecen en el recorrido diario de la luz, el calentamiento y el enfriamiento. Los ritmos domésticos se manifiestan en diferencias recurrentes de actividad acústica, temperatura y humedad. Los acontecimientos breves, como cocinar o ventilar, pueden producir variaciones intensas que desaparecen al resumir los datos mediante promedios horarios.</p>
-            <p>Estas diferencias no permiten identificar automáticamente qué ocurrió. Un aumento de humedad no equivale por sí mismo a una ducha y el silencio no demuestra que una habitación esté vacía. Para interpretar las mediciones es necesario relacionarlas con observaciones, anotaciones y conocimiento situado de la vivienda.</p>
-            <p>Esta limitación abrió una nueva pregunta práctica. La futura incorporación de sensores de presencia LD2410C podría ayudar a distinguir mejor entre ocupación, movimiento y ausencia.</p>
           </div>
+          <div class="archive-scale-grid">
+            <article><h3>Ciclos ambientales</h3><p>Aparecen en el recorrido diario de la luz, el calentamiento y el enfriamiento.</p></article>
+            <article><h3>Ritmos domésticos</h3><p>Se manifiestan en diferencias recurrentes de actividad acústica, temperatura y humedad.</p></article>
+            <article><h3>Acontecimientos breves</h3><p>Cocinar o ventilar puede producir variaciones intensas que desaparecen al resumir los datos mediante promedios horarios.</p></article>
+          </div>
+          <p class="archive-caution">Estas diferencias no permiten identificar automáticamente qué ocurrió. Un aumento de humedad no equivale por sí mismo a una ducha y el silencio no demuestra que una habitación esté vacía. Para interpretar las mediciones es necesario relacionarlas con observaciones, anotaciones y conocimiento situado de la vivienda.</p>
         </section>
 
         <section class="story-section interfaces-section">
@@ -143,28 +147,26 @@
               <li>Las interpretaciones sobre actividades domésticas permanecen como hipótesis contextualizadas.</li>
             </ul>
           </div>
+          <div class="limits-open-lines">
+            <h3>Líneas abiertas</h3>
+            <ul>
+              <li>Evaluar y ajustar la primera carcasa actualmente en impresión.</li>
+              <li>Instalar y calibrar sensores de presencia LD2410C en ambos nodos para distinguir mejor entre ocupación, movimiento y ausencia.</li>
+              <li>Investigar formas de comunicación autónoma entre ellos.</li>
+              <li>Desarrollar maneras visuales, sonoras e históricas de relacionarse con los registros.</li>
+            </ul>
+          </div>
         </section>
 
         <section class="story-section contribution-section">
           <div><h2>Autoría y colaboraciones</h2></div>
-          <div>
-            <p>He definido el concepto y los principios del proyecto, reacondicionado y administrado el servidor, seleccionado y montado los componentes, realizado las pruebas físicas, definido comportamientos e interfaces, contextualizado las mediciones y dirigido su documentación y desarrollo.</p>
-            <p>Parte del código, las configuraciones y la documentación se desarrolló iterativamente con asistencia de herramientas de inteligencia artificial, bajo mi dirección, revisión y comprobación en el sistema físico.</p>
-            <p>El dibujo original del personaje y las primeras exploraciones visuales de su carcasa fueron creados por <strong>Constanza Tizzoni</strong>. El bitmap de la pantalla y los modelos tridimensionales posteriores derivan de ese dibujo y se publican con su autorización.</p>
-            <p><strong>Nicolás Müller</strong> ha sido mi principal interlocutor técnico dentro del laboratorio. Hemos mantenido conversaciones frecuentes sobre sensores, conexiones, electrónica y fabricación. Me ha ayudado a resolver problemas de montaje y soldadura, ha revisado el modelo de la carcasa y facilitó la impresora 3D del laboratorio con la que actualmente estamos produciendo su primera versión física.</p>
-            <p><strong>Alejandro Bustos</strong> ha contribuido mediante conversaciones sobre la orientación y las posibilidades del proyecto, ayudándome a clarificar decisiones y abrir líneas de exploración desde su experiencia con la electrónica. También me facilitó un sensor que aún no ha sido incorporado al sistema.</p>
+          <div class="collaboration-list">
+            <article><h3>Mi trabajo</h3><p>He definido el concepto y los principios del proyecto, reacondicionado y administrado el servidor, seleccionado y montado los componentes, realizado las pruebas físicas, definido comportamientos e interfaces, contextualizado las mediciones y dirigido su documentación y desarrollo.</p></article>
+            <article><h3>Asistencia de IA</h3><p>Parte del código, las configuraciones y la documentación se desarrolló iterativamente con asistencia de herramientas de inteligencia artificial, bajo mi dirección, revisión y comprobación en el sistema físico.</p></article>
+            <article><h3>Constanza Tizzoni</h3><p>El dibujo original del personaje y las primeras exploraciones visuales de su carcasa fueron creados por Constanza Tizzoni. El bitmap de la pantalla y los modelos tridimensionales posteriores derivan de ese dibujo y se publican con su autorización.</p></article>
+            <article><h3>Nicolás Müller</h3><p>Ha sido mi principal interlocutor técnico dentro del laboratorio. Hemos mantenido conversaciones frecuentes sobre sensores, conexiones, electrónica y fabricación. Me ha ayudado a resolver problemas de montaje y soldadura, ha revisado el modelo de la carcasa y facilitó la impresora 3D del laboratorio con la que actualmente estamos produciendo su primera versión física.</p></article>
+            <article><h3>Alejandro Bustos</h3><p>Ha contribuido mediante conversaciones sobre la orientación y las posibilidades del proyecto, ayudándome a clarificar decisiones y abrir líneas de exploración desde su experiencia con la electrónica. También me facilitó un sensor que aún no ha sido incorporado al sistema.</p></article>
           </div>
-        </section>
-
-        <section class="story-section horizons-section horizons-section-compact">
-          <div><h2>Próximas exploraciones</h2></div>
-          <ul>
-            <li>Evaluar y ajustar la primera carcasa actualmente en impresión.</li>
-            <li>Instalar y calibrar sensores de presencia LD2410C en ambos nodos.</li>
-            <li>Investigar formas de comunicación autónoma entre ellos.</li>
-            <li>Desarrollar maneras visuales, sonoras e históricas de relacionarse con los registros.</li>
-          </ul>
-          <p class="technical-note">Estas líneas son posibilidades en desarrollo, no capacidades actuales del sistema.</p>
         </section>
       </article>
 
@@ -511,20 +513,20 @@
           <div class="huerto-timelapse" data-huerto-timelapse aria-label="Secuencia temporal del crecimiento del cultivo">
             <figure class="huerto-figure huerto-timelapse-frame">
               <img src="assets/huerto/siembra-19-septiembre.jpg" alt="Dos bandejas de germinación recién sembradas." width="1800" height="2400" loading="lazy" data-timelapse-image />
-              <figcaption aria-live="polite"><time datetime="2026-09-19" data-timelapse-date>19 de septiembre</time><span data-timelapse-note> · Siembra y primer registro estabilizado.</span></figcaption>
+              <figcaption><time datetime="2026-09-19" data-timelapse-date>19 de septiembre</time><span data-timelapse-note> · Siembra y primer registro estabilizado.</span></figcaption>
             </figure>
             <div class="huerto-timelapse-controls">
               <button type="button" class="huerto-timelapse-play" data-timelapse-play aria-pressed="false">Reproducir secuencia</button>
               <label for="huerto-timelapse-range">Recorrer los registros</label>
-              <input id="huerto-timelapse-range" type="range" min="0" max="11" value="0" step="1" data-timelapse-range />
-              <output data-timelapse-counter>1 / 12</output>
+              <input id="huerto-timelapse-range" type="range" min="0" max="19" value="0" step="1" data-timelapse-range />
+              <output data-timelapse-counter>1 / 20</output>
             </div>
             <p class="huerto-timelapse-note">Las variaciones de encuadre, iluminación y montaje forman parte del registro: la secuencia no ha sido alineada ni homogeneizada.</p>
           </div>
         </section>
 
         <section class="huerto-section huerto-instrument-section">
-          <div class="huerto-copy">
+          <div class="huerto-copy huerto-wide-copy">
             <h2>De la apreciación sensible a la señal instrumental</h2>
             <p>La decisión de regar comenzó como una evaluación práctica del sustrato: observar su color, tocarlo y decidir si todavía conservaba humedad. Posteriormente se incorporó un nodo vegetal compuesto por dos sensores capacitivos de sustrato, un sensor de luz y un sensor de temperatura, humedad ambiental y presión.</p>
             <p>Los sensores no reemplazan la observación sensible ni describen directamente el estado de las plantas. Cada lectura depende de la posición, profundidad, cableado, alimentación y configuración del montaje.</p>
@@ -548,7 +550,7 @@
 
         <section class="huerto-section huerto-system-section">
           <div class="huerto-copy">
-            <h2>Un nodo conectado con Viejito-Perro</h2>
+            <h2>Un nodo conectado con <a href="proyecto.html?id=viejito-perro">Viejito-Perro</a></h2>
             <p>El Nodo Vegetal 01 se integra técnicamente con la infraestructura doméstica de Viejito-Perro. El nodo obtiene las lecturas, Home Assistant permite supervisar su funcionamiento y un servicio independiente conserva una instantánea de seis variables cada minuto.</p>
             <p>El archivo separa la telemetría automática de los acontecimientos y observaciones humanas. Riegos, fotografías, movimientos, raleos, cambios de sensores y calibraciones se registran como eventos distintos. Esta separación permite relacionar posteriormente una variación instrumental con aquello que ocurrió alrededor de las plantas, sin reducir una cosa a la otra.</p>
             <p>Huerto constituye un proyecto autónomo. Utiliza parte de la infraestructura de Viejito-Perro, pero desarrolla su propia pregunta, protocolo y archivo.</p>
@@ -562,36 +564,38 @@
         </section>
 
         <section class="huerto-section huerto-care-section">
-          <div>
-            <h2>Sostener la vida también transforma lo observado</h2>
-          </div>
-          <div class="huerto-copy">
+          <h2>Sostener la vida también transforma lo observado</h2>
+          <div class="huerto-copy huerto-care-copy">
             <p>Observar el cultivo exige realizar prácticas que permitan sostener su vida. Regar, proporcionar luz, ralear, trasplantar y responder a cambios visibles no son actividades externas al dispositivo: mantienen las condiciones que hacen posible tanto el crecimiento de las plantas como la continuidad de su observación.</p>
             <p>Estas prácticas tampoco conservan un objeto inalterado. Cada intervención modifica las trayectorias posteriores del cultivo y aquello que podrá registrarse. El cuidado sostiene la vida, pero también selecciona, orienta y transforma sus posibilidades.</p>
             <p>Durante el primer raleo de los rabanitos se aplicaron criterios distintos en dos cavidades. En una se conservó la planta de mayor tamaño; en otra, la menor. Las plántulas retiradas fueron fotografiadas y pesadas, incorporando parcialmente una práctica de fenotipado conocida durante el trabajo de campo.</p>
             <p>El procedimiento no constituye un experimento comparativo ni reproduce un protocolo de laboratorio completo. Su importancia está en mostrar cómo una conversación, una herramienta y una decisión de cuidado pueden introducir nuevas operaciones de observación en el espacio doméstico.</p>
+          </div>
+          <div class="huerto-care-gallery">
             <figure class="huerto-figure huerto-care-figure">
               <img src="assets/huerto/raleo-y-medicion.jpg" alt="Tres plántulas de rabanito retiradas durante el raleo, dispuestas junto a una cinta métrica antes de ser pesadas." width="1600" height="2133" loading="lazy" />
               <figcaption>Plántulas retiradas durante el primer raleo, fotografiadas junto a una referencia de longitud antes del pesaje.</figcaption>
             </figure>
+            <figure class="huerto-figure huerto-care-figure">
+              <img src="assets/huerto/rabanito-r1-medicion.jpg" alt="Plántula de rabanito R1 extraída y limpia, dispuesta junto a una cinta métrica y su etiqueta." width="1350" height="1800" loading="lazy" />
+              <figcaption>La intervención del 3 de octubre convirtió una planta cultivada en una unidad identificada, medida y pesada.</figcaption>
+            </figure>
           </div>
         </section>
 
-        <section class="huerto-section huerto-text-section">
-          <h2>Una práctica de cuidado distribuido</h2>
-          <div class="huerto-copy">
-            <p>La continuidad de las plantas, del cultivo y de su registro no ha dependido exclusivamente de una persona ni del funcionamiento automático de los sensores. Durante una ausencia, otra persona de la vivienda sostuvo el riego y produjo parte del registro fotográfico siguiendo indicaciones generales sobre encuadre y orientación.</p>
-            <p>La circulación de una de esas fotografías a través de una plataforma de mensajería redujo su resolución y eliminó parte de la metadata original. Este episodio hizo visible que la procedencia y comparabilidad de los registros también dependen de personas, instrucciones, dispositivos y plataformas.</p>
-            <p>El cuidado distribuido no es un elemento externo al sistema. Es una condición para que las plantas, las fotografías y el archivo puedan continuar existiendo.</p>
-          </div>
-        </section>
-
-        <section class="huerto-section huerto-text-section">
-          <h2>Corregir sin borrar</h2>
-          <div class="huerto-copy">
-            <p>Durante los primeros días se documentó incorrectamente la posición de las dos sondas de sustrato. La comparación de las series mostró que el comportamiento de cada canal era más coherente con la ubicación inversa.</p>
-            <p>La rectificación no modificó los valores históricos ni intercambió los nombres eléctricos de los sensores. Se corrigió la anotación que relacionaba cada canal con su posición física y se conservó el error como parte de la historia del archivo.</p>
-            <p>Este procedimiento expresa uno de los principios del proyecto: una anomalía no debe eliminarse silenciosamente. Debe contextualizarse mediante nuevas observaciones, eventos y correcciones verificables.</p>
+        <section class="huerto-section huerto-continuity-section">
+          <h2>La continuidad del archivo</h2>
+          <div class="huerto-continuity-grid">
+            <div>
+              <p class="eyebrow">Cuidado distribuido</p>
+              <p>La continuidad de las plantas, del cultivo y de su registro no ha dependido exclusivamente de una persona ni del funcionamiento automático de los sensores. Durante una ausencia, otra persona de la vivienda sostuvo el riego y produjo parte del registro fotográfico siguiendo indicaciones generales sobre encuadre y orientación.</p>
+              <p>La circulación de una de esas fotografías a través de una plataforma de mensajería redujo su resolución y eliminó parte de la metadata original. El episodio hizo visible que la procedencia y comparabilidad de los registros también dependen de personas, instrucciones, dispositivos y plataformas.</p>
+            </div>
+            <div>
+              <p class="eyebrow">Corregir sin borrar</p>
+              <p>Durante los primeros días se documentó incorrectamente la posición de las dos sondas de sustrato. La comparación de las series mostró que el comportamiento de cada canal era más coherente con la ubicación inversa.</p>
+              <p>La rectificación no modificó los valores históricos ni intercambió los nombres eléctricos de los sensores. Se corrigió la anotación que relacionaba cada canal con su posición física y se conservó el error como parte de la historia del archivo.</p>
+            </div>
           </div>
         </section>
 
@@ -604,36 +608,37 @@
           </div>
         </section>
 
-        <section class="huerto-section huerto-state-section">
-          <div>
+        <section class="huerto-section huerto-state-limits-section">
+          <div class="huerto-state-heading">
             <p class="eyebrow">Estado actual</p>
             <h2>Un cultivo y un archivo todavía abiertos</h2>
           </div>
-          <div class="huerto-copy">
-            <p>El cultivo continúa activo y la serie fotográfica se ha mantenido. Actualmente está pendiente ralear los tomates y trasplantar los rabanitos. La bitácora y el archivo técnico todavía deben actualizarse para incorporar los registros posteriores al 28 de septiembre.</p>
-            <p>El nodo y el archivo de datos se encuentran operativos, aunque las sondas de sustrato todavía requieren calibración situada. También permanece pendiente consolidar la secuencia fotográfica, documentar las siguientes intervenciones y completar el ciclo de cultivo.</p>
+          <div class="huerto-state-limits-grid">
+            <div class="huerto-copy">
+              <p class="eyebrow">Al 10 de octubre de 2026</p>
+              <p>El cultivo continúa activo y la serie fotográfica llega al día 23 desde la siembra. El 3 de octubre se ralearon los tomates, se extrajeron y midieron dos rabanitos y se trasplantaron los otros dos a macetas individuales. Los tomates conservados continuaron creciendo y su trasplante estaba en preparación; el raleo de las albahacas seguía pendiente.</p>
+              <p>El nodo y el archivo de datos permanecen operativos. Las sondas de sustrato todavía requieren calibración situada y el ciclo de cultivo continúa abierto.</p>
+            </div>
+            <div>
+              <p class="eyebrow">Límites</p>
+              <ul>
+                <li>No es un experimento biológico controlado y las plantas no funcionan como réplicas comparables.</li>
+                <li>Los voltajes de las sondas no equivalen todavía a porcentajes de humedad.</li>
+                <li>Las condiciones fotográficas no son completamente constantes.</li>
+                <li>Las series permiten seguir asociaciones temporales, pero no establecer relaciones causales.</li>
+                <li>Las prácticas trasladadas desde el laboratorio se presentan de forma anonimizada y no representan protocolos completos.</li>
+                <li>La infraestructura automática no reemplaza las decisiones humanas de observación y cuidado.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        <section class="huerto-section huerto-limits-section">
-          <h2>Límites</h2>
-          <ul>
-            <li>No es un experimento biológico controlado.</li>
-            <li>Las plantas no funcionan como réplicas sometidas a tratamientos comparables.</li>
-            <li>Los voltajes de las sondas no equivalen todavía a porcentajes de humedad.</li>
-            <li>Las condiciones de iluminación, encuadre y dispositivo fotográfico no son completamente constantes.</li>
-            <li>Las series permiten seguir asociaciones temporales, pero no establecer relaciones causales.</li>
-            <li>Las prácticas trasladadas desde el laboratorio se presentan de forma anonimizada y no representan protocolos completos de esas instituciones.</li>
-            <li>La infraestructura automática no reemplaza las decisiones humanas de observación y cuidado.</li>
-          </ul>
-        </section>
-
-        <section class="huerto-section huerto-text-section huerto-credits-section">
+        <section class="huerto-section huerto-credits-section">
           <h2>Autoría y colaboración</h2>
-          <div class="huerto-copy">
-            <p>He conceptualizado y diseñado el proyecto, realizado la siembra y el cuidado cotidiano, construido el nodo vegetal, definido el protocolo de observación, configurado el archivo de datos y elaborado las bitácoras y su interpretación.</p>
-            <p>Otra persona de la vivienda colaboró temporalmente con el riego y la producción de fotografías, permitiendo mantener la continuidad del cultivo durante mi ausencia.</p>
-            <p>Algunos componentes y prácticas surgieron de intercambios producidos durante el trabajo de campo. Estas contribuciones se mantienen anonimizadas para proteger a las personas y espacios involucrados. La programación, configuración y revisión técnica también han recibido apoyo de herramientas de inteligencia artificial bajo mi dirección y comprobación.</p>
+          <div class="huerto-credits-grid">
+            <div><p class="eyebrow">Mi trabajo</p><p>He conceptualizado y diseñado el proyecto, realizado la siembra y el cuidado cotidiano, construido el nodo vegetal, definido el protocolo de observación, configurado el archivo de datos y elaborado las bitácoras y su interpretación.</p></div>
+            <div><p class="eyebrow">Cuidado distribuido</p><p>Otra persona de la vivienda colaboró temporalmente con el riego y la producción de fotografías, permitiendo mantener la continuidad del cultivo durante mi ausencia.</p></div>
+            <div><p class="eyebrow">Intercambios de campo y asistencia técnica</p><p>Algunos componentes y prácticas surgieron de intercambios producidos durante el trabajo de campo. Estas contribuciones se mantienen anonimizadas para proteger a las personas y espacios involucrados. La programación, configuración y revisión técnica también han recibido apoyo de herramientas de inteligencia artificial bajo mi dirección y comprobación.</p></div>
           </div>
         </section>
       </article>
