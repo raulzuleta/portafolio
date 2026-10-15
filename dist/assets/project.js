@@ -8,8 +8,8 @@ const projects = {
     en: ['CENVI: learning to think with an instrument', 'Pedagogical system designed and piloted · 2026', 'CENVI was a pedagogical system developed by the Centro de Investigación e Intervención en Psicología Educacional at Universidad Central de Chile (CIPSE-UCEN), Coquimbo Region campus. It brought together a manual, a software application, training and a process of ongoing guidance to support Psychology students in administering and interpreting the Cuestionario de Convivencia Escolar para la No Violencia (CENVI). The project was not intended merely to make questionnaire scoring easier. Its purpose was to support the work that begins once data have been obtained: assessing their quality, relating factors and dimensions, developing a situated diagnosis and formulating relevant guidance for each school.', '', '', '', '', []]
   },
   punitaqui: {
-    es: ['Organizar la convivencia escolar a escala comunal', 'Política comunal y sistema de orientaciones · Elaborado en 2019 para el período 2020–2024', 'En 2019, mientras trabajaba como coordinador comunal de Convivencia Escolar en el Departamento de Educación Municipal de Punitaqui, elaboré una política y un conjunto de documentos destinados a organizar el trabajo de los establecimientos educacionales de la comuna. El proyecto surgió ante una dificultad práctica: los equipos de convivencia que debía supervisar trabajaban con criterios, procedimientos y formas de organización muy diferentes. Como coordinador comunal, consideré necesario ofrecer un marco compartido que orientara su trabajo sin reemplazar las decisiones propias de cada establecimiento.', '¿Cómo traducir problemas y criterios técnicos en orientaciones claras, situadas y utilizables?', 'Levantamiento de necesidades, organización de información y redacción de documentos operativos para actores comunales.', 'Análisis, estructuración y redacción de las orientaciones.', 'Trabajo desarrollado en contexto municipal.', ['Política comunal', 'Cinco documentos de orientación', 'Matrices, diagramas e instrumentos de trabajo']],
-    en: ['Organising school coexistence at the municipal level', 'Municipal policy and guidance system · produced in 2019 for the 2020–2024 period', 'In 2019, while working as municipal school coexistence coordinator in Punitaqui’s Municipal Education Department, I produced a policy and a set of documents intended to organise the work of local schools. The project arose from a practical difficulty: the school coexistence teams I supervised worked with very different criteria, procedures and organisational arrangements. I considered it necessary to provide a shared framework that could guide their work without replacing the decisions made by each school.', 'How can problems and technical criteria be translated into clear, situated and usable guidance?', 'Needs assessment, information organisation, and the drafting of operational documents for municipal education staff.', 'Analysis, structure and authorship of the guidance documents.', 'Work developed in a municipal setting.', ['Municipal policy', 'Five guidance documents', 'Matrices, diagrams and working tools']]
+    es: ['Organizar la convivencia escolar a escala comunal', 'Política comunal y sistema de orientaciones · 2019', 'En 2019, mientras trabajaba como coordinador comunal de Convivencia Escolar en el Departamento de Educación Municipal de Punitaqui, elaboré una política y un conjunto de documentos destinados a organizar el trabajo de los establecimientos educacionales de la comuna. El proyecto surgió ante una dificultad práctica: los equipos de convivencia que debía supervisar trabajaban con criterios, procedimientos y formas de organización muy diferentes. Como coordinador comunal, consideré necesario ofrecer un marco compartido que orientara su trabajo sin reemplazar las decisiones propias de cada establecimiento.', '¿Cómo traducir problemas y criterios técnicos en orientaciones claras, situadas y utilizables?', 'Levantamiento de necesidades, organización de información y redacción de documentos operativos para actores comunales.', 'Análisis, estructuración y redacción de las orientaciones.', 'Trabajo desarrollado en contexto municipal.', ['Política comunal', 'Cinco documentos de orientación', 'Matrices, diagramas e instrumentos de trabajo']],
+    en: ['Organising school coexistence at the municipal level', 'Municipal policy and guidance system · 2019', 'In 2019, while working as municipal school coexistence coordinator in Punitaqui’s Municipal Education Department, I produced a policy and a set of documents intended to organise the work of local schools. The project arose from a practical difficulty: the school coexistence teams I supervised worked with very different criteria, procedures and organisational arrangements. I considered it necessary to provide a shared framework that could guide their work without replacing the decisions made by each school.', 'How can problems and technical criteria be translated into clear, situated and usable guidance?', 'Needs assessment, information organisation, and the drafting of operational documents for municipal education staff.', 'Analysis, structure and authorship of the guidance documents.', 'Work developed in a municipal setting.', ['Municipal policy', 'Five guidance documents', 'Matrices, diagrams and working tools']]
   },
   cencosud: {
     es: ['Del análisis de una experiencia financiera al prototipo', 'Diseño de experiencia y prototipado · Proyecto académico grupal · 2023', 'Este proyecto fue realizado como trabajo final del Diplomado en Customer Experience: Data, Diseño e Innovación de la Pontificia Universidad Católica de Chile. Al comienzo del diplomado, sus participantes propusieron distintos casos y votaron cuál desarrollar. El caso seleccionado fue presentado por un integrante de nuestro equipo que trabajaba en Cencosud y conocía directamente el problema. El equipo tomó como caso la experiencia de solicitud y administración de avances mediante la aplicación de Tarjeta Cencosud Scotiabank. A partir de la información aportada por este integrante, construimos una representación del recorrido del usuario, formulamos oportunidades de mejora y las tradujimos en un conjunto de pantallas. El proyecto fue un ejercicio académico. No constituyó un encargo oficial de Cencosud Scotiabank ni fue validado institucionalmente por la empresa.', '¿Cómo traducir una propuesta de experiencia en una interfaz comprensible y consistente?', 'Análisis colectivo de la experiencia y desarrollo de un conjunto de pantallas en Figma.', 'Participación en el análisis colectivo y realización íntegra del rediseño de la aplicación y sus pantallas.', 'Pablo Poblete, Wendy Vazquez, Benjamín Gallegos, Pablo Pincheira y Raúl Zuleta.', ['Journey map', 'Service blueprint', 'Archivo de diseño en Figma']],
@@ -24,6 +24,9 @@ const projects = {
     en: ['Sound practices', 'Explorations in listening, sound-making and montage · 2025–2026', 'Two practices that extend anthropological questions through instruments, archives, found sounds and decisions about montage.', '', '', '', '', []]
   }
 };
+
+projects.cencosud.es[1] = 'Diseño de experiencia y prototipado · 2023';
+projects.cencosud.en[1] = 'Experience design and prototyping · 2023';
 
 const switcher = document.querySelector('.language-switch');
 const staticEnglish = document.documentElement.dataset.staticLanguage === 'en';
@@ -265,6 +268,39 @@ function setupHuertoOpeningBalance() {
   balance();
 }
 
+function setupSoundLocalNavigation() {
+  const navigation = document.querySelector('.sound-local-nav');
+  if (!navigation) return;
+
+  const links = [...navigation.querySelectorAll('[data-sound-target]')];
+  const sections = links.map((link) => document.getElementById(link.dataset.soundTarget)).filter(Boolean);
+  if (!sections.length) return;
+
+  let scheduled = false;
+  const update = () => {
+    const threshold = navigation.getBoundingClientRect().bottom + 128;
+    let active = sections[0].id;
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= threshold) active = section.id;
+    });
+    links.forEach((link) => {
+      if (link.dataset.soundTarget === active) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+    scheduled = false;
+  };
+
+  const requestUpdate = () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(update);
+  };
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate, { passive: true });
+  update();
+}
+
 function render(language) {
   if (isSpanishOnly) language = 'es';
   const [title, status, intro, problem, process, role, credits, evidence] = project[language];
@@ -324,3 +360,4 @@ setupHuertoTimelapse();
 setupProjectLightbox();
 render(staticEnglish ? 'en' : 'es');
 setupHuertoOpeningBalance();
+setupSoundLocalNavigation();
