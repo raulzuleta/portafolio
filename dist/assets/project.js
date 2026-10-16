@@ -356,8 +356,8 @@ if (isCenvi) {
 } else if (switcher.tagName === 'BUTTON') {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }
-setupHuertoTimelapse();
+if (isHuerto) setupHuertoTimelapse();
 setupProjectLightbox();
 render(staticEnglish ? 'en' : 'es');
-setupHuertoOpeningBalance();
-setupSoundLocalNavigation();
+if (isHuerto) setupHuertoOpeningBalance();
+if (isSoundPractices) setupSoundLocalNavigation();

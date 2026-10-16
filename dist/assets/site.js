@@ -128,7 +128,7 @@ function activateTab(tabName, updateAddress = true, moveFocus = false) {
 
   if (updateAddress) history.pushState(null, '', `#${validTab}`);
   if (switcher?.tagName === 'A') switcher.href = `${languageTarget}#${validTab}`;
-  window.scrollTo({ top: 0, behaviour: reduceMotion.matches ? 'auto' : 'smooth' });
+  window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
   if (moveFocus && activePanel) {
     const heading = activePanel.querySelector('h1, h2');
     if (heading) {
