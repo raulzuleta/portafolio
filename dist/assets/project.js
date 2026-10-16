@@ -38,21 +38,12 @@ const isCencosud = id === 'cencosud';
 const isHuerto = id === 'huerto';
 const isSoundPractices = id === 'practicas-sonoras';
 const hasDedicatedStory = isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices;
-const isSpanishOnly = !staticEnglish && (isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices);
 document.body.classList.toggle('viejito-detail-page', id === 'viejito-perro');
 document.body.classList.toggle('cenvi-detail-page', isCenvi);
 document.body.classList.toggle('punitaqui-detail-page', isPunitaqui);
 document.body.classList.toggle('cencosud-detail-page', isCencosud);
 document.body.classList.toggle('huerto-detail-page', isHuerto);
 document.body.classList.toggle('sound-practices-detail-page', isSoundPractices);
-
-if (isSpanishOnly && switcher.tagName === 'BUTTON') {
-  switcher.disabled = true;
-  switcher.classList.add('is-static');
-  switcher.setAttribute('aria-label', 'Contenido disponible actualmente en español');
-  switcher.setAttribute('aria-disabled', 'true');
-  switcher.title = 'Versión en inglés pendiente';
-}
 
 function setupProjectLightbox() {
   const imageSelector = [
@@ -302,7 +293,6 @@ function setupSoundLocalNavigation() {
 }
 
 function render(language) {
-  if (isSpanishOnly) language = 'es';
   const [title, status, intro, problem, process, role, credits, evidence] = project[language];
   document.documentElement.lang = language;
   if (!staticEnglish) document.querySelectorAll('[data-es][data-en]').forEach((element) => { element.textContent = element.dataset[language]; });
@@ -324,7 +314,7 @@ function render(language) {
   const english = language === 'en';
   if (switcher.tagName === 'BUTTON') {
     switcher.setAttribute('aria-pressed', String(english));
-    if (!isSpanishOnly) switcher.setAttribute('aria-label', english ? 'Switch to Spanish' : 'Cambiar idioma a inglés');
+    switcher.setAttribute('aria-label', english ? 'Switch to Spanish' : 'Cambiar idioma a inglés');
     switcher.children[0].classList.toggle('active', !english);
     switcher.children[1].classList.toggle('active', english);
   } else {

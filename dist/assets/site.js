@@ -1,7 +1,6 @@
 const switcher = document.querySelector('.language-switch');
 const staticLanguage = document.documentElement.dataset.staticLanguage;
 const languageTarget = staticLanguage === 'en' ? 'index.html' : 'index-en.html';
-const translatable = document.querySelectorAll('[data-es][data-en]');
 const tabLinks = document.querySelectorAll('[data-tab]');
 const navTabs = document.querySelectorAll('nav [data-tab]');
 const panels = document.querySelectorAll('[data-panel]');
@@ -75,39 +74,6 @@ function closeDiagramCard(returnFocus = false) {
     node.setAttribute('aria-expanded', 'false');
   });
   if (returnFocus) previousNode.focus();
-}
-
-function setLanguage(language) {
-  document.documentElement.lang = language;
-  translatable.forEach((element) => {
-    element.textContent = element.dataset[language];
-  });
-  document.querySelectorAll('[data-alt-es][data-alt-en]').forEach((image) => {
-    image.alt = image.dataset[`alt${language === 'es' ? 'Es' : 'En'}`];
-  });
-  document.querySelectorAll('[data-aria-es][data-aria-en]').forEach((element) => {
-    element.setAttribute('aria-label', element.dataset[`aria${language === 'es' ? 'Es' : 'En'}`]);
-  });
-  document.querySelectorAll('[data-label-es][data-label-en]').forEach((element) => {
-    element.setAttribute('aria-label', element.dataset[`label${language === 'es' ? 'Es' : 'En'}`]);
-  });
-  renderDiagramCard();
-
-  const english = language === 'en';
-  switcher.setAttribute('aria-pressed', String(english));
-  switcher.setAttribute('aria-label', english ? 'Switch to Spanish' : 'Cambiar idioma a inglés');
-  switcher.children[0].classList.toggle('active', !english);
-  switcher.children[1].classList.toggle('active', english);
-  document.title = english
-    ? 'Raúl Zuleta — Anthropology, pedagogy and material experimentation'
-    : 'Raúl Zuleta — Antropología, pedagogía y experimentación material';
-  localStorage.setItem('portfolio-language', language);
-}
-
-if (!staticLanguage && switcher?.tagName === 'BUTTON') {
-  switcher.addEventListener('click', () => {
-    setLanguage(document.documentElement.lang === 'es' ? 'en' : 'es');
-  });
 }
 
 function activateTab(tabName, updateAddress = true, moveFocus = false) {
@@ -227,6 +193,5 @@ if (oledPages.length > 1 && !reduceMotion.matches) {
   }, 2800);
 }
 
-if (staticLanguage) localStorage.setItem('portfolio-language', staticLanguage);
-else setLanguage('es');
+localStorage.setItem('portfolio-language', staticLanguage);
 activateTab(location.hash.slice(1), false);
