@@ -110,7 +110,7 @@ Decisión del 16 de octubre de 2026:
 - envío asíncrono sin abandonar el portafolio;
 - confirmación visible solo después de una respuesta exitosa del servicio;
 - conservación de los campos y enlace de correo alternativo cuando el envío falla;
-- campo señuelo `_gotcha` y futura restricción al dominio público;
+- campo señuelo `_gotcha` y restricción al dominio público;
 - sin copia adicional inicial en el servidor `viejito-perro`; el correo recibido actuará como archivo.
 
 Prueba pública del 17 de octubre de 2026:
@@ -121,7 +121,14 @@ Prueba pública del 17 de octubre de 2026:
 - el segundo envío fue aceptado, mostró la confirmación, vació los campos, apareció en Submissions y generó correctamente una notificación a `raulzuleta1@gmail.com`;
 - se eliminó del formulario la mención visible al proveedor, conservando el consentimiento sobre envío y almacenamiento de datos.
 
-Decisión antispam pendiente: al configurar Cloudflare y el dominio definitivo, incorporar Cloudflare Turnstile con claves propias y restringir Formspree a `razc.cl`. Ninguna clave secreta deberá incorporarse al repositorio.
+Protección antispam cerrada el 17 de octubre de 2026:
+
+- widget Cloudflare Turnstile en modo administrado, autorizado para `razc.cl` y `www.razc.cl`;
+- clave pública incorporada a las versiones española e inglesa y clave secreta almacenada únicamente en Formspree;
+- CAPTCHA de Formspree configurado para validar el token `cf-turnstile-response`;
+- Formspree restringido a `razc.cl`, incluyendo sus subdominios;
+- Formshield y el campo señuelo `_gotcha` permanecen activos;
+- prueba pública satisfactoria: widget visible y coherente con el diseño, confirmación de éxito, campos vaciados, envío registrado en Submissions y notificación recibida en `raulzuleta1@gmail.com`.
 
 ## Pruebas públicas de interfaz
 
@@ -133,8 +140,6 @@ Revisión manual realizada por Raúl el 17 de octubre de 2026 en escritorio, sim
 
 Los tres ajustes fueron implementados, comprobados localmente a 390 px de ancho y publicados correctamente.
 
-## Próximo punto de decisión
+## Estado de cierre
 
-Configurar Cloudflare Turnstile para el formulario y restringir Formspree a `razc.cl`.
-
-No considerar definitiva la protección antispam hasta comprobar Turnstile desde `razc.cl`.
+La prepublicación y publicación técnica quedaron completadas el 17 de octubre de 2026. El procedimiento de actualización y la separación de responsabilidades entre el entorno local, GitHub, GitHub Pages, Cloudflare, NIC Chile y Formspree están documentados en `README.md` y en este registro.
