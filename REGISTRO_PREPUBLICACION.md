@@ -105,10 +105,18 @@ Decisión del 16 de octubre de 2026:
 - campo señuelo `_gotcha` y futura restricción al dominio público;
 - sin copia adicional inicial en el servidor `viejito-perro`; el correo recibido actuará como archivo.
 
-Configuración antispam informada: reCAPTCHA de Formspree con la clave secreta personalizada en blanco. Se asume que corresponde al reCAPTCHA predeterminado administrado por Formspree; esta suposición debe comprobarse mediante un envío controlado en el despliegue de prueba. No se incorporará ninguna clave secreta al repositorio.
+Prueba pública del 17 de octubre de 2026:
+
+- el primer envío falló porque el CAPTCHA estándar de Formspree estaba activo, pero el formulario usa envío asíncrono y no incluía el token requerido;
+- el intento fallido no apareció en Inbox ni en Spam;
+- se desactivó temporalmente CAPTCHA en Formspree, manteniendo Formshield y el campo señuelo `_gotcha`;
+- el segundo envío fue aceptado, mostró la confirmación, vació los campos y apareció en Submissions;
+- se eliminó del formulario la mención visible al proveedor, conservando el consentimiento sobre envío y almacenamiento de datos.
+
+Decisión antispam pendiente: al configurar Cloudflare y el dominio definitivo, incorporar Cloudflare Turnstile con claves propias y restringir Formspree a `razc.cl`. Ninguna clave secreta deberá incorporarse al repositorio.
 
 ## Próximo punto de decisión
 
-Comprobar reCAPTCHA y ejecutar un envío real controlado desde el despliegue de prueba antes de publicar.
+Comprobar la notificación por correo del envío de prueba y configurar Turnstile junto con el dominio definitivo.
 
-No continuar con la publicación definitiva o el DNS hasta comprobar el formulario y reCAPTCHA en el despliegue de prueba.
+No considerar definitiva la protección antispam hasta comprobar Turnstile desde `razc.cl`.

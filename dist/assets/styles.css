@@ -395,7 +395,6 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .contact-form { align-self: start; padding: 0 clamp(1.25rem, 3vw, 2.25rem) clamp(1rem, 2.5vw, 1.75rem); border: 1px solid var(--ink); background: rgba(255,255,255,.16); box-shadow: 3px 3px 0 rgba(29,48,44,.14); }
 .contact-window-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 2.35rem; margin: 0 calc(clamp(1.25rem, 3vw, 2.25rem) * -1); padding: .48rem .85rem; border-bottom: 1px solid var(--ink); background: var(--blue-strong); color: var(--paper); font-size: clamp(.9rem, 1.15vw, 1rem); line-height: 1.15; }
 .contact-window-bar strong { font-weight: 600; letter-spacing: -.015em; }
-.form-notice { margin: 0 calc(clamp(1.25rem, 3vw, 2.25rem) * -1) 1.25rem; padding: .6rem clamp(1.25rem, 3vw, 2.25rem); border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--acid) 42%, var(--paper)); font-size: .76rem; font-weight: 600; }
 .form-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .form-field { margin-bottom: .85rem; }
 .form-field label, .form-label-row label { display: block; margin-bottom: .35rem; font-size: .82rem; font-weight: 700; }
