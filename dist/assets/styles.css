@@ -405,6 +405,7 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .form-field input[aria-invalid="true"], .form-field textarea[aria-invalid="true"] { border-color: #8b2f2f; box-shadow: 0 2px 0 #8b2f2f; }
 .form-label-row { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .form-label-row output { color: var(--muted); font-size: .75rem; }
+.turnstile-field { width: 100%; min-height: 4.1rem; margin: .95rem 0 1rem; overflow: hidden; }
 .consent-field { display: grid; grid-template-columns: auto 1fr; gap: .65rem; align-items: start; margin: .95rem 0 1rem; color: var(--muted); font-size: .8rem; }
 .consent-field input { margin-top: .25rem; accent-color: var(--blue); }
 .consent-field input:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }

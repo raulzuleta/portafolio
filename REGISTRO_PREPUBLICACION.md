@@ -68,15 +68,22 @@ Decisión del 16 de octubre de 2026: publicar los certificados íntegros. Raúl 
 
 ## Alojamiento
 
-Hipótesis actual: GitHub Pages desde un repositorio público, publicando exclusivamente el contenido de `dist`. No se ha activado Pages ni cambiado la visibilidad del repositorio.
+Decisión aplicada el 17 de octubre de 2026: GitHub Pages desde el repositorio público `raulzuleta/portafolio`, mediante GitHub Actions y publicando exclusivamente el contenido de `dist`.
 
-El formulario se conecta a Formspree porque GitHub Pages no procesa ni almacena envíos. La hipótesis de alojamiento quedará lista para aprobación después de comprobar el formulario en un despliegue de prueba.
+El despliegue de prueba se verificó en `https://raulzuleta.github.io/portafolio/`. Tras asignar el dominio definitivo, esa dirección redirige al sitio público. El formulario se conecta a Formspree porque GitHub Pages no procesa ni almacena envíos.
 
 ## Dominio
 
 - Dominio inscrito por Raúl el 16 de octubre de 2026: `razc.cl`.
-- Estado actual: registrado, sin servidores DNS ni registros para el portafolio configurados.
-- Decisión operativa: no modificar DNS hasta disponer de un despliegue de prueba verificado y de los valores exactos requeridos por GitHub Pages y el proveedor DNS elegido.
+- Proveedor DNS: Cloudflare, plan gratuito.
+- Servidores autoritativos configurados en NIC Chile: `donovan.ns.cloudflare.com` y `lila.ns.cloudflare.com`.
+- NIC Chile no se configuró como servidor secundario.
+- Registros del dominio raíz: cuatro registros A de GitHub Pages (`185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`), en modo DNS only.
+- `www`: CNAME a `raulzuleta.github.io`, en modo DNS only.
+- Dominio verificado en la cuenta de GitHub mediante el registro TXT `_github-pages-challenge-raulzuleta`; conservarlo permanentemente.
+- Dominio personalizado de GitHub Pages: `razc.cl`, con comprobación DNS satisfactoria.
+- HTTPS obligatorio activado el 17 de octubre de 2026.
+- Comprobación pública: `https://razc.cl` responde correctamente y `https://www.razc.cl` redirige al dominio principal. Durante la activación persistió brevemente una respuesta HTTP previa en caché, pendiente de expirar.
 
 ## Metadatos y SEO básico
 
@@ -124,10 +131,10 @@ Revisión manual realizada por Raúl el 17 de octubre de 2026 en escritorio, sim
 - reorganizar verticalmente y centrar las flechas del diagrama “Cómo funciona” de Viejito-Perro en móvil;
 - forzar a una sola columna, a ancho completo, las imágenes del afiche y la introducción conceptual del caso de cadenas de valor en móvil.
 
-Los tres ajustes fueron implementados y comprobados localmente a 390 px de ancho. Queda pendiente una verificación breve en el sitio desplegado.
+Los tres ajustes fueron implementados, comprobados localmente a 390 px de ancho y publicados correctamente.
 
 ## Próximo punto de decisión
 
-Configurar Turnstile junto con el dominio definitivo.
+Configurar Cloudflare Turnstile para el formulario y restringir Formspree a `razc.cl`.
 
 No considerar definitiva la protección antispam hasta comprobar Turnstile desde `razc.cl`.

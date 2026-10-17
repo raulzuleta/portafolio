@@ -29,7 +29,9 @@
     <meta name="twitter:description" content="Investigaciones, proyectos y materiales que articulan antropología, pedagogía y experimentación material." />
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
     <link rel="stylesheet" href="assets/styles.css?v=layout-final-home-3" />
-    <script src="assets/site.js?v=publication-audit-1" defer></script>
+    <link rel="preconnect" href="https://challenges.cloudflare.com" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="assets/site.js?v=publication-audit-2" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Raúl Zuleta Cortés","url":"https://razc.cl/","sameAs":["https://orcid.org/0009-0005-2897-0759","https://github.com/raulzuleta","https://www.linkedin.com/in/raulzuleta1/"]}</script>
   </head>
   <body>
@@ -419,6 +421,7 @@
             <div class="form-label-row"><label for="contact-message">Mensaje</label><output for="contact-message"><span data-message-count>0</span>/2500</output></div>
             <textarea id="contact-message" name="message" maxlength="2500" rows="6" required></textarea>
           </div>
+          <div class="turnstile-field"><div class="cf-turnstile" data-sitekey="0x4AAAAAAFZVT2O1VW9uphxT" data-action="contact" data-theme="light" data-size="flexible" data-language="es"></div></div>
           <label class="consent-field"><input name="consent" type="checkbox" required /><span>Acepto que estos datos sean enviados y almacenados únicamente para gestionar y responder este mensaje.</span></label>
           <button class="contact-submit" type="submit">Enviar mensaje</button>
           <p class="form-status" data-form-status role="status" aria-live="polite"></p>

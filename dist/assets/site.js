@@ -58,6 +58,14 @@ contactForm?.addEventListener('submit', async (event) => {
     return;
   }
 
+  const turnstileToken = contactForm.querySelector('[name="cf-turnstile-response"]')?.value;
+  if (!turnstileToken) {
+    setFormStatus('error', language === 'en'
+      ? 'Please complete the anti-spam verification before sending.'
+      : 'Completa la verificación antispam antes de enviar.');
+    return;
+  }
+
   contactSubmit.disabled = true;
   contactSubmit.textContent = language === 'en' ? 'Sending…' : 'Enviando…';
   setFormStatus('pending', language === 'en' ? 'Sending your message…' : 'Enviando tu mensaje…');
@@ -80,6 +88,7 @@ contactForm?.addEventListener('submit', async (event) => {
     console.error(error);
     setFormStatus('error', contactErrorMessage(language));
   } finally {
+    window.turnstile?.reset();
     contactSubmit.disabled = false;
     contactSubmit.textContent = language === 'en' ? 'Send message' : 'Enviar mensaje';
   }
