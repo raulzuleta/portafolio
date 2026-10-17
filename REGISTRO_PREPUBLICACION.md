@@ -72,6 +72,26 @@ Hipótesis actual: GitHub Pages desde un repositorio público, publicando exclus
 
 El formulario se conecta a Formspree porque GitHub Pages no procesa ni almacena envíos. La hipótesis de alojamiento quedará lista para aprobación después de comprobar el formulario en un despliegue de prueba.
 
+## Dominio
+
+- Dominio inscrito por Raúl el 16 de octubre de 2026: `razc.cl`.
+- Estado actual: registrado, sin servidores DNS ni registros para el portafolio configurados.
+- Decisión operativa: no modificar DNS hasta disponer de un despliegue de prueba verificado y de los valores exactos requeridos por GitHub Pages y el proveedor DNS elegido.
+
+## Metadatos y SEO básico
+
+Implementado localmente el 16 de octubre de 2026:
+
+- URL canónica y correspondencia `hreflang` para las páginas estáticas en español e inglés;
+- metadatos Open Graph y Twitter con tarjeta social grande compartida;
+- imagen social `assets/social-card.png` de 1200 × 630 px, coherente con la identidad visual aprobada;
+- datos estructurados `Person` en las portadas;
+- instrucciones de indexación, `robots.txt` y `sitemap.xml` asociados a `https://razc.cl`.
+
+Las vistas de proyectos se construyen desde una sola página por idioma y cambian mediante el parámetro `id`. Por ahora se mantienen metadatos genéricos y se excluyen sus variantes del sitemap para no declarar URL canónicas incorrectas. Si se requiere posicionamiento individual de cada proyecto, será necesario generar una URL estática por proyecto o incorporar metadatos durante una fase de compilación.
+
+La tarjeta social usa una única imagen bilingüe —nombre, ejes temáticos y dominio— para todas las páginas. Su visualización real en servicios externos deberá comprobarse después del despliegue de prueba, porque cada plataforma mantiene su propia caché.
+
 ## Formulario de contacto
 
 Decisión del 16 de octubre de 2026:
