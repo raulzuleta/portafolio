@@ -98,7 +98,8 @@ Decisión del 16 de octubre de 2026:
 
 - servicio receptor: Formspree, plan gratuito;
 - endpoint público configurado en las versiones española e inglesa;
-- destino y alternativa visible ante errores: `razuletac@uc.cl`;
+- destino de las notificaciones de Formspree: `raulzuleta1@gmail.com`;
+- alternativa pública visible ante errores: `razuletac@uc.cl`;
 - envío asíncrono sin abandonar el portafolio;
 - confirmación visible solo después de una respuesta exitosa del servicio;
 - conservación de los campos y enlace de correo alternativo cuando el envío falla;
@@ -110,13 +111,23 @@ Prueba pública del 17 de octubre de 2026:
 - el primer envío falló porque el CAPTCHA estándar de Formspree estaba activo, pero el formulario usa envío asíncrono y no incluía el token requerido;
 - el intento fallido no apareció en Inbox ni en Spam;
 - se desactivó temporalmente CAPTCHA en Formspree, manteniendo Formshield y el campo señuelo `_gotcha`;
-- el segundo envío fue aceptado, mostró la confirmación, vació los campos y apareció en Submissions;
+- el segundo envío fue aceptado, mostró la confirmación, vació los campos, apareció en Submissions y generó correctamente una notificación a `raulzuleta1@gmail.com`;
 - se eliminó del formulario la mención visible al proveedor, conservando el consentimiento sobre envío y almacenamiento de datos.
 
 Decisión antispam pendiente: al configurar Cloudflare y el dominio definitivo, incorporar Cloudflare Turnstile con claves propias y restringir Formspree a `razc.cl`. Ninguna clave secreta deberá incorporarse al repositorio.
 
+## Pruebas públicas de interfaz
+
+Revisión manual realizada por Raúl el 17 de octubre de 2026 en escritorio, simulación móvil, Safari y teléfono real. Navegación, idiomas, enlaces, documentos, validación y formulario funcionaron correctamente. Se detectaron tres ajustes técnicos:
+
+- restituir separación entre la barra superior y el primer campo del formulario después de eliminar el aviso de Formspree;
+- reorganizar verticalmente y centrar las flechas del diagrama “Cómo funciona” de Viejito-Perro en móvil;
+- forzar a una sola columna, a ancho completo, las imágenes del afiche y la introducción conceptual del caso de cadenas de valor en móvil.
+
+Los tres ajustes fueron implementados y comprobados localmente a 390 px de ancho. Queda pendiente una verificación breve en el sitio desplegado.
+
 ## Próximo punto de decisión
 
-Comprobar la notificación por correo del envío de prueba y configurar Turnstile junto con el dominio definitivo.
+Configurar Turnstile junto con el dominio definitivo.
 
 No considerar definitiva la protección antispam hasta comprobar Turnstile desde `razc.cl`.
