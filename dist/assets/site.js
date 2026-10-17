@@ -13,6 +13,7 @@ const contactForm = document.querySelector('[data-contact-form]');
 const contactMessage = document.querySelector('#contact-message');
 const messageCount = document.querySelector('[data-message-count]');
 const formStatus = document.querySelector('[data-form-status]');
+const contactSubmit = contactForm?.querySelector('.contact-submit');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let activeDiagramNode = null;
 let previewDiagramNode = null;
@@ -23,7 +24,26 @@ contactMessage?.addEventListener('input', () => {
   messageCount.textContent = contactMessage.value.length;
 });
 
-contactForm?.addEventListener('submit', (event) => {
+function setFormStatus(state, content) {
+  if (!formStatus) return;
+  formStatus.dataset.state = state;
+  if (content instanceof Node) formStatus.replaceChildren(content);
+  else formStatus.textContent = content;
+}
+
+function contactErrorMessage(language) {
+  const fragment = document.createDocumentFragment();
+  fragment.append(language === 'en'
+    ? 'Your message could not be sent. Please try again or email me at '
+    : 'No fue posible enviar tu mensaje. Inténtalo nuevamente o escríbeme a ');
+  const emailLink = document.createElement('a');
+  emailLink.href = 'mailto:razuletac@uc.cl';
+  emailLink.textContent = 'razuletac@uc.cl';
+  fragment.append(emailLink, '.');
+  return fragment;
+}
+
+contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const language = document.documentElement.lang === 'en' ? 'en' : 'es';
   if (!contactForm.checkValidity()) {
@@ -31,22 +51,45 @@ contactForm?.addEventListener('submit', (event) => {
       if (field.validity.valid) field.removeAttribute('aria-invalid');
       else field.setAttribute('aria-invalid', 'true');
     });
-    formStatus.textContent = language === 'en'
+    setFormStatus('error', language === 'en'
       ? 'Please review the highlighted fields.'
-      : 'Revisa los campos señalados antes de enviar.';
+      : 'Revisa los campos señalados antes de enviar.');
     contactForm.reportValidity();
     return;
   }
-  formStatus.textContent = language === 'en'
-    ? 'Prototype only: your message has not been sent or stored.'
-    : 'Esto es solo un prototipo: tu mensaje no fue enviado ni almacenado.';
+
+  contactSubmit.disabled = true;
+  contactSubmit.textContent = language === 'en' ? 'Sending…' : 'Enviando…';
+  setFormStatus('pending', language === 'en' ? 'Sending your message…' : 'Enviando tu mensaje…');
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' },
+    });
+    if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+
+    contactForm.reset();
+    contactForm.querySelectorAll('[aria-invalid]').forEach((field) => field.removeAttribute('aria-invalid'));
+    if (messageCount) messageCount.textContent = '0';
+    setFormStatus('success', language === 'en'
+      ? 'Your message was sent successfully. Thank you for writing. I aim to reply within ten working days when a response is required.'
+      : 'Tu mensaje fue enviado correctamente. Gracias por escribirme. Si requiere respuesta, procuraré contestar dentro de diez días hábiles.');
+  } catch (error) {
+    console.error(error);
+    setFormStatus('error', contactErrorMessage(language));
+  } finally {
+    contactSubmit.disabled = false;
+    contactSubmit.textContent = language === 'en' ? 'Send message' : 'Enviar mensaje';
+  }
 });
 
 contactForm?.querySelectorAll('input, textarea').forEach((field) => {
   field.addEventListener('input', () => {
     if (field.validity.valid) field.removeAttribute('aria-invalid');
     else field.setAttribute('aria-invalid', 'true');
-    if (contactForm.checkValidity()) formStatus.textContent = '';
+    if (contactForm.checkValidity() && formStatus?.dataset.state === 'error') setFormStatus('', '');
   });
 });
 

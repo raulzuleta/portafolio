@@ -375,11 +375,12 @@
           </div>
         </div>
 
-        <form class="contact-form" data-contact-form aria-describedby="contact-form-notice" novalidate>
+        <form class="contact-form" action="https://formspree.io/f/xrpernra" method="post" data-contact-form aria-describedby="contact-form-notice" novalidate>
           <div class="contact-window-bar">
             <strong>Nuevo mensaje</strong>
           </div>
-          <div class="form-notice" id="contact-form-notice">Prototipo visual: los mensajes todavía no se envían ni almacenan.</div>
+          <div class="form-notice" id="contact-form-notice">Los datos se envían mediante Formspree exclusivamente para gestionar y responder tu mensaje.</div>
+          <div class="form-honeypot" aria-hidden="true"><label for="contact-company">Deja este campo vacío</label><input id="contact-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off" /></div>
           <div class="form-field">
             <label for="contact-name">Nombre (opcional)</label>
             <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" />
@@ -396,7 +397,7 @@
             <div class="form-label-row"><label for="contact-message">Mensaje</label><output for="contact-message"><span data-message-count>0</span>/2500</output></div>
             <textarea id="contact-message" name="message" maxlength="2500" rows="6" required></textarea>
           </div>
-          <label class="consent-field"><input name="consent" type="checkbox" required /><span>Acepto que estos datos sean almacenados únicamente para gestionar y responder este mensaje.</span></label>
+          <label class="consent-field"><input name="consent" type="checkbox" required /><span>Acepto que estos datos sean enviados y almacenados únicamente para gestionar y responder este mensaje.</span></label>
           <button class="contact-submit" type="submit">Enviar mensaje</button>
           <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
