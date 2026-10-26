@@ -15,6 +15,7 @@ const messageCount = document.querySelector('[data-message-count]');
 const formStatus = document.querySelector('[data-form-status]');
 const contactSubmit = contactForm?.querySelector('.contact-submit');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 let activeDiagramNode = null;
 let previewDiagramNode = null;
 
@@ -112,6 +113,7 @@ function renderDiagramCard() {
   link.textContent = activeDiagramNode.dataset[`link${language === 'es' ? 'Es' : 'En'}`];
   link.href = `#${activeDiagramNode.dataset.target}`;
   link.dataset.tab = activeDiagramNode.dataset.target;
+  link.hidden = false;
 }
 
 function closeDiagramCard(returnFocus = false) {
@@ -119,6 +121,12 @@ function closeDiagramCard(returnFocus = false) {
   const previousNode = activeDiagramNode;
   activeDiagramNode = null;
   diagramCard.hidden = true;
+  diagramCard.setAttribute('aria-hidden', 'true');
+  diagramCard.removeAttribute('aria-labelledby');
+  diagramCard.removeAttribute('aria-describedby');
+  const link = diagramCard.querySelector('.diagram-card-link');
+  link.hidden = true;
+  link.removeAttribute('href');
   knowledgeDiagram?.classList.remove('is-card-open');
   if (knowledgeDiagram) knowledgeDiagram.inert = false;
   diagramNodes.forEach((node) => {
@@ -131,6 +139,8 @@ function closeDiagramCard(returnFocus = false) {
 function activateTab(tabName, updateAddress = true, moveFocus = false) {
   const validTab = [...navTabs].some((tab) => tab.dataset.tab === tabName) ? tabName : 'inicio';
   let activePanel = null;
+
+  document.body.classList.toggle('is-home-active', validTab === 'inicio');
 
   panels.forEach((panel) => {
     const active = panel.dataset.panel === validTab;
@@ -184,6 +194,9 @@ diagramNodes.forEach((node) => {
     });
     renderDiagramCard();
     diagramCard.hidden = false;
+    diagramCard.removeAttribute('aria-hidden');
+    diagramCard.setAttribute('aria-labelledby', 'diagram-card-title');
+    diagramCard.setAttribute('aria-describedby', 'diagram-card-copy');
     requestAnimationFrame(() => diagramClose?.focus());
   });
 });
@@ -247,3 +260,6 @@ if (oledPages.length > 1 && !reduceMotion.matches) {
 
 localStorage.setItem('portfolio-language', staticLanguage);
 activateTab(location.hash.slice(1), false);
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'auto' }));
+}, { once: true });

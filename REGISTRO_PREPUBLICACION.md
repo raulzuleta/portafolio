@@ -143,3 +143,19 @@ Los tres ajustes fueron implementados, comprobados localmente a 390 px de ancho 
 ## Estado de cierre
 
 La prepublicación y publicación técnica quedaron completadas el 17 de octubre de 2026. El procedimiento de actualización y la separación de responsabilidades entre el entorno local, GitHub, GitHub Pages, Cloudflare, NIC Chile y Formspree están documentados en `README.md` y en este registro.
+
+## Auditoría posterior a la publicación — 26 de octubre de 2026
+
+Se revisó retroalimentación recibida después de mostrar el portafolio a distintas personas. Las correcciones se prepararon en la rama local `audit-retroalimentacion-oct-2026`; en esta etapa no se modificó GitHub ni el sitio público.
+
+Cambios preparados y verificados localmente:
+
+- navegación a 390 px reorganizada en dos filas de tres destinos, sin contenido oculto ni desplazamiento horizontal;
+- espacios reales incorporados entre líneas visuales de encabezados para evitar concatenaciones en tecnologías de asistencia, en español e inglés;
+- tarjeta del diagrama excluida explícitamente del árbol accesible mientras está cerrada; sus relaciones ARIA y enlace se incorporan solo cuando contiene información;
+- atributos `src` vacíos retirados de las imágenes utilizadas por los visores dinámicos de proyectos y pedagogía;
+- altura de la portada resuelta con una estructura de tres zonas —encabezado, contenido flexible y pie— que ocupa la altura real de la ventana (`dvh`) sin depender de restas fijas; además se neutralizó el desplazamiento tardío al fragmento `#inicio` observado en Safari;
+- jerarquía de tarjetas revisada: “Explorar proyecto” se alinea al fondo de cada fila para ordenar tarjetas con contenidos dispares; en reposo conserva la apariencia de texto y, al pasar el cursor o enfocar con teclado, emerge como botón tipo píldora mediante un fondo verde oscuro que avanza de izquierda a derecha en 420 ms, con movimiento prácticamente instantáneo si el sistema solicita reducir animaciones;
+- auditoría tipográfica: no se justificó una homogeneización masiva. En la portada de escritorio se observaron ocho tamaños funcionales y predominio de 16 px; las mayúsculas se conservan solo en etiquetas breves. Se reforzó específicamente el llamado de las tarjetas, donde sí existía una debilidad jerárquica.
+
+Pruebas locales realizadas a 390 × 844 px en español e inglés, y a 1440 × 900, 1440 × 800 y 1440 × 768 px en escritorio. El sitio de Alejandro Bustos (`https://aebn.cl`) quedó enlazado desde su nombre en los agradecimientos de Viejito‑Perro, en ambos idiomas. Queda pendiente la aprobación visual de Raúl y, posteriormente, commit en `main`, despliegue y comprobación pública.
