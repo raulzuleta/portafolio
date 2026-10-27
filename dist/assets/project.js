@@ -22,6 +22,10 @@ const projects = {
   'practicas-sonoras': {
     es: ['Prácticas sonoras', 'Exploraciones de escucha, interpretación y montaje · 2025–2026', 'Dos prácticas que prolongan preguntas antropológicas mediante instrumentos, archivos, sonidos encontrados y decisiones de edición.', '', '', '', '', []],
     en: ['Sound practices', 'Explorations in listening, sound-making and montage · 2025–2026', 'Two practices that extend anthropological questions through instruments, archives, found sounds and decisions about montage.', '', '', '', '', []]
+  },
+  'ecologia-audiovisual': {
+    es: ['Ecología audiovisual', 'Exploración colaborativa en curso · desde septiembre de 2026', 'Una exploración visual y sonora que transforma históricos ambientales de Viejito-Perro en un medio de cultivo donde las relaciones entre espacios domésticos pueden producir formas.', '', '', '', '', []],
+    en: ['Audiovisual ecology', 'Ongoing collaborative exploration · since September 2026', 'A visual and sonic exploration that transforms Viejito-Perro’s environmental histories into a culture medium in which relationships between domestic spaces can produce forms.', '', '', '', '', []]
   }
 };
 
@@ -37,13 +41,15 @@ const isPunitaqui = id === 'punitaqui';
 const isCencosud = id === 'cencosud';
 const isHuerto = id === 'huerto';
 const isSoundPractices = id === 'practicas-sonoras';
-const hasDedicatedStory = isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices;
+const isAudiovisualEcology = id === 'ecologia-audiovisual';
+const hasDedicatedStory = isCenvi || isPunitaqui || isCencosud || isHuerto || isSoundPractices || isAudiovisualEcology;
 document.body.classList.toggle('viejito-detail-page', id === 'viejito-perro');
 document.body.classList.toggle('cenvi-detail-page', isCenvi);
 document.body.classList.toggle('punitaqui-detail-page', isPunitaqui);
 document.body.classList.toggle('cencosud-detail-page', isCencosud);
 document.body.classList.toggle('huerto-detail-page', isHuerto);
 document.body.classList.toggle('sound-practices-detail-page', isSoundPractices);
+document.body.classList.toggle('ecologia-audiovisual-detail-page', isAudiovisualEcology);
 
 function setupProjectLightbox() {
   const imageSelector = [
@@ -51,7 +57,8 @@ function setupProjectLightbox() {
     '#punitaqui-content figure img',
     '#cencosud-content figure img',
     '#huerto-content figure img',
-    '#sound-practices-content figure img'
+    '#sound-practices-content figure img',
+    '#ecologia-audiovisual-content figure img'
   ].join(',');
 
   document.querySelectorAll('.cenvi-media-button').forEach((button) => button.classList.add('project-media-button'));
@@ -161,7 +168,16 @@ function setupHuertoTimelapse() {
     ['assets/huerto/crecimiento-7-octubre.jpg', '2026-10-07', '7 de octubre', 'Los tomates vuelven a desbordar sus cavidades.', 'Follaje de tomate extendido sobre la bandeja después del raleo.'],
     ['assets/huerto/crecimiento-8-octubre.jpg', '2026-10-08', '8 de octubre', 'El cultivo exige preparar una nueva reorganización.', 'Tomates en crecimiento y rabanitos sostenidos por tutores.'],
     ['assets/huerto/crecimiento-9-octubre.jpg', '2026-10-09', '9 de octubre', 'El crecimiento anticipa el trasplante de los tomates.', 'Cultivo doméstico con follaje de tomate ocupando gran parte de la bandeja.'],
-    ['assets/huerto/crecimiento-10-octubre.jpg', '2026-10-10', '10 de octubre', 'La serie permanece abierta.', 'Tomates, albahacas y rabanitos activos veintitrés días después de la siembra.']
+    ['assets/huerto/crecimiento-10-octubre.jpg', '2026-10-10', '10 de octubre', 'El follaje ocupa una parte creciente del almácigo.', 'Tomates, albahacas y rabanitos activos veintitrés días después de la siembra.'],
+    ['assets/huerto/crecimiento-11-octubre.jpg', '2026-10-11', '11 de octubre', 'El calendario del cultivo desborda el calendario humano.', 'Los seis tomates continúan creciendo mientras su trasplante sigue pendiente.'],
+    ['assets/huerto/crecimiento-15-octubre.jpg', '2026-10-15', '15 de octubre', 'Las plantas exceden el espacio inicial del almácigo.', 'Último registro general antes del trasplante parcial de los tomates.'],
+    ['assets/huerto/crecimiento-16-octubre.jpg', '2026-10-16', '16 de octubre', 'El cultivo se extiende sobre la mesa.', 'Tres tomates ocupan macetas individuales después del trasplante.'],
+    ['assets/huerto/crecimiento-17-octubre.jpg', '2026-10-17', '17 de octubre', 'Observar también implica decidir cuándo no intervenir.', 'Los tomates trasplantados permanecen erguidos sin recibir un nuevo riego.'],
+    ['assets/huerto/crecimiento-18-octubre.jpg', '2026-10-18', '18 de octubre', 'El crecimiento transforma las condiciones de registro.', 'Macetas, hojas, bandejas y cables comienzan a superponerse.'],
+    ['assets/huerto/crecimiento-21-octubre.jpg', '2026-10-21', '21 de octubre', 'El cultivo continúa mientras se acumulan intervenciones pendientes.', 'Los tomates producen nuevos brotes y el follaje oculta parte del montaje.'],
+    ['assets/huerto/crecimiento-23-octubre.jpg', '2026-10-23', '23 de octubre', 'La vista general registra mejor el ensamblaje que cada individuo.', 'Tomates, rabanitos y albahacas ocupan una proporción creciente del espacio.'],
+    ['assets/huerto/crecimiento-24-octubre.jpg', '2026-10-24', '24 de octubre', 'El cuidado adopta un ritmo flexible ante los cambios del ambiente.', 'Último registro general antes de extraer tomates, ralear albahacas y calibrar las sondas.'],
+    ['assets/huerto/crecimiento-26-octubre.jpg', '2026-10-26', '26 de octubre', 'La serie permanece abierta.', 'El sistema reorganizado reúne tomates y rabanitos en macetas, albahacas raleadas y dos sondas calibradas.']
   ];
   const framesEn = [
     ['assets/huerto/siembra-19-septiembre.jpg', '2026-09-19', '19 September', 'Sowing and first stabilised record.', 'Two newly sown germination trays.'],
@@ -183,7 +199,16 @@ function setupHuertoTimelapse() {
     ['assets/huerto/crecimiento-7-octubre.jpg', '2026-10-07', '7 October', 'The tomatoes again extend beyond their cells.', 'Tomato foliage spreading across the tray after thinning.'],
     ['assets/huerto/crecimiento-8-octubre.jpg', '2026-10-08', '8 October', 'The plants call for another reorganisation.', 'Growing tomatoes and radishes supported by stakes.'],
     ['assets/huerto/crecimiento-9-octubre.jpg', '2026-10-09', '9 October', 'Growth anticipates the tomatoes’ transplant.', 'Domestic cultivation with tomato foliage occupying much of the tray.'],
-    ['assets/huerto/crecimiento-10-octubre.jpg', '2026-10-10', '10 October', 'The series remains open.', 'Tomatoes, basil, and radishes active twenty-three days after sowing.']
+    ['assets/huerto/crecimiento-10-octubre.jpg', '2026-10-10', '10 October', 'Foliage occupies a growing share of the seedling tray.', 'Tomatoes, basil, and radishes active twenty-three days after sowing.'],
+    ['assets/huerto/crecimiento-11-octubre.jpg', '2026-10-11', '11 October', 'The plants’ calendar exceeds the human schedule.', 'All six tomatoes continue to grow while transplanting remains pending.'],
+    ['assets/huerto/crecimiento-15-octubre.jpg', '2026-10-15', '15 October', 'The plants exceed the seedling tray’s initial space.', 'Final overview before partially transplanting the tomatoes.'],
+    ['assets/huerto/crecimiento-16-octubre.jpg', '2026-10-16', '16 October', 'The cultivation spreads across the table.', 'Three tomatoes occupy individual pots after transplanting.'],
+    ['assets/huerto/crecimiento-17-octubre.jpg', '2026-10-17', '17 October', 'Observation also entails deciding when not to intervene.', 'The transplanted tomatoes remain upright without further watering.'],
+    ['assets/huerto/crecimiento-18-octubre.jpg', '2026-10-18', '18 October', 'Growth transforms the conditions of documentation.', 'Pots, leaves, trays, and cables begin to overlap.'],
+    ['assets/huerto/crecimiento-21-octubre.jpg', '2026-10-21', '21 October', 'The cultivation continues as pending interventions accumulate.', 'The tomatoes produce new shoots while foliage conceals part of the setup.'],
+    ['assets/huerto/crecimiento-23-octubre.jpg', '2026-10-23', '23 October', 'The overview now documents the assemblage better than each individual.', 'Tomatoes, radishes, and basil occupy a growing share of the space.'],
+    ['assets/huerto/crecimiento-24-octubre.jpg', '2026-10-24', '24 October', 'Care adopts a flexible rhythm as environmental conditions change.', 'Final overview before extracting tomatoes, thinning the basil, and calibrating the probes.'],
+    ['assets/huerto/crecimiento-26-octubre.jpg', '2026-10-26', '26 October', 'The series remains open.', 'The reorganised system brings together potted tomatoes and radishes, thinned basil, and two calibrated probes.']
   ];
   const english = document.documentElement.lang === 'en';
   const frames = english ? framesEn : framesEs;
@@ -343,6 +368,10 @@ if (isCenvi) {
   document.querySelector('#project-standard-content').hidden = true;
   document.querySelector('#project-standard-evidence').hidden = true;
   document.querySelector('#sound-practices-content').hidden = false;
+} else if (isAudiovisualEcology) {
+  document.querySelector('#project-standard-content').hidden = true;
+  document.querySelector('#project-standard-evidence').hidden = true;
+  document.querySelector('#ecologia-audiovisual-content').hidden = false;
 } else if (switcher.tagName === 'BUTTON') {
   switcher.addEventListener('click', () => render(document.documentElement.lang === 'es' ? 'en' : 'es'));
 }
