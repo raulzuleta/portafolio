@@ -25,7 +25,7 @@ const projects = {
   },
   'ecologia-audiovisual': {
     es: ['Ecología audiovisual', 'Exploración colaborativa en curso · desde septiembre de 2026', 'Una exploración visual y sonora que transforma históricos ambientales de Viejito-Perro en un medio de cultivo donde las relaciones entre espacios domésticos pueden producir formas.', '', '', '', '', []],
-    en: ['Audiovisual ecology', 'Ongoing collaborative exploration · since September 2026', 'A visual and sonic exploration that transforms Viejito-Perro’s environmental histories into a culture medium in which relationships between domestic spaces can produce forms.', '', '', '', '', []]
+    en: ['Audiovisual ecology', 'Ongoing collaborative exploration · since September 2026', 'An exploration in visualisation and sound-making that transforms environmental records gathered by Viejito-Perro into a culture medium where relations among domestic spaces generate forms.', '', '', '', '', []]
   }
 };
 
@@ -323,7 +323,22 @@ function render(language) {
   if (!staticEnglish) document.querySelectorAll('[data-es][data-en]').forEach((element) => { element.textContent = element.dataset[language]; });
   document.querySelector('#project-title').textContent = title;
   document.querySelector('#project-status').textContent = status;
-  document.querySelector('#project-intro').textContent = intro;
+  const introElement = document.querySelector('#project-intro');
+  introElement.textContent = intro;
+  if (isAudiovisualEcology) {
+    const projectName = 'Viejito-Perro';
+    const projectNameIndex = intro.indexOf(projectName);
+    if (projectNameIndex !== -1) {
+      const link = document.createElement('a');
+      link.href = `${language === 'en' ? 'proyecto-en.html' : 'proyecto.html'}?id=viejito-perro`;
+      link.textContent = projectName;
+      introElement.replaceChildren(
+        document.createTextNode(intro.slice(0, projectNameIndex)),
+        link,
+        document.createTextNode(intro.slice(projectNameIndex + projectName.length))
+      );
+    }
+  }
   document.querySelector('#project-problem').textContent = problem;
   document.querySelector('#project-process').textContent = process;
   document.querySelector('#project-role').textContent = role;
