@@ -551,9 +551,9 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .horizons-section .technical-note { grid-column: 2; margin-top: 0; }
 .horizons-section-compact { padding: clamp(2.25rem, 4vw, 3.25rem) 0 clamp(1.5rem, 3vw, 2rem); }
 .oled-disclaimer { margin: .55rem 0 0; max-width: 36rem; color: var(--muted); font-size: .76rem; line-height: 1.35; }
-:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
-:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.2rem, 6vw, 5.8rem); }
-:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero .lead { max-width: 72rem; font-size: clamp(1.05rem, 1.55vw, 1.28rem); }
+:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page, .ecologia-audiovisual-detail-page) .project-detail-hero { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem); }
+:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page, .ecologia-audiovisual-detail-page) .project-detail-hero h1 { max-width: none; margin-bottom: clamp(1.25rem, 3vw, 2rem); font-size: clamp(3.2rem, 6vw, 5.8rem); }
+:is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page, .ecologia-audiovisual-detail-page) .project-detail-hero .lead { max-width: 72rem; font-size: clamp(1.05rem, 1.55vw, 1.28rem); }
 .cenvi-case { padding-bottom: 0; }
 .cenvi-section { display: grid; grid-template-columns: minmax(12rem, .42fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(2.75rem, 5vw, 4.75rem) 0; border-top: 1px solid var(--ink); }
 .cenvi-section:first-of-type { border-top: 0; }
@@ -778,6 +778,27 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
 .huerto-hero-figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; }
 .huerto-hero-figure .project-media-button { height: 100%; min-height: 0; aspect-ratio: auto; }
 .huerto-hero-figure img { height: 100%; object-fit: cover; }
+.ecologia-audiovisual-detail-page .ecologia-opening { display: block; }
+.ecologia-audiovisual-detail-page .ecologia-opening-copy { display: grid; grid-template-columns: minmax(17rem, .7fr) minmax(0, 1.3fr); gap: clamp(2rem, 7vw, 7rem); align-items: start; }
+.ecologia-audiovisual-detail-page .ecologia-opening-copy h2 { max-width: 17ch; }
+.ecologia-audiovisual-detail-page .ecologia-opening-text p:first-child { margin-top: 0; }
+.ecologia-audiovisual-detail-page .ecologia-video { margin-top: clamp(2.5rem, 5vw, 4.5rem); }
+.ecologia-audiovisual-detail-page .ecologia-video video { display: block; width: min(100%, 62rem); margin: 0 auto; aspect-ratio: 16 / 9; background: #050505; object-fit: contain; }
+.ecologia-audiovisual-detail-page .ecologia-video figcaption { max-width: 62rem; margin: .8rem auto 0; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
+.ecologia-paired-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ecologia-column { display: flex; min-width: 0; flex-direction: column; }
+.ecologia-column .huerto-copy { flex: 1; }
+.ecologia-column figure { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+.ecologia-column figure { width: 100%; }
+.ecologia-column figure .project-media-button { width: 100%; aspect-ratio: 5 / 4; }
+.ecologia-column figure img { width: 100%; height: 100%; object-fit: cover; }
+.ecologia-column:first-child figure img { object-position: center 42%; }
+.ecologia-column:last-child figure img { object-position: center 48%; }
+.ecologia-audiovisual-detail-page .ecologia-authorship-section { grid-template-columns: minmax(17rem, .72fr) minmax(0, 1.28fr); align-items: start; padding-bottom: clamp(1.5rem, 3vw, 2.5rem); border-top: 1px solid var(--ink); }
+.ecologia-audiovisual-detail-page .ecologia-authorship-section h2 { max-width: 17ch; }
+.ecologia-audiovisual-detail-page .ecologia-authorship-grid { grid-template-columns: 1fr; gap: clamp(1.5rem, 3vw, 2.5rem); }
+.ecologia-audiovisual-detail-page #ecologia-audiovisual-content { padding-bottom: 0; }
+.ecologia-audiovisual-detail-page .project-end-nav { margin-top: 0; }
 .huerto-sequence-section { grid-template-columns: 1fr; }
 .huerto-sequence-section .huerto-copy { display: grid; grid-template-columns: minmax(15rem, .72fr) minmax(0, 1.28fr); column-gap: clamp(2rem, 7vw, 7rem); }
 .huerto-sequence-section .huerto-copy h2 { grid-row: 1 / span 3; }
@@ -1048,7 +1069,10 @@ dt { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-s
   .cenvi-section-with-media { grid-template-columns: minmax(17rem, .9fr) minmax(20rem, 1.1fr); gap: clamp(1.5rem, 4vw, 3rem); }
   .cenvi-section h2 { max-width: 16ch; }
   .cenvi-gallery { grid-template-columns: 1fr; }
-  :is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page) .project-detail-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
+  :is(.viejito-detail-page, .cenvi-detail-page, .punitaqui-detail-page, .cencosud-detail-page, .huerto-detail-page, .sound-practices-detail-page, .ecologia-audiovisual-detail-page) .project-detail-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
+  .ecologia-audiovisual-detail-page .ecologia-opening-copy,
+  .ecologia-paired-section,
+  .ecologia-audiovisual-detail-page .ecologia-authorship-section { grid-template-columns: 1fr; }
   .huerto-opening,
   .huerto-instrument-section,
   .huerto-system-section,

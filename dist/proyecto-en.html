@@ -21,8 +21,8 @@
     <meta name="twitter:image" content="https://razc.cl/assets/social-card.png" />
     <meta name="twitter:image:alt" content="Raúl Zuleta — Anthropology, teaching and material experimentation" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon-rz.svg?v=2" />
-  <link rel="stylesheet" href="assets/styles.css?v=ux-audit-2" />
-    <script src="assets/project.js?v=ux-audit-1" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=ecologia-2026-10" />
+    <script src="assets/project.js?v=ecologia-2026-10" defer></script>
   </head>
   <body class="project-detail-page">
     <a class="skip-link" href="#detalle">Skip to content</a>
@@ -522,8 +522,8 @@
             <div class="huerto-timelapse-controls">
               <button type="button" class="huerto-timelapse-play" data-timelapse-play aria-pressed="false">Play sequence</button>
               <label for="huerto-timelapse-range">Browse the records</label>
-              <input id="huerto-timelapse-range" type="range" min="0" max="19" value="0" step="1" data-timelapse-range />
-              <output data-timelapse-counter>1 / 20</output>
+              <input id="huerto-timelapse-range" type="range" min="0" max="28" value="0" step="1" data-timelapse-range />
+              <output data-timelapse-counter>1 / 29</output>
             </div>
             <p class="huerto-timelapse-note">Variations in framing, lighting and setup form part of the record: the sequence has not been aligned or standardised.</p>
           </div>
@@ -534,7 +534,7 @@
             <h2>From sensory judgement to instrumental signals</h2>
             <p>The decision to water began as a practical assessment of the substrate: looking at its colour, touching it and deciding whether it still retained moisture. A plant node was subsequently added, comprising two capacitive substrate sensors, a light sensor and a sensor measuring temperature, ambient humidity and pressure.</p>
             <p>The sensors do not replace sensory observation, nor do they directly describe the condition of the plants. Each reading depends on the position and depth of the sensor, its wiring and power supply, and the configuration of the assembly.</p>
-            <p>The substrate probes currently produce raw voltage values. These make it possible to track variation, but do not yet correspond to calibrated moisture percentages. Keeping them in their original units avoids presenting an interpretation as though it were a direct and definitive measurement.</p>
+            <p>The probes retain their raw voltage readings and also produce percentages derived from individual air-and-water calibrations. These relative scales make it possible to track variation within each pot, but they do not directly measure volumetric water content or make the two sensors equivalent.</p>
           </div>
           <div class="huerto-instrument-gallery">
             <figure class="huerto-figure">
@@ -619,15 +619,15 @@
           </div>
           <div class="huerto-state-limits-grid">
             <div class="huerto-copy">
-              <p class="eyebrow">As of 10 October 2026</p>
-              <p>The cultivation remains active and the photographic series extends to day 23 after sowing. On 3 October the tomatoes were thinned, two radishes were extracted and measured, and the other two were transplanted into individual pots. The retained tomatoes continued to grow and preparations were under way to transplant them; thinning the basil remained pending.</p>
-              <p>The node and data archive remain operational. The substrate probes still require situated calibration, and the cultivation cycle is ongoing.</p>
+              <p class="eyebrow">As of 26 October 2026</p>
+              <p>The cultivation remains active, and the photographic series documents its gradual reorganisation. On 15 October, three tomatoes were transplanted into individual pots. On 24 October, the remaining tomatoes were removed from the seedling tray, all four basil cells were thinned, and one plant was retained in each cell. The two transplanted radishes and three selected tomatoes continue to grow.</p>
+              <p>The node and data archive remain operational. The two substrate probes were calibrated individually and now accompany two tomatoes in different pots. The cultivation, care decisions, and photographic series remain open.</p>
             </div>
             <div>
               <p class="eyebrow">Limits</p>
               <ul>
                 <li>It is not a controlled biological experiment, and the plants do not function as comparable replicas.</li>
-                <li>The raw probe voltages do not yet correspond to moisture percentages.</li>
+                <li>The probe percentages express relative electrical scales, not volumetric water content.</li>
                 <li>Photographic conditions are not entirely constant.</li>
                 <li>The series can trace temporal associations but cannot establish causal relationships.</li>
                 <li>Practices transferred from the laboratory are anonymised and do not represent complete protocols.</li>
@@ -646,6 +646,91 @@
           </div>
         </section>
       </article>
+      <article class="huerto-story" id="ecologia-audiovisual-content" lang="en" hidden>
+        <section class="huerto-section ecologia-opening">
+          <div class="ecologia-opening-copy">
+            <div>
+              <p class="eyebrow">Working question</p>
+              <h2>How do forms emerge from relationships?</h2>
+            </div>
+            <div class="huerto-copy ecologia-opening-text">
+              <p>Audiovisual ecology transforms environmental histories produced by <a href="proyecto-en.html?id=viejito-perro">Viejito-Perro</a> into a visual and sonic experience. The data neither depict organisms nor appear as a monitoring dashboard. They modify a culture medium in which relationships between domestic spaces act as seeds for morphogenetic processes.</p>
+              <p>The fundamental unit is not an isolated variable, but the differences, coincidences and changes that emerge between the living room, bedroom and outdoors. Each selected date initiates a possible ecology conditioned by those records, without attempting to reproduce the original day literally.</p>
+            </div>
+          </div>
+          <figure class="ecologia-video">
+            <video controls muted playsinline preload="metadata" aria-label="Recording of the first Audiovisual ecology visualisation">
+              <source src="assets/ecologia-audiovisual/primera-visualizacion.m4v" type="video/mp4" />
+            </video>
+            <figcaption>First functional visualisation: two colonies respond to relationships between temperature and humidity in the living room and bedroom. Sound is part of the prototype; the video starts muted and can be enabled through its controls.</figcaption>
+          </figure>
+        </section>
+
+        <section class="huerto-section ecologia-paired-section">
+          <div class="ecologia-column">
+            <h2>From an environmental archive to a culture medium</h2>
+            <div class="huerto-copy">
+              <p>The exploration began in early September 2026. I had wanted to sonify data collected by <a href="proyecto-en.html?id=viejito-perro">Viejito-Perro</a> for some time, and I prepared a sanitised dataset to explore that possibility. I mentioned the idea to Alejandro Bustos, who offered to collaborate. I created a working repository and shared it with him on 18 September.</p>
+              <p>From there, we developed a shared direction. Instead of mechanically assigning each variable to a note or form, we decided to explore a relational engine capable of producing visual and sonic events simultaneously. Temperature, humidity, light and other signals can modify energy, viscosity, resistance or perturbation. These correspondences are poetic and technical decisions under investigation, not natural meanings inherent in the data.</p>
+            </div>
+            <figure class="huerto-figure">
+              <img src="assets/ecologia-audiovisual/sesion-colaborativa.jpg" alt="Raúl Zuleta and Alejandro Bustos working in front of a computer and an electronic setup." width="1199" height="1800" loading="lazy" />
+              <figcaption>Working session on the visualisation and physical controller, October 2026.</figcaption>
+            </figure>
+          </div>
+          <div class="ecologia-column">
+            <h2>A first provisional grammar</h2>
+            <div class="huerto-copy">
+              <p>The first prototype uses nine days of temperature and humidity records from the living room and bedroom. Two colonies grow inside a culture dish. Temperature changes their energy; differences between rooms produce flows; humidity alters the medium’s viscosity; and the accumulated history of the simulation conditions what can happen next.</p>
+              <p>A joystick connected to an ESP32 board makes it possible to move through the time series and reveal an optional data layer. Image and sound respond to the same simulated culture: the colonies’ territory, agitation and viscosity modify their voices and textures.</p>
+              <p>This implementation tests navigation and an initial translation of the data. It does not yet constitute a definitive audiovisual grammar.</p>
+            </div>
+            <figure class="huerto-figure">
+              <img src="assets/ecologia-audiovisual/joystick-esp32.jpg" alt="Joystick connected to an ESP32 board on a breadboard." width="1012" height="1800" loading="lazy" />
+              <figcaption>Physical controller used to move through the time series and show or hide the data layer.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-text-section">
+          <h2>Relationship to my trajectory</h2>
+          <div class="huerto-copy">
+            <p>The project brings together two lines of work that had previously developed separately. From <a href="proyecto-en.html?id=viejito-perro">Viejito-Perro</a>, it takes up the construction of infrastructure, environmental recording and the question of what instruments make perceptible. From the sound practices, it takes up listening as a mode of exploration and an interest in building atmospheres through decisions about interpretation and montage.</p>
+            <p>The collaboration brings these capabilities to a new problem: how to construct a sensory experience from relationships between data without reducing it to an explanation, illustration or monitoring interface.</p>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-state-limits-section">
+          <div class="huerto-state-heading">
+            <p class="eyebrow">Current status</p>
+            <h2>A successful first visualisation awaiting its next iteration</h2>
+          </div>
+          <div class="huerto-state-limits-grid">
+            <div class="huerto-copy">
+              <p class="eyebrow">As of 26 October 2026</p>
+              <p>The project has a first functional visualisation, joystick navigation and experimental sound synthesis. It is currently paused before its next conceptual and technical iteration, which will revisit the audiovisual grammar, expand the relationships under consideration and assess new forms of interaction.</p>
+            </div>
+            <div>
+              <p class="eyebrow">Limits</p>
+              <ul>
+                <li>It is neither a scientific visualisation nor a monitoring tool.</li>
+                <li>The visual and sonic translations are experimental decisions that may change.</li>
+                <li>The domestic data were sanitised, but their circulation remains restricted to the project.</li>
+                <li>The first prototype uses a limited interval and does not represent the entire environmental archive.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="huerto-section huerto-credits-section ecologia-authorship-section">
+          <h2>Authorship and collaboration</h2>
+          <div class="huerto-credits-grid ecologia-authorship-grid">
+            <div><p class="eyebrow">My work</p><p>I conceptualised the project, prepared the data and developed its visual and sonic grammar. The expressive decisions were iterated and reviewed through our collaboration.</p></div>
+            <div><p class="eyebrow"><a href="https://aebn.cl" target="_blank" rel="noopener">Alejandro Bustos ↗</a></p><p>He contributed the technical capabilities required to program and implement the prototype, and participated in iterating the proposal and its expressive correspondences.</p></div>
+          </div>
+        </section>
+      </article>
+
       <article class="sound-practices-story" id="sound-practices-content" lang="en" hidden>
         <div class="sound-local-nav" role="navigation" aria-label="Navigation between sound pieces">
           <span class="sound-local-nav-label">Pieces</span>
