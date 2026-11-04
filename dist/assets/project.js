@@ -177,7 +177,13 @@ function setupHuertoTimelapse() {
     ['assets/huerto/crecimiento-21-octubre.jpg', '2026-10-21', '21 de octubre', 'El cultivo continúa mientras se acumulan intervenciones pendientes.', 'Los tomates producen nuevos brotes y el follaje oculta parte del montaje.'],
     ['assets/huerto/crecimiento-23-octubre.jpg', '2026-10-23', '23 de octubre', 'La vista general registra mejor el ensamblaje que cada individuo.', 'Tomates, rabanitos y albahacas ocupan una proporción creciente del espacio.'],
     ['assets/huerto/crecimiento-24-octubre.jpg', '2026-10-24', '24 de octubre', 'El cuidado adopta un ritmo flexible ante los cambios del ambiente.', 'Último registro general antes de extraer tomates, ralear albahacas y calibrar las sondas.'],
-    ['assets/huerto/crecimiento-26-octubre.jpg', '2026-10-26', '26 de octubre', 'La serie permanece abierta.', 'El sistema reorganizado reúne tomates y rabanitos en macetas, albahacas raleadas y dos sondas calibradas.']
+    ['assets/huerto/crecimiento-26-octubre.jpg', '2026-10-26', '26 de octubre', 'La serie permanece abierta.', 'El sistema reorganizado reúne tomates y rabanitos en macetas, albahacas raleadas y dos sondas calibradas.'],
+    ['assets/huerto/crecimiento-28-octubre.jpg', '2026-10-28', '28 de octubre', 'El follaje intensifica la superposición entre unidades.', 'Tomates, rabanitos y albahacas vistos pocas horas después de un riego selectivo de T1.'],
+    ['assets/huerto/crecimiento-30-octubre.jpg', '2026-10-30', '30 de octubre', 'El crecimiento reduce la separación visual entre las plantas.', 'El follaje de los tomates cubre una parte creciente del sistema antes de nuevas intervenciones.'],
+    ['assets/huerto/crecimiento-31-octubre.jpg', '2026-10-31', '31 de octubre · mañana', 'La configuración alcanza un nuevo umbral de reorganización.', 'Último registro general antes de cosechar los rabanitos y trasplantar las albahacas.'],
+    ['assets/huerto/crecimiento-31-octubre-trasplante-albahacas.jpg', '2026-10-31', '31 de octubre · trasplante', 'La cosecha y el trasplante vuelven a componer el sistema.', 'Cuatro albahacas recién separadas y trasplantadas a macetas individuales con pequeños tutores.'],
+    ['assets/huerto/crecimiento-1-noviembre.jpg', '2026-11-01', '1 de noviembre', 'La nueva disposición conserva las huellas de la intervención.', 'Tres tomates y cuatro albahacas en macetas individuales la mañana posterior al trasplante.'],
+    ['assets/huerto/crecimiento-4-noviembre.jpg', '2026-11-04', '4 de noviembre', 'El registro se reanuda después de una discontinuidad.', 'Tres tomates turgentes y cuatro albahacas vivas, con diferencias visibles de tamaño y tonalidad.']
   ];
   const framesEn = [
     ['assets/huerto/siembra-19-septiembre.jpg', '2026-09-19', '19 September', 'Sowing and first stabilised record.', 'Two newly sown germination trays.'],
@@ -208,7 +214,13 @@ function setupHuertoTimelapse() {
     ['assets/huerto/crecimiento-21-octubre.jpg', '2026-10-21', '21 October', 'The cultivation continues as pending interventions accumulate.', 'The tomatoes produce new shoots while foliage conceals part of the setup.'],
     ['assets/huerto/crecimiento-23-octubre.jpg', '2026-10-23', '23 October', 'The overview now documents the assemblage better than each individual.', 'Tomatoes, radishes, and basil occupy a growing share of the space.'],
     ['assets/huerto/crecimiento-24-octubre.jpg', '2026-10-24', '24 October', 'Care adopts a flexible rhythm as environmental conditions change.', 'Final overview before extracting tomatoes, thinning the basil, and calibrating the probes.'],
-    ['assets/huerto/crecimiento-26-octubre.jpg', '2026-10-26', '26 October', 'The series remains open.', 'The reorganised system brings together potted tomatoes and radishes, thinned basil, and two calibrated probes.']
+    ['assets/huerto/crecimiento-26-octubre.jpg', '2026-10-26', '26 October', 'The series remains open.', 'The reorganised system brings together potted tomatoes and radishes, thinned basil, and two calibrated probes.'],
+    ['assets/huerto/crecimiento-28-octubre.jpg', '2026-10-28', '28 October', 'The foliage increasingly overlaps across units.', 'Tomatoes, radishes and basil a few hours after T1 was selectively watered.'],
+    ['assets/huerto/crecimiento-30-octubre.jpg', '2026-10-30', '30 October', 'Growth reduces the visual separation between plants.', 'Tomato foliage covers a growing share of the system before further interventions.'],
+    ['assets/huerto/crecimiento-31-octubre.jpg', '2026-10-31', '31 October · morning', 'The arrangement reaches another threshold for reorganisation.', 'Final overview before harvesting the radishes and transplanting the basil.'],
+    ['assets/huerto/crecimiento-31-octubre-trasplante-albahacas.jpg', '2026-10-31', '31 October · transplanting', 'Harvesting and transplanting recompose the system once again.', 'Four basil plants newly separated and transplanted into individual pots with small stakes.'],
+    ['assets/huerto/crecimiento-1-noviembre.jpg', '2026-11-01', '1 November', 'The new arrangement retains traces of the intervention.', 'Three tomatoes and four basil plants in individual pots on the morning after transplanting.'],
+    ['assets/huerto/crecimiento-4-noviembre.jpg', '2026-11-04', '4 November', 'Documentation resumes after a break.', 'Three turgid tomatoes and four living basil plants, with visible differences in size and colour.']
   ];
   const english = document.documentElement.lang === 'en';
   const frames = english ? framesEn : framesEs;
